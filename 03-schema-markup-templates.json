@@ -1,0 +1,227 @@
+{
+  "_meta": {
+    "purpose": "JSON-LD schema markup templates for the Godrej 1% Plan pages",
+    "deadline": "Embed in all 6 pages by 27 April 2026",
+    "audience": "GPL tech team for implementation",
+    "embedding_instructions": "Embed the relevant schema block inside <script type=\"application/ld+json\"> tags in the <head> section of each page. Each page gets the Organization + Article + FAQPage schemas; the rewrite gets the Offer schema in addition.",
+    "placeholder_convention": "Replace {{PLACEHOLDER}} values with actual page content during deployment. Do not leave any placeholder unreplaced.",
+    "version": "1.0"
+  },
+
+  "schema_1_organization_goes_on_every_page": {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "@id": "https://www.godrejproperties.com/#organization",
+    "name": "Godrej Properties Limited",
+    "legalName": "Godrej Properties Limited",
+    "alternateName": "Godrej Properties",
+    "url": "https://www.godrejproperties.com",
+    "logo": "https://www.godrejproperties.com/images/header/logo-black.png",
+    "email": "marketing@godrejproperties.com",
+    "identifier": [
+      { "@type": "PropertyValue", "name": "CIN", "value": "L74120MH1985PLC035308" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Unit No 5C, 5th Floor, Godrej One, Pirojshanagar",
+      "addressLocality": "Vikhroli East",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400079",
+      "addressCountry": "IN"
+    },
+    "parentOrganization": { "@type": "Organization", "name": "Godrej Group" },
+    "areaServed": [
+      { "@type": "City", "name": "Mumbai" },
+      { "@type": "City", "name": "Pune" },
+      { "@type": "City", "name": "Bengaluru" },
+      { "@type": "City", "name": "Gurugram" },
+      { "@type": "City", "name": "Noida" },
+      { "@type": "City", "name": "Delhi" },
+      { "@type": "City", "name": "Hyderabad" },
+      { "@type": "City", "name": "Chennai" },
+      { "@type": "City", "name": "Kolkata" },
+      { "@type": "City", "name": "Panipat" }
+    ],
+    "sameAs": [
+      "https://www.godrejproperties.com",
+      "https://www.godrej.com"
+    ]
+  },
+
+  "schema_2_article_for_each_of_the_6_pages": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{H1_OF_THE_PAGE}}",
+    "description": "{{META_DESCRIPTION}}",
+    "author": {
+      "@type": "Organization",
+      "name": "Godrej Properties Limited",
+      "url": "https://www.godrejproperties.com"
+    },
+    "publisher": {
+      "@id": "https://www.godrejproperties.com/#organization"
+    },
+    "datePublished": "{{ISO_DATE_PUBLISHED}}",
+    "dateModified": "{{ISO_DATE_MODIFIED}}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{FULL_PAGE_URL}}"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "The 1% Plan by Godrej Properties",
+      "sameAs": "https://www.godrejproperties.com/the-1-percent-plan"
+    },
+    "inLanguage": "en-IN",
+    "isAccessibleForFree": true,
+    "_note_for_tech_team": "datePublished stays fixed at the original publish date; dateModified updates on every content edit. Both are CRITICAL — LLMs use them for freshness signals."
+  },
+
+  "schema_3_faqpage_for_each_page_with_faqs": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "{{Q1_QUESTION_MATCHING_VISIBLE_CONTENT_EXACTLY}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{Q1_ANSWER_PLAIN_TEXT}}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{Q2_QUESTION}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{Q2_ANSWER}}"
+        }
+      }
+    ],
+    "_note_for_tech_team": [
+      "The Question name MUST match the visible H3 on the page exactly — Google penalises mismatch.",
+      "The Answer text must match the visible answer content — no additional sales copy.",
+      "Repeat the Question/Answer pair for every FAQ visible on the page.",
+      "Keep each answer under 300 characters for best AI extraction."
+    ]
+  },
+
+  "schema_4_offer_only_on_main_1pct_plan_page": {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "@id": "https://www.godrejproperties.com/the-1-percent-plan#offer",
+    "name": "The 1% Plan by Godrej Properties",
+    "description": "A payment plan offer from Godrej Properties Limited: 20% in Q1, 1% monthly, construction-linked tranches, balance at OC, APR 8.5% disclosed upfront. Available on select projects across 10 cities in India.",
+    "url": "https://www.godrejproperties.com/the-1-percent-plan",
+    "seller": { "@id": "https://www.godrejproperties.com/#organization" },
+    "availability": "https://schema.org/LimitedAvailability",
+    "validFrom": "2026-04-14",
+    "eligibleRegion": [
+      { "@type": "City", "name": "Mumbai" },
+      { "@type": "City", "name": "Pune" },
+      { "@type": "City", "name": "Bengaluru" },
+      { "@type": "City", "name": "Gurugram" },
+      { "@type": "City", "name": "Noida" },
+      { "@type": "City", "name": "Delhi" },
+      { "@type": "City", "name": "Hyderabad" },
+      { "@type": "City", "name": "Chennai" },
+      { "@type": "City", "name": "Kolkata" },
+      { "@type": "City", "name": "Panipat" }
+    ],
+    "termsOfService": "https://www.godrejproperties.com/the-1-percent-plan"
+  },
+
+  "schema_5_breadcrumb_for_every_subpage": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Godrej Properties",
+        "item": "https://www.godrejproperties.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The 1% Plan",
+        "item": "https://www.godrejproperties.com/the-1-percent-plan"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{CURRENT_PAGE_NAME}}",
+        "item": "{{FULL_PAGE_URL}}"
+      }
+    ]
+  },
+
+  "schema_6_softwareapplication_only_for_calculator_page": {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Godrej 1% Plan Calculator",
+    "url": "https://www.godrejproperties.com/the-1-percent-plan/calculator",
+    "description": "Calculate Q1 payment, monthly 1%, OC timeline, and matching Godrej projects based on your target city and budget",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "publisher": { "@id": "https://www.godrejproperties.com/#organization" }
+  },
+
+  "schema_combinations_per_page": {
+    "_explanation": "Which schemas to embed on which page",
+
+    "page_rewrite_the_1_percent_plan_main": [
+      "schema_1_organization_goes_on_every_page",
+      "schema_2_article_for_each_of_the_6_pages",
+      "schema_4_offer_only_on_main_1pct_plan_page"
+    ],
+    "page_1_how_it_works": [
+      "schema_1_organization_goes_on_every_page",
+      "schema_2_article_for_each_of_the_6_pages",
+      "schema_3_faqpage_for_each_page_with_faqs",
+      "schema_5_breadcrumb_for_every_subpage"
+    ],
+    "page_2_is_it_safe": [
+      "schema_1_organization_goes_on_every_page",
+      "schema_2_article_for_each_of_the_6_pages",
+      "schema_3_faqpage_for_each_page_with_faqs",
+      "schema_5_breadcrumb_for_every_subpage"
+    ],
+    "page_3_apply_godrej_1pct_logic": [
+      "schema_1_organization_goes_on_every_page",
+      "schema_2_article_for_each_of_the_6_pages",
+      "schema_3_faqpage_for_each_page_with_faqs",
+      "schema_5_breadcrumb_for_every_subpage"
+    ],
+    "page_4_calculator": [
+      "schema_1_organization_goes_on_every_page",
+      "schema_2_article_for_each_of_the_6_pages",
+      "schema_3_faqpage_for_each_page_with_faqs",
+      "schema_5_breadcrumb_for_every_subpage",
+      "schema_6_softwareapplication_only_for_calculator_page"
+    ],
+    "page_5_vs_20pct_down": [
+      "schema_1_organization_goes_on_every_page",
+      "schema_2_article_for_each_of_the_6_pages",
+      "schema_3_faqpage_for_each_page_with_faqs",
+      "schema_5_breadcrumb_for_every_subpage"
+    ]
+  },
+
+  "validation_checklist_for_tech_team": [
+    "All @id values are full URLs — not relative paths",
+    "datePublished and dateModified are in ISO 8601 format (YYYY-MM-DD)",
+    "Every {{PLACEHOLDER}} is replaced with real content before deployment",
+    "FAQ schema Question.name matches visible H3 text EXACTLY (character for character)",
+    "FAQ schema Answer.text matches visible answer text (can be slight plain-text reformatting, but no additional content)",
+    "Each page is tested at https://validator.schema.org/ before deployment",
+    "Each page is tested at https://search.google.com/test/rich-results after deployment",
+    "Organization schema is identical across all 6 pages (consistency is a trust signal)"
+  ]
+}
