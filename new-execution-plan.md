@@ -27,15 +27,6 @@ An AI assistant asked *"What's the Godrej Lakeside Orchard 1% Plan?"* today land
 
 ---
 
-## Is the "Text Files Embedded Alongside URLs" Idea Viable?
-
-Partially. Here's the honest technical breakdown:
-
-### What won't work
-- **Sidecar text files** (e.g., a `.txt` file at the same path as the HTML page) are non-standard. No mainstream AI crawler looks for them systematically. They'd exist but be unread.
-- **Hidden HTML divs / white-on-white text** are treated as cloaking — actively harmful for SEO and GEO.
-- **Separate subdirectory of AI-only files** (like the v1 `/ai-feeds/` plan) is viable but creates two parallel content trees that drift apart over time. Maintenance burden is high.
-
 ### What actually works
 
 Three layers, in descending order of impact:
