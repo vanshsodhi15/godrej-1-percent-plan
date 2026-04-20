@@ -27,7 +27,7 @@ An AI assistant asked *"What's the Godrej Lakeside Orchard 1% Plan?"* today land
 
 ---
 
-### What actually works
+### What actually works in this case for GEO
 
 Three layers, in descending order of impact:
 
