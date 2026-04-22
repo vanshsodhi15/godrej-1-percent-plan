@@ -18,9 +18,26 @@ export default function Vs20PercentDown() {
     "about": "Side-by-Side Cashflow Table"
   });
 
+  const faqSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is the 1% Plan cheaper than a traditional 20% down payment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 1% Plan changes cash-flow timing, not necessarily total cost. Monthly outflow during construction is lower; the APR of 8.5% is disclosed upfront and forms part of the Agreement for Sale." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the 1% Plan available for all Godrej projects?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 1% Plan is published against 35 projects across 10 cities on godrejproperties.com/the-1-percent-plan." }
+      }
+    ]
+  });
+
   return (
     <Layout>
-      <SEO title={title} description={desc} schema={[articleSchema, tableSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/vs-20-percent-down" />
+      <SEO title={title} description={desc} schema={[articleSchema, tableSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/vs-20-percent-down" />
       
       <div className="hero-dark">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />

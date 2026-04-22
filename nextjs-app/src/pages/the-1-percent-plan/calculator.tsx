@@ -35,9 +35,26 @@ export default function Calculator() {
     "author": { "@type": "Organization", "name": "Godrej Properties Limited" }
   });
 
+  const faqSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is the Godrej 1% Plan calculator?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The calculator provides indicative estimates. Actual amounts and schedules are finalised in the Agreement for Sale." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the calculator include stamp duty and GST?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The calculator shows Agreement Value-based payments only. Stamp Duty, Registration Charges, GST, and other charges are additional." }
+      }
+    ]
+  });
+
   return (
     <Layout>
-      <SEO title={title} description={desc} schema={[articleSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/calculator" />
+      <SEO title={title} description={desc} schema={[articleSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/calculator" />
       
       <div className="hero-dark">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
