@@ -1,14 +1,14 @@
-# Robots.txt — Exact Diff for AI Crawler Access
+# Robots.txt
 
 **Target file:** `https://www.godrejproperties.com/robots.txt`
+
 **Action:** Replace entire file with the combined version below. All existing restrictions are preserved and duplicated for safety.
-**Deadline:** Implement by 27 April 2026
 
 ---
 
 ## Why This Matters
 
-If robots.txt blocks (or fails to explicitly allow) AI crawlers, the 6 pages we're building will not appear in AI search results — regardless of content quality. This is a hard prerequisite.
+If robots.txt blocks (or fails to explicitly allow) AI crawlers, the pages we're building will not appear in AI search results — regardless of content quality. **This is a hard prerequisite.**
 
 ---
 
@@ -32,7 +32,7 @@ Disallow: /undefined
 
 # ─────────────────────────────────────────────────────────────
 # AI / LLM Crawlers — Explicitly Supported
-# Added: 2026-04-27 | Purpose: Support 1% Plan GEO campaign
+# Added: 2026-XX-XX (please fill in the date) | Purpose: Support 1% Plan GEO campaign
 # ─────────────────────────────────────────────────────────────
 User-agent: GPTBot
 User-agent: OAI-SearchBot
@@ -98,12 +98,3 @@ If any issue arises:
 - User-agent-based content differentiation (we serve identical content to all crawlers — this is intentional)
 
 ---
-
-## Escalation
-
-If GPL tech team cannot implement this by 27 April, **flag immediately**. Without AI-crawler access:
-- Deliverable 4 (AI audit) will show zero pickup across all platforms
-- The 6 pages we build cannot be cited by any AI system
-- The campaign's primary KPIs cannot be met
-
-This is a hard prerequisite.
