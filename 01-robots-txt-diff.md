@@ -1,7 +1,7 @@
 # Robots.txt — Exact Diff for AI Crawler Access
 
 **Target file:** `https://www.godrejproperties.com/robots.txt`
-**Action:** Additive only. No existing rules are removed or modified.
+**Action:** Replace entire file with the combined version below. All existing restrictions are preserved and duplicated for safety.
 **Deadline:** Implement by 27 April 2026
 
 ---
@@ -12,57 +12,47 @@ If robots.txt blocks (or fails to explicitly allow) AI crawlers, the 6 pages we'
 
 ---
 
-## What to Add
+## The Final Combined robots.txt
 
-Append the following block to the end of the existing robots.txt file on the root domain:
+Replace the entire contents of the existing `robots.txt` file on the root domain with the following combined version.
 
-```
+*Note: The explicit AI bots have been grouped. Crucially, the `Disallow` rules from the general crawler block have been duplicated into the AI crawler block. This is a strict technical requirement, because when a crawler matches a specific `User-agent` group, it completely bypasses the `User-agent: *` group and could otherwise index your `/admin/` and `/login*` routes.* 
+
+```text
 # ─────────────────────────────────────────────────────────────
-# AI / LLM Crawlers — explicitly allowed
+# General Crawlers
+# ─────────────────────────────────────────────────────────────
+User-agent: *
+Disallow: /admin/
+Disallow: /*?page=
+Disallow: /*?city=
+Disallow: /login*
+Disallow: /success-page
+Disallow: /undefined
+
+# ─────────────────────────────────────────────────────────────
+# AI / LLM Crawlers — Explicitly Supported
 # Added: 2026-04-27 | Purpose: Support 1% Plan GEO campaign
 # ─────────────────────────────────────────────────────────────
-
-# OpenAI — ChatGPT (training + retrieval)
 User-agent: GPTBot
-Allow: /
-
 User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ChatGPT-User
-Allow: /
-
-# Google AI — Gemini, Bard, AI Overviews
 User-agent: Google-Extended
-Allow: /
-
-# Anthropic — Claude
 User-agent: ClaudeBot
-Allow: /
-
 User-agent: anthropic-ai
-Allow: /
-
 User-agent: Claude-Web
-Allow: /
-
-# Perplexity AI
 User-agent: PerplexityBot
-Allow: /
-
-# Common Crawl — feeds many open and commercial LLMs
 User-agent: CCBot
-Allow: /
-
-# Apple Intelligence
 User-agent: Applebot-Extended
-Allow: /
-
-# Microsoft — Bing + Copilot
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /*?page=
+Disallow: /*?city=
+Disallow: /login*
+Disallow: /success-page
+Disallow: /undefined
 
-# Updated sitemap reference
 Sitemap: https://www.godrejproperties.com/sitemap.xml
 ```
 
@@ -72,9 +62,8 @@ Sitemap: https://www.godrejproperties.com/sitemap.xml
 
 Before deploying, verify:
 
-1. **Existing robots.txt is preserved in full.** No Disallow rules are removed or modified.
-2. **No existing rules conflict with the new Allow directives.** If there's an existing `User-agent: *` with `Disallow: /`, the specific Allow rules above still override it for those user agents, but the setup should be reviewed.
-3. **Any CDN-level bot blocking is disabled for the above user-agent strings.** If godrejproperties.com is behind Cloudflare or a similar CDN, Cloudflare's "Super Bot Fight Mode" will block GPTBot and ClaudeBot by default regardless of what robots.txt says. This must be manually exempted in the CDN dashboard.
+1. **Existing restrictions are preserved in full.** All current `Disallow` rules have been carried over to both the `*` and AI bot blocks.
+2. **Any CDN-level bot blocking is disabled for the AI user-agent strings.** This is paramount: if godrejproperties.com is behind Cloudflare or a similar CDN, features like "Super Bot Fight Mode" block `GPTBot` and `ClaudeBot` by default. Giving them `Allow` in `robots.txt` doesn't stop the CDN from dropping the connection. They must be manually exempted in the WAF/CDN dashboard.
 4. **The file is served with `Content-Type: text/plain` and an HTTP 200 response.**
 5. **Check the file from multiple regions** — ensure no geo-restrictions apply to robots.txt.
 
