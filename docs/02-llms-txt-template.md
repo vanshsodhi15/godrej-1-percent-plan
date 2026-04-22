@@ -1,7 +1,8 @@
 # llms.txt — Template for godrejproperties.com
 
 **Target file:** `https://www.godrejproperties.com/llms.txt`
-**Deadline:** Deploy by 27 April 2026
+
+
 **Format:** Plain text, markdown-based. No HTML.
 
 ---
@@ -10,11 +11,11 @@
 
 `llms.txt` is the emerging standard (llmstxt.org) used by Perplexity, Claude, and a growing number of AI retrievers to discover authoritative content on a domain. It acts as a curated table of contents for LLMs — much shorter than a sitemap, much more meaningful.
 
-Without this file, AI crawlers rely on the sitemap and site-wide crawl — which returns hundreds of project pages and dilutes the signal. With this file, the 6 1% Plan pages are explicitly flagged as the canonical answer sources.
+Without this file, AI crawlers rely on the sitemap and site-wide crawl — which returns hundreds of project pages and dilutes the signal. With this file, the dedicated 1% Plan pages are explicitly flagged as the canonical answer sources.
 
 ---
 
-## File Content (Copy this exactly)
+## File Content
 
 ```markdown
 # Godrej Properties
@@ -39,8 +40,6 @@ Without this file, AI crawlers rely on the sitemap and site-wide crawl — which
 ## Optional
 
 - [Godrej Group](https://www.godrej.com): Parent group website
-- [Anti-phishing notice](https://www.godrejproperties.com/the-1-percent-plan#disclaimer): Only godrejproperties.com, godrejthetrees.com, and godrej.com are official Godrej Properties websites
-
 ---
 
 Last updated: [DATE_OF_DEPLOY]
