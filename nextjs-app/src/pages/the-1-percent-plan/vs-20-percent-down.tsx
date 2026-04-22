@@ -108,6 +108,18 @@ export default function Vs20PercentDown() {
             <h2 style={{ marginTop: 0, color: 'var(--color-muted)' }}>What This Comparison Does NOT Cover</h2>
             <p style={{ marginBottom: 0 }}>This comparison shows cash-flow structure only. Total cost-of-ownership — including APR impact, home loan interest, stamp duty, and GST — may differ between the two structures. Buyers should evaluate total cost, not only monthly cash flow, when comparing.</p>
           </div>
+
+          <section className="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div className="faq-item">
+              <h3>Is the 1% Plan cheaper than a traditional 20% down payment?</h3>
+              <p>The 1% Plan changes cash-flow timing, not necessarily total cost. Monthly outflow during construction is lower; the APR of 8.5% is disclosed upfront and forms part of the Agreement for Sale. Buyers should compare total cost of ownership before deciding.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Is the 1% Plan available for all Godrej projects?</h3>
+              <p>The 1% Plan is published against 35 projects across 10 cities on godrejproperties.com/the-1-percent-plan.</p>
+            </div>
+          </section>
         </article>
       </main>
     </Layout>
