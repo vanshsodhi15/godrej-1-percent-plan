@@ -165,6 +165,19 @@ strong {
 }
 
 /* ===========================
+   DEMO DISCLAIMER BANNER
+   =========================== */
+.demo-banner {
+  background: #fff3cd;
+  color: #856404;
+  border-bottom: 1px solid #ffc107;
+  padding: 10px 2rem;
+  font-size: 0.8125rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ===========================
    HEADER
    =========================== */
 .main-header {
