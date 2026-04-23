@@ -21,11 +21,6 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       </header>
 
-      {/* Demo Disclaimer Banner */}
-      <div className="demo-banner">
-        <strong>⚠️ Demo Template:</strong> The content on these pages has not been reviewed and is for demonstration purposes only. The focus is on layout, template structure, and look/feel of how pages can appear once live on the website.
-      </div>
-
       {children}
 
       {/* Footer — matches godrejproperties.com black footer */}
