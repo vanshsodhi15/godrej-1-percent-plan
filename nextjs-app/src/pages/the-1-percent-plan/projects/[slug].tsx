@@ -268,47 +268,81 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               <h3>Demo Illustration — {project.name}</h3>
               <p>
                 Indicative Agreement Value used for this example:{' '}
-                <strong>₹ {ex.indicativeAgreementValueCr} Cr</strong>. Figures are illustrative; the
-                Agreement for Sale governs the final payment schedule for each unit.
+                <strong>₹ {ex.indicativeAgreementValueCr} Cr</strong>
+                {ex.totalCostForCustomer && <> | Total Cost to Customer: <strong>{ex.totalCostForCustomer}</strong></>}
+                {ex.totalAgreementValue && <> | Total Agreement Value: <strong>{ex.totalAgreementValue}</strong></>}
+                . Figures are illustrative; the Agreement for Sale governs the final payment schedule for each unit.
               </p>
-              <div className="table-wrapper" style={{ marginTop: '1rem' }}>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Stage</th>
-                      <th>Trigger</th>
-                      <th>Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Booking</td>
-                      <td>At booking</td>
-                      <td>{ex.upfrontAtBookingAmount}</td>
-                    </tr>
-                    <tr>
-                      <td>Registration</td>
-                      <td>At AfS execution</td>
-                      <td>{ex.registrationAmount}</td>
-                    </tr>
-                    <tr>
-                      <td>Q1 Total ({ex.q1TotalPct})</td>
-                      <td>Within first quarter</td>
-                      <td>{ex.q1TotalAmount}</td>
-                    </tr>
-                    <tr>
-                      <td>Monthly 1%</td>
-                      <td>Each month post-Q1</td>
-                      <td>{ex.monthlyOnePctAmount}</td>
-                    </tr>
-                    <tr>
-                      <td>OC Balance</td>
-                      <td>At Occupation Certificate</td>
-                      <td>{ex.ocBalancePct}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+
+              {/* Detailed milestone table (when full data is available) */}
+              {ex.milestones && ex.milestones.length > 0 ? (
+                <div className="table-wrapper" style={{ marginTop: '1rem' }}>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Milestone</th>
+                        <th>%</th>
+                        <th>Amount (₹)</th>
+                        <th>Calculation Logic</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ex.milestones.map((m, i) => (
+                        <tr key={i}>
+                          <td>{m.stage}</td>
+                          <td>{m.percentage}</td>
+                          <td>{m.amount}</td>
+                          <td style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>{m.logic}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <div className="table-wrapper" style={{ marginTop: '1rem' }}>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Stage</th>
+                        <th>Trigger</th>
+                        <th>Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Booking</td>
+                        <td>At booking</td>
+                        <td>{ex.upfrontAtBookingAmount}</td>
+                      </tr>
+                      <tr>
+                        <td>Registration</td>
+                        <td>At AfS execution</td>
+                        <td>{ex.registrationAmount}</td>
+                      </tr>
+                      <tr>
+                        <td>Q1 Total ({ex.q1TotalPct})</td>
+                        <td>Within first quarter</td>
+                        <td>{ex.q1TotalAmount}</td>
+                      </tr>
+                      <tr>
+                        <td>Monthly 1%</td>
+                        <td>Each month post-Q1</td>
+                        <td>{ex.monthlyOnePctAmount}</td>
+                      </tr>
+                      <tr>
+                        <td>OC Balance</td>
+                        <td>At Occupation Certificate</td>
+                        <td>{ex.ocBalancePct}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {ex.additionalSdrNote && (
+                <p style={{ marginTop: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>{ex.additionalSdrNote}</p>
+              )}
+
               <p style={{ marginTop: '1rem', marginBottom: 0, fontStyle: 'italic' }}>{ex.notes}</p>
             </div>
 
@@ -325,16 +359,47 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           <section>
             <h2>5. Floor Plans</h2>
             <p>{project.floorPlans}</p>
+            {project.floorPlanImages && project.floorPlanImages.length > 0 && (
+              <div style={{ marginTop: '2rem' }}>
+                {project.floorPlanImages.map((fp, i) => (
+                  <div key={i} className="card" style={{ marginBottom: '2rem', padding: 0, overflow: 'hidden' }}>
+                    <div style={{ padding: '1.5rem 1.5rem 0.5rem' }}>
+                      <h3 style={{ marginTop: 0 }}>{fp.label}</h3>
+                      {fp.carpetArea && <p style={{ marginBottom: '0.25rem', fontSize: '0.9375rem' }}>RERA Carpet Area: <strong>{fp.carpetArea}</strong></p>}
+                      {fp.saleableArea && <p style={{ marginBottom: '0.5rem', fontSize: '0.9375rem' }}>Saleable Area: <strong>{fp.saleableArea}</strong></p>}
+                    </div>
+                    <img
+                      src={fp.src}
+                      alt={fp.alt}
+                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
 
           {/* Section 6 — Location Advantages */}
           <section>
             <h2>6. Location Advantages</h2>
-            <ul style={{ marginLeft: '1.5rem' }}>
-              {project.locationAdvantages.map((u, i) => (
-                <li key={i} style={{ listStyle: 'disc', marginBottom: '0.5rem' }}>{u}</li>
-              ))}
-            </ul>
+            {project.locationAdvantagesByCategory && project.locationAdvantagesByCategory.length > 0 ? (
+              project.locationAdvantagesByCategory.map((group, gi) => (
+                <div key={gi} style={{ marginBottom: '1.5rem' }}>
+                  <h3 style={{ marginBottom: '0.5rem' }}>{group.category}</h3>
+                  <ul style={{ marginLeft: '1.5rem' }}>
+                    {group.items.map((item, ii) => (
+                      <li key={ii} style={{ listStyle: 'disc', marginBottom: '0.35rem' }}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <ul style={{ marginLeft: '1.5rem' }}>
+                {project.locationAdvantages.map((u, i) => (
+                  <li key={i} style={{ listStyle: 'disc', marginBottom: '0.5rem' }}>{u}</li>
+                ))}
+              </ul>
+            )}
           </section>
 
           {/* Section 7 — Micro-market */}

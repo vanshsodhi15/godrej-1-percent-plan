@@ -291,6 +291,11 @@ strong {
   font-weight: 600;
 }
 
+.card p {
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
 .card-accent {
   border-left: 3px solid var(--accent-gold);
 }
