@@ -490,14 +490,30 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       <section id="faqs" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
-          <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
-            {project.faqs.map((f, i) => (
-              <div className="faq-item" key={i}>
-                <h3>{f.question}</h3>
-                <p>{f.answer}</p>
+          {project.faqsByCategory && project.faqsByCategory.length > 0 ? (
+            project.faqsByCategory.map((group, gi) => (
+              <div key={gi} className="faq-category" style={{ marginTop: gi === 0 ? '1rem' : '2rem' }}>
+                <h3 className="faq-category-title">{group.category}</h3>
+                <div className="faq-section" style={{ marginTop: 0, borderTop: 'none', paddingTop: 0 }}>
+                  {group.items.map((f, fi) => (
+                    <div className="faq-item" key={fi}>
+                      <h4>{f.question}</h4>
+                      <p>{f.answer}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            ))
+          ) : (
+            <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
+              {project.faqs.map((f, i) => (
+                <div className="faq-item" key={i}>
+                  <h3>{f.question}</h3>
+                  <p>{f.answer}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

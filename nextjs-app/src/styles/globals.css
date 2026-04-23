@@ -482,12 +482,22 @@ input:focus, select:focus {
   padding-top: 2rem;
 }
 
+.faq-category-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--accent-gold-dark);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-gold);
+}
+
 .faq-item {
   border-bottom: 1px solid var(--border-light);
   padding: 1.25rem 0;
 }
 
-.faq-item h3 {
+.faq-item h3,
+.faq-item h4 {
   margin: 0 0 0.5rem 0;
   font-size: 1.0625rem;
   color: var(--color-heading);
