@@ -16,6 +16,11 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface LocationAdvantageGroup {
+  category: string;
+  items: string[];
+}
+
 export interface FloorPlanImage {
   label: string;          // e.g. "2 BHK Luxe"
   src: string;            // /assets/filename.jpg
@@ -77,6 +82,7 @@ export interface Project {
   floorPlanImages?: FloorPlanImage[];     // actual floor plan images when available
   // Section 6 — Location advantages
   locationAdvantages: string[];
+  locationAdvantagesByCategory?: LocationAdvantageGroup[];
   // Section 7 — Micro-market understanding
   microMarketNotes: string;
   // Section 8 — Sales / pre-sales FAQs (incl. conflict-handling)
@@ -426,7 +432,7 @@ export const projects: Project[] = [
     reraPortal: 'https://rera.karnataka.gov.in',
     reraCertificateLink: 'https://rera.karnataka.gov.in/certificate?CER_NO=PRM/KA/RERA/1250/304/PR/090126/008393',
     salesStatus: 'Sustenance',
-    constructionStatus: 'Under Construction — Basement Stage',
+    constructionStatus: 'Under Construction – Basement Stage',
     pricing: [
       {
         configuration: '2 BHK Premium',
@@ -507,46 +513,115 @@ export const projects: Project[] = [
       {
         label: '2 BHK Luxe',
         src: '/assets/godrej_parkshire_2luxe_plan.jpg',
-        alt: 'Godrej Parkshire 2 BHK Luxe floor plan — RERA Carpet Area 68.27 sq.mts. (734.86 sq.ft.), Saleable Area 113.75 sq.mts. (1,224.35 sq.ft.)',
+        alt: 'Godrej Parkshire 2 BHK Luxe floor plan – RERA Carpet Area 68.27 sq.mts. (734.86 sq.ft.), Saleable Area 113.75 sq.mts. (1,224.35 sq.ft.)',
         carpetArea: '68.27 sq.mts. (734.86 sq.ft.)',
         saleableArea: '113.75 sq.mts. (1,224.35 sq.ft.)',
       },
       {
         label: '3 BHK Premium',
         src: '/assets/godrej_parkshire_3pre_plan.jpg',
-        alt: 'Godrej Parkshire 3 BHK Premium floor plan — RERA Carpet Area 88.88 sq.mts. (956.70 sq.ft.), Saleable Area 151.82 sq.mts. (1,634.14 sq.ft.)',
+        alt: 'Godrej Parkshire 3 BHK Premium floor plan – RERA Carpet Area 88.88 sq.mts. (956.70 sq.ft.), Saleable Area 151.82 sq.mts. (1,634.14 sq.ft.)',
         carpetArea: '88.88 sq.mts. (956.70 sq.ft.)',
         saleableArea: '151.82 sq.mts. (1,634.14 sq.ft.)',
       },
       {
         label: '3 BHK Luxe',
         src: '/assets/godrej_parkshire_3luxe_plan.jpg',
-        alt: 'Godrej Parkshire 3 BHK Luxe floor plan — RERA Carpet Area 95.93 sq.mts. (1,032.59 sq.ft.), Saleable Area 162.59 sq.mts. (1,750.06 sq.ft.)',
+        alt: 'Godrej Parkshire 3 BHK Luxe floor plan – RERA Carpet Area 95.93 sq.mts. (1,032.59 sq.ft.), Saleable Area 162.59 sq.mts. (1,750.06 sq.ft.)',
         carpetArea: '95.93 sq.mts. (1,032.59 sq.ft.)',
         saleableArea: '162.59 sq.mts. (1,750.06 sq.ft.)',
       },
     ],
     locationAdvantages: [
-      'Old Madras Road — 7 minutes*',
-      'Satellite Town Ring Road (STRR) — 10 minutes*',
-      'Siliconcity Hospital — 7 minutes*',
-      'Delhi Public School — 8 minutes*',
-      'Orion Uptown Mall — 12 minutes*',
-      'Bearys Global Research Triangle — 15 minutes*',
-      'Hoskote Industrial Area — 16 minutes*',
-      'Hope Farm Junction — 20 minutes*',
-      'Whitefield Main Road — 22 minutes*',
-      'Whitefield Metro Station (Namma Metro) — 22 minutes*',
-      'Whitefield Railway Station — 22 minutes*',
-      'International Tech Park Bangalore (ITPL) — 25 minutes*',
-      'KIADB Aerospace Park — 35 minutes*',
-      'Kempegowda International Airport — 40 minutes*',
+      'Old Madras Road – 7 mins*',
+      'Satellite Town Ring Road (STRR) – 10 mins*',
+      'Siliconcity Hospital – 7 mins*',
+      'Delhi Public School – 8 mins*',
+      'Orion Uptown Mall – 12 mins*',
+      'Bearys Global Research Triangle – 15 mins*',
+      'Hoskote Industrial Area – 16 mins*',
+      'Hope Farm Junction – 20 mins*',
+      'Whitefield Main Road – 22 mins*',
+      'Whitefield Metro Station (Namma Metro) – 22 mins*',
+      'Whitefield Railway Station – 22 mins*',
+      'International Tech Park Bangalore (ITPL) – 25 mins*',
+      'KIADB Aerospace Park – 35 mins*',
+      'Kempegowda International Airport – 40 mins*',
     ],
-    microMarketNotes: 'Hoskote is an emerging high-potential residential corridor in East Bengaluru, positioned between Whitefield and key industrial zones. Traditionally an industrial hub, Hoskote is now transitioning towards organised residential development, driven by three factors. First, the Whitefield spillover effect: with Whitefield reaching saturation in pricing and density, buyers are moving outward in search of affordable alternatives, and Hoskote is within a 20–25 minute commute. Second, industrial and employment demand: the presence of the Hoskote Industrial Area, KIADB zones, logistics hubs, and growing warehousing activity creates a self-sustaining economic base that supports consistent rental and workforce-driven housing demand. Third, infrastructure-led appreciation: the Satellite Town Ring Road (STRR), Old Madras Road (NH 75), planned Namma Metro connectivity via Whitefield, and improved airport access are expected to unlock significant land value appreciation over the next 5–10 years. Hoskote is currently 30–40% more affordable than core Whitefield, offering larger homes at lower ticket sizes — positioned as an early-entry market with future upside potential. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities, indicating the micro-market is transitioning from "emerging" to "establishing." Compared to Whitefield, Hoskote offers lower prices with higher appreciation potential at a slightly longer commute. Compared to the Budigere / Old Madras Road belt, Hoskote has stronger industrial demand, better price entry points, and faster land absorption. The primary buyer profile includes first-time homebuyers, salaried IT professionals working in Whitefield or ITPL, industrial mid-management employees, and long-term investors seeking appreciation.',
+    locationAdvantagesByCategory: [
+      {
+        category: 'Connectivity',
+        items: [
+          'Old Madras Road – 7 mins*',
+          'Hoskote Industrial Area – 16 mins*',
+          'Hope Farm Junction – 20 mins*',
+          'Whitefield Main Road – 22 mins*',
+          'KIADB Aerospace Park – 35 mins*',
+        ],
+      },
+      {
+        category: 'Commute and Transport',
+        items: [
+          'Satellite Town Ring Road (STRR) – 10 mins*',
+          'Whitefield Metro Station (Namma Metro) – 22 mins*',
+          'Whitefield Railway Station – 22 mins*',
+          'Kempegowda International Airport – 40 mins*',
+        ],
+      },
+      {
+        category: 'Recreational and Lifestyle Hubs',
+        items: [
+          'Orion Uptown Mall – 12 mins*',
+          'Decathlon OMR – 16 mins*',
+          'INOX SBR Horizon – 18 mins*',
+          'Vivanta Bengaluru Whitefield – 24 mins*',
+          'Nexus Shantiniketan Mall – 28 mins*',
+          'Phoenix Marketcity – 28 mins*',
+        ],
+      },
+      {
+        category: 'Tech Parks and Employment Hubs',
+        items: [
+          'Bearys Global Research Triangle – 15 mins*',
+          'Brigade Signature Towers – 16 mins*',
+          'International Tech Park Bangalore – 24 mins*',
+          'ITPL – 25 mins*',
+          'RMZ Infinity – 28 mins*',
+          'Bagmane World Technology Centre – 30 mins*',
+          'EPIP Zone – 30 mins*',
+        ],
+      },
+      {
+        category: 'Schools and Colleges',
+        items: [
+          'Delhi Public School – 8 mins*',
+          'Winmore Academy – 9 mins*',
+          'The Polaris International School – 10 mins*',
+          'One World International School – 14 mins*',
+          'New Baldwin School – 16 mins*',
+          'MVJ Engineering College – 18 mins*',
+          'National Public School – 22 mins*',
+          'Orchids International School – 30 mins*',
+        ],
+      },
+      {
+        category: 'Healthcare Facilities',
+        items: [
+          'Siliconcity Hospital – 7 mins*',
+          'MVJ Medical College and Research Hospital – 10 mins*',
+          'Sathya Sai Orthopedic and Multispecialty Hospital – 16 mins*',
+          'East Point Hospital – 20 mins*',
+          'Manipal Hospital Whitefield – 24 mins*',
+          'Vydehi Hospital – 24 mins*',
+          'Aster Whitefield Hospital – 24 mins*',
+        ],
+      },
+    ],
+    microMarketNotes: 'Hoskote is an emerging high-potential residential corridor in East Bengaluru, positioned between Whitefield and key industrial zones. Traditionally an industrial hub, Hoskote is now transitioning towards organised residential development, driven by three factors. First, the Whitefield spillover effect: with Whitefield reaching saturation in pricing and density, buyers are moving outward in search of affordable alternatives, and Hoskote is within a 20–25 minute commute. Second, industrial and employment demand: the presence of the Hoskote Industrial Area, KIADB zones, logistics hubs, and growing warehousing activity creates a self-sustaining economic base that supports consistent rental and workforce-driven housing demand. Third, infrastructure-led appreciation: the Satellite Town Ring Road (STRR), Old Madras Road (NH 75), planned Namma Metro connectivity via Whitefield, and improved airport access are expected to unlock significant land value appreciation over the next 5–10 years. Hoskote is currently 30–40% more affordable than core Whitefield, offering larger homes at lower ticket sizes, positioned as an early-entry market with future upside potential. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities, indicating the micro-market is transitioning from "emerging" to "establishing." Compared to Whitefield, Hoskote offers lower prices with higher appreciation potential at a slightly longer commute. Compared to the Budigere / Old Madras Road belt, Hoskote has stronger industrial demand, better price entry points, and faster land absorption. The primary buyer profile includes first-time homebuyers, salaried IT professionals working in Whitefield or ITPL, industrial mid-management employees, and long-term investors seeking appreciation.',
     faqs: [
-      { question: 'Where exactly is Godrej Parkshire located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka — 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
+      { question: 'Where exactly is Godrej Parkshire located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka, 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
       { question: 'What configurations are available at Godrej Parkshire?', answer: 'Four configurations are available: 2 BHK Premium (1,095 sq.ft. SBU, starting from ₹1.25 Cr), 2 BHK Luxe (1,228 sq.ft. SBU, starting from ₹1.40 Cr), 3 BHK Premium (1,634 sq.ft. SBU, starting from ₹1.67 Cr), and 3 BHK Luxe (1,750 sq.ft. SBU, starting from ₹1.90 Cr). Prices are Agreement Value; GST (5%) and Stamp Duty + Registration (approximately 7.6%) are additional.' },
-      { question: 'What is the 1% Payment Plan for Godrej Parkshire?', answer: 'After an initial payment of 20% of the Agreement Value (plus GST) within the first 45 days, buyers pay 1% of the Agreement Value (plus GST) each month — approximately ₹1,29,541 per month for a 2 BHK unit — continuing through to November 2027 (19 months). Construction-linked milestones follow: 33% at terrace slab completion, 20% at Occupation Certificate, and 10% at notice of possession. SDR charges of approximately 7.7% are payable at possession.' },
+      { question: 'What is the 1% Payment Plan for Godrej Parkshire?', answer: 'After an initial payment of 20% of the Agreement Value (plus GST) within the first 45 days, buyers pay 1% of the Agreement Value (plus GST) each month, approximately ₹1,29,541 per month for a 2 BHK unit, continuing through to November 2027 (19 months). Construction-linked milestones follow: 33% at terrace slab completion, 20% at Occupation Certificate, and 10% at notice of possession. SDR charges of approximately 7.7% are payable at possession.' },
       { question: 'Does the 1% monthly payment include GST and registration charges?', answer: 'The 1% monthly payment includes 5% GST applied on the Agreement Value portion. Stamp Duty and Registration (SDR) charges of approximately 7.7% are separate and payable at the time of possession. They are not included in the monthly 1% payout.' },
       { question: 'How much do I need to pay upfront to book a unit at Godrej Parkshire?', answer: 'The booking amount is 5% of the Agreement Value plus 5% GST (approximately ₹6,47,703 for a 2 BHK unit). A second payment of the same amount is due within 15 days. The total initial outflow within 45 days is 20% of AV + GST (approximately ₹25,90,812 for a 2 BHK). A home loan can commence after the initial 10% payment.' },
       { question: 'Can I prepay or exit the 1% Payment Plan early?', answer: 'No. Under the current terms of the 1% Payment Plan, prepayment or early exit from the plan is not permitted. The payment schedule is as set out in the Agreement for Sale.' },

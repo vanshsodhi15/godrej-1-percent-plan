@@ -382,11 +382,24 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           {/* Section 6 — Location Advantages */}
           <section>
             <h2>6. Location Advantages</h2>
-            <ul style={{ marginLeft: '1.5rem' }}>
-              {project.locationAdvantages.map((u, i) => (
-                <li key={i} style={{ listStyle: 'disc', marginBottom: '0.5rem' }}>{u}</li>
-              ))}
-            </ul>
+            {project.locationAdvantagesByCategory && project.locationAdvantagesByCategory.length > 0 ? (
+              project.locationAdvantagesByCategory.map((group, gi) => (
+                <div key={gi} style={{ marginBottom: '1.5rem' }}>
+                  <h3 style={{ marginBottom: '0.5rem' }}>{group.category}</h3>
+                  <ul style={{ marginLeft: '1.5rem' }}>
+                    {group.items.map((item, ii) => (
+                      <li key={ii} style={{ listStyle: 'disc', marginBottom: '0.35rem' }}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <ul style={{ marginLeft: '1.5rem' }}>
+                {project.locationAdvantages.map((u, i) => (
+                  <li key={i} style={{ listStyle: 'disc', marginBottom: '0.5rem' }}>{u}</li>
+                ))}
+              </ul>
+            )}
           </section>
 
           {/* Section 7 — Micro-market */}
