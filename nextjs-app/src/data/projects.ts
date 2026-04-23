@@ -16,8 +16,25 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface FloorPlanImage {
+  label: string;          // e.g. "2 BHK Luxe"
+  src: string;            // /assets/filename.jpg
+  alt: string;
+  carpetArea?: string;    // e.g. "68.27 sq.mts. (734.86 sq.ft.)"
+  saleableArea?: string;  // e.g. "113.75 sq.mts. (1,224.35 sq.ft.)"
+}
+
+export interface PaymentMilestone {
+  stage: string;           // e.g. "On Booking"
+  percentage: string;      // e.g. "5%"
+  amount: string;          // ₹ formatted
+  logic: string;           // Explanation of how this is calculated
+}
+
 export interface ProjectPaymentExample {
   indicativeAgreementValueCr: string;     // e.g. "1.20"
+  totalCostForCustomer?: string;          // e.g. "₹1,32,19,005"
+  totalAgreementValue?: string;           // e.g. "₹1,23,37,199"
   upfrontAtBookingPct: string;            // e.g. "10%"
   upfrontAtBookingAmount: string;         // ₹
   registrationAmount: string;             // ₹
@@ -27,6 +44,8 @@ export interface ProjectPaymentExample {
   monthlyDurationMonths: string;          // e.g. "until next slab milestone"
   ocBalancePct: string;                   // e.g. "Balance"
   notes: string;                          // demo illustration prose
+  milestones?: PaymentMilestone[];        // Full detailed milestone schedule when available
+  additionalSdrNote?: string;             // e.g. "Additional SDR charges of 7.7% at possession"
 }
 
 export interface Project {
@@ -55,6 +74,7 @@ export interface Project {
   paymentPlanExample: ProjectPaymentExample;
   // Section 5 — Floor plans
   floorPlans: string;                     // narrative or link summary
+  floorPlanImages?: FloorPlanImage[];     // actual floor plan images when available
   // Section 6 — Location advantages
   locationAdvantages: string[];
   // Section 7 — Micro-market understanding
@@ -399,25 +419,147 @@ export const projects: Project[] = [
     name: 'Godrej Parkshire',
     city: 'Bengaluru',
     state: 'Karnataka',
-    microLocation: 'Hosakote, Bengaluru Rural',
+    microLocation: 'Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural',
     developer: 'Godrej Properties Limited',
-    type: 'Residential',
+    type: 'Residential group housing',
     rera: 'PRM/KA/RERA/1250/304/PR/090126/008393',
     reraPortal: 'https://rera.karnataka.gov.in',
-    reraCertificateLink: GPL('Direct certificate URL'),
-    salesStatus: GPL('Launch / Sustenance / Sold Out'),
-    constructionStatus: GPL('Stage'),
-    pricing: defaultPricing,
-    possessionRera: GPL('Month YYYY'),
-    possessionGpl: GPL('Month YYYY'),
-    ocRera: GPL('Month YYYY'),
-    ocGpl: GPL('Month YYYY'),
-    paymentPlanExample: defaultPaymentExample,
-    floorPlans: GPL('Floor-plan summary'),
-    locationAdvantages: [GPL('USP 1'), GPL('USP 2'), GPL('USP 3')],
-    microMarketNotes: GPL('Micro-market notes'),
-    faqs: defaultFaqs,
-    legalDisclaimers: defaultLegal,
+    reraCertificateLink: 'https://rera.karnataka.gov.in/certificate?CER_NO=PRM/KA/RERA/1250/304/PR/090126/008393',
+    salesStatus: 'Sustenance',
+    constructionStatus: 'Under Construction — Basement Stage',
+    pricing: [
+      {
+        configuration: '2 BHK Premium',
+        area: '1,095 sq.ft. (SBU)',
+        agreementValue: '₹1.25 Cr – ₹1.40 Cr',
+        agreementValuePlusGst: '₹1.31 Cr – ₹1.47 Cr (AV + 5% GST)',
+        agreementValuePlusGstSdr: '₹1.41 Cr – ₹1.58 Cr (AV + 5% GST + 7.6% SDR)',
+      },
+      {
+        configuration: '2 BHK Luxe',
+        area: '1,228 sq.ft. (SBU) | RERA Carpet: 734.86 sq.ft. | Saleable: 1,224.35 sq.ft.',
+        agreementValue: '₹1.40 Cr – ₹1.60 Cr',
+        agreementValuePlusGst: '₹1.47 Cr – ₹1.68 Cr (AV + 5% GST)',
+        agreementValuePlusGstSdr: '₹1.58 Cr – ₹1.81 Cr (AV + 5% GST + 7.6% SDR)',
+      },
+      {
+        configuration: '3 BHK Premium',
+        area: '1,634 sq.ft. (SBU) | RERA Carpet: 956.70 sq.ft. | Saleable: 1,634.14 sq.ft.',
+        agreementValue: '₹1.67 Cr – ₹1.90 Cr',
+        agreementValuePlusGst: '₹1.75 Cr – ₹2.00 Cr (AV + 5% GST)',
+        agreementValuePlusGstSdr: '₹1.89 Cr – ₹2.15 Cr (AV + 5% GST + 7.6% SDR)',
+      },
+      {
+        configuration: '3 BHK Luxe',
+        area: '1,750 sq.ft. (SBU) | RERA Carpet: 1,032.59 sq.ft. | Saleable: 1,750.06 sq.ft.',
+        agreementValue: '₹1.90 Cr – ₹2.25 Cr',
+        agreementValuePlusGst: '₹2.00 Cr – ₹2.36 Cr (AV + 5% GST)',
+        agreementValuePlusGstSdr: '₹2.15 Cr – ₹2.54 Cr (AV + 5% GST + 7.6% SDR)',
+      },
+    ],
+    possessionRera: 'December 2030',
+    possessionGpl: 'December 2029',
+    ocRera: 'Not yet disclosed',
+    ocGpl: 'Not yet disclosed',
+    paymentPlanExample: {
+      indicativeAgreementValueCr: '1.23',
+      totalCostForCustomer: '₹1,32,19,005',
+      totalAgreementValue: '₹1,23,37,199',
+      upfrontAtBookingPct: '5%',
+      upfrontAtBookingAmount: '₹6,47,703 (5% of AV + 5% GST on that value)',
+      registrationAmount: '₹6,47,703 (5% of AV + 5% GST, due within 15 days of booking)',
+      q1TotalPct: '20%',
+      q1TotalAmount: '₹12,95,406 (10% of AV + 5% GST, due within 45 days of booking or before 30 June 2026, whichever is earlier)',
+      monthlyOnePctAmount: '₹1,29,541 per month (1% of AV + 5% GST)',
+      monthlyDurationMonths: '19 months (July 2026 through November 2027, on or before the 5th of each month)',
+      ocBalancePct: '63% at construction milestones and possession (33% on terrace completion + 20% on OC + 10% on notice of possession)',
+      notes: 'This illustration is based on a 2 BHK unit with a Total Agreement Value of ₹1,23,37,199 and a Total Cost to Customer of ₹1,32,19,005 (including GST). The 1% monthly payment of ₹1,29,541 applies from July 2026 through November 2027 (19 months). On completion of the terrace slab, 33% of AV + GST (₹42,74,839) becomes payable. At receipt of the Occupation Certificate, 20% of AV + GST (₹25,90,812) is due, followed by 10% of AV + GST (₹12,95,406) on notice of possession. An additional 7.7% towards Stamp Duty and Registration (SDR) is payable at the time of possession. Advance Maintenance and Sinking Fund Charges of ₹2,64,946 are payable separately. All amounts are inclusive of 5% GST on the Agreement Value component. This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on the unit selected, associated charges for that unit, and the offers available at the project marketing office.',
+      milestones: [
+        { stage: 'On Booking', percentage: '5%', amount: '₹6,47,703', logic: '5% of Agreement Value + 5% GST on that value' },
+        { stage: 'Within 15 days of Booking', percentage: '5%', amount: '₹6,47,703', logic: '5% of Agreement Value + 5% GST on that value' },
+        { stage: 'Within 45 days of Booking or before 30 June 2026 (whichever is earlier)', percentage: '10%', amount: '₹12,95,406', logic: '10% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 July 2026', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 August 2026', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 September 2026', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 October 2026', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 November 2026', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 December 2026', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 January 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 February 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 March 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 April 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 May 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 June 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 July 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 August 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 September 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 October 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On or before 5 November 2027', percentage: '1%', amount: '₹1,29,541', logic: '1% of Agreement Value + 5% GST on that value' },
+        { stage: 'On Completion of Terrace Slab', percentage: '33%', amount: '₹42,74,839', logic: '33% of Agreement Value + 5% GST on that value' },
+        { stage: 'On Receipt of Occupation Certificate', percentage: '20%', amount: '₹25,90,812', logic: '20% of Agreement Value + 5% GST on that value' },
+        { stage: 'On Notice of Possession', percentage: '10%', amount: '₹12,95,406', logic: '10% of Agreement Value + 5% GST on that value' },
+        { stage: 'Advance Maintenance & Sinking Fund Charges', percentage: '—', amount: '₹2,64,946', logic: 'Payable separately; not part of the Agreement Value' },
+      ],
+      additionalSdrNote: 'Additional Stamp Duty and Registration (SDR) charges of approximately 7.7% are payable at the time of possession.',
+    },
+    floorPlans: 'Floor plans are available for 2 BHK Luxe, 3 BHK Premium, and 3 BHK Luxe configurations. All dimensions shown are from unfinished wall to unfinished wall (excluding ledge wall area). Carpet area is calculated from the unfinished wall and includes ledge walls. Balcony area and dimensions include the up-stands. Drawings are not to scale. The developer reserves the right to add or remove and change the location of any amenities/specifications at their own discretion. Floor plans are solely illustrative; furnishings and movable items depicted form no part of the offering.',
+    floorPlanImages: [
+      {
+        label: '2 BHK Luxe',
+        src: '/assets/godrej_parkshire_2luxe_plan.jpg',
+        alt: 'Godrej Parkshire 2 BHK Luxe floor plan — RERA Carpet Area 68.27 sq.mts. (734.86 sq.ft.), Saleable Area 113.75 sq.mts. (1,224.35 sq.ft.)',
+        carpetArea: '68.27 sq.mts. (734.86 sq.ft.)',
+        saleableArea: '113.75 sq.mts. (1,224.35 sq.ft.)',
+      },
+      {
+        label: '3 BHK Premium',
+        src: '/assets/godrej_parkshire_3pre_plan.jpg',
+        alt: 'Godrej Parkshire 3 BHK Premium floor plan — RERA Carpet Area 88.88 sq.mts. (956.70 sq.ft.), Saleable Area 151.82 sq.mts. (1,634.14 sq.ft.)',
+        carpetArea: '88.88 sq.mts. (956.70 sq.ft.)',
+        saleableArea: '151.82 sq.mts. (1,634.14 sq.ft.)',
+      },
+      {
+        label: '3 BHK Luxe',
+        src: '/assets/godrej_parkshire_3luxe_plan.jpg',
+        alt: 'Godrej Parkshire 3 BHK Luxe floor plan — RERA Carpet Area 95.93 sq.mts. (1,032.59 sq.ft.), Saleable Area 162.59 sq.mts. (1,750.06 sq.ft.)',
+        carpetArea: '95.93 sq.mts. (1,032.59 sq.ft.)',
+        saleableArea: '162.59 sq.mts. (1,750.06 sq.ft.)',
+      },
+    ],
+    locationAdvantages: [
+      'Old Madras Road — 7 minutes*',
+      'Satellite Town Ring Road (STRR) — 10 minutes*',
+      'Siliconcity Hospital — 7 minutes*',
+      'Delhi Public School — 8 minutes*',
+      'Orion Uptown Mall — 12 minutes*',
+      'Bearys Global Research Triangle — 15 minutes*',
+      'Hoskote Industrial Area — 16 minutes*',
+      'Hope Farm Junction — 20 minutes*',
+      'Whitefield Main Road — 22 minutes*',
+      'Whitefield Metro Station (Namma Metro) — 22 minutes*',
+      'Whitefield Railway Station — 22 minutes*',
+      'International Tech Park Bangalore (ITPL) — 25 minutes*',
+      'KIADB Aerospace Park — 35 minutes*',
+      'Kempegowda International Airport — 40 minutes*',
+    ],
+    microMarketNotes: 'Hoskote is an emerging high-potential residential corridor in East Bengaluru, positioned between Whitefield and key industrial zones. Traditionally an industrial hub, Hoskote is now transitioning towards organised residential development, driven by three factors. First, the Whitefield spillover effect: with Whitefield reaching saturation in pricing and density, buyers are moving outward in search of affordable alternatives, and Hoskote is within a 20–25 minute commute. Second, industrial and employment demand: the presence of the Hoskote Industrial Area, KIADB zones, logistics hubs, and growing warehousing activity creates a self-sustaining economic base that supports consistent rental and workforce-driven housing demand. Third, infrastructure-led appreciation: the Satellite Town Ring Road (STRR), Old Madras Road (NH 75), planned Namma Metro connectivity via Whitefield, and improved airport access are expected to unlock significant land value appreciation over the next 5–10 years. Hoskote is currently 30–40% more affordable than core Whitefield, offering larger homes at lower ticket sizes — positioned as an early-entry market with future upside potential. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities, indicating the micro-market is transitioning from "emerging" to "establishing." Compared to Whitefield, Hoskote offers lower prices with higher appreciation potential at a slightly longer commute. Compared to the Budigere / Old Madras Road belt, Hoskote has stronger industrial demand, better price entry points, and faster land absorption. The primary buyer profile includes first-time homebuyers, salaried IT professionals working in Whitefield or ITPL, industrial mid-management employees, and long-term investors seeking appreciation.',
+    faqs: [
+      { question: 'Where exactly is Godrej Parkshire located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka — 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
+      { question: 'What configurations are available at Godrej Parkshire?', answer: 'Four configurations are available: 2 BHK Premium (1,095 sq.ft. SBU, starting from ₹1.25 Cr), 2 BHK Luxe (1,228 sq.ft. SBU, starting from ₹1.40 Cr), 3 BHK Premium (1,634 sq.ft. SBU, starting from ₹1.67 Cr), and 3 BHK Luxe (1,750 sq.ft. SBU, starting from ₹1.90 Cr). Prices are Agreement Value; GST (5%) and Stamp Duty + Registration (approximately 7.6%) are additional.' },
+      { question: 'What is the 1% Payment Plan for Godrej Parkshire?', answer: 'After an initial payment of 20% of the Agreement Value (plus GST) within the first 45 days, buyers pay 1% of the Agreement Value (plus GST) each month — approximately ₹1,29,541 per month for a 2 BHK unit — continuing through to November 2027 (19 months). Construction-linked milestones follow: 33% at terrace slab completion, 20% at Occupation Certificate, and 10% at notice of possession. SDR charges of approximately 7.7% are payable at possession.' },
+      { question: 'Does the 1% monthly payment include GST and registration charges?', answer: 'The 1% monthly payment includes 5% GST applied on the Agreement Value portion. Stamp Duty and Registration (SDR) charges of approximately 7.7% are separate and payable at the time of possession. They are not included in the monthly 1% payout.' },
+      { question: 'How much do I need to pay upfront to book a unit at Godrej Parkshire?', answer: 'The booking amount is 5% of the Agreement Value plus 5% GST (approximately ₹6,47,703 for a 2 BHK unit). A second payment of the same amount is due within 15 days. The total initial outflow within 45 days is 20% of AV + GST (approximately ₹25,90,812 for a 2 BHK). A home loan can commence after the initial 10% payment.' },
+      { question: 'Can I prepay or exit the 1% Payment Plan early?', answer: 'No. Under the current terms of the 1% Payment Plan, prepayment or early exit from the plan is not permitted. The payment schedule is as set out in the Agreement for Sale.' },
+      { question: 'When does my home loan EMI start?', answer: 'A home loan application can be initiated after the 10% initial payment (booking + 15-day instalment). The bank will process the loan and disbursals will follow the construction-linked schedule agreed with the developer.' },
+      { question: 'What is the possession timeline for Godrej Parkshire?', answer: 'The RERA-registered possession timeline is December 2030. Godrej Properties targets possession by December 2029. The project is currently under construction at the basement stage.' },
+      { question: 'What are the additional charges apart from the Agreement Value?', answer: 'Additional charges include: GST at 5% on the Agreement Value, Stamp Duty and Registration (SDR) of approximately 7.6–7.7%, Preferential Location Charges (PLC), Floor Rise Charges (FRC), and Advance Maintenance and Sinking Fund Charges (₹2,64,946 for the 2 BHK illustration). There are no hidden charges.' },
+      { question: 'Is Godrej Parkshire a good investment?', answer: 'Hoskote is positioned as an early-entry market with significant upside potential, driven by infrastructure expansion (STRR, planned metro connectivity), Whitefield spillover demand, and the presence of KIADB industrial zones. Prices are currently 30–40% lower than core Whitefield. The entry of branded developers like Godrej Properties signals the micro-market is transitioning from emerging to establishing.' },
+      { question: 'Why should I buy in Hoskote instead of Whitefield?', answer: 'Hoskote offers larger homes at substantially lower prices while remaining within a 22-minute commute of Whitefield. With the Satellite Town Ring Road (STRR), Old Madras Road access, and planned metro connectivity, Hoskote is expected to see strong appreciation over the next 5–10 years. Buyers benefit from early-mover pricing with the construction quality and brand assurance of Godrej Properties.' },
+      { question: 'What if the project gets delayed beyond the RERA date?', answer: 'Godrej Properties is a reputed, SEBI-listed developer with a track record of over 50 delivered projects. Under RERA regulations, buyers are entitled to compensation in the event of project delays beyond the registered possession date. The RERA number and certificate are publicly verifiable on the Karnataka RERA portal.' },
+      { question: 'Is the 1% Payment Plan really beneficial compared to a regular payment plan?', answer: 'Yes. The 1% Plan significantly reduces monthly financial outflow during the construction period. For a 2 BHK at Godrej Parkshire, the monthly payment is approximately ₹1.30 lakh — comparable to a rent payment in many Bengaluru neighbourhoods — while the bulk of the payment is deferred until construction milestones are achieved. This improves cash flow flexibility and allows buyers to plan finances around a predictable outflow schedule.' },
+      { question: 'How do I block a unit at Godrej Parkshire?', answer: 'A unit can be blocked with a token amount equivalent to 5% of the Agreement Value. The second instalment of 5% is due within 15 days, and the remaining 10% is due within 45 days of booking. Contact the project marketing office for current availability and the unit blocking process.' },
+    ],
+    legalDisclaimers: 'RERA Registration: PRM/KA/RERA/1250/304/PR/090126/008393, available at website: http://rera.karnataka.gov.in. Site Address: Godrej Parkshire, SY NO 36/1, 36/2, 36/3, 36/4A1, 36/4A2, 36/4B1, 36/4B2, 36/5, 36/6, 36/7, 36/8, 36/9, 66/1, 66/2, 66/3, 67/1A1, 67/1A2, 67/1A3, 67/1B1, 67/1B2, 67/1B3, 67/2, 67/3, 67/4, 68/1, 68/2, 68/3, 68/4 AND 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka — 562114. The project is registered as Godrej Parkshire. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Do not rely on information provided on any other website. The sale is subject to the terms of the application form, allotment letter, and Agreement for Sale. The specifications and amenities mentioned in the Agreement for Sale and/or uploaded on the Karnataka RERA website are final and binding on the Developer and Purchaser. Recipients are advised to verify all relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Refer to payment terms as mentioned in the Agreement for Sale. The offer is at the sole discretion of the developer and is available for a limited time period. Date of publication: 14 April 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-parkshire',
   },
   {
