@@ -125,6 +125,27 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.breadcrumbs {
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  transition: color var(--duration) var(--ease);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-heading);
+}
+
 h3 {
   font-size: 1.125rem;
   font-weight: 600;
@@ -242,7 +263,7 @@ strong {
    SUMMARY / HIGHLIGHT BOX
    =========================== */
 .summary-card {
-  background: var(--bg-dark);
+  background: var(--bg-seashell);
   color: var(--color-white);
   padding: 2rem 2.5rem;
   border-radius: 8px;
@@ -252,14 +273,14 @@ strong {
 }
 
 .summary-card p {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-primary);
   margin-bottom: 0;
   font-size: 1.0625rem;
   line-height: 1.75;
 }
 
 .summary-card strong {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
 /* ===========================
