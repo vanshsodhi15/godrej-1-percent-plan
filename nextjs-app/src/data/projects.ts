@@ -16,6 +16,11 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface FaqGroup {
+  category: string;
+  items: FaqItem[];
+}
+
 export interface LocationAdvantageGroup {
   category: string;
   items: string[];
@@ -87,6 +92,7 @@ export interface Project {
   microMarketNotes: string;
   // Section 8 — Sales / pre-sales FAQs (incl. conflict-handling)
   faqs: FaqItem[];
+  faqsByCategory?: FaqGroup[];
   // Section 9 — Legal disclaimers
   legalDisclaimers: string;
   // Existing live URL for this project (the marketing/sourcing page; we link out, never overwrite)
@@ -619,20 +625,110 @@ export const projects: Project[] = [
     ],
     microMarketNotes: 'Hoskote is an emerging high-potential residential corridor in East Bengaluru, positioned between Whitefield and key industrial zones. Traditionally an industrial hub, Hoskote is now transitioning towards organised residential development, driven by three factors. First, the Whitefield spillover effect: with Whitefield reaching saturation in pricing and density, buyers are moving outward in search of affordable alternatives, and Hoskote is within a 20–25 minute commute. Second, industrial and employment demand: the presence of the Hoskote Industrial Area, KIADB zones, logistics hubs, and growing warehousing activity creates a self-sustaining economic base that supports consistent rental and workforce-driven housing demand. Third, infrastructure-led appreciation: the Satellite Town Ring Road (STRR), Old Madras Road (NH 75), planned Namma Metro connectivity via Whitefield, and improved airport access are expected to unlock significant land value appreciation over the next 5–10 years. Hoskote is currently 30–40% more affordable than core Whitefield, offering larger homes at lower ticket sizes, positioned as an early-entry market with future upside potential. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities, indicating the micro-market is transitioning from "emerging" to "establishing." Compared to Whitefield, Hoskote offers lower prices with higher appreciation potential at a slightly longer commute. Compared to the Budigere / Old Madras Road belt, Hoskote has stronger industrial demand, better price entry points, and faster land absorption. The primary buyer profile includes first-time homebuyers, salaried IT professionals working in Whitefield or ITPL, industrial mid-management employees, and long-term investors seeking appreciation.',
     faqs: [
-      { question: 'Where exactly is Godrej Parkshire located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka, 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
-      { question: 'What configurations are available at Godrej Parkshire?', answer: 'Four configurations are available: 2 BHK Premium (1,095 sq.ft. SBU, starting from ₹1.25 Cr), 2 BHK Luxe (1,228 sq.ft. SBU, starting from ₹1.40 Cr), 3 BHK Premium (1,634 sq.ft. SBU, starting from ₹1.67 Cr), and 3 BHK Luxe (1,750 sq.ft. SBU, starting from ₹1.90 Cr). Prices are Agreement Value; GST (5%) and Stamp Duty + Registration (approximately 7.6%) are additional.' },
-      { question: 'What is the 1% Payment Plan for Godrej Parkshire?', answer: 'After an initial payment of 20% of the Agreement Value (plus GST) within the first 45 days, buyers pay 1% of the Agreement Value (plus GST) each month, approximately ₹1,29,541 per month for a 2 BHK unit, continuing through to November 2027 (19 months). Construction-linked milestones follow: 33% at terrace slab completion, 20% at Occupation Certificate, and 10% at notice of possession. SDR charges of approximately 7.7% are payable at possession.' },
-      { question: 'Does the 1% monthly payment include GST and registration charges?', answer: 'The 1% monthly payment includes 5% GST applied on the Agreement Value portion. Stamp Duty and Registration (SDR) charges of approximately 7.7% are separate and payable at the time of possession. They are not included in the monthly 1% payout.' },
-      { question: 'How much do I need to pay upfront to book a unit at Godrej Parkshire?', answer: 'The booking amount is 5% of the Agreement Value plus 5% GST (approximately ₹6,47,703 for a 2 BHK unit). A second payment of the same amount is due within 15 days. The total initial outflow within 45 days is 20% of AV + GST (approximately ₹25,90,812 for a 2 BHK). A home loan can commence after the initial 10% payment.' },
-      { question: 'Can I prepay or exit the 1% Payment Plan early?', answer: 'No. Under the current terms of the 1% Payment Plan, prepayment or early exit from the plan is not permitted. The payment schedule is as set out in the Agreement for Sale.' },
-      { question: 'When does my home loan EMI start?', answer: 'A home loan application can be initiated after the 10% initial payment (booking + 15-day instalment). The bank will process the loan and disbursals will follow the construction-linked schedule agreed with the developer.' },
-      { question: 'What is the possession timeline for Godrej Parkshire?', answer: 'The RERA-registered possession timeline is December 2030. Godrej Properties targets possession by December 2029. The project is currently under construction at the basement stage.' },
-      { question: 'What are the additional charges apart from the Agreement Value?', answer: 'Additional charges include: GST at 5% on the Agreement Value, Stamp Duty and Registration (SDR) of approximately 7.6–7.7%, Preferential Location Charges (PLC), Floor Rise Charges (FRC), and Advance Maintenance and Sinking Fund Charges (₹2,64,946 for the 2 BHK illustration). There are no hidden charges.' },
-      { question: 'Is Godrej Parkshire a good investment?', answer: 'Hoskote is positioned as an early-entry market with significant upside potential, driven by infrastructure expansion (STRR, planned metro connectivity), Whitefield spillover demand, and the presence of KIADB industrial zones. Prices are currently 30–40% lower than core Whitefield. The entry of branded developers like Godrej Properties signals the micro-market is transitioning from emerging to establishing.' },
-      { question: 'Why should I buy in Hoskote instead of Whitefield?', answer: 'Hoskote offers larger homes at substantially lower prices while remaining within a 22-minute commute of Whitefield. With the Satellite Town Ring Road (STRR), Old Madras Road access, and planned metro connectivity, Hoskote is expected to see strong appreciation over the next 5–10 years. Buyers benefit from early-mover pricing with the construction quality and brand assurance of Godrej Properties.' },
-      { question: 'What if the project gets delayed beyond the RERA date?', answer: 'Godrej Properties is a reputed, SEBI-listed developer with a track record of over 50 delivered projects. Under RERA regulations, buyers are entitled to compensation in the event of project delays beyond the registered possession date. The RERA number and certificate are publicly verifiable on the Karnataka RERA portal.' },
-      { question: 'Is the 1% Payment Plan really beneficial compared to a regular payment plan?', answer: 'Yes. The 1% Plan significantly reduces monthly financial outflow during the construction period. For a 2 BHK at Godrej Parkshire, the monthly payment is approximately ₹1.30 lakh — comparable to a rent payment in many Bengaluru neighbourhoods — while the bulk of the payment is deferred until construction milestones are achieved. This improves cash flow flexibility and allows buyers to plan finances around a predictable outflow schedule.' },
-      { question: 'How do I block a unit at Godrej Parkshire?', answer: 'A unit can be blocked with a token amount equivalent to 5% of the Agreement Value. The second instalment of 5% is due within 15 days, and the remaining 10% is due within 45 days of booking. Contact the project marketing office for current availability and the unit blocking process.' },
+      // General Project FAQs
+      { question: 'Where exactly is the project located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka, 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
+      { question: 'Who is the developer?', answer: 'The project is developed by Godrej Properties, one of India\'s most trusted real estate brands, listed on the NSE and BSE with a track record of over 50 delivered projects across India.' },
+      { question: 'Is the project RERA approved?', answer: 'Yes. Godrej Parkshire is RERA registered under number PRM/KA/RERA/1250/304/PR/090126/008393, verifiable on the Karnataka RERA portal at rera.karnataka.gov.in.' },
+      { question: 'What is the possession timeline?', answer: 'The RERA-registered possession timeline is December 2030. Godrej Properties targets possession by December 2029.' },
+      { question: 'What configurations are available?', answer: 'Four configurations are available: 2 BHK Premium (1,095 sq.ft. SBU), 2 BHK Luxe (1,228 sq.ft. SBU), 3 BHK Premium (1,634 sq.ft. SBU), and 3 BHK Luxe (1,750 sq.ft. SBU).' },
+      // Pricing & Costing FAQs
+      { question: 'What is the starting price?', answer: 'Starting from ₹1.32 Cr onwards (inclusive of GST). Agreement Value starts from ₹1.25 Cr for the 2 BHK Premium configuration.' },
+      { question: 'What are the additional charges?', answer: 'Additional charges include GST (5% on Agreement Value), Preferential Location Charges (PLC), Floor Rise Charges (FRC), Advance Maintenance and Sinking Fund Charges, and Stamp Duty and Registration (SDR) of approximately 7.6 to 7.7%.' },
+      { question: 'Are there any hidden costs?', answer: 'No. There are no hidden charges. All applicable costs are disclosed upfront in the payment schedule and Agreement for Sale.' },
+      // 1% Payment Plan FAQs
+      { question: 'What is the 1% payment plan?', answer: 'After an initial booking amount, buyers pay 1% of the Agreement Value (plus GST) each month during the construction period. For a 2 BHK unit at Godrej Parkshire, this works out to approximately ₹1,29,541 per month for 19 months (July 2026 through November 2027). Construction-linked milestones follow: 33% at terrace slab completion, 20% at Occupation Certificate, and 10% at notice of possession.' },
+      { question: 'Does the 1% include GST and registration?', answer: 'The 1% monthly payment includes 5% GST applied on the Agreement Value portion. Stamp Duty and Registration (SDR) charges of approximately 7.7% are separate and payable at the time of possession. They are not included in the monthly 1% payout.' },
+      { question: 'How much do I need to pay upfront?', answer: '10% of the Agreement Value plus GST is payable within the first 30 days (5% at booking + 5% within 15 days). An additional 10% of AV + GST is due within 45 days of booking, bringing the total initial outflow to 20% of AV + GST.' },
+      { question: 'When does the home loan EMI start?', answer: 'A home loan application can be initiated after the initial 10% payment (booking + 15-day instalment). The bank will process the loan and disbursals will follow the construction-linked schedule agreed with the developer.' },
+      { question: 'Can I prepay or exit the 1% plan?', answer: 'No. Under the current terms of the 1% Payment Plan, prepayment or early exit from the plan is not permitted. The payment schedule is as set out in the Agreement for Sale.' },
+      // Location & Connectivity FAQs
+      { question: 'How far is Whitefield?', answer: 'Whitefield Main Road is approximately 20 to 22 minutes from Godrej Parkshire. Whitefield Metro Station (Namma Metro) and Whitefield Railway Station are both approximately 22 minutes away.' },
+      { question: 'Is metro connectivity available?', answer: 'Yes. Whitefield Metro Station on the Namma Metro Purple Line is approximately 22 minutes from the project. Planned metro expansion towards Hoskote is expected to further improve connectivity.' },
+      { question: 'How far is the airport?', answer: 'Kempegowda International Airport is approximately 40 to 50 minutes from Godrej Parkshire, depending on traffic conditions and route taken.' },
+      // Investment & Decision-Making FAQs
+      { question: 'Is this a good investment?', answer: 'Yes. Hoskote is positioned as an early-entry market with significant upside potential, driven by rapid infrastructure growth in East Bengaluru (STRR, planned metro expansion), proximity to IT corridors including Whitefield and ITPL, and upcoming metro connectivity. Prices are currently 30 to 40% lower than core Whitefield, and the entry of branded developers like Godrej Properties signals the micro-market is transitioning from emerging to establishing.' },
+      { question: 'Who is this project ideal for?', answer: 'Godrej Parkshire is well suited for first-time homebuyers looking for quality homes at accessible price points, IT professionals working in Whitefield, ITPL, or the broader East Bengaluru tech corridor, and long-term investors seeking early-entry pricing in a high-growth micro-market.' },
+      // Construction & Quality FAQs
+      { question: 'What is the current construction status?', answer: 'The project is currently under construction at the basement stage. Godrej Properties targets possession by December 2029, with the RERA deadline set at December 2030.' },
+      // Conflict Handling FAQs
+      { question: 'Why should I buy in Hoskote instead of Whitefield?', answer: 'Hoskote offers larger homes at substantially lower prices while remaining within a 22-minute commute of Whitefield. With the Satellite Town Ring Road (STRR), Old Madras Road access, and planned metro connectivity, Hoskote is expected to see strong appreciation over the next 5 to 10 years. Buyers benefit from early-mover pricing with the construction quality and brand assurance of Godrej Properties.' },
+      { question: 'Isn\'t Hoskote too far or underdeveloped?', answer: 'Not anymore. Hoskote is seeing rapid infrastructure growth, including highway upgrades, the Satellite Town Ring Road (STRR), and planned Namma Metro connectivity via Whitefield. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities.' },
+      { question: 'Why is this priced higher than nearby local builders?', answer: 'Godrej Properties is a trusted, SEBI-listed national brand with a track record of over 50 delivered projects. The premium reflects superior construction quality, modern amenities, community living standards, and the assurance of timely delivery backed by RERA compliance.' },
+      { question: 'What if the project gets delayed?', answer: 'As a reputed, SEBI-listed developer, delays are rare with Godrej Properties. Under RERA regulations, buyers are entitled to compensation in the event of project delays beyond the registered possession date. The RERA number and certificate are publicly verifiable on the Karnataka RERA portal.' },
+      { question: 'Is the 1% plan really beneficial?', answer: 'Yes. The 1% Plan significantly reduces monthly financial outflow during the construction period. For a 2 BHK at Godrej Parkshire, the monthly payment is approximately ₹1.30 lakh, comparable to a rent payment in many Bengaluru neighbourhoods, while the bulk of the payment is deferred until construction milestones are achieved. This improves cash flow flexibility and allows buyers to plan finances around a predictable outflow schedule.' },
+      // Closing-Oriented FAQs
+      { question: 'What is the best unit available now?', answer: 'Premium-facing units (park view and corner units) are currently in high demand and offer better long-term value. Contact the project marketing office for the latest availability and unit options.' },
+      { question: 'Are there any current offers?', answer: 'Yes. The 1% Payment Plan is the current flagship offer, allowing buyers to pay just 1% of the Agreement Value per month during construction after the initial booking amount.' },
+      { question: 'How do I block a unit?', answer: 'A unit can be blocked with a token amount of 5% of the Agreement Value. The second instalment of 5% is due within 15 days, and the remaining 10% is due within 45 days of booking. Contact the project marketing office for current availability.' },
+    ],
+    faqsByCategory: [
+      {
+        category: 'General Project FAQs',
+        items: [
+          { question: 'Where exactly is the project located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka, 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
+          { question: 'Who is the developer?', answer: 'The project is developed by Godrej Properties, one of India\'s most trusted real estate brands, listed on the NSE and BSE with a track record of over 50 delivered projects across India.' },
+          { question: 'Is the project RERA approved?', answer: 'Yes. Godrej Parkshire is RERA registered under number PRM/KA/RERA/1250/304/PR/090126/008393, verifiable on the Karnataka RERA portal at rera.karnataka.gov.in.' },
+          { question: 'What is the possession timeline?', answer: 'The RERA-registered possession timeline is December 2030. Godrej Properties targets possession by December 2029.' },
+          { question: 'What configurations are available?', answer: 'Four configurations are available: 2 BHK Premium (1,095 sq.ft. SBU), 2 BHK Luxe (1,228 sq.ft. SBU), 3 BHK Premium (1,634 sq.ft. SBU), and 3 BHK Luxe (1,750 sq.ft. SBU).' },
+        ],
+      },
+      {
+        category: 'Pricing and Costing',
+        items: [
+          { question: 'What is the starting price?', answer: 'Starting from ₹1.32 Cr onwards (inclusive of GST). Agreement Value starts from ₹1.25 Cr for the 2 BHK Premium configuration.' },
+          { question: 'What are the additional charges?', answer: 'Additional charges include GST (5% on Agreement Value), Preferential Location Charges (PLC), Floor Rise Charges (FRC), Advance Maintenance and Sinking Fund Charges, and Stamp Duty and Registration (SDR) of approximately 7.6 to 7.7%.' },
+          { question: 'Are there any hidden costs?', answer: 'No. There are no hidden charges. All applicable costs are disclosed upfront in the payment schedule and Agreement for Sale.' },
+        ],
+      },
+      {
+        category: '1% Payment Plan',
+        items: [
+          { question: 'What is the 1% payment plan?', answer: 'After an initial booking amount, buyers pay 1% of the Agreement Value (plus GST) each month during the construction period. For a 2 BHK unit at Godrej Parkshire, this works out to approximately ₹1,29,541 per month for 19 months (July 2026 through November 2027). Construction-linked milestones follow: 33% at terrace slab completion, 20% at Occupation Certificate, and 10% at notice of possession.' },
+          { question: 'Does the 1% include GST and registration?', answer: 'The 1% monthly payment includes 5% GST applied on the Agreement Value portion. Stamp Duty and Registration (SDR) charges of approximately 7.7% are separate and payable at the time of possession. They are not included in the monthly 1% payout.' },
+          { question: 'How much do I need to pay upfront?', answer: '10% of the Agreement Value plus GST is payable within the first 30 days (5% at booking + 5% within 15 days). An additional 10% of AV + GST is due within 45 days of booking, bringing the total initial outflow to 20% of AV + GST.' },
+          { question: 'When does the home loan EMI start?', answer: 'A home loan application can be initiated after the initial 10% payment (booking + 15-day instalment). The bank will process the loan and disbursals will follow the construction-linked schedule agreed with the developer.' },
+          { question: 'Can I prepay or exit the 1% plan?', answer: 'No. Under the current terms of the 1% Payment Plan, prepayment or early exit from the plan is not permitted. The payment schedule is as set out in the Agreement for Sale.' },
+        ],
+      },
+      {
+        category: 'Location and Connectivity',
+        items: [
+          { question: 'How far is Whitefield?', answer: 'Whitefield Main Road is approximately 20 to 22 minutes from Godrej Parkshire. Whitefield Metro Station (Namma Metro) and Whitefield Railway Station are both approximately 22 minutes away.' },
+          { question: 'Is metro connectivity available?', answer: 'Yes. Whitefield Metro Station on the Namma Metro Purple Line is approximately 22 minutes from the project. Planned metro expansion towards Hoskote is expected to further improve connectivity.' },
+          { question: 'How far is the airport?', answer: 'Kempegowda International Airport is approximately 40 to 50 minutes from Godrej Parkshire, depending on traffic conditions and route taken.' },
+        ],
+      },
+      {
+        category: 'Investment and Decision-Making',
+        items: [
+          { question: 'Is this a good investment?', answer: 'Yes. Hoskote is positioned as an early-entry market with significant upside potential, driven by rapid infrastructure growth in East Bengaluru (STRR, planned metro expansion), proximity to IT corridors including Whitefield and ITPL, and upcoming metro connectivity. Prices are currently 30 to 40% lower than core Whitefield, and the entry of branded developers like Godrej Properties signals the micro-market is transitioning from emerging to establishing.' },
+          { question: 'Who is this project ideal for?', answer: 'Godrej Parkshire is well suited for first-time homebuyers looking for quality homes at accessible price points, IT professionals working in Whitefield, ITPL, or the broader East Bengaluru tech corridor, and long-term investors seeking early-entry pricing in a high-growth micro-market.' },
+        ],
+      },
+      {
+        category: 'Construction and Quality',
+        items: [
+          { question: 'What is the current construction status?', answer: 'The project is currently under construction at the basement stage. Godrej Properties targets possession by December 2029, with the RERA deadline set at December 2030.' },
+        ],
+      },
+      {
+        category: 'Conflict Handling',
+        items: [
+          { question: 'Why should I buy in Hoskote instead of Whitefield?', answer: 'Hoskote offers larger homes at substantially lower prices while remaining within a 22-minute commute of Whitefield. With the Satellite Town Ring Road (STRR), Old Madras Road access, and planned metro connectivity, Hoskote is expected to see strong appreciation over the next 5 to 10 years. Buyers benefit from early-mover pricing with the construction quality and brand assurance of Godrej Properties.' },
+          { question: 'Isn\'t Hoskote too far or underdeveloped?', answer: 'Not anymore. Hoskote is seeing rapid infrastructure growth, including highway upgrades, the Satellite Town Ring Road (STRR), and planned Namma Metro connectivity via Whitefield. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities.' },
+          { question: 'Why is this priced higher than nearby local builders?', answer: 'Godrej Properties is a trusted, SEBI-listed national brand with a track record of over 50 delivered projects. The premium reflects superior construction quality, modern amenities, community living standards, and the assurance of timely delivery backed by RERA compliance.' },
+          { question: 'What if the project gets delayed?', answer: 'As a reputed, SEBI-listed developer, delays are rare with Godrej Properties. Under RERA regulations, buyers are entitled to compensation in the event of project delays beyond the registered possession date. The RERA number and certificate are publicly verifiable on the Karnataka RERA portal.' },
+          { question: 'Is the 1% plan really beneficial?', answer: 'Yes. The 1% Plan significantly reduces monthly financial outflow during the construction period. For a 2 BHK at Godrej Parkshire, the monthly payment is approximately ₹1.30 lakh, comparable to a rent payment in many Bengaluru neighbourhoods, while the bulk of the payment is deferred until construction milestones are achieved. This improves cash flow flexibility and allows buyers to plan finances around a predictable outflow schedule.' },
+        ],
+      },
+      {
+        category: 'Closing-Oriented',
+        items: [
+          { question: 'What is the best unit available now?', answer: 'Premium-facing units (park view and corner units) are currently in high demand and offer better long-term value. Contact the project marketing office for the latest availability and unit options.' },
+          { question: 'Are there any current offers?', answer: 'Yes. The 1% Payment Plan is the current flagship offer, allowing buyers to pay just 1% of the Agreement Value per month during construction after the initial booking amount.' },
+          { question: 'How do I block a unit?', answer: 'A unit can be blocked with a token amount of 5% of the Agreement Value. The second instalment of 5% is due within 15 days, and the remaining 10% is due within 45 days of booking. Contact the project marketing office for current availability.' },
+        ],
+      },
     ],
     legalDisclaimers: 'RERA Registration: PRM/KA/RERA/1250/304/PR/090126/008393, available at website: http://rera.karnataka.gov.in. Site Address: Godrej Parkshire, SY NO 36/1, 36/2, 36/3, 36/4A1, 36/4A2, 36/4B1, 36/4B2, 36/5, 36/6, 36/7, 36/8, 36/9, 66/1, 66/2, 66/3, 67/1A1, 67/1A2, 67/1A3, 67/1B1, 67/1B2, 67/1B3, 67/2, 67/3, 67/4, 68/1, 68/2, 68/3, 68/4 AND 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka — 562114. The project is registered as Godrej Parkshire. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Do not rely on information provided on any other website. The sale is subject to the terms of the application form, allotment letter, and Agreement for Sale. The specifications and amenities mentioned in the Agreement for Sale and/or uploaded on the Karnataka RERA website are final and binding on the Developer and Purchaser. Recipients are advised to verify all relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Refer to payment terms as mentioned in the Agreement for Sale. The offer is at the sole discretion of the developer and is available for a limited time period. Date of publication: 14 April 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-parkshire',
