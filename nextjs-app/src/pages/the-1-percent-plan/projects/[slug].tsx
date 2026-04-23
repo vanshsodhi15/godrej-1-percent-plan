@@ -136,22 +136,17 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           ========================================== */}
       <section
         className="project-hero"
-        style={{
-          background: 'var(--bg-seashell)',
-          color: 'var(--color-heading)',
-          padding: '3.5rem 2rem 3rem',
-          textAlign: 'center',
-        }}
       >
         <img
           src="/assets/1_percent_logo.png"
           alt="The 1% Plan Logo"
           className="hero-logo"
+          style={{ filter: 'brightness(0) invert(1)' }}
         />
         <h1 style={{ maxWidth: '900px', margin: '0 auto', fontSize: '2rem' }}>
           {project.name} — 1% Payment Plan
         </h1>
-        <p style={{ marginTop: '0.5rem', color: 'var(--color-muted)', marginBottom: 0 }}>
+        <p style={{ marginTop: '0.5rem', marginBottom: 0 }}>
           {project.microLocation}, {project.city}, {project.state}
         </p>
       </section>
@@ -349,19 +344,76 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             </li>
           </ol>
 
-          <div className="card card-warm">
-            <h3>Demo Illustration — {project.name}</h3>
-            <p>
-              Indicative Agreement Value used for this example:{' '}
-              <strong>₹ {ex.indicativeAgreementValueCr} Cr</strong>
-              {ex.totalCostForCustomer && <> | Total Cost to Customer: <strong>{ex.totalCostForCustomer}</strong></>}
-              {ex.totalAgreementValue && <> | Total Agreement Value: <strong>{ex.totalAgreementValue}</strong></>}
-              . Figures are illustrative; the Agreement for Sale governs the final payment schedule for each unit.
+          <div style={{
+            background: 'linear-gradient(135deg, var(--bg-seashell) 0%, var(--bg-warm) 100%)',
+            borderRadius: '16px',
+            padding: '2.5rem',
+            border: '1px solid var(--border-light)',
+            boxShadow: 'var(--shadow-md)',
+            position: 'relative',
+            overflow: 'hidden',
+          }}>
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '4px',
+              height: '100%',
+              background: 'linear-gradient(to bottom, var(--accent-gold), var(--accent-gold-dark))',
+              borderRadius: '16px 0 0 16px',
+            }} />
+            <h3 style={{ marginTop: 0, fontSize: '1.25rem' }}>Demo Illustration — {project.name}</h3>
+
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '1rem',
+              marginTop: '1rem',
+              marginBottom: '1.5rem',
+            }}>
+              <div style={{
+                flex: '1 1 200px',
+                background: 'var(--bg-white)',
+                borderRadius: '10px',
+                padding: '1rem 1.25rem',
+                border: '1px solid var(--border-light)',
+              }}>
+                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-muted)' }}>Indicative AV</span>
+                <p style={{ marginBottom: 0, fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-heading)' }}>₹ {ex.indicativeAgreementValueCr} Cr</p>
+              </div>
+              {ex.totalAgreementValue && (
+                <div style={{
+                  flex: '1 1 200px',
+                  background: 'var(--bg-white)',
+                  borderRadius: '10px',
+                  padding: '1rem 1.25rem',
+                  border: '1px solid var(--border-light)',
+                }}>
+                  <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-muted)' }}>Total Agreement Value</span>
+                  <p style={{ marginBottom: 0, fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-heading)' }}>{ex.totalAgreementValue}</p>
+                </div>
+              )}
+              {ex.totalCostForCustomer && (
+                <div style={{
+                  flex: '1 1 200px',
+                  background: 'var(--bg-white)',
+                  borderRadius: '10px',
+                  padding: '1rem 1.25rem',
+                  border: '1px solid var(--border-light)',
+                }}>
+                  <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-muted)' }}>Total Cost to Customer</span>
+                  <p style={{ marginBottom: 0, fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-heading)' }}>{ex.totalCostForCustomer}</p>
+                </div>
+              )}
+            </div>
+
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', marginBottom: '0.5rem' }}>
+              Figures are illustrative; the Agreement for Sale governs the final payment schedule for each unit.
             </p>
 
             {/* Detailed milestone table (when full data is available) */}
             {ex.milestones && ex.milestones.length > 0 ? (
-              <div className="table-wrapper" style={{ marginTop: '1rem' }}>
+              <div className="table-wrapper" style={{ marginTop: '1rem', borderRadius: '12px' }}>
                 <table>
                   <thead>
                     <tr>
@@ -372,14 +424,26 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                     </tr>
                   </thead>
                   <tbody>
-                    {ex.milestones.map((m, i) => (
-                      <tr key={i}>
-                        <td>{m.stage}</td>
-                        <td>{m.percentage}</td>
-                        <td>{m.amount}</td>
-                        <td style={{ fontSize: '0.875rem', color: 'var(--color-muted)' }}>{m.logic}</td>
-                      </tr>
-                    ))}
+                    {ex.milestones.map((m, i) => {
+                      let rowClass = '';
+                      if (m.stage.includes('Booking') || m.stage.includes('15 days') || m.stage.includes('45 days')) {
+                        rowClass = 'milestone-phase-initial';
+                      } else if (m.percentage === '1%') {
+                        rowClass = 'milestone-phase-monthly';
+                      } else if (m.stage.includes('Terrace') || m.stage.includes('Occupation') || m.stage.includes('Possession')) {
+                        rowClass = 'milestone-phase-construction';
+                      } else if (m.stage.includes('Maintenance') || m.stage.includes('Fund')) {
+                        rowClass = 'milestone-phase-other';
+                      }
+                      return (
+                        <tr key={i} className={rowClass}>
+                          <td>{m.stage}</td>
+                          <td><strong>{m.percentage}</strong></td>
+                          <td><strong>{m.amount}</strong></td>
+                          <td style={{ fontSize: '0.8125rem', color: 'var(--color-muted)' }}>{m.logic}</td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
@@ -425,10 +489,19 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             )}
 
             {ex.additionalSdrNote && (
-              <p style={{ marginTop: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>{ex.additionalSdrNote}</p>
+              <p style={{
+                marginTop: '1rem',
+                fontWeight: 600,
+                color: 'var(--color-heading)',
+                background: 'rgba(200, 178, 119, 0.1)',
+                padding: '0.75rem 1rem',
+                borderRadius: '8px',
+                border: '1px solid rgba(200, 178, 119, 0.25)',
+                fontSize: '0.9375rem',
+              }}>{ex.additionalSdrNote}</p>
             )}
 
-            <p style={{ marginTop: '1rem', marginBottom: 0, fontStyle: 'italic' }}>{ex.notes}</p>
+            <p style={{ marginTop: '1rem', marginBottom: 0, fontStyle: 'italic', fontSize: '0.875rem', color: 'var(--color-muted)', lineHeight: 1.7 }}>{ex.notes}</p>
           </div>
 
           <p style={{ marginTop: '1.5rem' }}>

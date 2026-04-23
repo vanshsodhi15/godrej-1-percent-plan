@@ -136,6 +136,16 @@ h2 {
   position: relative;
 }
 
+.section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
 .breadcrumbs {
   font-size: 0.8125rem;
   color: var(--color-muted);
@@ -263,17 +273,48 @@ strong {
   display: block;
 }
 
+.project-hero {
+  background: linear-gradient(135deg, #27262e 0%, #3a3845 50%, #27262e 100%);
+  color: var(--color-white) !important;
+  padding: 4rem 2rem 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 30% 0%, rgba(200, 178, 119, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.project-hero h1 {
+  color: var(--color-white);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.project-hero p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* ===========================
    SUMMARY / HIGHLIGHT BOX
    =========================== */
 .summary-card {
-  background: var(--bg-seashell);
+  background: linear-gradient(135deg, var(--bg-seashell) 0%, var(--bg-warm) 100%);
   color: var(--color-white);
   padding: 2rem 2.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 3rem;
   position: relative;
   border-left: 4px solid var(--accent-gold);
+  box-shadow: var(--shadow-sm);
 }
 
 .summary-card p {
@@ -302,9 +343,10 @@ strong {
 .card {
   background: var(--bg-white);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid var(--border-light);
   transition: all var(--duration) var(--ease);
+  box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
@@ -325,6 +367,7 @@ strong {
 
 .card-accent {
   border-left: 3px solid var(--accent-gold);
+  background: linear-gradient(to right, rgba(200, 178, 119, 0.04), var(--bg-white));
 }
 
 .card-warm {
@@ -337,11 +380,12 @@ strong {
    =========================== */
 .table-wrapper {
   background: var(--bg-white);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   border: 1px solid var(--border-light);
   margin: 2rem 0;
+  box-shadow: var(--shadow-sm);
 }
 
 table {
@@ -357,12 +401,21 @@ th, td {
 }
 
 th {
-  background-color: var(--bg-dark);
+  background: linear-gradient(135deg, #27262e 0%, #3a3845 100%);
   color: var(--color-white);
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 0.875rem 1.25rem;
+}
+
+th:first-child {
+  border-radius: 11px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 11px 0 0;
 }
 
 tr:last-child td {
@@ -373,8 +426,33 @@ tbody tr {
   transition: background var(--duration) var(--ease);
 }
 
-tbody tr:hover {
+tbody tr:nth-child(even) {
   background-color: var(--bg-seashell);
+}
+
+tbody tr:hover {
+  background-color: var(--bg-warm-light);
+}
+
+/* Milestone phase highlights */
+.milestone-phase-initial td {
+  background: rgba(200, 178, 119, 0.08);
+  font-weight: 500;
+}
+
+.milestone-phase-monthly td {
+  font-size: 0.875rem;
+  color: var(--color-body);
+}
+
+.milestone-phase-construction td {
+  background: rgba(39, 38, 46, 0.04);
+  font-weight: 600;
+}
+
+.milestone-phase-other td {
+  font-style: italic;
+  color: var(--color-muted);
 }
 
 /* ===========================
@@ -486,14 +564,24 @@ input:focus, select:focus {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--accent-gold-dark);
-  margin: 0 0 0.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--accent-gold);
+  margin: 0 0 0.25rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(to right, rgba(200, 178, 119, 0.12), transparent);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 0 8px 8px 0;
 }
 
 .faq-item {
   border-bottom: 1px solid var(--border-light);
   padding: 1.25rem 0;
+  transition: background var(--duration) var(--ease);
+}
+
+.faq-item:hover {
+  background: var(--bg-seashell);
+  margin: 0 -1rem;
+  padding: 1.25rem 1rem;
+  border-radius: 8px;
 }
 
 .faq-item h3,
@@ -507,6 +595,7 @@ input:focus, select:focus {
   margin: 0;
   color: var(--color-muted);
   font-size: 0.9375rem;
+  line-height: 1.7;
 }
 
 /* ===========================
