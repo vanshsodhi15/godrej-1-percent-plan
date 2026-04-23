@@ -225,10 +225,19 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             </ul>
           )}
 
-          {/* Micro-market notes */}
           <div className="card card-warm" style={{ marginTop: '2rem' }}>
             <h3 style={{ marginTop: 0 }}>Micro-Market Understanding</h3>
-            <p style={{ marginBottom: 0 }}>{project.microMarketNotes}</p>
+            <ul style={{ marginLeft: '1.25rem', marginBottom: 0 }}>
+              {project.microMarketNotes.split('. ').map((sentence, idx, arr) => {
+                const text = idx === arr.length - 1 ? sentence : sentence + '.';
+                if (!text.trim()) return null;
+                return (
+                  <li key={idx} style={{ listStyle: 'disc', marginBottom: '0.75rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>
+                    {text}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </section>
@@ -252,7 +261,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   <img
                     src={fp.src}
                     alt={fp.alt}
-                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                    style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'contain', display: 'block', margin: '0 auto' }}
                   />
                 </div>
               ))}
