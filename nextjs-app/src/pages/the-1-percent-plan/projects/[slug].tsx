@@ -222,17 +222,100 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 
           <div className="card card-warm" style={{ marginTop: '2rem' }}>
             <h3 style={{ marginTop: 0 }}>Micro-Market Understanding</h3>
-            <ul style={{ marginLeft: '1.25rem', marginBottom: 0 }}>
-              {project.microMarketNotes.split('. ').map((sentence, idx, arr) => {
-                const text = idx === arr.length - 1 ? sentence : sentence + '.';
-                if (!text.trim()) return null;
-                return (
-                  <li key={idx} style={{ listStyle: 'disc', marginBottom: '0.75rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>
-                    {text}
-                  </li>
-                );
-              })}
-            </ul>
+            {project.microMarketSections && project.microMarketSections.length > 0 ? (
+              <div>
+                {project.microMarketSections.map((section, si) => (
+                  <div key={si} style={{ marginTop: si === 0 ? '1rem' : '2rem' }}>
+                    <h4 style={{ fontSize: '1.0625rem', fontWeight: 700, color: 'var(--accent-gold-dark)', marginBottom: '0.5rem', marginTop: 0 }}>
+                      {section.heading}
+                    </h4>
+
+                    {section.intro && (
+                      <p style={{ fontSize: '0.9375rem', color: 'var(--color-primary)', marginBottom: '0.75rem' }}>{section.intro}</p>
+                    )}
+
+                    {section.bullets && (
+                      <ul style={{ marginLeft: '1.25rem', marginBottom: '0.75rem' }}>
+                        {section.bullets.map((b, bi) => (
+                          <li key={bi} style={{ listStyle: 'disc', marginBottom: '0.35rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>{b}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {section.takeaway && (
+                      <p style={{ fontSize: '0.9375rem', fontWeight: 600, color: 'var(--color-heading)', marginBottom: '0.5rem' }}>
+                        {section.takeaway}
+                      </p>
+                    )}
+
+                    {section.quote && (
+                      <blockquote style={{
+                        borderLeft: '3px solid var(--accent-gold)',
+                        paddingLeft: '1rem',
+                        margin: '0.75rem 0',
+                        fontStyle: 'italic',
+                        fontWeight: 600,
+                        color: 'var(--color-heading)',
+                        fontSize: '1rem',
+                      }}>
+                        &ldquo;{section.quote}&rdquo;
+                      </blockquote>
+                    )}
+
+                    {section.subsections && section.subsections.map((sub, subi) => (
+                      <div key={subi} style={{
+                        marginTop: '1rem',
+                        marginLeft: '0.5rem',
+                        paddingLeft: '1rem',
+                        borderLeft: '2px solid var(--border-light)',
+                      }}>
+                        <h5 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--color-heading)', marginTop: 0, marginBottom: '0.35rem' }}>
+                          {sub.heading}
+                        </h5>
+                        {sub.intro && (
+                          <p style={{ fontSize: '0.9375rem', color: 'var(--color-body)', marginBottom: '0.5rem' }}>{sub.intro}</p>
+                        )}
+                        {sub.bullets && (
+                          <ul style={{ marginLeft: '1.25rem', marginBottom: '0.5rem' }}>
+                            {sub.bullets.map((b, bi) => (
+                              <li key={bi} style={{ listStyle: 'disc', marginBottom: '0.25rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>{b}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {sub.takeaway && (
+                          <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--accent-gold-dark)', marginBottom: 0 }}>
+                            {sub.takeaway}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+
+                    {section.comparisons && section.comparisons.map((comp, ci) => (
+                      <div key={ci} style={{ marginTop: '0.75rem' }}>
+                        <p style={{ fontWeight: 600, color: 'var(--color-heading)', marginBottom: '0.35rem', fontSize: '0.9375rem' }}>{comp.label}:</p>
+                        <ul style={{ marginLeft: '1.25rem', marginBottom: '0.5rem' }}>
+                          {comp.bullets.map((b, bi) => (
+                            <li key={bi} style={{ listStyle: 'disc', marginBottom: '0.25rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>{b}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ul style={{ marginLeft: '1.25rem', marginBottom: 0 }}>
+                {project.microMarketNotes.split('. ').map((sentence, idx, arr) => {
+                  const text = idx === arr.length - 1 ? sentence : sentence + '.';
+                  if (!text.trim()) return null;
+                  return (
+                    <li key={idx} style={{ listStyle: 'disc', marginBottom: '0.75rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>
+                      {text}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </div>
         </div>
       </section>

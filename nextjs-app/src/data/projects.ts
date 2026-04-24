@@ -21,6 +21,23 @@ export interface FaqGroup {
   items: FaqItem[];
 }
 
+export interface MicroMarketSubsection {
+  heading: string;
+  intro?: string;
+  bullets?: string[];
+  takeaway?: string;
+}
+
+export interface MicroMarketSection {
+  heading: string;
+  intro?: string;
+  bullets?: string[];
+  subsections?: MicroMarketSubsection[];
+  takeaway?: string;
+  quote?: string;
+  comparisons?: { label: string; bullets: string[] }[];
+}
+
 export interface LocationAdvantageGroup {
   category: string;
   items: string[];
@@ -90,6 +107,7 @@ export interface Project {
   locationAdvantagesByCategory?: LocationAdvantageGroup[];
   // Section 7 — Micro-market understanding
   microMarketNotes: string;
+  microMarketSections?: MicroMarketSection[];
   // Section 8 — Sales / pre-sales FAQs (incl. conflict-handling)
   faqs: FaqItem[];
   faqsByCategory?: FaqGroup[];
@@ -624,6 +642,97 @@ export const projects: Project[] = [
       },
     ],
     microMarketNotes: 'Hoskote is an emerging high-potential residential corridor in East Bengaluru, positioned between Whitefield and key industrial zones. Traditionally an industrial hub, Hoskote is now transitioning towards organised residential development, driven by three factors. First, the Whitefield spillover effect: with Whitefield reaching saturation in pricing and density, buyers are moving outward in search of affordable alternatives, and Hoskote is within a 20–25 minute commute. Second, industrial and employment demand: the presence of the Hoskote Industrial Area, KIADB zones, logistics hubs, and growing warehousing activity creates a self-sustaining economic base that supports consistent rental and workforce-driven housing demand. Third, infrastructure-led appreciation: the Satellite Town Ring Road (STRR), Old Madras Road (NH 75), planned Namma Metro connectivity via Whitefield, and improved airport access are expected to unlock significant land value appreciation over the next 5–10 years. Hoskote is currently 30–40% more affordable than core Whitefield, offering larger homes at lower ticket sizes, positioned as an early-entry market with future upside potential. The entry of branded developers like Godrej Properties marks a shift from plotted developments to integrated apartment communities, indicating the micro-market is transitioning from "emerging" to "establishing." Compared to Whitefield, Hoskote offers lower prices with higher appreciation potential at a slightly longer commute. Compared to the Budigere / Old Madras Road belt, Hoskote has stronger industrial demand, better price entry points, and faster land absorption. The primary buyer profile includes first-time homebuyers, salaried IT professionals working in Whitefield or ITPL, industrial mid-management employees, and long-term investors seeking appreciation.',
+    microMarketSections: [
+      {
+        heading: 'Market Overview',
+        intro: 'Hoskote is emerging as a high-potential residential corridor in East Bangalore, driven by its strategic location between Whitefield and key industrial zones. Traditionally known as an industrial hub, Hoskote is now witnessing a shift towards organized residential development, making it attractive for both end-users and long-term investors.',
+      },
+      {
+        heading: 'Growth Story',
+        intro: 'The growth of Hoskote is anchored on three key pillars:',
+        subsections: [
+          {
+            heading: '1. Whitefield Spillover Effect',
+            intro: 'With Whitefield reaching saturation in terms of pricing and density:',
+            bullets: [
+              'Buyers are moving outward in search of affordable alternatives',
+              'Hoskote offers significantly lower entry prices',
+              'Travel time remains within 20\u201325 minutes, making it a viable residential option',
+            ],
+            takeaway: 'This creates a strong end-user demand pipeline',
+          },
+          {
+            heading: '2. Industrial & Employment Backbone',
+            intro: 'Hoskote is not just a residential extension\u2014it has a self-sustaining economic base:',
+            bullets: [
+              'Presence of Hoskote Industrial Area',
+              'Proximity to KIADB zones and logistics hubs',
+              'Growing warehousing and manufacturing activity',
+            ],
+            takeaway: 'This ensures consistent rental demand and workforce-driven housing needs',
+          },
+          {
+            heading: '3. Infrastructure-Led Appreciation',
+            intro: 'Upcoming and existing infrastructure is a major catalyst:',
+            bullets: [
+              'Satellite Town Ring Road (STRR) improving regional connectivity',
+              'Access to Old Madras Road (NH 75)',
+              'Connectivity to Namma Metro via Whitefield',
+              'Improved access to Kempegowda International Airport',
+            ],
+            takeaway: 'Infrastructure expansion is expected to unlock land value appreciation over the next 5\u201310 years',
+          },
+        ],
+      },
+      {
+        heading: 'Price Positioning Advantage',
+        bullets: [
+          'Hoskote is currently 30\u201340% more affordable than core Whitefield',
+          'Offers larger homes at lower ticket sizes',
+          'Ideal for first-time homebuyers and budget-conscious IT professionals',
+        ],
+        quote: 'Early-entry market with future upside potential',
+      },
+      {
+        heading: 'Buyer Profile',
+        bullets: [
+          'First-time homebuyers',
+          'Salaried professionals working in Whitefield / ITPL',
+          'Industrial workforce (mid-management & above)',
+          'Long-term investors looking for appreciation',
+        ],
+      },
+      {
+        heading: 'Developer Activity & Market Maturity',
+        bullets: [
+          'Increasing entry of branded developers like Godrej Properties',
+          'Shift from plotted developments to integrated apartment communities',
+          'Gradual improvement in social infrastructure (schools, hospitals, retail)',
+        ],
+        takeaway: 'Indicates transition from "emerging" to "establishing" micro-market',
+      },
+      {
+        heading: 'Competitive Landscape',
+        comparisons: [
+          {
+            label: 'Compared to Whitefield',
+            bullets: [
+              'Lower price',
+              'Slightly longer commute',
+              'Higher appreciation potential',
+            ],
+          },
+          {
+            label: 'Compared to Budigere / Old Madras Road belt',
+            bullets: [
+              'More industrial demand',
+              'Better price entry',
+              'Faster land absorption',
+            ],
+          },
+        ],
+      },
+    ],
     faqs: [
       // General Project FAQs
       { question: 'Where exactly is the project located?', answer: 'Godrej Parkshire is located in Hoskote, East Bengaluru, next to NH-648. The site address is Survey Nos. 36/1 to 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka, 562114. It offers convenient access to major IT hubs, including Whitefield (22 minutes) and ITPL (25 minutes).' },
