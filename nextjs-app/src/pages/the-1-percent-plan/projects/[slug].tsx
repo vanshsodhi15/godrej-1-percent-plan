@@ -24,8 +24,8 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (ctx) => {
 
 export default function ProjectPage({ project }: ProjectPageProps) {
   const canonical = `https://www.godrejproperties.com/the-1-percent-plan/projects/${project.slug}`;
-  const title = `${project.name} 1% Plan: Payment breakdown, RERA, possession & FAQs`;
-  const desc = `How the Godrej 1% Payment Plan applies to ${project.name}, ${project.city}: Q1 + monthly 1% calculation, RERA ${project.rera}, possession timeline, and project FAQs.`;
+  const title = `${project.name} — Godrej 1% Payment Plan | RERA, Possession & FAQs`;
+  const desc = `${project.name}, ${project.city} — eligible under the Godrej 1% Payment Plan. RERA ${project.rera}, possession timeline, project details, and FAQs.`;
 
   // Schema 1 — ApartmentComplex (project entity)
   const apartmentSchema = JSON.stringify({
@@ -60,7 +60,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     priceSpecification: {
       '@type': 'PriceSpecification',
       description:
-        'Initial 20% within Q1 + 1% of Agreement Value monthly until next construction milestone + balance at OC. APR disclosed at 8.5%.',
+        'Eligible under the Godrej 1% Payment Plan. Refer to the project page for payment schedule details.',
     },
     itemOffered: { '@type': 'ApartmentComplex', name: project.name },
   });
@@ -163,10 +163,8 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               <p>
                 <strong>{project.name}</strong> is a {project.type.toLowerCase()} project by{' '}
                 <strong>{project.developer}</strong> in {project.microLocation}, {project.city}.
-                Under the <strong>Godrej 1% Plan</strong>, buyers pay 20% of the Agreement Value within Q1,
-                followed by <strong>1% monthly</strong> until the next construction-linked milestone, with the
-                balance due at <strong>Occupation Certificate (OC)</strong>. The plan operates at a disclosed
-                APR of <strong>8.5%</strong>. RERA: <strong>{project.rera}</strong>.
+                This project is eligible under the <strong>Godrej 1% Payment Plan</strong>.
+                RERA: <strong>{project.rera}</strong>.
               </p>
             </div>
 
