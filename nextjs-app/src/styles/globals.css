@@ -255,7 +255,8 @@ strong {
   animation: fadeInSoft 0.6s var(--ease) forwards;
 }
 
-.hero-dark {
+.hero-dark,
+.project-hero {
   background: var(--bg-dark);
   color: var(--color-white);
   padding: 4rem 2rem 3rem;
@@ -263,7 +264,8 @@ strong {
   animation: fadeInSoft 0.6s var(--ease) forwards;
 }
 
-.hero-dark h1 {
+.hero-dark h1,
+.project-hero h1 {
   color: var(--color-white);
 }
 
@@ -676,7 +678,7 @@ input:focus, select:focus {
   h3 { font-size: 1.0625rem; }
   .container, .content-container { padding: 2rem 1rem; }
   .header-container { padding: 0 1rem; }
-  .hero, .hero-dark { padding: 3rem 1rem 2rem; }
+  .hero, .hero-dark, .project-hero { padding: 3rem 1rem 2rem; }
   .hero-logo { max-width: 140px; margin-bottom: 1.5rem; }
   .calculator-panel { padding: 1.5rem 1rem; }
   .grid-container { grid-template-columns: 1fr !important; }
