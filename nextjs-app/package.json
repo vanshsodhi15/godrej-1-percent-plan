@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/package-deliverables.js",
+    "postbuild": "node scripts/flatten-deliverables.js",
     "start": "next start",
     "lint": "eslint"
   },
