@@ -1,4 +1,4 @@
-# Godrej 1% Plan — GEO Campaign Workspace
+# Godrej 1% Plan — GEO Campaign Workspace Repository
 
 This is the working folder for the Godrej Properties 1% Plan Generative Engine Optimization (GEO) campaign. Everything you need to deliver the 5 scoped items lives here.
 

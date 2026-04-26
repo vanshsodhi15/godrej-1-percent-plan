@@ -15,7 +15,7 @@ export default function Layout({ children }: LayoutProps) {
       {/* Header — matches godrejproperties.com sticky header */}
       <header className="main-header">
         <div className="header-container">
-          <a href="https://www.godrejproperties.com" className="logo-container" aria-label="Godrej Properties Home">
+          <a href="/" className="logo-container" aria-label="Godrej Properties Home">
             <img src="/assets/godrej_properties_logo.svg" alt="Godrej Properties" />
           </a>
         </div>
