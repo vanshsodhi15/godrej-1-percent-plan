@@ -89,7 +89,6 @@ htmlFiles.forEach((htmlPath) => {
 
   // --- 1. Extract and copy CSS files, rewrite paths ---
   const cssRefs = new Set();
-  // Match href="/_next/...*.css"
   html = html.replace(/href="(\/_next\/[^"]+\.css)"/g, (match, ref) => {
     const fileName = path.basename(ref);
     cssRefs.add(ref);
@@ -109,7 +108,6 @@ htmlFiles.forEach((htmlPath) => {
 
   // --- 2. Extract and copy JS files, rewrite paths ---
   const jsRefs = new Set();
-  // Match src="/_next/...*.js"
   html = html.replace(/src="(\/_next\/[^"]+\.js)"/g, (match, ref) => {
     const fileName = path.basename(ref);
     jsRefs.add(ref);
@@ -124,7 +122,6 @@ htmlFiles.forEach((htmlPath) => {
 
   // --- 3. Copy images from /assets/ to imgs/, rewrite paths ---
   const imgRefs = new Set();
-  // Match src="/assets/..." and href="/assets/..."
   html = html.replace(/(src|href)="(\/assets\/([^"]+))"/g, (match, attr, fullRef, fileName) => {
     imgRefs.add({ fullRef, fileName });
     return `${attr}="imgs/${fileName}"`;
@@ -135,6 +132,13 @@ htmlFiles.forEach((htmlPath) => {
       fs.copyFileSync(src, path.join(pageDir, 'imgs', fileName));
     }
   });
+
+  // --- 3b. Copy favicon.ico and rewrite path ---
+  const faviconSrc = path.join(outDir, 'favicon.ico');
+  if (fs.existsSync(faviconSrc)) {
+    fs.copyFileSync(faviconSrc, path.join(pageDir, 'imgs', 'favicon.ico'));
+  }
+  html = html.replace(/href="\/favicon\.ico"/g, 'href="imgs/favicon.ico"');
 
   // --- 4. Write index.html ---
   fs.writeFileSync(path.join(pageDir, 'index.html'), html, 'utf8');

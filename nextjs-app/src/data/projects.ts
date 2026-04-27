@@ -58,28 +58,6 @@ export interface PaymentMilestone {
   logic: string;           // Explanation of how this is calculated
 }
 
-export interface MicroMarketSubsection {
-  heading: string;
-  intro?: string;
-  bullets?: string[];
-  takeaway?: string;
-}
-
-export interface MicroMarketSection {
-  heading: string;
-  intro?: string;
-  bullets?: string[];
-  quote?: string;
-  takeaway?: string;
-  subsections?: MicroMarketSubsection[];
-  comparisons?: { label: string; bullets: string[] }[];
-}
-
-export interface FaqGroup {
-  category: string;
-  items: FaqItem[];
-}
-
 export interface ProjectPaymentExample {
   title?: string;                           // e.g. "Tower 8 & Tower 9: 3 BHK Luxe" (for projects with multiple illustrations)
   indicativeAgreementValueCr: string;     // e.g. "1.20"
@@ -139,6 +117,11 @@ export interface Project {
   legalDisclaimers: string;
   // Existing live URL for this project (the marketing/sourcing page; we link out, never overwrite)
   liveProjectUrl: string;
+  // Lead-gen form credentials (only for projects with active enquiry integration)
+  leadGen?: {
+    projectId: string;   // Salesforce project code (projCode)
+    adCode: string;      // Campaign ad code (addCode)
+  };
 }
 
 const GPL = (label: string) => `[GPL_DATA: ${label}]`;
@@ -1084,6 +1067,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registered. RERA No: P02400009910; Project: Godrej Regal Pavilion, Survey No: 253/P, 254, 255, 256/P, 259/P, at Gagan Pahad, Rajendranagar, Ranga Reddy, 500052; Website: https://rera.telangana.gov.in/. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on the Telangana RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/hyderabad/godrej-regal-pavilion',
+    leadGen: { projectId: 'a1lId000000TOqGIAW', adCode: '106732' },
   },
   {
     id: 'GP-HYD-002',
@@ -1510,6 +1494,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registration: PRM/KA/RERA/1250/304/PR/090126/008393, available at website: http://rera.karnataka.gov.in. Site Address: Godrej Parkshire, SY NO 36/1, 36/2, 36/3, 36/4A1, 36/4A2, 36/4B1, 36/4B2, 36/5, 36/6, 36/7, 36/8, 36/9, 66/1, 66/2, 66/3, 67/1A1, 67/1A2, 67/1A3, 67/1B1, 67/1B2, 67/1B3, 67/2, 67/3, 67/4, 68/1, 68/2, 68/3, 68/4 AND 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka — 562114. The project is registered as Godrej Parkshire. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Do not rely on information provided on any other website. The sale is subject to the terms of the application form, allotment letter, and Agreement for Sale. The specifications and amenities mentioned in the Agreement for Sale and/or uploaded on the Karnataka RERA website are final and binding on the Developer and Purchaser. Recipients are advised to verify all relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Refer to payment terms as mentioned in the Agreement for Sale. The offer is at the sole discretion of the developer and is available for a limited time period. Date of publication: 14 April 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-parkshire',
+    leadGen: { projectId: 'a1le2000000AOHBAA4', adCode: '125474' },
   },
   {
     id: 'GP-BLR-002',
@@ -1756,32 +1741,6 @@ export const projects: Project[] = [
       // Rebuttals
       { question: 'If client\'s budget is less (rebuttal)?', answer: 'That is a very healthy budget sir however, the price of our inventory is XYZ, so I would like to know if you have a look at the location and the project and you find it value for money, would you like to extend your budget a little bit? (Talk about funding source).' },
       { question: 'If client asks for details on mobile or denies to visit?', answer: 'Sir being from the pre sales department of Godrej properties, I can send you limited details which you already might have received since you placed the enquiry, however when it comes to the final deal/cost sheet/unit availability, someone directly from the sales team at site can help you with it. The sooner you visit the better options you will have to choose from as we have received great response for the project, so may I know when would be the suitable time where I can arrange a visit for you?' },
-      // Details Sharing
-      { question: 'If customer asks details prior to discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details wherein pricing details won\'t be mentioned. It\'ll take hardly 3-5mins of your time so shall I continue?' },
-      { question: 'If customer asks details post discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details which I\'ve already shared to you over the call why don\'t you plan a visit along with your family I\'ll arrange an on table discussion for you with my sales manager wherein you\'ll get a fair idea regarding what exactly we\'re coming up with along with locality.' },
-      { question: 'If sharing details upfront?', answer: 'Post call you\'ll receive details over your mail ID from my sales manager Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-      { question: 'If customer asks to share details?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID, his name would be Mr. Ajit Shindey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-      { question: 'If customer asks to share details for pre-launch property?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID her name would be Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-      // Customer Response Scenarios
-      { question: 'Customer says "I\'m not interested" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry.' },
-      { question: 'Customer says "I\'m not interested" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier.' },
-      { question: 'Customer says "I\'m not interested" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier.' },
-      { question: 'Customer says "I don\'t have any plans" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry and we do have exciting offers.' },
-      { question: 'Customer says "I don\'t have any plans" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier and we do have exciting offers.' },
-      { question: 'Customer says "I don\'t have any plans" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier and we do have exciting offers.' },
-      { question: 'Customer says "I did not enquire"?', answer: 'We received an enquiry from this number, hence we called.' },
-      { question: 'Customer says "I am a Broker"?', answer: 'Sir, there is a specific team who caters brokers/channel partners. I\'ll ask them to contact you.' },
-      { question: 'Customer calling for Job opportunity?', answer: 'Sir, we provide property details. For job, kindly visit our website.' },
-      { question: 'Test Enquiry?', answer: 'I\'ll update the same.' },
-      { question: 'Wrong Number?', answer: 'We received an enquiry from this number, hence we called.' },
-      { question: 'Irrelevant Enquiry (Carpenter, land for sale, generic feedback etc)?', answer: 'Sir, we provide property details. For your query, kindly visit our website.' },
-      { question: 'Customer says "Call Back Later" (Fresh)?', answer: 'You had placed an enquiry hence we called. I will need a few mins of your time. I will just quickly brief you on the project.' },
-      { question: 'Customer says "Call Back Later" (VDNB)?', answer: 'You had visited our site earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-      { question: 'Customer says "Call Back Later" (EDNV)?', answer: 'You had expressed interest in our project earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-      { question: 'Customer already purchased?', answer: 'Are you looking for any other investment option? Is anyone from your friend or family looking to invest?' },
-      { question: 'Customer bought with competitor?', answer: 'Congratulations for the purchase! Can you share any feedback as in what was the reason you chose other project over ours?' },
-      { question: 'Language Barrier?', answer: 'I\'ll try to arrange a call in your preferred language.' },
-      { question: 'Lost Budget/Inventory not Available/Location/Specification Amenities/Price/Possession/Size of Apartments?', answer: 'Rebuttals as per the script or cross pitch (if option available).' },
     ],
     faqsByCategory: [
       {
@@ -1829,43 +1788,10 @@ export const projects: Project[] = [
           { question: 'If client asks for details on mobile or denies to visit?', answer: 'Sir being from the pre sales department of Godrej properties, I can send you limited details which you already might have received since you placed the enquiry, however when it comes to the final deal/cost sheet/unit availability, someone directly from the sales team at site can help you with it. The sooner you visit the better options you will have to choose from as we have received great response for the project, so may I know when would be the suitable time where I can arrange a visit for you?' },
         ],
       },
-      {
-        category: 'Details Sharing',
-        items: [
-          { question: 'If customer asks details prior to discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details wherein pricing details won\'t be mentioned. It\'ll take hardly 3-5mins of your time so shall I continue?' },
-          { question: 'If customer asks details post discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details which I\'ve already shared to you over the call why don\'t you plan a visit along with your family I\'ll arrange an on table discussion for you with my sales manager wherein you\'ll get a fair idea regarding what exactly we\'re coming up with along with locality.' },
-          { question: 'If sharing details upfront?', answer: 'Post call you\'ll receive details over your mail ID from my sales manager Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-          { question: 'If customer asks to share details?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID, his name would be Mr. Ajit Shindey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-          { question: 'If customer asks to share details for pre-launch property?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID her name would be Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-        ],
-      },
-      {
-        category: 'Customer Response Scenarios',
-        items: [
-          { question: 'Customer says "I\'m not interested" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry.' },
-          { question: 'Customer says "I\'m not interested" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier.' },
-          { question: 'Customer says "I\'m not interested" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier.' },
-          { question: 'Customer says "I don\'t have any plans" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry and we do have exciting offers.' },
-          { question: 'Customer says "I don\'t have any plans" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier and we do have exciting offers.' },
-          { question: 'Customer says "I don\'t have any plans" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier and we do have exciting offers.' },
-          { question: 'Customer says "I did not enquire"?', answer: 'We received an enquiry from this number, hence we called.' },
-          { question: 'Customer says "I am a Broker"?', answer: 'Sir, there is a specific team who caters brokers/channel partners. I\'ll ask them to contact you.' },
-          { question: 'Customer calling for Job opportunity?', answer: 'Sir, we provide property details. For job, kindly visit our website.' },
-          { question: 'Test Enquiry?', answer: 'I\'ll update the same.' },
-          { question: 'Wrong Number?', answer: 'We received an enquiry from this number, hence we called.' },
-          { question: 'Irrelevant Enquiry (Carpenter, land for sale, generic feedback etc)?', answer: 'Sir, we provide property details. For your query, kindly visit our website.' },
-          { question: 'Customer says "Call Back Later" (Fresh)?', answer: 'You had placed an enquiry hence we called. I will need a few mins of your time. I will just quickly brief you on the project.' },
-          { question: 'Customer says "Call Back Later" (VDNB)?', answer: 'You had visited our site earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-          { question: 'Customer says "Call Back Later" (EDNV)?', answer: 'You had expressed interest in our project earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-          { question: 'Customer already purchased?', answer: 'Are you looking for any other investment option? Is anyone from your friend or family looking to invest?' },
-          { question: 'Customer bought with competitor?', answer: 'Congratulations for the purchase! Can you share any feedback as in what was the reason you chose other project over ours?' },
-          { question: 'Language Barrier?', answer: 'I\'ll try to arrange a call in your preferred language.' },
-          { question: 'Lost Budget/Inventory not Available/Location/Specification Amenities/Price/Possession/Size of Apartments?', answer: 'Rebuttals as per the script or cross pitch (if option available).' },
-        ],
-      },
     ],
     legalDisclaimers: 'RERA Registered. RERA No. PRM/KA/RERA/1251/446/PR/300924/007105 Project is registered as Godrej Lakeside Orchard, available at website: http://rera.karnataka.gov.in. Site address: Godrej Lakeside Orchard, Survey Nos. 77, 174/1B, 175/P, 175/2A, 175/2B, 176/2A, 176/2B, 177, 73, 78/1A, 78/2A1(P), 78/2B, 78/3A, 78/4, 79/1C2, 178 of Kodathi Village Varthur Hobli, Bengaluru East, Bengaluru Urban, Karnataka \u2013 560035. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on Karnataka RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-lakeside-orchard',
+    leadGen: { projectId: 'a1lId000000TNV0IAO', adCode: '97478' },
   },
   {
     id: 'GP-BLR-003',
@@ -1893,6 +1819,7 @@ export const projects: Project[] = [
     faqs: defaultFaqs,
     legalDisclaimers: defaultLegal,
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-woods',
+    leadGen: { projectId: 'a1le200000004y5AAA', adCode: '115926' },
   },
   {
     id: 'GP-CHN-001',
@@ -2366,6 +2293,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registered. RERA No: TNRERA/35/BLG/0354/2025; Project: Godrej Azure, Survey Nos. 282, 283/1, 284/1, 284/2A, 281/1B1A, 281/1B2, 283/2 and 284/2B Padur Village, Tiruporur Taluk, Kancheepuram District and survey Nos. 222/2, 224/1, 224/2, 227/1A, 227/1B, 227/1C, 227/2A, 227/2B, 227/2C, 227/3, 225/1, 225/2, 226/1 and 226/2 Kazhipattur Village, Muttukadu Panchayat Union, Kancheepuram District. Website: https://rera.tn.gov.in. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on Karnataka RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/chennai/godrej-azure',
+    leadGen: { projectId: 'a1le20000000NflAAE', adCode: '124805' },
   },
   {
     id: 'GP-KOL-001',
@@ -2405,9 +2333,9 @@ export const projects: Project[] = [
     type: 'Residential',
     rera: 'P51900078358',
     reraPortal: 'https://maharera.maharashtra.gov.in',
-    reraCertificateLink: 'https://maharera.maharashtra.gov.in/project/P51900078358',
-    salesStatus: 'Sustenance',
-    constructionStatus: 'Under Construction',
+    reraCertificateLink: GPL('Direct certificate URL'),
+    salesStatus: GPL('Launch / Sustenance / Sold Out'),
+    constructionStatus: GPL('Stage'),
     pricing: defaultPricing,
     possessionRera: GPL('Month YYYY'),
     possessionGpl: GPL('Month YYYY'),
