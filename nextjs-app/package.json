@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/package-deliverables.js",
     "postbuild": "node scripts/flatten-deliverables.js",
     "start": "next start",
     "lint": "eslint"
