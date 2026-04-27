@@ -71,7 +71,7 @@ function buildLeadGenScript(lg, projectUrl) {
         '<label for="lgf-ph">Mobile *</label>'+
         '<div class="phone-row">'+
           '<select id="lgf-cc" aria-label="Country code">'+
-            '<option value="+91">\ud83c\udee8\ud83c\uddf3 +91</option>'+
+            '<option value="+91">\ud83c\uddee\ud83c\uddf3 +91</option>'+
             '<option value="+1">\ud83c\uddfa\ud83c\uddf8 +1</option>'+
             '<option value="+44">\ud83c\uddec\ud83c\udde7 +44</option>'+
             '<option value="+971">\ud83c\udde6\ud83c\uddea +971</option>'+
