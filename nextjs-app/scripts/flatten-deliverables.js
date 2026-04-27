@@ -4,6 +4,176 @@ const path = require('path');
 const outDir = path.join(__dirname, '../out');
 const deliverDir = path.join(__dirname, '../Deliverables_Flat');
 
+// Lead-gen credentials for the 5 active projects
+const LEAD_GEN = {
+  'godrej-woods':           { projectId: 'a1le200000004y5AAA', adCode: '115926', name: 'Godrej Woods' },
+  'godrej-regal-pavilion':  { projectId: 'a1lId000000TOqGIAW', adCode: '106732', name: 'Godrej Regal Pavilion' },
+  'godrej-parkshire':       { projectId: 'a1le2000000AOHBAA4', adCode: '125474', name: 'Godrej Parkshire' },
+  'godrej-lakeside-orchard':{ projectId: 'a1lId000000TNV0IAO', adCode: '97478',  name: 'Godrej Lakeside Orchard' },
+  'godrej-azure':           { projectId: 'a1le20000000NflAAE', adCode: '124805', name: 'Godrej Azure' },
+};
+
+// Self-contained vanilla JS lead-gen modal — no React/Next.js dependency
+function buildLeadGenScript(lg, projectUrl) {
+  return `<script>
+(function(){
+  var PROJ_ID="${lg.projectId}", AD_CODE="${lg.adCode}", PROJ_URL="${projectUrl}", PROJ_NAME="${lg.name.replace(/"/g,'&quot;')}";
+  var shown=false, open=false;
+
+  function injectStyles(){
+    var s=document.createElement('style');
+    s.textContent=[
+      '#lgf-pill{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;background:#27262e;color:#fff;border:none;border-radius:999px;padding:.75rem 1.25rem;cursor:pointer;font-size:.875rem;font-weight:600;font-family:inherit;box-shadow:0 4px 16px rgba(0,0,0,.25);display:none;align-items:center;gap:.5rem;letter-spacing:.02em;}',
+      '#lgf-modal{position:fixed;bottom:0;right:0;z-index:9999;width:100%;max-width:420px;background:#fff;box-shadow:0 -4px 40px rgba(0,0,0,.18);border-radius:16px 16px 0 0;padding:1.5rem;box-sizing:border-box;font-family:inherit;display:none;}',
+      '@media(max-width:480px){#lgf-modal{max-width:100%!important;}}',
+      '#lgf-modal label{display:block;font-size:.75rem;font-weight:600;color:#27262e;margin-bottom:.3rem;letter-spacing:.02em;}',
+      '#lgf-modal input,#lgf-modal select{width:100%;border:1px solid #e7e7e7;border-radius:4px;padding:.5rem .75rem;font-size:.9375rem;font-family:inherit;color:#141414;background:#fff;box-sizing:border-box;margin-bottom:.75rem;}',
+      '#lgf-modal .row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}',
+      '#lgf-modal .phone-row{display:flex;gap:.5rem;}',
+      '#lgf-modal .phone-row select{width:90px;flex:none;margin-bottom:0;}',
+      '#lgf-modal .phone-row input{flex:1;margin-bottom:.75rem;}',
+      '#lgf-submit{width:100%;background:#27262e;color:#fff;border:none;border-radius:4px;padding:.75rem;font-size:.9375rem;font-weight:600;font-family:inherit;cursor:pointer;letter-spacing:.03em;}',
+      '#lgf-submit:disabled{background:#828282;cursor:not-allowed;}',
+      '#lgf-error{color:#c0392b;font-size:.8125rem;margin-bottom:.75rem;background:#fdf2f2;padding:.5rem .75rem;border-radius:4px;border:1px solid #f5c6cb;display:none;}',
+      '#lgf-success{text-align:center;padding:1.5rem 0;}',
+      '#lgf-tag{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#948058;margin:0 0 .2rem;}',
+      '#lgf-title{font-size:1.0625rem;font-weight:600;color:#27262e;margin:0;line-height:1.3;}',
+      '#lgf-sub{font-size:.8125rem;color:#828282;margin:.25rem 0 1rem;}',
+      '#lgf-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;}',
+      '#lgf-close{background:none;border:none;font-size:1.25rem;cursor:pointer;color:#828282;line-height:1;padding:.25rem;margin-top:-.25rem;}',
+      '#lgf-note{font-size:.7rem;color:#828282;margin-top:.6rem;text-align:center;line-height:1.5;}'
+    ].join('');
+    document.head.appendChild(s);
+  }
+
+  function buildModal(){
+    var el=document.createElement('div');
+    el.id='lgf-modal';
+    el.setAttribute('role','dialog');
+    el.setAttribute('aria-modal','true');
+    el.setAttribute('aria-label','Enquiry form for '+PROJ_NAME);
+    el.innerHTML=
+      '<div id="lgf-header">'+
+        '<div>'+
+          '<p id="lgf-tag">Godrej Properties</p>'+
+          '<h2 id="lgf-title">'+PROJ_NAME+'</h2>'+
+          '<p id="lgf-sub">Get details, pricing &amp; callback</p>'+
+        '</div>'+
+        '<button id="lgf-close" aria-label="Close enquiry form">\u2715</button>'+
+      '</div>'+
+      '<div id="lgf-body">'+
+        '<div class="row">'+
+          '<div><label for="lgf-fn">First Name *</label><input id="lgf-fn" type="text" placeholder="John" required autocomplete="given-name"/></div>'+
+          '<div><label for="lgf-ln">Last Name *</label><input id="lgf-ln" type="text" placeholder="Doe" required autocomplete="family-name"/></div>'+
+        '</div>'+
+        '<label for="lgf-em">Email *</label>'+
+        '<input id="lgf-em" type="email" placeholder="john@example.com" required autocomplete="email"/>'+
+        '<label for="lgf-ph">Mobile *</label>'+
+        '<div class="phone-row">'+
+          '<select id="lgf-cc" aria-label="Country code">'+
+            '<option value="+91">\ud83c\uddee\ud83c\uddf3 +91</option>'+
+            '<option value="+1">\ud83c\uddfa\ud83c\uddf8 +1</option>'+
+            '<option value="+44">\ud83c\uddec\ud83c\udde7 +44</option>'+
+            '<option value="+971">\ud83c\udde6\ud83c\uddea +971</option>'+
+            '<option value="+65">\ud83c\uddf8\ud83c\uddec +65</option>'+
+          '</select>'+
+          '<input id="lgf-ph" type="tel" placeholder="9876543210" required autocomplete="tel-national"/>'+
+        '</div>'+
+        '<div id="lgf-error"></div>'+
+        '<button id="lgf-submit" type="button">Get a Callback</button>'+
+        '<p id="lgf-note">By submitting, you agree to be contacted by Godrej Properties. T&amp;C apply.</p>'+
+      '</div>'+
+      '<div id="lgf-success" style="display:none">'+
+        '<div style="font-size:2.5rem;margin-bottom:.75rem">\u2705</div>'+
+        '<h3 style="color:#27262e;margin:0 0 .5rem">Thank you!</h3>'+
+        '<p style="color:#828282;font-size:.9375rem;margin:0">A Godrej Properties advisor will reach out shortly.</p>'+
+        '<button onclick="closeModal()" style="margin-top:1.25rem;background:#27262e;color:#fff;border:none;border-radius:4px;padding:.6rem 1.5rem;cursor:pointer;font-family:inherit;font-weight:600;font-size:.875rem;">Close</button>'+
+      '</div>';
+    document.body.appendChild(el);
+
+    document.getElementById('lgf-close').addEventListener('click', closeModal);
+    document.getElementById('lgf-submit').addEventListener('click', submitForm);
+  }
+
+  function buildPill(){
+    var el=document.createElement('button');
+    el.id='lgf-pill';
+    el.setAttribute('aria-label','Open enquiry form');
+    el.innerHTML='\ud83d\udcac Enquire';
+    el.addEventListener('click', openModal);
+    document.body.appendChild(el);
+  }
+
+  function openModal(){
+    document.getElementById('lgf-modal').style.display='block';
+    document.getElementById('lgf-pill').style.display='none';
+    open=true;
+    var fn=document.getElementById('lgf-fn');
+    if(fn) setTimeout(function(){fn.focus();},50);
+  }
+
+  function closeModal(){
+    document.getElementById('lgf-modal').style.display='none';
+    if(shown){
+      var pill=document.getElementById('lgf-pill');
+      pill.style.display='flex';
+    }
+    open=false;
+  }
+
+  function submitForm(){
+    var fn=document.getElementById('lgf-fn').value.trim();
+    var ln=document.getElementById('lgf-ln').value.trim();
+    var em=document.getElementById('lgf-em').value.trim();
+    var ph=document.getElementById('lgf-ph').value.trim();
+    var cc=document.getElementById('lgf-cc').value;
+    var err=document.getElementById('lgf-error');
+
+    if(!fn||!ln||!em||!ph){err.textContent='Please fill in all required fields.';err.style.display='block';return;}
+    if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(em)){err.textContent='Please enter a valid email address.';err.style.display='block';return;}
+    err.style.display='none';
+
+    var btn=document.getElementById('lgf-submit');
+    btn.disabled=true;btn.textContent='Sending\u2026';
+
+    var payload={formData:{firstName:fn,lastName:ln,email:em,propertyType:'',dateTime:new Date().toISOString(),property:{projCode:PROJ_ID,addCode:AD_CODE,url:PROJ_URL},phone:ph,countryCode:cc,country:'India',optIn:'Yes',OrganicCampagnID:'',websiteName:PROJ_URL}};
+
+    fetch('https://www.godrejproperties.com/api/enquiry',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json, */*','Origin':'https://www.godrejproperties.com'},
+      body:JSON.stringify(payload)
+    }).then(function(r){
+      if(r.ok){
+        document.getElementById('lgf-body').style.display='none';
+        document.getElementById('lgf-success').style.display='block';
+      } else {
+        err.textContent='Server error ('+r.status+'). Please try again.';err.style.display='block';
+        btn.disabled=false;btn.textContent='Get a Callback';
+      }
+    }).catch(function(){
+      err.textContent='Unable to submit. Please call or visit godrejproperties.com directly.';
+      err.style.display='block';
+      btn.disabled=false;btn.textContent='Get a Callback';
+    });
+  }
+
+  // Expose closeModal globally for the success button onclick
+  window.closeModal=closeModal;
+
+  injectStyles();
+  buildModal();
+  buildPill();
+
+  // Show after 5 s
+  setTimeout(function(){
+    shown=true;
+    openModal();
+  }, 5000);
+})();
+</script>`;
+}
+
+
 console.log('📦 Starting robust flat page packaging...');
 
 if (!fs.existsSync(outDir)) {
@@ -112,6 +282,13 @@ htmlFiles.forEach(htmlPath => {
   // Final fix for any remaining /_next links that might have escaped
   htmlContent = htmlContent.replace(/href="\/_next\/static\/chunks\/[^"]+\.css"/g, (m) => m.replace('/_next/static/chunks/', './css/'));
   htmlContent = htmlContent.replace(/src="\/_next\/static\/chunks\/[^"]+\.js"/g, (m) => m.replace('/_next/static/chunks/', './js/'));
+
+  // Inject self-contained vanilla JS lead-gen form for the 5 active projects
+  if (LEAD_GEN[baseName]) {
+    const projectUrl = 'https://www.godrejproperties.com/the-1-percent-plan/projects/' + baseName;
+    const script = buildLeadGenScript(LEAD_GEN[baseName], projectUrl);
+    htmlContent = htmlContent.replace('</body>', script + '\n</body>');
+  }
 
   fs.writeFileSync(path.join(pageDir, 'index.html'), htmlContent);
 });
