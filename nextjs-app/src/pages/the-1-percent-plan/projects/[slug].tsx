@@ -1,12 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
 import { Project, getAllSlugs, getProjectBySlug } from '@/data/projects';
+import LeadGenForm from '@/components/LeadGenForm';
 
-// Client-side only — never included in static HTML, zero impact on AI crawlers
-const LeadGenForm = dynamic(() => import('@/components/LeadGenForm'), { ssr: false });
+// LeadGenForm is SSR-safe: both `visible` and `shown` start false, so zero
+// form HTML appears in static output — AI crawlers see none of the form fields.
 
 interface ProjectPageProps {
   project: Project;
