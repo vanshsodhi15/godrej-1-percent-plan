@@ -1,8 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
 import { Project, getAllSlugs, getProjectBySlug } from '@/data/projects';
+
+// Client-side only — never included in static HTML, zero impact on AI crawlers
+const LeadGenForm = dynamic(() => import('@/components/LeadGenForm'), { ssr: false });
 
 interface ProjectPageProps {
   project: Project;
@@ -693,6 +697,16 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           Godrej 1% Plan
         </a>
       </nav>
+
+      {/* Lead-gen form — client-side only, renders only for projects with leadGen config */}
+      {project.leadGen && (
+        <LeadGenForm
+          projectName={project.name}
+          projectId={project.leadGen.projectId}
+          adCode={project.leadGen.adCode}
+          projectUrl={canonical}
+        />
+      )}
     </Layout>
   );
 }
