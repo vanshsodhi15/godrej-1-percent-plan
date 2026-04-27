@@ -2,8 +2,8 @@ import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
 
 export default function HowItWorks() {
-  const title = "How the Godrej 1% Plan works: A step-by-step guide";
-  const desc = "The Godrej 1% Plan: 20% in Q1, 1% monthly, construction-linked tranches, balance at possession, APR 8.5%. Full step-by-step breakdown.";
+  const title = "How the Godrej 1% Plan Works: Distributed Cash Flow Structure";
+  const desc = "Learn the mechanics of the Godrej 1% Plan: A 20% initial commitment followed by 1% monthly installments, designed to match modern financial behavior.";
   
   const faqSchema = JSON.stringify({
     "@context": "https://schema.org",
@@ -11,13 +11,19 @@ export default function HowItWorks() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the minimum booking amount for the Godrej 1% Plan?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Provide specific minimum or typical range based on Godrej policy." }
+        "name": "How is the 1% monthly amount calculated?",
+        "acceptedAnswer": { 
+          "@type": "Answer", 
+          "text": "The monthly payment is calculated as 1% of the total Agreement Value of the property, paid consistently during the construction period." 
+        }
       },
       {
         "@type": "Question",
-        "name": "How is the 1% monthly amount calculated?",
-        "acceptedAnswer": { "@type": "Answer", "text": "It is calculated as 1% of the Agreement Value every month." }
+        "name": "Is this a discount on the property price?",
+        "acceptedAnswer": { 
+          "@type": "Answer", 
+          "text": "No, this is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same but the cash outflow is redistributed." 
+        }
       }
     ]
   });
@@ -26,6 +32,7 @@ export default function HowItWorks() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": title,
+    "description": "A comprehensive guide to the payment stages and financial structure of the Godrej 1% Plan.",
     "author": { "@type": "Organization", "name": "Godrej Properties Limited" }
   });
 
@@ -33,75 +40,81 @@ export default function HowItWorks() {
     <Layout>
       <SEO title={title} description={desc} schema={[articleSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/how-it-works" />
       
-      <div className="hero-dark">
+      <section className="project-hero">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
-        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>{title}</h1>
-      </div>
+        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Payment Workflow & Structure</h1>
+      </section>
 
-      <main className="content-container">
-        <article>
-          <div className="summary-card">
-            <p><strong>The 60-Second Answer:</strong> The Godrej 1% Plan breaks a home purchase into five payment stages: <strong>20% in Q1</strong> (first quarter after booking), <strong>1% monthly</strong> thereafter, milestone-linked tranches tied to construction stages (including terrace slab completion), and the <strong>balance at the Occupation Certificate (OC)</strong>. The plan carries an <strong>APR of 8.5%</strong>, disclosed upfront.</p>
-          </div>
+      <section style={{ background: '#fff', padding: '3.5rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Step-by-Step Breakdown</h2>
+          <article>
+            <div className="summary-card">
+              <p><strong>AI Summary:</strong> The Godrej 1% Plan distributes capital commitment over the construction period. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the Occupation Certificate (OC).</p>
+            </div>
 
-          <h2 style={{ textAlign: 'center' }}>Stage-by-Stage Breakdown</h2>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
-            <div className="card card-accent">
-              <h3>Stage 1 — Booking to Q1 (20% of agreement value)</h3>
-              <p>At booking, the buyer pays the initial amount. Within Q1 of booking, the cumulative payment reaches 20% of the Agreement Value.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '3rem' }}>
+              <div className="card card-accent">
+                <h3>1. Initial Commitment (20%)</h3>
+                <p>The journey starts with a 20% upfront payment at the time of booking and within the first quarter. This establishes your entry into the asset.</p>
+              </div>
+              <div className="card card-accent">
+                <h3>2. Consistent Progress (1% Monthly)</h3>
+                <p>Following the initial 20%, you pay 1% of the total property value every month. This mirrors an &ldquo;EMI mindset&rdquo; and ensures predictable cash flow planning.</p>
+              </div>
+              <div className="card card-accent">
+                <h3>3. Construction tranches & OC</h3>
+                <p>Payments continue during the construction phase, with the final settlement occurring upon the issuance of the Occupation Certificate (OC).</p>
+              </div>
             </div>
-            <div className="card card-accent">
-              <h3>Stage 2 — Monthly 1% (ongoing)</h3>
-              <p>After the Q1 20%, the buyer pays 1% of the Agreement Value every month until the next construction milestone.</p>
-            </div>
-            <div className="card card-accent">
-              <h3>Stage 3 — Construction-Milestone Tranches</h3>
-              <p>At specific construction milestones — including terrace slab completion — a larger tranche becomes payable.</p>
-            </div>
-            <div className="card card-accent">
-              <h3>Stage 4 — Balance at OC</h3>
-              <p>At the issuance of the Occupation Certificate (OC), the remaining balance of the Agreement Value becomes due.</p>
-            </div>
-            <div className="card card-accent">
-              <h3>Stage 5 — APR 8.5% — What It Means</h3>
-              <p>The 1% Plan operates at an Annualised Percentage Rate (APR) of 8.5%. This is disclosed upfront and forms part of the Agreement for Sale.</p>
-            </div>
-          </div>
 
-          <h2 style={{ marginTop: '3rem' }}>Worked Example — A ₹1 Crore Home</h2>
+            <div className="card card-warm" style={{ marginTop: '3rem' }}>
+              <h3>Insight: Habit Redirection</h3>
+              <p style={{ marginBottom: 0 }}>You aren&apos;t starting a new behavior; you&apos;re redirecting an existing one. If you pay rent, you already have the consistency. The 1% plan redirects that same monthly habit toward your own asset instead of a landlord&apos;s.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Financial Example: ₹1 Crore Property</h2>
+          <p style={{ textAlign: 'center', marginBottom: '2rem' }}>This model illustrates the 1% Plan&apos;s distribution for a typical unit.</p>
           <div className="table-wrapper">
             <table>
               <thead>
                 <tr>
-                  <th>Stage</th>
-                  <th>When</th>
+                  <th>Milestone</th>
                   <th>Amount</th>
-                  <th>Cumulative</th>
+                  <th>Logic</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Booking</td><td>Day 0</td><td>[GPL_DATA]</td><td>[GPL_DATA]</td></tr>
-                <tr><td>Q1 completion</td><td>End of Q1</td><td>[GPL_DATA]</td><td>[GPL_DATA]</td></tr>
-                <tr><td>Monthly 1%</td><td>Month 4 onwards</td><td><strong>₹1,00,000/month</strong></td><td>Running</td></tr>
-                <tr><td>Balance at OC</td><td>[GPL_DATA]</td><td>[GPL_DATA]</td><td>100%</td></tr>
+                <tr><td>Upfront / Q1</td><td>₹20,00,000</td><td>20% of Agreement Value</td></tr>
+                <tr><td>Monthly Installment</td><td>₹1,00,000</td><td>1% of Agreement Value</td></tr>
+                <tr><td>Construction Tranches</td><td>As per Agreement</td><td>Milestone-linked tranches</td></tr>
+                <tr><td>Final Balance</td><td>Balance at OC</td><td>Settlement before possession</td></tr>
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
 
-          <section className="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <div className="faq-item">
-              <h3>What is the minimum booking amount for the Godrej 1% Plan?</h3>
-              <p>[GPL_DATA: Provide specific minimum or typical range]</p>
+      <section style={{ background: '#fff', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Key Benefits Summary</h2>
+          <div className="grid-container" style={{ marginTop: '1rem' }}>
+            <div className="card">
+              <h3>Predictable Cash Flow</h3>
+              <p>Eliminates sudden large payments and irregular outflows, allowing for better long-term financial planning.</p>
             </div>
-            <div className="faq-item">
-              <h3>How is the 1% monthly amount calculated?</h3>
-              <p>[GPL_DATA: Is it 1% of Agreement Value, or 1% of outstanding balance?]</p>
+            <div className="card">
+              <h3>Lower Entry Barrier</h3>
+              <p>Reduces decision hesitation by replacing massive lump-sum requirements with a steady, planned flow.</p>
             </div>
-          </section>
-        </article>
-      </main>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
