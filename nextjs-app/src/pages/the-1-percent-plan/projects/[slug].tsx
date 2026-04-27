@@ -183,10 +183,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 <p>{project.constructionStatus}</p>
               </div>
               <div className="card card-warm">
-                <h3>Project Type</h3>
-                <p>{project.type}</p>
-              </div>
-              <div className="card card-warm">
                 <h3>Developer</h3>
                 <p>{project.developer}</p>
               </div>
@@ -328,7 +324,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       <section id="plans" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Floor Plans</h2>
-          <p>{project.floorPlans}</p>
           {project.floorPlanImages && project.floorPlanImages.length > 0 && (
             <div style={{ marginTop: '2rem' }}>
               {project.floorPlanImages.map((fp, i) => (
@@ -364,7 +359,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               <thead>
                 <tr>
                   <th>Configuration</th>
-                  <th>RERA / Saleable / SBU (sq.ft.)</th>
+                  <th>SBU (sq.ft.)</th>
                   <th>Agreement Value (₹ Cr)</th>
                   <th>AV + GST (₹ Cr)</th>
                   <th>AV + GST + SDR (₹ Cr)</th>
@@ -447,7 +442,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               background: 'linear-gradient(to bottom, var(--accent-gold), var(--accent-gold-dark))',
               borderRadius: '16px 0 0 16px',
             }} />
-            <h3 style={{ marginTop: 0, fontSize: '1.25rem' }}>Demo Illustration — {project.name}</h3>
+            <h3 style={{ marginTop: 0, fontSize: '1.25rem' }}>{project.name}</h3>
 
             <div style={{
               display: 'flex',
