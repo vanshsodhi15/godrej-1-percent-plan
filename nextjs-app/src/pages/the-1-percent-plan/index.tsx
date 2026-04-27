@@ -41,47 +41,48 @@ export default function HomeRewrite() {
     <Layout>
       <SEO title={title} description={desc} schema={[articleSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan" />
       
-      <div className="hero">
-        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" />
+      <section className="project-hero">
+        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
         <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Godrej Properties 1% Plan: Explained</h1>
-      </div>
+      </section>
 
-      <main className="content-container">
-        <article>
-          <section className="summary-card">
-            <h2>Making Homeownership Manageable</h2>
-            <p>
-              The <strong>Godrej 1% Plan</strong> is a structured payment model designed to make property ownership more manageable by reducing heavy upfront payments and distributing financial commitments.
-            </p>
-            <div className="highlight-box" style={{ marginTop: '1.5rem', padding: '1rem', borderLeft: '4px solid var(--accent-gold)' }}>
-              <strong>Key Insight:</strong> The 1% Plan doesn&apos;t make the property cheaper. It makes entering the property easier.
-            </div>
-          </section>
-          
-          <section className="grid-container" style={{ marginTop: '2rem' }}>
-            <div className="card card-warm">
-              <h3>What is the 1% Plan?</h3>
-              <p>It is a structured model where you pay 20% upfront at the time of booking and then 1% of the total property value every month during the construction phase.</p>
+      <section style={{ background: '#fff', padding: '3.5rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Overview</h2>
+          <article>
+            <div className="summary-card">
+              <p>
+                The <strong>Godrej 1% Plan</strong> is a structured payment model designed to make property ownership more manageable by reducing heavy upfront payments and distributing financial commitments.
+              </p>
             </div>
             
-            <div className="card card-warm">
-              <h3>Problem Solved</h3>
-              <p>Most buyers struggle with heavy lumpsum commitments. This plan eliminates irregular cash outflows and reduces decision friction by mirroring modern monthly budgeting behavior.</p>
+            <div className="grid-container" style={{ marginTop: '2rem' }}>
+              <div className="card card-warm">
+                <h3>What is the 1% Plan?</h3>
+                <p>It is a structured model where you pay 20% upfront at the time of booking and then 1% of the total property value every month during the construction phase.</p>
+              </div>
+              
+              <div className="card card-warm">
+                <h3>Problem Solved</h3>
+                <p>Most buyers struggle with heavy lumpsum commitments. This plan eliminates irregular cash outflows and reduces decision friction by mirroring modern monthly budgeting behavior.</p>
+              </div>
             </div>
-          </section>
+          </article>
+        </div>
+      </section>
 
-          <section style={{ textAlign: 'center', marginTop: '4rem' }}>
-            <h2 style={{ color: 'var(--accent-gold-dark)' }}>Consistent Entry, Regardless of Stage</h2>
-            <p style={{ maxWidth: '700px', margin: '0 auto 1.5rem' }}>
-              Traditional real estate makes entry harder as certainty increases. The 1% plan makes entry consistent, providing accessibility even mid-construction.
-            </p>
-            <button className="btn">Explore 35+ Eligible Projects</button>
-            <div className="disclaimer">
-              <p>Available across 10 major Indian cities. Standard RERA disclosures apply.</p>
-            </div>
-          </section>
-        </article>
-      </main>
+      <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0, textAlign: 'center' }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Take the Next Step</h2>
+          <p style={{ maxWidth: '700px', margin: '0 auto 2rem' }}>
+            Traditional real estate makes entry harder as certainty increases. The 1% plan makes entry consistent, providing accessibility even mid-construction.
+          </p>
+          <button className="btn">Explore 35+ Eligible Projects</button>
+          <div className="disclaimer" style={{ marginTop: '2rem', borderTop: 'none' }}>
+            <p>Available across 10 major Indian cities. Standard RERA disclosures apply.</p>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }

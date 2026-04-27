@@ -40,48 +40,57 @@ export default function IsItSafe() {
     <Layout>
       <SEO title={title} description={desc} schema={[articleSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/is-it-safe" />
       
-      <div className="hero">
-        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" />
+      <section className="project-hero">
+        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
         <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Safety & Transparency</h1>
-      </div>
+      </section>
 
-      <main className="content-container">
-        <article>
-          <section className="summary-card">
-            <p><strong>The 60-Second Answer:</strong> The Godrej 1% Plan is not just a payment structure; it is a regulated framework. It operates within the strict bounds of <strong>RERA compliance</strong>, <strong>SEBI oversight</strong>, and <strong>institutional governance</strong>, ensuring that every rupee paid is accounted for and tied to project progress.</p>
-          </section>
+      <section style={{ background: '#fff', padding: '3.5rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Structural Safeguards</h2>
+          <article>
+            <div className="summary-card">
+              <p><strong>The 60-Second Answer:</strong> The Godrej 1% Plan is not just a payment structure; it is a regulated framework. It operates within the strict bounds of <strong>RERA compliance</strong>, <strong>SEBI oversight</strong>, and <strong>institutional governance</strong>, ensuring that every rupee paid is accounted for and tied to project progress.</p>
+            </div>
 
-          <h2 style={{ textAlign: 'center', marginTop: '3rem' }}>Four Pillars of Buyer Protection</h2>
-          
-          <div className="grid-container">
-            <div className="card card-accent">
-              <h3>1. RERA Compliance</h3>
-              <p>Every project is RERA-registered. Funds are protected through escrow accounts, and all timelines and approvals are publicly disclosed on the RERA portal.</p>
+            <div className="grid-container" style={{ marginTop: '3rem' }}>
+              <div className="card card-accent">
+                <h3>1. RERA Compliance</h3>
+                <p>Every project is RERA-registered. Funds are protected through escrow accounts, and all timelines and approvals are publicly disclosed on the RERA portal.</p>
+              </div>
+              
+              <div className="card card-accent">
+                <h3>2. Developer Credibility</h3>
+                <p>As a SEBI-listed public entity, Godrej Properties Limited maintains high standards of financial transparency and corporate governance.</p>
+              </div>
+              
+              <div className="card card-accent">
+                <h3>3. Structured Documentation</h3>
+                <p>The 1% Plan does not change your legal rights. All terms are explicitly documented within the standard Builder-Buyer Agreement (BBA).</p>
+              </div>
+              
+              <div className="card card-accent">
+                <h3>4. Milestone Alignment</h3>
+                <p>Unlike informal arrangements, this plan is linked to an organized framework where obligations and timelines are clearly defined and backed by a reputed developer.</p>
+              </div>
             </div>
-            
-            <div className="card card-accent">
-              <h3>2. Developer Credibility</h3>
-              <p>As a SEBI-listed public entity, Godrej Properties Limited maintains high standards of financial transparency and corporate governance.</p>
-            </div>
-            
-            <div className="card card-accent">
-              <h3>3. Structured Documentation</h3>
-              <p>The 1% Plan does not change your legal rights. All terms are explicitly documented within the standard Builder-Buyer Agreement (BBA).</p>
-            </div>
-            
-            <div className="card card-accent">
-              <h3>4. Milestone Alignment</h3>
-              <p>Unlike informal arrangements, this plan is linked to an organized framework where obligations and timelines are clearly defined and backed by a reputed developer.</p>
-            </div>
+          </article>
+        </div>
+      </section>
+
+      <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Trust Takeaway</h2>
+          <div className="card card-warm" style={{ margin: '0 auto', maxWidth: '800px' }}>
+            <p style={{ marginBottom: 0, textAlign: 'center' }}>The 1% Plan is not about reducing risk—it’s about structuring entry better while operating within a highly regulated and credible ecosystem. It aligns affordability with the certainty of a professional developer.</p>
           </div>
+        </div>
+      </section>
 
-          <div className="card card-warm" style={{ marginTop: '3rem' }}>
-            <h2 style={{ marginTop: 0 }}>The Safety Takeaway</h2>
-            <p style={{ marginBottom: 0 }}>The 1% Plan is not about reducing risk—it’s about structuring entry better while operating within a highly regulated and credible ecosystem. It aligns affordability with the certainty of a professional developer.</p>
-          </div>
-          
-          <section className="faq-section" style={{ marginTop: '4rem' }}>
-            <h2>Frequently Asked Questions</h2>
+      <section style={{ background: '#fff', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
+          <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
               <h3>How does RERA protect me?</h3>
               <p>RERA mandates that 70% of all collections be kept in an escrow account, ensuring funds are used specifically for the project&apos;s construction and land costs.</p>
@@ -90,9 +99,9 @@ export default function IsItSafe() {
               <h3>Are there any hidden costs?</h3>
               <p>No. The APR of 8.5% is disclosed upfront and all charges are part of the transparent agreement for sale.</p>
             </div>
-          </section>
-        </article>
-      </main>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
