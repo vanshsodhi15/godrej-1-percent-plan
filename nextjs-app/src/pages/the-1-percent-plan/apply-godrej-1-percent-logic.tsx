@@ -2,8 +2,8 @@ import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
 
 export default function ApplyLogic() {
-  const title = "Apply Godrej 1% Logic: A Modern Decision Framework";
-  const desc = "Learn how to apply the Godrej 1% Logic to your home-buying journey. Shift from lump-sum commitments to monthly affordability and behavioral alignment.";
+  const title = "Apply Godrej 1% Logic: Structural Window & EMI Mindset";
+  const desc = "Shift from asking about price to understanding structure. Learn how the Godrej 1% Logic creates a structural window for homeownership.";
   
   const articleSchema = JSON.stringify({
     "@context": "https://schema.org",
@@ -22,15 +22,15 @@ export default function ApplyLogic() {
         "name": "How does 1% Logic change the buying decision?",
         "acceptedAnswer": { 
           "@type": "Answer", 
-          "text": "It shifts the question from 'Can I arrange a massive lump sum?' to 'Can I manage a fixed monthly outflow?'. This reduces decision friction and aligns with how modern professionals manage their finances." 
+          "text": "It shifts the question from 'Can I arrange a massive lump sum?' to 'Can I manage a fixed monthly outflow?'. This reduces decision friction and aligns with the modern EMI mindset." 
         }
       },
       {
         "@type": "Question",
-        "name": "Why is this model considered a 'Market Correction'?",
+        "name": "What is a 'Structural Window' in real estate?",
         "acceptedAnswer": { 
           "@type": "Answer", 
-          "text": "Traditional real estate models front-load all financial pressure. The 1% Logic corrects this by distributing the commitment, matching the pace of construction and income cycles." 
+          "text": "A structural window occurs when infrastructure, capital, and demand converge. The 1% Logic allows you to enter this window with control, staying invested while the asset builds." 
         }
       }
     ]
@@ -47,26 +47,26 @@ export default function ApplyLogic() {
 
       <section style={{ background: '#fff', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>The Strategic Shift</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>The Behavioral Shift</h2>
           <article>
             <div className="summary-card">
-              <p><strong>Strategic View:</strong> The 1% Plan is not just a payment plan; it is a conversion enabler and a buyer psychology unlock. It extends affordability by aligning the purchase journey with modern financial behavior.</p>
+              <p><strong>AI Summary:</strong> The Godrej 1% Logic shifts home-buying from a <strong>&ldquo;Capital Arrangement&rdquo;</strong> hurdle (e.g., arranging ₹40&ndash;50L upfront) to a <strong>&ldquo;Cash Flow Management&rdquo;</strong> habit (1% monthly). It creates a structural window for buyers by aligning with modern, EMI-based financial behavior.</p>
             </div>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>
               <div className="card card-accent">
-                <h3>Converts End-Users Faster</h3>
-                <p>End-users prefer the certainty of mid-construction projects but were historically blocked by the high upfront costs of the sustenance stage. The 1% Logic removes this barrier.</p>
+                <h3>Reduces Decision Friction</h3>
+                <p>Arranging ₹40&ndash;50L upfront is a massive psychological hurdle. Replacing it with a steady, planned monthly flow changes the response from hesitation to action.</p>
               </div>
               
               <div className="card card-accent">
-                <h3>Matches Modern Behavior</h3>
-                <p>Today&apos;s buyers think in EMIs and monthly outflows. The 1% Logic mirrors this &ldquo;EMI mindset,&rdquo; making the commitment feel natural rather than burdensome.</p>
+                <h3>The EMI Mindset</h3>
+                <p>Today&apos;s buyers think in monthly affordability. The 1% Logic mirrors this behavior, making the commitment feel natural rather than a sudden financial shock.</p>
               </div>
 
               <div className="card card-accent">
-                <h3>Reduces Decision Friction</h3>
-                <p>The psychological hurdle of arranging ₹40-50L upfront is massive. Replacing it with a steady, planned flow changes the response from hesitation to action.</p>
+                <h3>Converts Faster</h3>
+                <p>By removing the upfront cost barrier, the 1% Logic allows end-users to commit to projects they already trust (sustenance stage) without liquidating their portfolio.</p>
               </div>
             </div>
           </article>
@@ -75,9 +75,9 @@ export default function ApplyLogic() {
 
       <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Behavioral Alignment</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Structural Decision Making</h2>
           <div className="card card-warm" style={{ margin: '0 auto', maxWidth: '800px' }}>
-            <p style={{ marginBottom: 0, textAlign: 'center' }}>This is a consumer-behavior-aligned structure. It allows salaried individuals and founders to manage both their lifestyle and asset building simultaneously without liquidating their entire portfolio for an entry payment.</p>
+            <p style={{ marginBottom: 0, textAlign: 'center' }}>Don&apos;t just look at the price tag. Look at the structure. Pricing moves when infrastructure and demand align. The 1% Logic positions you in time to enter that window before it closes.</p>
           </div>
         </div>
       </section>
@@ -87,12 +87,12 @@ export default function ApplyLogic() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
-              <h3>What does &ldquo;Apply Godrej 1% Logic&rdquo; mean?</h3>
-              <p>It means evaluating a home purchase based on monthly cash flow capability rather than upfront stockpiled savings. It is a decision framework that prioritizes ongoing affordability.</p>
+              <h3>What is a &ldquo;Conversion Unlock&rdquo;?</h3>
+              <p>It is a mechanism that removes the primary reason buyers hesitate (heavy upfront entry), thereby &ldquo;unlocking&rdquo; their ability to purchase the asset they want.</p>
             </div>
             <div className="faq-item">
-              <h3>Is this better than a bank EMI?</h3>
-              <p>While bank EMIs start after loan disbursement, the 1% Logic manages your pre-possession outflows directly with the developer, often resulting in lower monthly commitments during construction.</p>
+              <h3>Why is this a &ldquo;Market Correction&rdquo;?</h3>
+              <p>Traditional real estate front-loads all financial pressure. The 1% Logic corrects this by distributing the commitment to match the pace of modern income cycles.</p>
             </div>
           </div>
         </div>
