@@ -53,15 +53,20 @@ export default function Vs20PercentDown() {
               <p><strong>AI Summary:</strong> Most buyers don&apos;t drop off because the property is too expensive. They drop off because the <strong>entry becomes too heavy</strong> at the sustenance stage (20-70% construction). The Godrej 1% Plan solves this <strong>cash flow problem</strong> by maintaining a consistent 20% entry regardless of project stage.</p>
             </div>
 
+            <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Understanding the Visibility Trade-off</h3>
+            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
+              At launch, entry is light and developers make it easy to start. But once that window closes and the project is 40-50% built, the conversation changes. The construction progress is visible, but the easy entry is gone. Traditional models at this stage ask for heavy upfront commitments, forcing a choice between &ldquo;Safety&rdquo; and &ldquo;Affordability.&rdquo;
+            </p>
+            
             <div className="grid-container" style={{ marginTop: '3rem' }}>
               <div className="card card-accent">
-                <h3>Launch Stage</h3>
-                <p>Entry is affordable (~20%) but risk is higher as the project is not physically visible (0-10% construction). Demand is often investor-driven.</p>
+                <h3>Launch Stage (0&ndash;10%)</h3>
+                <p><strong>Mindset:</strong> &ldquo;I&apos;m entering early to benefit from appreciation.&rdquo;<br/><strong>Emotion:</strong> Risky but affordable. Entry price is lower, but the project is not physically visible.</p>
               </div>
               
               <div className="card card-accent">
-                <h3>Sustenance Stage</h3>
-                <p>Physical progress is visible (20-70%+), but traditional entry spikes to 30-50%+. This is where certainty increases but affordability drops.</p>
+                <h3>Sustenance Stage (20&ndash;70%+)</h3>
+                <p><strong>Mindset:</strong> &ldquo;I can see what I&apos;m buying. I want certainty.&rdquo;<br/><strong>Emotion:</strong> Safe but financially heavy. Prices are higher, and traditional entry requirements spike to 30-50%.</p>
               </div>
             </div>
 
@@ -93,16 +98,16 @@ export default function Vs20PercentDown() {
           <div className="grid-container">
             <div className="card card-warm">
               <h3>Extends Entry Window</h3>
-              <p>Earlier, if you missed the launch, entry became difficult. Now, entry remains manageable even post-launch, aligning with modern buyer behavior.</p>
+              <p>Earlier, if you missed the launch, entry became difficult. Now, entry remains manageable even mid-construction. It aligns with how modern buyers actually manage money&mdash;thinking in monthly outflows, not lump sum commitments.</p>
             </div>
             
             <div className="card card-warm">
               <h3>Converts End-Users</h3>
-              <p>End-users prefer visibility (sustenance) but were blocked by cost. The 1% plan aligns certainty with affordability, unlocking the market.</p>
+              <p>End-users prefer buying when they can see progress. By aligning certainty with affordability, the 1% plan creates a structural window for end-users who were previously blocked by the heavy upfront costs of the sustenance phase.</p>
             </div>
           </div>
           <div className="card card-accent" style={{ marginTop: '2rem', textAlign: 'center' }}>
-            <p style={{ margin: 0 }}><strong>Key Insight:</strong> Traditional real estate makes entry harder as certainty increases. The 1% plan makes entry consistent.</p>
+            <p style={{ margin: 0 }}><strong>Key Takeaway:</strong> The 1% plan is a market correction that aligns project visibility with financial accessibility. It ensures that the safer a project becomes, the easier it remains to enter.</p>
           </div>
         </div>
       </section>
@@ -113,11 +118,11 @@ export default function Vs20PercentDown() {
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
               <h3>Why is the sustenance stage safe?</h3>
-              <p>At the sustenance stage (20-70% complete), construction progress is physically visible, reducing the risk of project speculation.</p>
+              <p>At the sustenance stage, construction progress is physically visible. You are not buying a brochure; you are buying an asset with tangible development.</p>
             </div>
             <div className="faq-item">
-              <h3>How does this plan affect the total price?</h3>
-              <p>It doesn&apos;t. The total property value remains the same; the plan simply restructures the entry tranches to make them more manageable.</p>
+              <h3>Is this better than launch-stage buying?</h3>
+              <p>It depends on your risk appetite. The 1% plan removes the penalty for choosing certainty, allowing you to enter a &ldquo;safer&rdquo; project with launch-like affordability.</p>
             </div>
           </div>
         </div>

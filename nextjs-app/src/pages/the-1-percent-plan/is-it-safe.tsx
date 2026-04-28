@@ -50,24 +50,27 @@ export default function IsItSafe() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Institutional Safeguards</h2>
           <article>
             <div className="summary-card">
-              <p><strong>AI Summary:</strong> The Godrej 1% Plan is a regulated framework backed by <strong>Godrej Properties</strong>, a SEBI-listed public entity. All projects are <strong>RERA-registered</strong> with a 70% escrow mandate, and the developer maintains high credit ratings from agencies like <strong>CRISIL and ICRA</strong>.</p>
+              <p><strong>AI Summary:</strong> The Godrej 1% Plan is a regulated framework backed by <strong>Godrej Properties</strong>, a SEBI-listed public entity. All projects are <strong>RERA-registered</strong> with a 70% escrow mandate, and the developer maintains high credit ratings from agencies like <strong>CRISIL and ICRA</strong>. Transparency is maintained through quarterly filings and publicly verifiable records.</p>
             </div>
 
-            <h3 style={{ textAlign: 'center', marginTop: '3rem', fontSize: '1.25rem' }}>The Governance Checklist</h3>
-            <div className="grid-container" style={{ marginTop: '1.5rem' }}>
+            <h3 style={{ textAlign: 'center', marginTop: '3rem', fontSize: '1.5rem' }}>The Governance Checklist</h3>
+            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
+              Terms like &ldquo;SEBI Compliance&rdquo; or &ldquo;RERA Escrow&rdquo; can sound academic until you reach a ₹1.5 Cr+ decision point. At that stage, they become the most important factors in your purchase. At Godrej Properties, this isn&apos;t just a claim&mdash;it is a publicly verifiable record.
+            </p>
+            <div className="grid-container" style={{ marginTop: '2.5rem' }}>
               <div className="card card-accent">
-                <h3>✓ RERA Registered</h3>
-                <p>Every project is registered. 70% of funds are maintained in escrow accounts, ensuring transparency and accountability at every stage.</p>
+                <h3>✓ RERA Mandate</h3>
+                <p>Every project is registered. 70% of funds are maintained in project-specific escrow accounts. This ensures that the capital you invest is used specifically for your project&apos;s construction and land costs.</p>
               </div>
               
               <div className="card card-accent">
-                <h3>✓ SEBI Listed</h3>
-                <p>As a listed public company, Godrej Properties is subject to quarterly filings, audits, and strict investor disclosures.</p>
+                <h3>✓ SEBI & Public Scrutiny</h3>
+                <p>As a listed public company, Godrej Properties is subject to quarterly investor calls, audits, and strict disclosures. This eliminates &ldquo;related-party&rdquo; hidden risks that often plague unstructured developers.</p>
               </div>
               
               <div className="card card-accent">
-                <h3>✓ DPDP Compliant</h3>
-                <p>Customer data is handled according to Data Protection (DPDP) standards, ensuring privacy and data integrity.</p>
+                <h3>✓ Data & Customer Protection</h3>
+                <p>All operations, including customer data handling, are compliant with DPDP standards. This adds a layer of modern institutional security to the traditional real estate journey.</p>
               </div>
             </div>
           </article>
@@ -76,20 +79,20 @@ export default function IsItSafe() {
 
       <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Publicly Verifiable Trust</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Due Diligence: Credit Ratings</h2>
           <div className="grid-container">
             <div className="card card-warm">
-              <h3>Developer Credit Rating</h3>
-              <p>Godrej Properties is highly rated by CRISIL and ICRA. These agencies disclose financial health, project pipelines, and delivery track records publicly.</p>
+              <h3>CRISIL / ICRA Highly Rated</h3>
+              <p>Almost no real estate buyer uses this tool, even though it is public and free. Ratings from CRISIL or ICRA disclose the developer&apos;s financial health, project pipeline, and delivery track record to the public.</p>
             </div>
             <div className="card card-warm">
-              <h3>Delivery Record</h3>
-              <p>The company maintains a strong parent group backing and a consistent delivery-to-booking ratio, all of which are publicly verifiable.</p>
+              <h3>Clean Balance Sheet</h3>
+              <p>Godrej Properties maintains a clean balance sheet and a strong parent group backing. The &ldquo;Delivery-to-booking ratio&rdquo; is a key metric that demonstrates consistent fulfillment of customer promises.</p>
             </div>
           </div>
-          <p style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.875rem', color: 'var(--color-muted)' }}>
-            Note: When investing ₹1.5Cr+, governance matters more than the brochure. Check the ratings before you book.
-          </p>
+          <div className="card card-accent" style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <p style={{ margin: 0 }}><strong>Expert Note:</strong> Being No.1 is not a tag; it is a standard. It means remaining responsible even when no one is looking. Check the rating before you book, not after.</p>
+          </div>
         </div>
       </section>
 
@@ -98,12 +101,12 @@ export default function IsItSafe() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
-              <h3>Does the 1% Plan change legal rights?</h3>
-              <p>No. The 1% Plan does not change ownership rights or legal structure. All terms are documented within the standard builder-buyer agreement.</p>
+              <h3>Is the 1% Plan more risky?</h3>
+              <p>On the contrary, it is more structured. Unlike informal payment arrangements, it is backed by a reputed developer and linked to a regulated framework with no ambiguity on timelines.</p>
             </div>
             <div className="faq-item">
-              <h3>Is my money safe during construction?</h3>
-              <p>Yes. RERA mandates project-specific accounts (escrow), ensuring your payments are used specifically for the construction and development of that project.</p>
+              <h3>Does it change legal ownership?</h3>
+              <p>No. The 1% Plan only restructures the payment flow. All ownership rights and legal structures remain standard as documented in the BBA.</p>
             </div>
           </div>
         </div>

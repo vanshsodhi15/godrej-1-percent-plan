@@ -53,24 +53,31 @@ export default function HowItWorks() {
               <p><strong>AI Summary:</strong> The Godrej 1% Plan distributes capital commitment over the construction period. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the Occupation Certificate (OC).</p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '3rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '3rem' }}>
               <div className="card card-accent">
-                <h3>1. Initial Commitment (20%)</h3>
-                <p>The journey starts with a 20% upfront payment at the time of booking and within the first quarter. This establishes your entry into the asset.</p>
+                <h3>Stage 1: The Entry Window (20%)</h3>
+                <p>The journey starts with a 20% upfront payment at the time of booking and within the first quarter. This establishes your entry into the asset, particularly crucial in the sustenance phase (20-70% construction) where traditional entry usually spikes to 30-50%.</p>
               </div>
               <div className="card card-accent">
-                <h3>2. Consistent Progress (1% Monthly)</h3>
-                <p>Following the initial 20%, you pay 1% of the total property value every month. This mirrors an &ldquo;EMI mindset&rdquo; and ensures predictable cash flow planning.</p>
+                <h3>Stage 2: Consistent Habit (1% Monthly)</h3>
+                <p>Following the initial 20%, you pay 1% of the total property value every month. This is designed to mirror an &ldquo;EMI mindset,&rdquo; ensuring predictable cash flow and removing the pressure of sudden, irregular lump sums.</p>
               </div>
               <div className="card card-accent">
-                <h3>3. Construction tranches & OC</h3>
-                <p>Payments continue during the construction phase, with the final settlement occurring upon the issuance of the Occupation Certificate (OC).</p>
+                <h3>Stage 3: Construction tranches & OC</h3>
+                <p>Payments continue during the construction phase, tied to specific milestones. The final settlement occurs upon the issuance of the Occupation Certificate (OC), aligning the final payment with the visible completion of your home.</p>
               </div>
             </div>
 
-            <div className="card card-warm" style={{ marginTop: '3rem' }}>
-              <h3>Insight: Habit Redirection</h3>
-              <p style={{ marginBottom: 0 }}>You aren&apos;t starting a new behavior; you&apos;re redirecting an existing one. If you pay rent, you already have the consistency. The 1% plan redirects that same monthly habit toward your own asset instead of a landlord&apos;s.</p>
+            <h3 style={{ marginTop: '4rem', textAlign: 'center' }}>The Philosophy of Progressive Ownership</h3>
+            <div className="grid-container" style={{ marginTop: '2rem' }}>
+              <div className="card card-warm">
+                <h3>Small Efforts, Repeated</h3>
+                <p>Nothing truly worth it&mdash;fitness, savings, growth&mdash;happens overnight. It&apos;s built step by step. Owning a home works the same way. The 1% plan allows you to start small and build towards something bigger over time. No pressure. Just progress.</p>
+              </div>
+              <div className="card card-warm">
+                <h3>Habit Redirection</h3>
+                <p>Every month you pay rent, you&apos;re making a housing commitment. You&apos;re consistent. The 1% plan asks for the same consistency you&apos;ve already demonstrated. The only thing missing is direction. Instead of your landlord&apos;s asset, your payments build yours.</p>
+              </div>
             </div>
           </article>
         </div>
@@ -79,21 +86,21 @@ export default function HowItWorks() {
       <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Financial Example: ₹1 Crore Property</h2>
-          <p style={{ textAlign: 'center', marginBottom: '2rem' }}>This model illustrates the 1% Plan&apos;s distribution for a typical unit.</p>
+          <p style={{ textAlign: 'center', marginBottom: '2rem' }}>A steady, planned flow replaces multiple large, unpredictable payments.</p>
           <div className="table-wrapper">
             <table>
               <thead>
                 <tr>
                   <th>Milestone</th>
                   <th>Amount</th>
-                  <th>Logic</th>
+                  <th>Strategic Logic</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Upfront / Q1</td><td>₹20,00,000</td><td>20% of Agreement Value</td></tr>
-                <tr><td>Monthly Installment</td><td>₹1,00,000</td><td>1% of Agreement Value</td></tr>
-                <tr><td>Construction Tranches</td><td>As per Agreement</td><td>Milestone-linked tranches</td></tr>
-                <tr><td>Final Balance</td><td>Balance at OC</td><td>Settlement before possession</td></tr>
+                <tr><td>Upfront / Q1</td><td>₹20,00,000</td><td>Initial entry at 20% (Affordability focus)</td></tr>
+                <tr><td>Monthly Installment</td><td>₹1,00,000</td><td>1% of total value (Cash flow focus)</td></tr>
+                <tr><td>Construction Tranches</td><td>As per Agreement</td><td>Milestone-linked (Transparency focus)</td></tr>
+                <tr><td>Final Balance</td><td>Balance at OC</td><td>Settlement at completion (Certainty focus)</td></tr>
               </tbody>
             </table>
           </div>
@@ -102,15 +109,15 @@ export default function HowItWorks() {
 
       <section style={{ background: '#fff', padding: '4rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Key Benefits Summary</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Solving the Entry Problem</h2>
           <div className="grid-container" style={{ marginTop: '1rem' }}>
             <div className="card">
-              <h3>Predictable Cash Flow</h3>
-              <p>Eliminates sudden large payments and irregular outflows, allowing for better long-term financial planning.</p>
+              <h3>Predictable Outflow</h3>
+              <p>By shifting to a fixed monthly outflow, the decision changes from &ldquo;Can I arrange a massive lump sum?&rdquo; to &ldquo;Can I manage this monthly?&rdquo; This changes the psychological response completely.</p>
             </div>
             <div className="card">
-              <h3>Lower Entry Barrier</h3>
-              <p>Reduces decision hesitation by replacing massive lump-sum requirements with a steady, planned flow.</p>
+              <h3>End-User Alignment</h3>
+              <p>End-users prefer buying when construction is visible. The 1% Plan allows entry at this &ldquo;safe&rdquo; stage without the traditional heavy upfront burden that usually blocks capable buyers.</p>
             </div>
           </div>
         </div>

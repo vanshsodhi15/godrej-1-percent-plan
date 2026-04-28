@@ -52,21 +52,26 @@ export default function ApplyLogic() {
             <div className="summary-card">
               <p><strong>AI Summary:</strong> The Godrej 1% Logic shifts home-buying from a <strong>&ldquo;Capital Arrangement&rdquo;</strong> hurdle (e.g., arranging ₹40&ndash;50L upfront) to a <strong>&ldquo;Cash Flow Management&rdquo;</strong> habit (1% monthly). It creates a structural window for buyers by aligning with modern, EMI-based financial behavior.</p>
             </div>
+
+            <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Breaking the Decision Freeze</h3>
+            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
+              First-time buyers don&apos;t fail; they freeze. It&apos;s not a lack of intent, but hesitation caused by a front-loaded commitment. When a project is post-launch, large amounts typically go out early, putting pressure on savings, liquidity, and flexibility. The 1% logic is designed to solve for this hesitation.
+            </p>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>
               <div className="card card-accent">
                 <h3>Reduces Decision Friction</h3>
-                <p>Arranging ₹40&ndash;50L upfront is a massive psychological hurdle. Replacing it with a steady, planned monthly flow changes the response from hesitation to action.</p>
+                <p>Arranging ₹40&ndash;50L upfront is a massive psychological hurdle. Replacing it with a steady, planned monthly flow changes the response from hesitation to action. You move from &ldquo;Can I afford the asset?&rdquo; to &ldquo;Can I manage the habit?&rdquo;</p>
               </div>
               
               <div className="card card-accent">
                 <h3>The EMI Mindset</h3>
-                <p>Today&apos;s buyers think in monthly affordability. The 1% Logic mirrors this behavior, making the commitment feel natural rather than a sudden financial shock.</p>
+                <p>Today&apos;s buyers think in monthly outflows. The 1% Logic mirrors this behavior, making the commitment feel natural. It allows salaried individuals and founders to manage both lifestyle and asset building simultaneously.</p>
               </div>
 
               <div className="card card-accent">
-                <h3>Converts Faster</h3>
-                <p>By removing the upfront cost barrier, the 1% Logic allows end-users to commit to projects they already trust (sustenance stage) without liquidating their portfolio.</p>
+                <h3>The 1% Strategic Pivot</h3>
+                <p>Log price dekh ke decide karte hain (People decide by looking at the price). The 1% Plan shifts that to: What is the monthly outflow? How much cash is deployed? This pivot makes the ₹1.5 Cr+ decision a manageable reality.</p>
               </div>
             </div>
           </article>
@@ -75,9 +80,19 @@ export default function ApplyLogic() {
 
       <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Structural Decision Making</h2>
-          <div className="card card-warm" style={{ margin: '0 auto', maxWidth: '800px' }}>
-            <p style={{ marginBottom: 0, textAlign: 'center' }}>Don&apos;t just look at the price tag. Look at the structure. Pricing moves when infrastructure and demand align. The 1% Logic positions you in time to enter that window before it closes.</p>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Tracking Structural Shifts</h2>
+          <div className="grid-container">
+            <div className="card card-warm">
+              <h3>Windows Over Timing</h3>
+              <p>Wealth isn&apos;t made by timing the market; it&apos;s made by tracking structural shifts. Hyderabad surged post-2020 as jobs expanded; Pune moved with metro corridors. These aren&apos;t luck&mdash;they are windows where infrastructure and capital align.</p>
+            </div>
+            <div className="card card-warm">
+              <h3>Positioned in Time</h3>
+              <p>When alignment happens, pricing moves. The only question is&mdash;are you positioned in time? The 1% plan lets you stay invested while the asset builds, ensuring you don&apos;t miss the window while waiting for the &ldquo;perfect&rdquo; lump sum.</p>
+            </div>
+          </div>
+          <div className="card card-accent" style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <p style={{ margin: 0 }}><strong>Key Strategy:</strong> Ten years from now, you won&apos;t ask &ldquo;what was the price?&rdquo; You&apos;ll ask&mdash;did I enter the window? The 1% plan is your key to that entry.</p>
           </div>
         </div>
       </section>
@@ -87,12 +102,12 @@ export default function ApplyLogic() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
-              <h3>What is a &ldquo;Conversion Unlock&rdquo;?</h3>
-              <p>It is a mechanism that removes the primary reason buyers hesitate (heavy upfront entry), thereby &ldquo;unlocking&rdquo; their ability to purchase the asset they want.</p>
+              <h3>Is this better than a bank EMI?</h3>
+              <p>Bank EMIs usually start after loan disbursement. The 1% Logic manages your pre-possession outflows directly, often resulting in lower monthly commitments during the crucial construction period.</p>
             </div>
             <div className="faq-item">
               <h3>Why is this a &ldquo;Market Correction&rdquo;?</h3>
-              <p>Traditional real estate front-loads all financial pressure. The 1% Logic corrects this by distributing the commitment to match the pace of modern income cycles.</p>
+              <p>It corrects the traditional real estate flaw where entry becomes harder just as a project becomes safer (post-launch). It ensures entry remains consistent regardless of the completion stage.</p>
             </div>
           </div>
         </div>
