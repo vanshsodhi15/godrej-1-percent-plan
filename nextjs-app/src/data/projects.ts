@@ -58,28 +58,6 @@ export interface PaymentMilestone {
   logic: string;           // Explanation of how this is calculated
 }
 
-export interface MicroMarketSubsection {
-  heading: string;
-  intro?: string;
-  bullets?: string[];
-  takeaway?: string;
-}
-
-export interface MicroMarketSection {
-  heading: string;
-  intro?: string;
-  bullets?: string[];
-  quote?: string;
-  takeaway?: string;
-  subsections?: MicroMarketSubsection[];
-  comparisons?: { label: string; bullets: string[] }[];
-}
-
-export interface FaqGroup {
-  category: string;
-  items: FaqItem[];
-}
-
 export interface ProjectPaymentExample {
   title?: string;                           // e.g. "Tower 8 & Tower 9: 3 BHK Luxe" (for projects with multiple illustrations)
   indicativeAgreementValueCr: string;     // e.g. "1.20"
@@ -1116,7 +1094,7 @@ export const projects: Project[] = [
       monthlyOnePctAmount: '₹1,29,541 per month (1% of AV + 5% GST)',
       monthlyDurationMonths: '19 months (July 2026 through November 2027, on or before the 5th of each month)',
       ocBalancePct: '63% at construction milestones and possession (33% on terrace completion + 20% on OC + 10% on notice of possession)',
-      notes: 'This illustration is based on a 2 BHK unit with a Total Agreement Value of ₹1,23,37,199 and a Total Cost to Customer of ₹1,32,19,005 (including GST). The 1% monthly payment of ₹1,29,541 applies from July 2026 through November 2027 (19 months). On completion of the terrace slab, 33% of AV + GST (₹42,74,839) becomes payable. At receipt of the Occupation Certificate, 20% of AV + GST (₹25,90,812) is due, followed by 10% of AV + GST (₹12,95,406) on notice of possession. An additional 7.7% towards Stamp Duty and Registration (SDR) is payable at the time of possession. Advance Maintenance and Sinking Fund Charges of ₹2,64,946 are payable separately. All amounts are inclusive of 5% GST on the Agreement Value component. This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on the unit selected, associated charges for that unit, and the offers available at the project marketing office.',
+      notes: 'This illustration is based on a 2 BHK unit with a Total Agreement Value of ₹1,23,37,199 and a Total Cost to Customer of ₹1,32,19,005 (including GST). The 1% monthly payment of ₹1,29,541 applies from July 2026 through November 2027 (19 months). On completion of the terrace slab, 33% of AV + GST (₹42,74,839) becomes payable. At receipt of the Occupation Certificate, 20% of AV + GST (₹25,90,812) is due, followed by 10% of AV + GST (₹12,95,406) on notice of possession. An additional 7.6% towards Stamp Duty and Registration (SDR) is payable at the time of possession. Advance Maintenance and Sinking Fund Charges of ₹2,64,946 are payable separately. All amounts are inclusive of 5% GST on the Agreement Value component. This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on the unit selected, associated charges for that unit, and the offers available at the project marketing office.',
       milestones: [
         { stage: 'On Booking', percentage: '5%', amount: '₹6,47,703', logic: '5% of Agreement Value + 5% GST on that value' },
         { stage: 'Within 15 days of Booking', percentage: '5%', amount: '₹6,47,703', logic: '5% of Agreement Value + 5% GST on that value' },
@@ -1143,7 +1121,7 @@ export const projects: Project[] = [
         { stage: 'On Notice of Possession', percentage: '10%', amount: '₹12,95,406', logic: '10% of Agreement Value + 5% GST on that value' },
         { stage: 'Advance Maintenance & Sinking Fund Charges', percentage: '—', amount: '₹2,64,946', logic: 'Payable separately; not part of the Agreement Value' },
       ],
-      additionalSdrNote: 'Additional Stamp Duty and Registration (SDR) charges of approximately 7.7% are payable at the time of possession.',
+      additionalSdrNote: 'Additional Stamp Duty and Registration (SDR) charges of approximately 7.6% are payable at the time of possession.',
     },
     floorPlans: 'Floor plans are available for 2 BHK Luxe, 3 BHK Premium, and 3 BHK Luxe configurations. All dimensions shown are from unfinished wall to unfinished wall (excluding ledge wall area). Carpet area is calculated from the unfinished wall and includes ledge walls. Balcony area and dimensions include the up-stands. Drawings are not to scale. The developer reserves the right to add or remove and change the location of any amenities/specifications at their own discretion. Floor plans are solely illustrative; furnishings and movable items depicted form no part of the offering.',
     floorPlanImages: [
@@ -1701,32 +1679,6 @@ export const projects: Project[] = [
       // Rebuttals
       { question: 'If client\'s budget is less (rebuttal)?', answer: 'That is a very healthy budget sir however, the price of our inventory is XYZ, so I would like to know if you have a look at the location and the project and you find it value for money, would you like to extend your budget a little bit? (Talk about funding source).' },
       { question: 'If client asks for details on mobile or denies to visit?', answer: 'Sir being from the pre sales department of Godrej properties, I can send you limited details which you already might have received since you placed the enquiry, however when it comes to the final deal/cost sheet/unit availability, someone directly from the sales team at site can help you with it. The sooner you visit the better options you will have to choose from as we have received great response for the project, so may I know when would be the suitable time where I can arrange a visit for you?' },
-      // Details Sharing
-      { question: 'If customer asks details prior to discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details wherein pricing details won\'t be mentioned. It\'ll take hardly 3-5mins of your time so shall I continue?' },
-      { question: 'If customer asks details post discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details which I\'ve already shared to you over the call why don\'t you plan a visit along with your family I\'ll arrange an on table discussion for you with my sales manager wherein you\'ll get a fair idea regarding what exactly we\'re coming up with along with locality.' },
-      { question: 'If sharing details upfront?', answer: 'Post call you\'ll receive details over your mail ID from my sales manager Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-      { question: 'If customer asks to share details?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID, his name would be Mr. Ajit Shindey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-      { question: 'If customer asks to share details for pre-launch property?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID her name would be Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-      // Customer Response Scenarios
-      { question: 'Customer says "I\'m not interested" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry.' },
-      { question: 'Customer says "I\'m not interested" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier.' },
-      { question: 'Customer says "I\'m not interested" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier.' },
-      { question: 'Customer says "I don\'t have any plans" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry and we do have exciting offers.' },
-      { question: 'Customer says "I don\'t have any plans" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier and we do have exciting offers.' },
-      { question: 'Customer says "I don\'t have any plans" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier and we do have exciting offers.' },
-      { question: 'Customer says "I did not enquire"?', answer: 'We received an enquiry from this number, hence we called.' },
-      { question: 'Customer says "I am a Broker"?', answer: 'Sir, there is a specific team who caters brokers/channel partners. I\'ll ask them to contact you.' },
-      { question: 'Customer calling for Job opportunity?', answer: 'Sir, we provide property details. For job, kindly visit our website.' },
-      { question: 'Test Enquiry?', answer: 'I\'ll update the same.' },
-      { question: 'Wrong Number?', answer: 'We received an enquiry from this number, hence we called.' },
-      { question: 'Irrelevant Enquiry (Carpenter, land for sale, generic feedback etc)?', answer: 'Sir, we provide property details. For your query, kindly visit our website.' },
-      { question: 'Customer says "Call Back Later" (Fresh)?', answer: 'You had placed an enquiry hence we called. I will need a few mins of your time. I will just quickly brief you on the project.' },
-      { question: 'Customer says "Call Back Later" (VDNB)?', answer: 'You had visited our site earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-      { question: 'Customer says "Call Back Later" (EDNV)?', answer: 'You had expressed interest in our project earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-      { question: 'Customer already purchased?', answer: 'Are you looking for any other investment option? Is anyone from your friend or family looking to invest?' },
-      { question: 'Customer bought with competitor?', answer: 'Congratulations for the purchase! Can you share any feedback as in what was the reason you chose other project over ours?' },
-      { question: 'Language Barrier?', answer: 'I\'ll try to arrange a call in your preferred language.' },
-      { question: 'Lost Budget/Inventory not Available/Location/Specification Amenities/Price/Possession/Size of Apartments?', answer: 'Rebuttals as per the script or cross pitch (if option available).' },
     ],
     faqsByCategory: [
       {
@@ -1772,40 +1724,6 @@ export const projects: Project[] = [
         items: [
           { question: 'If client\'s budget is less (rebuttal)?', answer: 'That is a very healthy budget sir however, the price of our inventory is XYZ, so I would like to know if you have a look at the location and the project and you find it value for money, would you like to extend your budget a little bit? (Talk about funding source).' },
           { question: 'If client asks for details on mobile or denies to visit?', answer: 'Sir being from the pre sales department of Godrej properties, I can send you limited details which you already might have received since you placed the enquiry, however when it comes to the final deal/cost sheet/unit availability, someone directly from the sales team at site can help you with it. The sooner you visit the better options you will have to choose from as we have received great response for the project, so may I know when would be the suitable time where I can arrange a visit for you?' },
-        ],
-      },
-      {
-        category: 'Details Sharing',
-        items: [
-          { question: 'If customer asks details prior to discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details wherein pricing details won\'t be mentioned. It\'ll take hardly 3-5mins of your time so shall I continue?' },
-          { question: 'If customer asks details post discussion?', answer: 'I\'ll definitely ask my sales manager to share you the details however it\'ll contain limited details which I\'ve already shared to you over the call why don\'t you plan a visit along with your family I\'ll arrange an on table discussion for you with my sales manager wherein you\'ll get a fair idea regarding what exactly we\'re coming up with along with locality.' },
-          { question: 'If sharing details upfront?', answer: 'Post call you\'ll receive details over your mail ID from my sales manager Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-          { question: 'If customer asks to share details?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID, his name would be Mr. Ajit Shindey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-          { question: 'If customer asks to share details for pre-launch property?', answer: 'I\'ll definitely ask my sales manager to share you the details post call over your mail ID her name would be Miss Shivani Pandey you can revert on that mail if you have any queries also a two way communication number will be mentioned you can reach out to us on that as well. The details which I\'ll be sharing will be containing 2 links one would be of location and another would be of Digital Collateral wherein you\'ll get master plan and floor plan.' },
-        ],
-      },
-      {
-        category: 'Customer Response Scenarios',
-        items: [
-          { question: 'Customer says "I\'m not interested" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry.' },
-          { question: 'Customer says "I\'m not interested" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier.' },
-          { question: 'Customer says "I\'m not interested" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier.' },
-          { question: 'Customer says "I don\'t have any plans" (Fresh)?', answer: 'Any specific reason Sir/Ma\'am? We have just received your enquiry and we do have exciting offers.' },
-          { question: 'Customer says "I don\'t have any plans" (VDNB)?', answer: 'Any specific reason Sir/Ma\'am? You had visited our project earlier and we do have exciting offers.' },
-          { question: 'Customer says "I don\'t have any plans" (EDNV)?', answer: 'Any specific reason Sir/Ma\'am? You had expressed interest in our project/s earlier and we do have exciting offers.' },
-          { question: 'Customer says "I did not enquire"?', answer: 'We received an enquiry from this number, hence we called.' },
-          { question: 'Customer says "I am a Broker"?', answer: 'Sir, there is a specific team who caters brokers/channel partners. I\'ll ask them to contact you.' },
-          { question: 'Customer calling for Job opportunity?', answer: 'Sir, we provide property details. For job, kindly visit our website.' },
-          { question: 'Test Enquiry?', answer: 'I\'ll update the same.' },
-          { question: 'Wrong Number?', answer: 'We received an enquiry from this number, hence we called.' },
-          { question: 'Irrelevant Enquiry (Carpenter, land for sale, generic feedback etc)?', answer: 'Sir, we provide property details. For your query, kindly visit our website.' },
-          { question: 'Customer says "Call Back Later" (Fresh)?', answer: 'You had placed an enquiry hence we called. I will need a few mins of your time. I will just quickly brief you on the project.' },
-          { question: 'Customer says "Call Back Later" (VDNB)?', answer: 'You had visited our site earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-          { question: 'Customer says "Call Back Later" (EDNV)?', answer: 'You had expressed interest in our project earlier. I will need a few mins of your time. I will just quickly brief you on the project.' },
-          { question: 'Customer already purchased?', answer: 'Are you looking for any other investment option? Is anyone from your friend or family looking to invest?' },
-          { question: 'Customer bought with competitor?', answer: 'Congratulations for the purchase! Can you share any feedback as in what was the reason you chose other project over ours?' },
-          { question: 'Language Barrier?', answer: 'I\'ll try to arrange a call in your preferred language.' },
-          { question: 'Lost Budget/Inventory not Available/Location/Specification Amenities/Price/Possession/Size of Apartments?', answer: 'Rebuttals as per the script or cross pitch (if option available).' },
         ],
       },
     ],
@@ -2353,9 +2271,9 @@ export const projects: Project[] = [
     type: 'Residential',
     rera: 'P51900078358',
     reraPortal: 'https://maharera.maharashtra.gov.in',
-    reraCertificateLink: 'https://maharera.maharashtra.gov.in/project/P51900078358',
-    salesStatus: 'Sustenance',
-    constructionStatus: 'Under Construction',
+    reraCertificateLink: GPL('Direct certificate URL'),
+    salesStatus: GPL('Launch / Sustenance / Sold Out'),
+    constructionStatus: GPL('Stage'),
     pricing: defaultPricing,
     possessionRera: GPL('Month YYYY'),
     possessionGpl: GPL('Month YYYY'),
