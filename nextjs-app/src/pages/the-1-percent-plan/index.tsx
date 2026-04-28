@@ -53,25 +53,30 @@ export default function HomeRewrite() {
           <article>
             <div className="summary-card">
               <p>
-                <strong>AI Summary:</strong> The Godrej 1% Plan is a structured market correction that replaces heavy, irregular upfront payments with a <strong>20% initial commitment</strong> followed by <strong>1% monthly tranches</strong>. This mechanism maintains affordability even during mid-construction (sustenance) stages.
+                <strong></strong> The Godrej 1% Plan is a structured market correction that replaces heavy, irregular upfront payments with a <strong>20% initial commitment</strong> followed by <strong>1% monthly tranches</strong>. This mechanism maintains affordability even during <a href="/the-1-percent-plan/vs-20-percent-down">mid-construction stages</a>, aligning with the &ldquo;EMI mindset&rdquo; of modern professionals.
               </p>
             </div>
+
+            <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Shifting from Price to Structure</h3>
+            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
+              The &ldquo;Price to Structure&rdquo; shift is the core philosophy of the Godrej 1% Plan. Today, savvy buyers aren&apos;t asking about price first&mdash;they&apos;re asking about the <a href="/the-1-percent-plan/how-it-works" style={{ color: 'inherit', textDecoration: 'underline' }}>financial structure</a> that lets them enter the asset while maintaining liquidity.
+            </p>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>
               <div className="card card-accent">
                 <h3>The Structural Window</h3>
-                <p>Wealth in real estate is made by recognizing the right window. The 1% plan creates a structural window where infrastructure, capital, and demand align, allowing you to stay invested while the asset builds.</p>
+                <p>Most wealth in real estate isn&apos;t made by timing the market; it&apos;s made by entering the right window. Gurgaon before Cyber City, BKC before it became a financial core, and Whitefield before the tech corridor&mdash;these were structural windows. The 1% plan creates a similar window where infrastructure, capital, and demand align.</p>
               </div>
               
               <div className="card card-accent">
                 <h3>Breaking the Loop</h3>
-                <p>First-time buyers often "freeze" due to front-loaded commitments. This plan is designed to break that loop—not to rush you, but because waiting for the "right time" while prices rise is expensive.</p>
+                <p>First-time buyers often &ldquo;freeze&rdquo; due to front-loaded commitments. If you&apos;ve been planning to buy for more than 2 years, you&apos;re in a loop where same intent meets same plan, while the home becomes 20-30% more expensive. The 1% structure is designed to break this loop by making the start manageable.</p>
               </div>
             </div>
 
             <div className="card card-warm" style={{ marginTop: '3rem' }}>
               <h3>Strategic Insight</h3>
-              <p style={{ marginBottom: 0 }}>Traditional real estate makes entry harder as certainty increases. The 1% plan makes entry consistent, regardless of the construction stage. It doesn&apos;t make the property cheaper; it makes entering the property easier.</p>
+              <p style={{ marginBottom: 0 }}>Traditional real estate makes entry harder as certainty increases. As a project becomes safe (20-70% built), the traditional ask is a heavy upfront commitment. The 1% plan corrects this by making entry consistent, regardless of the stage. It doesn&apos;t make the property cheaper; it makes entering the property easier.</p>
             </div>
           </article>
         </div>
@@ -79,11 +84,27 @@ export default function HomeRewrite() {
 
       <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0, textAlign: 'center' }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Take the Next Step</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Recognize the Shift</h2>
           <p style={{ maxWidth: '700px', margin: '0 auto 2rem' }}>
-            Recognize the shift. Move from asking about price to understanding the structure. This is a consumer-behavior-aligned structure for serious real estate evaluation.
+            The question isn&apos;t whether you can afford the asset. The question is whether there&apos;s a structure that lets you enter it&mdash;even mid-construction&mdash;without front-loading everything at once. 
           </p>
           <button className="btn">View Eligible Developments</button>
+        </div>
+      </section>
+
+      <section style={{ background: '#fff', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
+          <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
+            <div className="faq-item">
+              <h3>What is the 1% Plan structure?</h3>
+              <p>The plan requires a 20% upfront payment at the time of booking, followed by 1% of the total property value paid every month during the construction period.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Is this a discount on the property price?</h3>
+              <p>No, it is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same, but entering the property becomes easier.</p>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
