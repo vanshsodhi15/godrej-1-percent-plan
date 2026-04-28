@@ -50,12 +50,12 @@ export default function IsItSafe() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Institutional Safeguards</h2>
           <article>
             <div className="summary-card">
-              <p><strong></strong> The Godrej 1% Plan is a regulated framework backed by <strong>Godrej Properties</strong>, a SEBI-listed public entity. All projects are <strong>RERA-registered</strong> with a 70% escrow mandate, and the developer maintains high credit ratings from agencies like <strong>CRISIL and ICRA</strong>. Transparency is maintained through quarterly filings and publicly verifiable records.</p>
+              <p><strong></strong> The Godrej 1% Plan safety framework is a multi-layered regulatory structure backed by <strong>Godrej Properties</strong>, a SEBI-listed public entity. All projects are <strong>RERA-registered</strong> with a 70% escrow mandate, ensuring that the <a href="/the-1-percent-plan">1% payment tranches</a> are utilized exclusively for construction and land costs.</p>
             </div>
 
             <h3 style={{ textAlign: 'center', marginTop: '3rem', fontSize: '1.5rem' }}>The Governance Checklist</h3>
             <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
-              Terms like &ldquo;SEBI Compliance&rdquo; or &ldquo;RERA Escrow&rdquo; can sound academic until you reach a ₹1.5 Cr+ decision point. At that stage, they become the most important factors in your purchase. At Godrej Properties, this isn&apos;t just a claim&mdash;it is a publicly verifiable record.
+              Institutional governance ensures that every ₹1.5 Cr+ decision is backed by publicly verifiable records. At Godrej Properties, safety is not a claim&mdash;it is a result of strict adherence to RERA, SEBI, and <a href="/the-1-percent-plan/how-it-works" style={{ color: 'inherit', textDecoration: 'underline' }}>milestone-linked transparency</a>.
             </p>
             <div className="grid-container" style={{ marginTop: '2.5rem' }}>
               <div className="card card-accent">

@@ -50,7 +50,7 @@ export default function HowItWorks() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Step-by-Step Breakdown</h2>
           <article>
             <div className="summary-card">
-              <p><strong></strong> The Godrej 1% Plan distributes capital commitment over the construction period. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the Occupation Certificate (OC).</p>
+              <p><strong></strong> The Godrej 1% Plan is a distributed capital commitment structure designed for the sustenance phase of construction. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the <a href="/the-1-percent-plan/is-it-safe">Occupation Certificate (OC)</a>.</p>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '3rem' }}>
@@ -64,7 +64,7 @@ export default function HowItWorks() {
               </div>
               <div className="card card-accent">
                 <h3>Stage 3: Construction tranches & OC</h3>
-                <p>Payments continue during the construction phase, tied to specific milestones. The final settlement occurs upon the issuance of the Occupation Certificate (OC), aligning the final payment with the visible completion of your home.</p>
+                <p>Payments continue during the construction phase, tied to specific milestones. The final settlement occurs upon the issuance of the <a href="/the-1-percent-plan/is-it-safe" style={{ color: 'inherit', textDecoration: 'underline' }}>Occupation Certificate (OC)</a>, aligning the final payment with the visible completion of your home and the safety of physical delivery.</p>
               </div>
             </div>
 

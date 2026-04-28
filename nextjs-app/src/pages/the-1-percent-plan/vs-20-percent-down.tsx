@@ -50,12 +50,12 @@ export default function Vs20PercentDown() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>The Real Drop-Off</h2>
           <article>
             <div className="summary-card">
-              <p><strong></strong> Most buyers don&apos;t drop off because the property is too expensive. They drop off because the <strong>entry becomes too heavy</strong> at the sustenance stage (20-70% construction). The Godrej 1% Plan solves this <strong>cash flow problem</strong> by maintaining a consistent 20% entry regardless of project stage.</p>
+              <p><strong></strong> The Godrej 1% Plan is a market correction mechanism that solves the &ldquo;Real Drop-Off&rdquo; problem in real estate. While traditional models spike entry requirements to 30-50% during the <a href="/the-1-percent-plan/is-it-safe">sustenance phase</a>, the 1% plan maintains a consistent 20% entry barrier, aligning affordability with project visibility.</p>
             </div>
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Understanding the Visibility Trade-off</h3>
             <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
-              At launch, entry is light and developers make it easy to start. But once that window closes and the project is 40-50% built, the conversation changes. The construction progress is visible, but the easy entry is gone. Traditional models at this stage ask for heavy upfront commitments, forcing a choice between &ldquo;Safety&rdquo; and &ldquo;Affordability.&rdquo;
+              The &ldquo;Visibility Trade-off&rdquo; occurs when a project becomes safer (construction is visible) but less affordable (entry costs increase). The 1% Plan eliminates this trade-off, allowing buyers to enter a <a href="/the-1-percent-plan/how-it-works" style={{ color: 'inherit', textDecoration: 'underline' }}>visible, mid-construction asset</a> with launch-like affordability.
             </p>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>

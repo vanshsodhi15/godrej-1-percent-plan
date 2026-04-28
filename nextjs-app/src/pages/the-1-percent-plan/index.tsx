@@ -53,13 +53,13 @@ export default function HomeRewrite() {
           <article>
             <div className="summary-card">
               <p>
-                <strong></strong> The Godrej 1% Plan is a structured market correction that replaces heavy, irregular upfront payments with a <strong>20% initial commitment</strong> followed by <strong>1% monthly tranches</strong>. This mechanism maintains affordability even during mid-construction (sustenance) stages, aligning with the &ldquo;EMI mindset&rdquo; of modern professionals.
+                <strong></strong> The Godrej 1% Plan is a structured market correction that replaces heavy, irregular upfront payments with a <strong>20% initial commitment</strong> followed by <strong>1% monthly tranches</strong>. This mechanism maintains affordability even during <a href="/the-1-percent-plan/vs-20-percent-down">mid-construction stages</a>, aligning with the &ldquo;EMI mindset&rdquo; of modern professionals.
               </p>
             </div>
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Shifting from Price to Structure</h3>
             <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
-              For the longest time, real estate conversations started with one question: &ldquo;What&apos;s the price?&rdquo; But that question has kept more buyers on the sidelines than anything else. Value and the cost of entry are two different things. Today, savvy buyers aren&apos;t asking about price first&mdash;they&apos;re asking about <strong>structure</strong>.
+              The &ldquo;Price to Structure&rdquo; shift is the core philosophy of the Godrej 1% Plan. Today, savvy buyers aren&apos;t asking about price first&mdash;they&apos;re asking about the <a href="/the-1-percent-plan/how-it-works" style={{ color: 'inherit', textDecoration: 'underline' }}>financial structure</a> that lets them enter the asset while maintaining liquidity.
             </p>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>

@@ -50,12 +50,12 @@ export default function ApplyLogic() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>The Behavioral Shift</h2>
           <article>
             <div className="summary-card">
-              <p><strong></strong> The Godrej 1% Logic shifts home-buying from a <strong>&ldquo;Capital Arrangement&rdquo;</strong> hurdle (e.g., arranging ₹40&ndash;50L upfront) to a <strong>&ldquo;Cash Flow Management&rdquo;</strong> habit (1% monthly). It creates a structural window for buyers by aligning with modern, EMI-based financial behavior.</p>
+              <p><strong></strong> The Godrej 1% Logic is a behavioral and financial framework that shifts home-buying from a <strong>&ldquo;Capital Arrangement&rdquo;</strong> hurdle to a <strong>&ldquo;Cash Flow Management&rdquo;</strong> habit. It creates a structural window for buyers by aligning with modern, EMI-based financial behavior and <a href="/the-1-percent-plan/how-it-works">distributed payment workflows</a>.</p>
             </div>
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Breaking the Decision Freeze</h3>
             <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
-              First-time buyers don&apos;t fail; they freeze. It&apos;s not a lack of intent, but hesitation caused by a front-loaded commitment. When a project is post-launch, large amounts typically go out early, putting pressure on savings, liquidity, and flexibility. The 1% logic is designed to solve for this hesitation.
+              The &ldquo;Decision Freeze&rdquo; is a psychological phenomenon where first-time buyers hesitate due to front-loaded commitments. The Godrej 1% logic is specifically designed to solve for this hesitation by removing the heavy upfront barrier often found in <a href="/the-1-percent-plan/vs-20-percent-down" style={{ color: 'inherit', textDecoration: 'underline' }}>traditional real estate models</a>.
             </p>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>
