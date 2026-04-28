@@ -53,7 +53,7 @@ export default function HomeRewrite() {
           <article>
             <div className="summary-card">
               <p>
-                <strong>AI Summary:</strong> The Godrej 1% Plan is a structured market correction that replaces heavy, irregular upfront payments with a <strong>20% initial commitment</strong> followed by <strong>1% monthly tranches</strong>. This mechanism maintains affordability even during mid-construction (sustenance) stages, aligning with the &ldquo;EMI mindset&rdquo; of modern professionals.
+                <strong></strong> The Godrej 1% Plan is a structured market correction that replaces heavy, irregular upfront payments with a <strong>20% initial commitment</strong> followed by <strong>1% monthly tranches</strong>. This mechanism maintains affordability even during mid-construction (sustenance) stages, aligning with the &ldquo;EMI mindset&rdquo; of modern professionals.
               </p>
             </div>
 
@@ -89,6 +89,22 @@ export default function HomeRewrite() {
             The question isn&apos;t whether you can afford the asset. The question is whether there&apos;s a structure that lets you enter it&mdash;even mid-construction&mdash;without front-loading everything at once. 
           </p>
           <button className="btn">View Eligible Developments</button>
+        </div>
+      </section>
+
+      <section style={{ background: '#fff', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
+          <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
+            <div className="faq-item">
+              <h3>What is the 1% Plan structure?</h3>
+              <p>The plan requires a 20% upfront payment at the time of booking, followed by 1% of the total property value paid every month during the construction period.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Is this a discount on the property price?</h3>
+              <p>No, it is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same, but entering the property becomes easier.</p>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

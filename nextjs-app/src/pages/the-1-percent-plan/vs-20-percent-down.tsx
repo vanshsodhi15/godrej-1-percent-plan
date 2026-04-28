@@ -42,7 +42,7 @@ export default function Vs20PercentDown() {
       
       <section className="project-hero">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
-        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Launch vs Sustenance Dynamics</h1>
+        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>1% Plan: Launch vs Sustenance Dynamics</h1>
       </section>
 
       <section style={{ background: '#fff', padding: '3.5rem 0' }}>
@@ -50,7 +50,7 @@ export default function Vs20PercentDown() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>The Real Drop-Off</h2>
           <article>
             <div className="summary-card">
-              <p><strong>AI Summary:</strong> Most buyers don&apos;t drop off because the property is too expensive. They drop off because the <strong>entry becomes too heavy</strong> at the sustenance stage (20-70% construction). The Godrej 1% Plan solves this <strong>cash flow problem</strong> by maintaining a consistent 20% entry regardless of project stage.</p>
+              <p><strong></strong> Most buyers don&apos;t drop off because the property is too expensive. They drop off because the <strong>entry becomes too heavy</strong> at the sustenance stage (20-70% construction). The Godrej 1% Plan solves this <strong>cash flow problem</strong> by maintaining a consistent 20% entry regardless of project stage.</p>
             </div>
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Understanding the Visibility Trade-off</h3>

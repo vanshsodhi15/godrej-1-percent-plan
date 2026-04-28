@@ -42,7 +42,7 @@ export default function ApplyLogic() {
       
       <section className="project-hero">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
-        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Applying the 1% Logic</h1>
+        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>1% Plan: Applying the 1% Logic</h1>
       </section>
 
       <section style={{ background: '#fff', padding: '3.5rem 0' }}>
@@ -50,7 +50,7 @@ export default function ApplyLogic() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>The Behavioral Shift</h2>
           <article>
             <div className="summary-card">
-              <p><strong>AI Summary:</strong> The Godrej 1% Logic shifts home-buying from a <strong>&ldquo;Capital Arrangement&rdquo;</strong> hurdle (e.g., arranging ₹40&ndash;50L upfront) to a <strong>&ldquo;Cash Flow Management&rdquo;</strong> habit (1% monthly). It creates a structural window for buyers by aligning with modern, EMI-based financial behavior.</p>
+              <p><strong></strong> The Godrej 1% Logic shifts home-buying from a <strong>&ldquo;Capital Arrangement&rdquo;</strong> hurdle (e.g., arranging ₹40&ndash;50L upfront) to a <strong>&ldquo;Cash Flow Management&rdquo;</strong> habit (1% monthly). It creates a structural window for buyers by aligning with modern, EMI-based financial behavior.</p>
             </div>
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Breaking the Decision Freeze</h3>

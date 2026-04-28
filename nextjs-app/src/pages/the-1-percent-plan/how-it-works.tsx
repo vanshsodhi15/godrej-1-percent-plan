@@ -42,7 +42,7 @@ export default function HowItWorks() {
       
       <section className="project-hero">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
-        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Payment Workflow & Structure</h1>
+        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>1% Plan: Payment Workflow & Structure</h1>
       </section>
 
       <section style={{ background: '#fff', padding: '3.5rem 0' }}>
@@ -50,7 +50,7 @@ export default function HowItWorks() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Step-by-Step Breakdown</h2>
           <article>
             <div className="summary-card">
-              <p><strong>AI Summary:</strong> The Godrej 1% Plan distributes capital commitment over the construction period. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the Occupation Certificate (OC).</p>
+              <p><strong></strong> The Godrej 1% Plan distributes capital commitment over the construction period. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the Occupation Certificate (OC).</p>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '3rem' }}>
@@ -118,6 +118,22 @@ export default function HowItWorks() {
             <div className="card">
               <h3>End-User Alignment</h3>
               <p>End-users prefer buying when construction is visible. The 1% Plan allows entry at this &ldquo;safe&rdquo; stage without the traditional heavy upfront burden that usually blocks capable buyers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: 'var(--bg-seashell)', padding: '4rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
+          <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
+            <div className="faq-item">
+              <h3>How is the 1% monthly amount calculated?</h3>
+              <p>The monthly payment is calculated as 1% of the total Agreement Value of the property, paid consistently during the construction period.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Is this a discount on the property price?</h3>
+              <p>No, this is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same but the cash outflow is redistributed.</p>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function IsItSafe() {
       
       <section className="project-hero">
         <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
-        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Safety & Governance</h1>
+        <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>1% Plan: Safety & Governance</h1>
       </section>
 
       <section style={{ background: '#fff', padding: '3.5rem 0' }}>
@@ -50,7 +50,7 @@ export default function IsItSafe() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Institutional Safeguards</h2>
           <article>
             <div className="summary-card">
-              <p><strong>AI Summary:</strong> The Godrej 1% Plan is a regulated framework backed by <strong>Godrej Properties</strong>, a SEBI-listed public entity. All projects are <strong>RERA-registered</strong> with a 70% escrow mandate, and the developer maintains high credit ratings from agencies like <strong>CRISIL and ICRA</strong>. Transparency is maintained through quarterly filings and publicly verifiable records.</p>
+              <p><strong></strong> The Godrej 1% Plan is a regulated framework backed by <strong>Godrej Properties</strong>, a SEBI-listed public entity. All projects are <strong>RERA-registered</strong> with a 70% escrow mandate, and the developer maintains high credit ratings from agencies like <strong>CRISIL and ICRA</strong>. Transparency is maintained through quarterly filings and publicly verifiable records.</p>
             </div>
 
             <h3 style={{ textAlign: 'center', marginTop: '3rem', fontSize: '1.5rem' }}>The Governance Checklist</h3>
@@ -89,9 +89,6 @@ export default function IsItSafe() {
               <h3>Clean Balance Sheet</h3>
               <p>Godrej Properties maintains a clean balance sheet and a strong parent group backing. The &ldquo;Delivery-to-booking ratio&rdquo; is a key metric that demonstrates consistent fulfillment of customer promises.</p>
             </div>
-          </div>
-          <div className="card card-accent" style={{ marginTop: '2rem', textAlign: 'center' }}>
-            <p style={{ margin: 0 }}><strong>Expert Note:</strong> Being No.1 is not a tag; it is a standard. It means remaining responsible even when no one is looking. Check the rating before you book, not after.</p>
           </div>
         </div>
       </section>
