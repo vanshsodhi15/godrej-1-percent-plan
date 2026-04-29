@@ -444,6 +444,10 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             }} />
             <h3 style={{ marginTop: 0, fontSize: '1.25rem' }}>{project.name}</h3>
 
+            <h4 style={{ marginTop: '1rem', marginBottom: '1rem', fontSize: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>
+              How it will work for this Project (with demo illustration of the calculation)
+            </h4>
+
             <div style={{
               display: 'flex',
               flexWrap: 'wrap',
@@ -451,16 +455,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               marginTop: '1rem',
               marginBottom: '1.5rem',
             }}>
-              <div style={{
-                flex: '1 1 200px',
-                background: 'var(--bg-white)',
-                borderRadius: '10px',
-                padding: '1rem 1.25rem',
-                border: '1px solid var(--border-light)',
-              }}>
-                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-muted)' }}>Indicative AV</span>
-                <p style={{ marginBottom: 0, fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-heading)' }}>₹ {ex.indicativeAgreementValueCr} Cr</p>
-              </div>
               {ex.totalAgreementValue && (
                 <div style={{
                   flex: '1 1 200px',
@@ -486,10 +480,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 </div>
               )}
             </div>
-
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-muted)', marginBottom: '0.5rem' }}>
-              Figures are illustrative; the Agreement for Sale governs the final payment schedule for each unit.
-            </p>
 
             {/* Detailed milestone table (when full data is available) */}
             {ex.milestones && ex.milestones.length > 0 ? (
@@ -581,7 +571,11 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               }}>{ex.additionalSdrNote}</p>
             )}
 
-            <p style={{ marginTop: '1rem', marginBottom: 0, fontStyle: 'italic', fontSize: '0.875rem', color: 'var(--color-muted)', lineHeight: 1.7 }}>{ex.notes}</p>
+            <p style={{ marginTop: '1rem', fontSize: '0.875rem', fontStyle: 'italic', color: 'var(--color-muted)', lineHeight: 1.7 }}>
+              This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on the (i) unit selected (ii) associated charges for that unit and (iii) the offers available at project marketing office.
+            </p>
+
+            <p style={{ marginTop: '0.5rem', marginBottom: 0, fontStyle: 'italic', fontSize: '0.875rem', color: 'var(--color-muted)', lineHeight: 1.7 }}>{ex.notes}</p>
           </div>
 
           <p style={{ marginTop: '1.5rem' }}>
