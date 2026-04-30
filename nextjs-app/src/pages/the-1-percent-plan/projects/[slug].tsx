@@ -594,15 +594,15 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       <section id="rera" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>RERA: Possession &amp; OC Timelines</h2>
-          <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+          <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
             <div className="card card-accent">
               <h3>RERA Number</h3>
-              <p>{project.rera}</p>
+              <p style={{ wordBreak: 'break-all' }}>{project.rera}</p>
             </div>
             <div className="card card-accent">
               <h3>RERA Portal</h3>
               <p>
-                <a href={project.reraPortal} target="_blank" rel="noopener noreferrer">
+                <a href={project.reraPortal} target="_blank" rel="noopener noreferrer" style={{ whiteSpace: 'nowrap' }}>
                   Verify on State RERA portal
                 </a>
               </p>
