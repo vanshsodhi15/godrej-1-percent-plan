@@ -203,9 +203,16 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 <div key={gi} className="card" style={{ background: 'var(--bg-white)' }}>
                   <h3 style={{ marginTop: 0 }}>{group.category}</h3>
                   <ul style={{ marginLeft: '1.25rem' }}>
-                    {group.items.map((item, ii) => (
-                      <li key={ii} style={{ listStyle: 'disc', marginBottom: '0.35rem', fontSize: '0.9375rem' }}>{item}</li>
-                    ))}
+                    {group.items.map((item, ii) => {
+                      const parts = item.split(' | ');
+                      return (
+                        <li key={ii} style={{ listStyle: 'disc', marginBottom: '0.35rem', fontSize: '0.9375rem' }}>
+                          {parts.length === 2
+                            ? <>{parts[0]} <span style={{ whiteSpace: 'nowrap' }}>| {parts[1]}</span></>
+                            : item}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               ))}
