@@ -597,7 +597,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
             <div className="card card-accent">
               <h3>RERA Number</h3>
-              <p style={{ wordBreak: 'break-all' }}>{project.rera}</p>
+              <p>{project.rera}</p>
             </div>
             <div className="card card-accent">
               <h3>RERA Portal</h3>

@@ -363,8 +363,7 @@ strong {
 }
 
 .card p {
-  overflow-wrap: break-word;
-  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .card-accent {
