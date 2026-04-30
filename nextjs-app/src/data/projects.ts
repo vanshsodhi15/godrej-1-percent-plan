@@ -1811,7 +1811,14 @@ export const projects: Project[] = [
       additionalSdrNote: 'Additional SDR Charges of 7.6% at the time of possession.',
     },
     floorPlans: 'Floor plans are available for 2 BHK, 3 BHK Premium, and 3 BHK Luxe configurations.',
-    locationAdvantageGroups: [
+    locationAdvantages: [
+      'REVA University – 2 minutes',
+      'Manyata Tech Park – 12 minutes',
+      'Bhartiya Mall Of Bengaluru – 8 minutes',
+      'Cytecare Hospital – 7 minutes',
+      'Phoenix Mall Of Asia – 15 minutes',
+    ],
+    locationAdvantagesByCategory: [
       {
         category: 'Educational Institutes',
         items: [
