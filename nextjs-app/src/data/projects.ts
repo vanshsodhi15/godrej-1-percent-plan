@@ -1810,7 +1810,30 @@ export const projects: Project[] = [
       ],
       additionalSdrNote: 'Additional SDR Charges of 7.6% at the time of possession.',
     },
-    floorPlans: 'Floor plans are available for 2 BHK, 3 BHK Premium, and 3 BHK Luxe configurations.',
+    floorPlans: 'Floor plans are available for 2 BHK, 3 BHK Premium, and 3 BHK Lux configurations.',
+    floorPlanImages: [
+      {
+        label: '2 BHK',
+        src: '/assets/godrej_woods_2bhk_plan.jpg',
+        alt: 'Godrej Woods 2 BHK floor plan – RERA Carpet Area 66.81 sq.mt. (719.17 sq.ft.), Saleable Area 110.87 sq.mt. (1,193.38 sq.ft.)',
+        carpetArea: '66.81 sq.mt. (719.17 sq.ft.)',
+        saleableArea: '110.87 sq.mt. (1,193.38 sq.ft.)',
+      },
+      {
+        label: '3 BHK Premium',
+        src: '/assets/godrej_woods_3bhk_premium_plan.jpg',
+        alt: 'Godrej Woods 3 BHK Premium floor plan – RERA Carpet Area 95.34 sq.mt. (1,026.26 sq.ft.), Saleable Area 175.39 sq.mt. (1,887.88 sq.ft.)',
+        carpetArea: '95.34 sq.mt. (1,026.26 sq.ft.)',
+        saleableArea: '175.39 sq.mt. (1,887.88 sq.ft.)',
+      },
+      {
+        label: '3 BHK Lux',
+        src: '/assets/godrej_woods_3bhk_lux_plan.jpg',
+        alt: 'Godrej Woods 3 BHK Lux floor plan – RERA Carpet Area 109.04 sq.mt. (1,173.66 sq.ft.), Saleable Area 203.58 sq.mt. (2,191.36 sq.ft.)',
+        carpetArea: '109.04 sq.mt. (1,173.66 sq.ft.)',
+        saleableArea: '203.58 sq.mt. (2,191.36 sq.ft.)',
+      },
+    ],
     locationAdvantages: [
       'REVA University – 2 minutes',
       'Manyata Tech Park – 12 minutes',
