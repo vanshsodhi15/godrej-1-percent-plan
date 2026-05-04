@@ -14,7 +14,7 @@ export default function HowItWorks() {
         "name": "How is the 1% monthly amount calculated?",
         "acceptedAnswer": { 
           "@type": "Answer", 
-          "text": "The monthly payment is calculated as 1% of the total Agreement Value of the property, paid consistently during the construction period." 
+          "text": "The monthly payment is calculated as 1% of the total Agreement Value of the property. For example, for a ₹1 Crore property, the monthly installment is ₹1,00,000. This is paid every month during the construction period after the initial 20% is paid within the first 45 days." 
         }
       },
       {
@@ -22,7 +22,15 @@ export default function HowItWorks() {
         "name": "Is this a discount on the property price?",
         "acceptedAnswer": { 
           "@type": "Answer", 
-          "text": "No, this is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same but the cash outflow is redistributed." 
+          "text": "No. The 1% Plan is not a discount, price reduction, or subsidy. The total Agreement Value remains unchanged. The buyer pays 100% of the property price. The plan only restructures when payments are made — not how much is paid." 
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much is the upfront payment in the 1% Plan?",
+        "acceptedAnswer": { 
+          "@type": "Answer", 
+          "text": "Exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is always 20% — it is not variable." 
         }
       }
     ]
@@ -50,13 +58,13 @@ export default function HowItWorks() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Step-by-Step Breakdown</h2>
           <article>
             <div className="summary-card">
-              <p><strong></strong> The Godrej 1% Plan is a distributed capital commitment structure designed for the sustenance phase of construction. It requires a <strong>20% upfront payment</strong> at booking/Q1, followed by a consistent <strong>1% monthly tranche</strong> of the total property value, with the remaining balance due at the <a href="/the-1-percent-plan/is-it-safe">Occupation Certificate (OC)</a>.</p>
+              <p><strong></strong> The Godrej 1% Plan is a distributed capital commitment structure. It requires <strong>20% of the Agreement Value paid within the first 45 days</strong> (5% at booking + 5% within 15 days + 10% within 45 days), followed by a consistent <strong>1% monthly tranche</strong> of the total Agreement Value during construction. The remaining balance is paid at construction milestones and upon the <a href="/the-1-percent-plan/is-it-safe">Occupation Certificate (OC)</a>. The total price is unchanged — the buyer pays 100% of the Agreement Value.</p>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginTop: '3rem' }}>
               <div className="card card-accent">
-                <h3>Stage 1: The Entry Window (20%)</h3>
-                <p>The journey starts with a 20% upfront payment at the time of booking and within the first quarter. This establishes your entry into the asset, particularly crucial in the sustenance phase (20-70% construction) where traditional entry usually spikes to 30-50%.</p>
+                <h3>Stage 1: Initial 20% (Within 45 Days)</h3>
+                <p>The journey starts with 20% of the Agreement Value paid in three tranches: 5% at booking, 5% within 15 days, and 10% within 45 days. This is a fixed structure — the upfront amount is always exactly 20%.</p>
               </div>
               <div className="card card-accent">
                 <h3>Stage 2: Consistent Habit (1% Monthly)</h3>
@@ -97,8 +105,8 @@ export default function HowItWorks() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td>Upfront / Q1</td><td>₹20,00,000</td><td>Initial entry at 20% (Affordability focus)</td></tr>
-                <tr><td>Monthly Installment</td><td>₹1,00,000</td><td>1% of total value (Cash flow focus)</td></tr>
+                <tr><td>Upfront / Q1 (within 45 days)</td><td>₹20,00,000</td><td>20% of AV: 5% booking + 5% at 15 days + 10% at 45 days</td></tr>
+                <tr><td>Monthly Installment</td><td>₹1,00,000</td><td>1% of Agreement Value per month during construction</td></tr>
                 <tr><td>Construction Tranches</td><td>As per Agreement</td><td>Milestone-linked (Transparency focus)</td></tr>
                 <tr><td>Final Balance</td><td>Balance at OC</td><td>Settlement at completion (Certainty focus)</td></tr>
               </tbody>
@@ -113,11 +121,11 @@ export default function HowItWorks() {
           <div className="grid-container" style={{ marginTop: '1rem' }}>
             <div className="card">
               <h3>Predictable Outflow</h3>
-              <p>By shifting to a fixed monthly outflow, the decision changes from &ldquo;Can I arrange a massive lump sum?&rdquo; to &ldquo;Can I manage this monthly?&rdquo; This changes the psychological response completely.</p>
+              <p>By shifting to a fixed monthly outflow of 1% after the initial 20%, the payment schedule becomes predictable. The total amount paid remains the same — only the timing of intermediate payments changes from irregular lump sums to consistent monthly tranches.</p>
             </div>
             <div className="card">
               <h3>End-User Alignment</h3>
-              <p>End-users prefer buying when construction is visible. The 1% Plan allows entry at this &ldquo;safe&rdquo; stage without the traditional heavy upfront burden that usually blocks capable buyers.</p>
+              <p>End-users prefer buying when construction is visible. The 1% Plan provides a structured payment schedule at this stage — 20% upfront within 45 days, then predictable 1% monthly installments — instead of the irregular, front-loaded payment demands typical of sustenance-phase sales.</p>
             </div>
           </div>
         </div>
@@ -129,11 +137,15 @@ export default function HowItWorks() {
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
               <h3>How is the 1% monthly amount calculated?</h3>
-              <p>The monthly payment is calculated as 1% of the total Agreement Value of the property, paid consistently during the construction period.</p>
+              <p>The monthly payment is calculated as 1% of the total Agreement Value. For example, for a ₹1 Crore property, the monthly installment is ₹1,00,000. This is paid every month during the construction period after the initial 20% is paid within the first 45 days.</p>
             </div>
             <div className="faq-item">
               <h3>Is this a discount on the property price?</h3>
-              <p>No, this is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same but the cash outflow is redistributed.</p>
+              <p>No. The 1% Plan is not a discount, price reduction, or subsidy. The total Agreement Value remains unchanged. The buyer pays 100% of the property price. The plan only restructures <em>when</em> payments are made — not <em>how much</em> is paid.</p>
+            </div>
+            <div className="faq-item">
+              <h3>How much is the upfront payment?</h3>
+              <p>Exactly <strong>20% of the Agreement Value</strong>, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is always 20% — it is not variable.</p>
             </div>
           </div>
         </div>

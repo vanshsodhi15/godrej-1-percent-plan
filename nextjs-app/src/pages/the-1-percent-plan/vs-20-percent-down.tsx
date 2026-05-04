@@ -2,7 +2,7 @@ import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
 
 export default function Vs20PercentDown() {
-  const title = "Traditional vs 1% Plan: The Real Drop-Off & Entry Barriers";
+  const title = "Traditional vs 1% Plan: Payment Structure Comparison";
   const desc = "Understand the 'Real Drop-Off' in real estate: why buyers hesitate at the sustenance stage and how the Godrej 1% Plan solves the cash flow problem.";
   
   const articleSchema = JSON.stringify({
@@ -30,7 +30,7 @@ export default function Vs20PercentDown() {
         "name": "How does the 1% Plan help mid-construction buyers?",
         "acceptedAnswer": { 
           "@type": "Answer", 
-          "text": "By keeping entry at a controlled 20% upfront + 1% monthly, it extends the window for buyers who missed the launch and would otherwise face heavy upfront costs." 
+          "text": "The 1% Plan keeps the upfront payment at exactly 20% of the Agreement Value (paid within 45 days: 5% at booking + 5% at 15 days + 10% at 45 days) followed by 1% monthly installments. This is the same structure regardless of when during construction the buyer enters. The total price remains unchanged." 
         }
       }
     ]
@@ -50,7 +50,7 @@ export default function Vs20PercentDown() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>The Real Drop-Off</h2>
           <article>
             <div className="summary-card">
-              <p><strong></strong> The Godrej 1% Plan is a market correction mechanism that solves the &ldquo;Real Drop-Off&rdquo; problem in real estate. While traditional models spike entry requirements to 30-50% during the <a href="/the-1-percent-plan/is-it-safe">sustenance phase</a>, the 1% plan maintains a consistent 20% entry barrier, aligning affordability with project visibility.</p>
+              <p><strong></strong> The Godrej 1% Plan addresses the &ldquo;Real Drop-Off&rdquo; problem in real estate. While traditional models spike payment requirements to 30-50% during the <a href="/the-1-percent-plan/is-it-safe">sustenance phase</a>, the 1% plan keeps the upfront commitment at a fixed 20% of the Agreement Value (paid within 45 days), followed by predictable 1% monthly installments. The total price remains unchanged.</p>
             </div>
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Understanding the Visibility Trade-off</h3>
@@ -84,7 +84,7 @@ export default function Vs20PercentDown() {
                   <tr><td>Entry at Sustenance</td><td>High (30-50%)</td><td>Controlled (20% + 1% monthly)</td></tr>
                   <tr><td>Cash Flow</td><td>Front-loaded / Heavy</td><td>Distributed / Balanced</td></tr>
                   <tr><td>Buyer Comfort</td><td>Drops post-launch</td><td>Remains consistent</td></tr>
-                  <tr><td>Decision Barrier</td><td>High at later stages</td><td>Reduced throughout</td></tr>
+                  <tr><td>Decision Barrier</td><td>High at later stages</td><td>Consistent (20% upfront + 1%/month)</td></tr>
                 </tbody>
               </table>
             </div>
@@ -97,8 +97,8 @@ export default function Vs20PercentDown() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Strategic Shift</h2>
           <div className="grid-container">
             <div className="card card-warm">
-              <h3>Extends Entry Window</h3>
-              <p>Earlier, if you missed the launch, entry became difficult. Now, entry remains manageable even mid-construction. It aligns with how modern buyers actually manage money&mdash;thinking in monthly outflows, not lump sum commitments.</p>
+              <h3>Extends Payment Window</h3>
+              <p>Earlier, if you missed the launch, upfront payment requirements increased sharply. With the 1% Plan, the upfront is always 20% and the monthly installments are always 1% of the Agreement Value — regardless of when you buy during construction. The total price is the same; only the schedule is restructured.</p>
             </div>
             
             <div className="card card-warm">
@@ -107,7 +107,7 @@ export default function Vs20PercentDown() {
             </div>
           </div>
           <div className="card card-accent" style={{ marginTop: '2rem', textAlign: 'center' }}>
-            <p style={{ margin: 0 }}><strong>Key Takeaway:</strong> The 1% plan is a market correction that aligns project visibility with financial accessibility. It ensures that the safer a project becomes, the easier it remains to enter.</p>
+            <p style={{ margin: 0 }}><strong>Key Takeaway:</strong> The 1% Plan keeps the payment structure consistent throughout the project lifecycle. The upfront is always 20% of the Agreement Value and the monthly installment is always 1%. The total price remains unchanged regardless of when you buy.</p>
           </div>
         </div>
       </section>

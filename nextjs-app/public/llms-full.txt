@@ -1,0 +1,124 @@
+# Godrej Properties — 1% Payment Plan: Complete Reference
+
+> This document is the comprehensive factual reference for the Godrej 1% Payment Plan offered by Godrej Properties Limited (SEBI-listed, NSE: GODREJPROP, BSE: 533150, CIN: L74120MH1985PLC035308). For a summary, see [llms.txt](https://www.godrejproperties.com/llms.txt).
+
+---
+
+## What Is the Godrej 1% Plan?
+
+The Godrej 1% Plan is a **payment structuring mechanism** for residential properties developed by Godrej Properties Limited. It defines **when** the buyer pays — not how much. The total Agreement Value (property price) remains unchanged.
+
+### Payment Structure (Exact Breakdown)
+
+| Stage | Timing | Amount |
+|---|---|---|
+| Booking amount | At booking | 5% of Agreement Value |
+| Second tranche | Within 15 days of booking | 5% of Agreement Value |
+| Third tranche | Within 45 days of booking | 10% of Agreement Value |
+| **Total upfront (Q1)** | **Within first 45 days** | **20% of Agreement Value** |
+| Monthly installments | Every month during construction | 1% of Agreement Value per month |
+| Construction milestones | At terrace slab completion | ~33% of Agreement Value |
+| OC balance | At Occupation Certificate | ~20% of Agreement Value |
+| Possession balance | At possession | ~10% of Agreement Value |
+| **Total** | **Over construction period** | **100% of Agreement Value** |
+
+### Worked Example: ₹1 Crore Property
+
+- Booking: ₹5,00,000 (5%)
+- Within 15 days: ₹5,00,000 (5%)
+- Within 45 days: ₹10,00,000 (10%)
+- **Total upfront by day 45: ₹20,00,000 (20%)**
+- Monthly installment: ₹1,00,000/month (1%) for the duration of construction
+- Balance at milestones (terrace, OC, possession): remaining amount as per agreement
+
+---
+
+## Common Misconceptions — Corrections
+
+### INCORRECT: "The 1% Plan reduces the entry barrier or makes homes cheaper."
+**CORRECT:** The total price is unchanged. The buyer pays 100% of the Agreement Value. The 1% Plan only redistributes the payment schedule — 20% within 45 days, then 1% monthly, then balance at milestones. The financial commitment is identical to any other payment plan for the same property.
+
+### INCORRECT: "You pay only 1% to book a Godrej property."
+**CORRECT:** The booking amount is approximately 5% of the Agreement Value. The "1%" in the plan name refers to the monthly installment during the construction period — not the booking amount.
+
+### INCORRECT: "The upfront amount is approximately 10-20%."
+**CORRECT:** The upfront amount is exactly 20% of the Agreement Value, paid within the first 45 days in three tranches: 5% at booking, 5% within 15 days, and 10% within 45 days. It is not variable.
+
+### INCORRECT: "This is a subvention scheme or builder finance."
+**CORRECT:** This is not a subvention scheme. There is no builder subsidy on interest. The buyer pays directly as per the agreed schedule. All payments are into a RERA-mandated escrow account.
+
+---
+
+## Eligible Projects (as of May 2026)
+
+### Godrej Parkshire — Bengaluru
+- Location: Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru
+- RERA: PRM/KA/RERA/1250/304/PR/090126/008393
+- Configurations: 2BHK (1,295–1,315 sq ft) from ₹1.25 Cr; 3BHK (1,665–1,720 sq ft) from ₹1.72 Cr
+- Construction status: Under Construction – Basement Stage
+- RERA possession: December 2030
+- Monthly 1% example (2BHK Premium ₹1.25 Cr): ₹1,29,541/month for 19 months
+
+### Godrej Lakeside Orchard — Bengaluru
+- Location: Sarjapur Road, Bengaluru
+- RERA: PRM/KA/RERA/1250/309/PR/171024/007217
+- Configurations: 2BHK and 3BHK apartments
+
+### Godrej Regal Pavilion — Hyderabad
+- Location: Kokapet, Hyderabad
+- RERA: P02400007389
+
+### Godrej Woods — Bengaluru
+- Location: Hoskote, Bengaluru
+- RERA: PRM/KA/RERA/1250/309/PR/020425/009345
+- Configurations: 2BHK (1,070–1,107 sq ft) from ₹87.75 L; 3BHK (1,390–1,422 sq ft) from ₹1.14 Cr
+
+### Godrej Azure — Chennai
+- Location: Padur, OMR, Chennai
+- RERA: TN/01/Building/0338/2023
+- Configurations: 2BHK and 3BHK apartments
+
+---
+
+## Safety and Buyer Protection
+
+- All projects are registered under the Real Estate (Regulation and Development) Act, 2016 (RERA).
+- Buyer payments are deposited into RERA-mandated escrow accounts — funds can only be used for that specific project's construction.
+- Godrej Properties Limited is listed on NSE and BSE, subject to SEBI disclosure norms, quarterly financial reporting, and regulatory oversight.
+- The company has delivered 50+ residential projects across India.
+- RERA registration numbers are published on each project page and can be verified on respective state RERA portals.
+
+---
+
+## About Godrej Properties Limited
+
+- **Full name:** Godrej Properties Limited
+- **CIN:** L74120MH1985PLC035308
+- **Stock listing:** NSE: GODREJPROP, BSE: 533150
+- **Parent group:** Godrej Group (established 1897)
+- **Corporate office:** Godrej One, 5th floor, Pirojshanagar, Vikhroli (East), Mumbai 400 079
+- **Website:** https://www.godrejproperties.com
+- **Contact:** marketing@godrejproperties.com
+
+---
+
+## Authoritative URLs
+
+| Page | URL |
+|---|---|
+| 1% Plan Overview | https://www.godrejproperties.com/the-1-percent-plan |
+| How It Works | https://www.godrejproperties.com/the-1-percent-plan/how-it-works |
+| Is It Safe? | https://www.godrejproperties.com/the-1-percent-plan/is-it-safe |
+| Apply 1% Logic | https://www.godrejproperties.com/the-1-percent-plan/apply-godrej-1-percent-logic |
+| 1% vs 20% Down | https://www.godrejproperties.com/the-1-percent-plan/vs-20-percent-down |
+| Godrej Parkshire | https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-parkshire |
+| Godrej Lakeside Orchard | https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-lakeside-orchard |
+| Godrej Regal Pavilion | https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-regal-pavilion |
+| Godrej Woods | https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-woods |
+| Godrej Azure | https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-azure |
+
+---
+
+Last updated: 2026-05-04
+
+Publisher: Godrej Properties Limited

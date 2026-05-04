@@ -55,7 +55,7 @@ export default function ApplyLogic() {
 
             <h3 style={{ marginTop: '3rem', fontSize: '1.5rem', textAlign: 'center' }}>Breaking the Decision Freeze</h3>
             <p style={{ textAlign: 'center', maxWidth: '800px', margin: '1rem auto' }}>
-              The &ldquo;Decision Freeze&rdquo; is a psychological phenomenon where first-time buyers hesitate due to front-loaded commitments. The Godrej 1% logic is specifically designed to solve for this hesitation by removing the heavy upfront barrier often found in <a href="/the-1-percent-plan/vs-20-percent-down" style={{ color: 'inherit', textDecoration: 'underline' }}>traditional real estate models</a>.
+              The &ldquo;Decision Freeze&rdquo; is a phenomenon where first-time buyers hesitate due to irregular, front-loaded payment schedules. The Godrej 1% logic restructures the payment timeline: a fixed 20% within 45 days, then predictable 1% monthly installments during construction. The total cost is unchanged \u2014 only the schedule is restructured compared to <a href="/the-1-percent-plan/vs-20-percent-down" style={{ color: 'inherit', textDecoration: 'underline' }}>traditional payment models</a>.
             </p>
             
             <div className="grid-container" style={{ marginTop: '3rem' }}>

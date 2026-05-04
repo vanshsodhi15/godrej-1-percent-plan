@@ -22,3 +22,7 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://www.godrejproperties.com/sitemap.xml
+
+# LLM-specific content files (llmstxt.org standard)
+# llms.txt: https://www.godrejproperties.com/llms.txt
+# llms-full.txt: https://www.godrejproperties.com/llms-full.txt

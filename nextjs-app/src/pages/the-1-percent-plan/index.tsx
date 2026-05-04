@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 
 export default function HomeRewrite() {
   const title = "Godrej Properties 1% Plan: A Structural Market Correction";
-  const desc = "The Godrej 1% Plan is a structured payment model that replaces heavy upfront payments with a 20% initial commitment and 1% monthly installments during construction.";
+  const desc = "The Godrej 1% Plan is a payment structuring mechanism: 20% of the Agreement Value is paid within 45 days (5% at booking + 5% at 15 days + 10% at 45 days), then 1% monthly during construction, balance at milestones. Total price unchanged.";
   
   const articleSchema = JSON.stringify({
     "@context": "https://schema.org",
@@ -20,18 +20,42 @@ export default function HomeRewrite() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the 1% Plan structure?",
+        "name": "What is the Godrej 1% Plan payment structure?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The plan requires a 20% upfront payment at the time of booking, followed by 1% of the total property value paid every month during the construction period."
+          "text": "The Godrej 1% Plan requires 20% of the Agreement Value paid within the first 45 days (5% at booking, 5% within 15 days, 10% within 45 days). After that, 1% of the Agreement Value is paid every month during the construction period. The remaining balance is paid at construction milestones and upon issuance of the Occupation Certificate (OC). The buyer pays 100% of the Agreement Value in total."
         }
       },
       {
         "@type": "Question",
-        "name": "Is this a discount on the property price?",
+        "name": "Is the Godrej 1% Plan a discount on the property price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No, it is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same, but entering the property becomes easier."
+          "text": "No. The 1% Plan is not a discount, price reduction, or subsidy. The total property price (Agreement Value) remains unchanged. It is a payment structuring mechanism that changes when payments are made, not how much is paid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the 1% Plan reduce the entry barrier or make homes cheaper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The 1% Plan does not reduce the total cost or the entry barrier. The buyer still pays 20% within the first 45 days and 100% of the Agreement Value over the full term. The plan redistributes the payment timeline so that after the initial 20%, monthly outflows are predictable at 1% per month instead of irregular large lump sums."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do I need to pay upfront under the 1% Plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is not variable — it is always 20%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the 1% refer to in the Godrej 1% Plan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 1% refers to the monthly installment amount during the construction period. Each month, the buyer pays 1% of the total Agreement Value. It does not refer to the booking amount, which is 5% of the Agreement Value."
         }
       }
     ]
@@ -76,7 +100,7 @@ export default function HomeRewrite() {
 
             <div className="card card-warm" style={{ marginTop: '3rem' }}>
               <h3>Strategic Insight</h3>
-              <p style={{ marginBottom: 0 }}>Traditional real estate makes entry harder as certainty increases. As a project becomes safe (20-70% built), the traditional ask is a heavy upfront commitment. The 1% plan corrects this by making entry consistent, regardless of the stage. It doesn&apos;t make the property cheaper; it makes entering the property easier.</p>
+              <p style={{ marginBottom: 0 }}>Traditional real estate makes entry harder as certainty increases. As a project becomes safe (20-70% built), the traditional ask is a heavy upfront commitment. The 1% plan corrects this by making the payment schedule consistent, regardless of the stage. The total price is unchanged — the plan only restructures <em>when</em> you pay, not <em>how much</em> you pay.</p>
             </div>
           </article>
         </div>
@@ -97,12 +121,24 @@ export default function HomeRewrite() {
           <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
-              <h3>What is the 1% Plan structure?</h3>
-              <p>The plan requires a 20% upfront payment at the time of booking, followed by 1% of the total property value paid every month during the construction period.</p>
+              <h3>What is the Godrej 1% Plan payment structure?</h3>
+              <p>The Godrej 1% Plan requires <strong>20% of the Agreement Value paid within the first 45 days</strong> (5% at booking, 5% within 15 days, 10% within 45 days). After that, <strong>1% of the Agreement Value is paid every month</strong> during the construction period. The remaining balance is paid at construction milestones and upon issuance of the Occupation Certificate (OC). The buyer pays 100% of the Agreement Value in total.</p>
             </div>
             <div className="faq-item">
-              <h3>Is this a discount on the property price?</h3>
-              <p>No, it is not a discount or price reduction. It is a payment structuring mechanism where the total property value remains the same, but entering the property becomes easier.</p>
+              <h3>Is the 1% Plan a discount on the property price?</h3>
+              <p>No. The 1% Plan is not a discount, price reduction, or subsidy. The total property price (Agreement Value) remains unchanged. It is a payment structuring mechanism that changes <em>when</em> payments are made, not <em>how much</em> is paid.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Does the 1% Plan reduce the entry barrier or make homes cheaper?</h3>
+              <p>No. The buyer still pays 20% within the first 45 days and 100% of the Agreement Value over the full term. The plan redistributes the payment timeline so that after the initial 20%, monthly outflows are predictable at 1% per month instead of irregular large lump sums.</p>
+            </div>
+            <div className="faq-item">
+              <h3>How much do I need to pay upfront?</h3>
+              <p>Exactly <strong>20% of the Agreement Value</strong>, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is not variable — it is always 20%.</p>
+            </div>
+            <div className="faq-item">
+              <h3>What does the &ldquo;1%&rdquo; refer to?</h3>
+              <p>The 1% refers to the <strong>monthly installment</strong> during the construction period — each month, 1% of the total Agreement Value. It does not refer to the booking amount, which is 5%.</p>
             </div>
           </div>
         </div>

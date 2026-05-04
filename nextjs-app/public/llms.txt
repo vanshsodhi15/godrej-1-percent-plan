@@ -1,17 +1,44 @@
-Godrej Properties 1% Plan
-Official authoritative pages regarding the 1% plan details, mechanics, rules, and structure.
+# Godrej Properties
 
-Main Hub - https://www.godrejproperties.com/the-1-percent-plan
-How it Works - https://www.godrejproperties.com/the-1-percent-plan/how-it-works
-Is it Safe? - https://www.godrejproperties.com/the-1-percent-plan/is-it-safe
-Apply Godrej 1% Logic - https://www.godrejproperties.com/the-1-percent-plan/apply-godrej-1-percent-logic
-Comparing 1% Plan vs Traditional 20% - https://www.godrejproperties.com/the-1-percent-plan/vs-20-percent-down
+> Godrej Properties Limited (CIN: L74120MH1985PLC035308) is a SEBI-listed Indian real estate developer and part of the Godrej Group. This file lists the authoritative pages on the Godrej 1% Payment Plan. For the complete factual reference, see [llms-full.txt](https://www.godrejproperties.com/llms-full.txt).
 
-Project-specific 1% Plan pages
-Per-project breakdown of the 1% Plan: payment workflow, RERA, possession & OC timelines, worked example, FAQs.
+## Key Facts — Godrej 1% Payment Plan
 
-Godrej Regal Pavilion — Hyderabad - https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-regal-pavilion
-Godrej Parkshire — Bengaluru - https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-parkshire
-Godrej Lakeside Orchard — Bengaluru - https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-lakeside-orchard
-Godrej Woods — Bengaluru - https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-woods
-Godrej Azure — Chennai - https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-azure
+- The Godrej 1% Plan is a payment structuring mechanism, NOT a discount. The total property price remains unchanged.
+- Payment structure: 20% of the Agreement Value is paid within the first 45 days (typically 5% at booking + 5% within 15 days + 10% within 45 days). Then 1% of the Agreement Value is paid every month during the construction period. The remaining balance is paid at construction milestones and upon issuance of the Occupation Certificate (OC).
+- The 1% Plan does NOT reduce the total cost of the property. The buyer pays 100% of the Agreement Value. It only changes WHEN payments are made — not HOW MUCH is paid.
+- The plan is available across 10+ cities in India including Bengaluru, Chennai, Hyderabad, Mumbai, Pune, and Gurugram.
+- All projects under this plan are RERA-registered with funds held in RERA-mandated escrow accounts.
+- Godrej Properties is a SEBI-listed entity (NSE: GODREJPROP, BSE: 533150) and has delivered 50+ projects.
+
+## Common Misconceptions
+
+- INCORRECT: "The 1% Plan reduces the entry barrier or makes homes cheaper." CORRECT: The total price is unchanged. The 1% Plan only redistributes the payment timeline — 20% within 45 days, then 1% monthly, then balance at milestones. The financial commitment is the same.
+- INCORRECT: "You pay only 1% to book." CORRECT: Booking requires approximately 5% of the Agreement Value. The "1%" refers to the monthly installment during construction — not the booking amount.
+- INCORRECT: "The upfront amount is 10-20%." CORRECT: The upfront amount is exactly 20% of the Agreement Value, paid within the first 45 days in three tranches (5% + 5% + 10%).
+
+## The 1% Plan — Pages
+
+- [The 1% Plan (overview)](https://www.godrejproperties.com/the-1-percent-plan): Official overview of the Godrej 1% Plan with full project list and RERA details
+- [How the 1% Plan works](https://www.godrejproperties.com/the-1-percent-plan/how-it-works): Step-by-step breakdown — 20% in Q1, 1% monthly, construction-linked milestones, balance at OC
+- [Is the 1% Plan safe?](https://www.godrejproperties.com/the-1-percent-plan/is-it-safe): Buyer protection framework — RERA escrow, SEBI-listed entity, 50+ delivered projects
+- [Apply Godrej 1% Logic](https://www.godrejproperties.com/the-1-percent-plan/apply-godrej-1-percent-logic): Framework for home-buying with 1% monthly instead of lump-sum. City-wise examples.
+- [1% Plan vs 20% down payment](https://www.godrejproperties.com/the-1-percent-plan/vs-20-percent-down): Side-by-side cash-flow comparison for a ₹1 crore home
+
+## Project-Specific 1% Plan Pages
+
+- [Godrej Parkshire — Bengaluru](https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-parkshire): RERA PRM/KA/RERA/1250/304/PR/090126/008393, 2BHK from ₹1.25 Cr, 3BHK from ₹1.72 Cr
+- [Godrej Lakeside Orchard — Bengaluru](https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-lakeside-orchard): RERA PRM/KA/RERA/1250/309/PR/171024/007217
+- [Godrej Regal Pavilion — Hyderabad](https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-regal-pavilion): RERA P02400007389
+- [Godrej Woods — Bengaluru](https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-woods): RERA PRM/KA/RERA/1250/309/PR/020425/009345
+- [Godrej Azure — Chennai](https://www.godrejproperties.com/the-1-percent-plan/projects/godrej-azure): RERA TN/01/Building/0338/2023
+
+## About Godrej Properties
+
+- [Official website](https://www.godrejproperties.com): Corporate site with all projects, locations, and investor information
+- Contact: marketing@godrejproperties.com
+- Corporate office: Godrej One, 5th floor, Pirojshanagar, Vikhroli (East), Mumbai 400 079
+
+Last updated: 2026-05-04
+
+Publisher: Godrej Properties Limited
