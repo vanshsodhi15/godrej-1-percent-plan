@@ -153,24 +153,24 @@ const defaultPaymentExample: ProjectPaymentExample = {
 
 const defaultFaqs: FaqItem[] = [
   {
-    question: 'How does the 1% Plan apply to this project specifically?',
-    answer: GPL('Project-specific narrative: Q1 amount, monthly tranche, milestone trigger, OC balance.'),
+    question: 'What is the Godrej 1% Payment Plan?',
+    answer: 'The Godrej 1% Plan is a payment structuring mechanism. You pay 20% of the Agreement Value within the first 45 days (5% at booking + 5% within 15 days + 10% within 45 days), then 1% of the Agreement Value every month during construction. The remaining balance is paid at construction milestones and at the Occupation Certificate (OC). The total property price is unchanged — the plan only restructures when you pay, not how much you pay.',
+  },
+  {
+    question: 'How much do I need to pay upfront under the 1% Plan?',
+    answer: 'Exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is always 20% — it is not variable.',
   },
   {
     question: 'Is the 1% calculated on the basic Agreement Value or AV + GST + SDR?',
-    answer: GPL('Confirm calculation base — typically Agreement Value; clarify GST and Stamp Duty + Registration treatment.'),
+    answer: 'The 1% monthly installment is calculated on the Agreement Value (AV) only. GST and Stamp Duty + Registration (SDR) are payable separately by the buyer.',
   },
   {
-    question: 'What happens if construction is delayed beyond the RERA possession date?',
-    answer: GPL('RERA-mandated remedy + GPL communication policy.'),
+    question: 'Does the 1% Plan reduce the total cost or make homes cheaper?',
+    answer: 'No. The total property price (Agreement Value) remains unchanged. The 1% Plan only restructures the payment timeline — 20% within 45 days, then 1% monthly, then balance at milestones. The buyer pays 100% of the Agreement Value.',
   },
   {
-    question: 'Can I prepay or close the 1% Plan early without penalty?',
-    answer: GPL('Prepayment treatment — confirm with finance + legal.'),
-  },
-  {
-    question: 'Is this project actually under the 1% Plan today, or is the URL placeholder?',
-    answer: GPL('Confirm live applicability of the 1% Plan for this project as of current date.'),
+    question: 'What does the 1% refer to in the Godrej 1% Plan?',
+    answer: 'The 1% refers to the monthly installment during construction — each month, you pay 1% of the total Agreement Value. It does not refer to the booking amount, which is 5% of the Agreement Value.',
   },
 ];
 
@@ -1336,11 +1336,11 @@ export const projects: Project[] = [
       { question: 'What are the additional charges?', answer: 'GST, PLC, FRC, AM, SDR' },
       { question: 'Are there any hidden costs?', answer: 'No there are no hidden charges' },
       // 1% Payment Plan FAQs
-      { question: 'What is the 1% payment plan?', answer: 'Pay monthly one percent of the property value after initial booking amount.' },
-      { question: 'Does the 1% include GST and registration?', answer: 'No Those are not included.' },
-      { question: 'How much do I need to pay upfront?', answer: '10 percent of property value.' },
-      { question: 'When does the home loan EMI start?', answer: 'After 10 percent of initial payment home loan can start.' },
-      { question: 'Can I prepay or exit the 1% plan?', answer: 'NO' },
+      { question: 'What is the 1% payment plan?', answer: 'The Godrej 1% Plan is a payment structuring mechanism. You pay 20% of the Agreement Value within the first 45 days (5% at booking + 5% within 15 days + 10% within 45 days), then 1% of the Agreement Value every month during construction. The remaining balance is paid at construction milestones and at the Occupation Certificate. The total property price is unchanged.' },
+      { question: 'Does the 1% include GST and registration?', answer: 'No. GST and Stamp Duty + Registration (SDR) are payable separately by the buyer and are not included in the 1% calculation base.' },
+      { question: 'How much do I need to pay upfront?', answer: 'Exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is always 20%.' },
+      { question: 'When does the home loan EMI start?', answer: 'After the initial 20% payment is completed within the first 45 days, home loan disbursement can begin as per bank norms.' },
+      { question: 'Can I prepay or exit the 1% plan?', answer: 'No, the 1% Plan follows a fixed payment schedule as per the Agreement for Sale.' },
       // Location & Connectivity FAQs
       { question: 'How far is Whitefield?', answer: '20 min from whitefield' },
       { question: 'Is metro connectivity available?', answer: 'Yes its available' },
@@ -1355,7 +1355,7 @@ export const projects: Project[] = [
       { question: 'Isn\'t Hoskote too far or underdeveloped?', answer: 'Not anymore—Hoskote is seeing rapid infrastructure growth, highways, and planned metro connectivity.' },
       { question: 'Why is this priced higher than nearby local builders?', answer: 'Trusted brand (Godrej Properties), Better construction quality, Modern amenities & community living' },
       { question: 'What if the project gets delayed?', answer: 'Being a reputed developer, delays are rare—and RERA ensures accountability and compensation clauses.' },
-      { question: 'Is the 1% plan really beneficial?', answer: 'Yes, it reduces financial burden during construction and improves cash flow flexibility.' },
+      { question: 'Is the 1% plan really beneficial?', answer: 'The 1% Plan restructures the payment timeline so that after the initial 20% (paid within 45 days), monthly outflows are predictable at 1% of the Agreement Value per month. The total cost remains the same — only the schedule changes from irregular lump sums to consistent monthly payments.' },
       // Closing-Oriented FAQs
       { question: 'What is the best unit available now?', answer: 'Premium-facing units (park view / corner units) are currently in high demand and offer better long-term value.' },
       { question: 'Are there any current offers?', answer: '1 percent payment plan' },
@@ -1383,11 +1383,11 @@ export const projects: Project[] = [
       {
         category: '1% Payment Plan FAQs',
         items: [
-          { question: 'What is the 1% payment plan?', answer: 'Pay monthly one percent of the property value after initial booking amount.' },
-          { question: 'Does the 1% include GST and registration?', answer: 'No Those are not included.' },
-          { question: 'How much do I need to pay upfront?', answer: '10 percent of property value.' },
-          { question: 'When does the home loan EMI start?', answer: 'After 10 percent of initial payment home loan can start.' },
-          { question: 'Can I prepay or exit the 1% plan?', answer: 'NO' },
+          { question: 'What is the 1% payment plan?', answer: 'The Godrej 1% Plan is a payment structuring mechanism. You pay 20% of the Agreement Value within the first 45 days (5% at booking + 5% within 15 days + 10% within 45 days), then 1% of the Agreement Value every month during construction. The remaining balance is paid at construction milestones and at the Occupation Certificate. The total property price is unchanged.' },
+          { question: 'Does the 1% include GST and registration?', answer: 'No. GST and Stamp Duty + Registration (SDR) are payable separately by the buyer and are not included in the 1% calculation base.' },
+          { question: 'How much do I need to pay upfront?', answer: 'Exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is always 20%.' },
+          { question: 'When does the home loan EMI start?', answer: 'After the initial 20% payment is completed within the first 45 days, home loan disbursement can begin as per bank norms.' },
+          { question: 'Can I prepay or exit the 1% plan?', answer: 'No, the 1% Plan follows a fixed payment schedule as per the Agreement for Sale.' },
         ],
       },
       {
@@ -1418,7 +1418,7 @@ export const projects: Project[] = [
           { question: 'Isn\'t Hoskote too far or underdeveloped?', answer: 'Not anymore—Hoskote is seeing rapid infrastructure growth, highways, and planned metro connectivity.' },
           { question: 'Why is this priced higher than nearby local builders?', answer: 'Trusted brand (Godrej Properties), Better construction quality, Modern amenities & community living' },
           { question: 'What if the project gets delayed?', answer: 'Being a reputed developer, delays are rare—and RERA ensures accountability and compensation clauses.' },
-          { question: 'Is the 1% plan really beneficial?', answer: 'Yes, it reduces financial burden during construction and improves cash flow flexibility.' },
+          { question: 'Is the 1% plan really beneficial?', answer: 'The 1% Plan restructures the payment timeline so that after the initial 20% (paid within 45 days), monthly outflows are predictable at 1% of the Agreement Value per month. The total cost remains the same — only the schedule changes from irregular lump sums to consistent monthly payments.' },
         ],
       },
       {

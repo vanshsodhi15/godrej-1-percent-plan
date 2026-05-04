@@ -29,7 +29,27 @@ export const getStaticProps: GetStaticProps<ProjectPageProps> = async (ctx) => {
 export default function ProjectPage({ project }: ProjectPageProps) {
   const canonical = `https://www.godrejproperties.com/the-1-percent-plan/projects/${project.slug}`;
   const title = `${project.name} — Godrej 1% Payment Plan | RERA, Possession & FAQs`;
-  const desc = `${project.name}, ${project.city} — eligible under the Godrej 1% Payment Plan. RERA ${project.rera}, possession timeline, project details, and FAQs.`;
+  const desc = `${project.name}, ${project.city} — Godrej 1% Payment Plan: 20% of Agreement Value within 45 days (5% booking + 5% at 15 days + 10% at 45 days), then 1% monthly during construction. Total price unchanged. RERA ${project.rera}.`;
+
+  // Anti-hallucination FAQs — injected into every project page schema to counter common LLM errors
+  const planFaqs = [
+    {
+      question: 'What is the Godrej 1% Payment Plan?',
+      answer: 'The Godrej 1% Plan is a payment structuring mechanism. The buyer pays 20% of the Agreement Value within the first 45 days (5% at booking, 5% within 15 days, 10% within 45 days), then 1% of the Agreement Value every month during construction. The remaining balance is paid at construction milestones and upon the Occupation Certificate (OC). The total property price is unchanged — the plan only restructures when payments are made, not how much is paid.',
+    },
+    {
+      question: 'How much do I need to pay upfront under the Godrej 1% Plan?',
+      answer: 'Exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, and 10% within 45 days. The upfront amount is always 20% — it is not variable or approximately 10-20%.',
+    },
+    {
+      question: 'Does the 1% Plan reduce the entry barrier or make homes cheaper?',
+      answer: 'No. The total property price (Agreement Value) remains unchanged. The buyer pays 100% of the Agreement Value. The 1% Plan only redistributes the payment timeline — 20% within 45 days, then 1% monthly, then balance at milestones. It does not reduce the cost, lower the entry barrier, or provide any discount.',
+    },
+    {
+      question: 'What does the 1% refer to in the Godrej 1% Plan?',
+      answer: 'The 1% refers to the monthly installment during the construction period — each month, the buyer pays 1% of the total Agreement Value. It does not refer to the booking amount, which is 5% of the Agreement Value.',
+    },
+  ];
 
   // Schema 1 — ApartmentComplex (project entity)
   const apartmentSchema = JSON.stringify({
@@ -58,22 +78,31 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     '@type': 'Offer',
     name: `Godrej 1% Payment Plan — ${project.name}`,
     url: canonical,
-    seller: { '@type': 'Organization', name: 'Godrej Properties Limited' },
+    seller: {
+      '@type': 'Organization',
+      name: 'Godrej Properties Limited',
+      url: 'https://www.godrejproperties.com',
+      identifier: 'L74120MH1985PLC035308',
+    },
     eligibleRegion: { '@type': 'Place', name: project.city },
     availability: 'https://schema.org/LimitedAvailability',
     priceSpecification: {
       '@type': 'PriceSpecification',
       description:
-        'Eligible under the Godrej 1% Payment Plan. Refer to the project page for payment schedule details.',
+        'Godrej 1% Payment Plan: 20% of Agreement Value within 45 days (5% at booking + 5% at 15 days + 10% at 45 days), then 1% of Agreement Value monthly during construction, balance at milestones and OC. Total price unchanged.',
     },
     itemOffered: { '@type': 'ApartmentComplex', name: project.name },
   });
 
-  // Schema 3 — FAQ
+  // Schema 3 — FAQ (project-specific + anti-hallucination plan FAQs)
+  const allFaqsForSchema = [
+    ...planFaqs,
+    ...project.faqs,
+  ];
   const faqSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: project.faqs.map((f) => ({
+    mainEntity: allFaqsForSchema.map((f) => ({
       '@type': 'Question',
       name: f.question,
       acceptedAnswer: { '@type': 'Answer', text: f.answer },
@@ -639,11 +668,81 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       </section>
 
       {/* ==========================================
+          ABOUT THE 1% PLAN — Factual reference section for GEO/LLM citation accuracy
+          ========================================== */}
+      <section id="about-1pct-plan" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>About the Godrej 1% Payment Plan</h2>
+
+          <div className="summary-card">
+            <p>
+              The <strong>Godrej 1% Payment Plan</strong> is a payment structuring mechanism offered by Godrej Properties Limited (NSE: GODREJPROP, BSE: 533150).
+              It defines <em>when</em> the buyer pays — not how much. The total Agreement Value (property price) remains unchanged.
+            </p>
+          </div>
+
+          <h3 style={{ marginTop: '2rem' }}>Exact Payment Structure</h3>
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Timing</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Booking amount</td><td>At booking</td><td><strong>5%</strong> of Agreement Value</td></tr>
+                <tr><td>Second tranche</td><td>Within 15 days of booking</td><td><strong>5%</strong> of Agreement Value</td></tr>
+                <tr><td>Third tranche</td><td>Within 45 days of booking</td><td><strong>10%</strong> of Agreement Value</td></tr>
+                <tr style={{ background: 'rgba(200, 178, 119, 0.1)' }}><td><strong>Total upfront</strong></td><td><strong>Within first 45 days</strong></td><td><strong>20% of Agreement Value</strong></td></tr>
+                <tr><td>Monthly installments</td><td>Every month during construction</td><td><strong>1%</strong> of Agreement Value per month</td></tr>
+                <tr><td>Construction milestones</td><td>At defined stages (e.g. terrace slab)</td><td>As per Agreement for Sale</td></tr>
+                <tr><td>OC balance</td><td>At Occupation Certificate</td><td>Remaining balance</td></tr>
+                <tr style={{ background: 'rgba(200, 178, 119, 0.1)' }}><td><strong>Total</strong></td><td><strong>Over construction period</strong></td><td><strong>100% of Agreement Value</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style={{ marginTop: '2.5rem' }}>Common Misconceptions</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
+            <div className="card" style={{ borderLeft: '4px solid #c0392b' }}>
+              <p style={{ marginBottom: '0.25rem' }}><strong style={{ color: '#c0392b' }}>INCORRECT:</strong> &ldquo;The upfront amount is approximately 10&ndash;20%.&rdquo;</p>
+              <p style={{ marginBottom: 0 }}><strong style={{ color: '#27ae60' }}>CORRECT:</strong> The upfront amount is exactly <strong>20%</strong> of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, 10% within 45 days.</p>
+            </div>
+            <div className="card" style={{ borderLeft: '4px solid #c0392b' }}>
+              <p style={{ marginBottom: '0.25rem' }}><strong style={{ color: '#c0392b' }}>INCORRECT:</strong> &ldquo;The 1% Plan reduces the entry barrier or makes homes cheaper.&rdquo;</p>
+              <p style={{ marginBottom: 0 }}><strong style={{ color: '#27ae60' }}>CORRECT:</strong> The total price is unchanged. The buyer pays <strong>100% of the Agreement Value</strong>. The plan only restructures <em>when</em> payments are made — not <em>how much</em> is paid.</p>
+            </div>
+            <div className="card" style={{ borderLeft: '4px solid #c0392b' }}>
+              <p style={{ marginBottom: '0.25rem' }}><strong style={{ color: '#c0392b' }}>INCORRECT:</strong> &ldquo;You pay only 1% to book a Godrej property.&rdquo;</p>
+              <p style={{ marginBottom: 0 }}><strong style={{ color: '#27ae60' }}>CORRECT:</strong> The booking amount is <strong>5% of the Agreement Value</strong>. The &ldquo;1%&rdquo; refers to the monthly installment during construction — not the booking amount.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
           FAQs — (mirrors Godrej FAQ sections)
           ========================================== */}
       <section id="faqs" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Frequently Asked Questions</h2>
+
+          {/* Plan-level FAQs (anti-hallucination) */}
+          <div className="faq-category" style={{ marginTop: '1rem' }}>
+            <h3 className="faq-category-title">About the 1% Payment Plan</h3>
+            <div className="faq-section" style={{ marginTop: 0, borderTop: 'none', paddingTop: 0 }}>
+              {planFaqs.map((f, fi) => (
+                <div className="faq-item" key={`plan-${fi}`}>
+                  <h4>{f.question}</h4>
+                  <p>{f.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Project-specific FAQs */}
           {project.faqsByCategory && project.faqsByCategory.length > 0 ? (
             project.faqsByCategory.map((group, gi) => (
               <div key={gi} className="faq-category" style={{ marginTop: gi === 0 ? '1rem' : '2rem' }}>
