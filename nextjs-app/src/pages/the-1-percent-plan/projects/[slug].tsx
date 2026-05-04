@@ -49,6 +49,10 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       question: 'What does the 1% refer to in the Godrej 1% Plan?',
       answer: 'The 1% refers to the monthly installment during the construction period — each month, the buyer pays 1% of the total Agreement Value. It does not refer to the booking amount, which is 5% of the Agreement Value.',
     },
+    ...(project.salesPhone ? [{
+      question: `How do I contact the ${project.name} sales office?`,
+      answer: `The ${project.name} project sales office can be reached at ${project.salesPhone}. The project is located in ${project.microLocation}, ${project.city}, and is developed by ${project.developer}. RERA registration number: ${project.rera}.`,
+    }] : []),
   ];
 
   // Schema 1 — ApartmentComplex (project entity)
@@ -63,6 +67,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       addressRegion: project.state,
       addressCountry: 'IN',
     },
+    ...(project.salesPhone ? { telephone: project.salesPhone } : {}),
     containsPlace: project.pricing.map((row) => ({
       '@type': 'Apartment',
       numberOfRooms: row.configuration,
@@ -83,6 +88,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       name: 'Godrej Properties Limited',
       url: 'https://www.godrejproperties.com',
       identifier: 'L74120MH1985PLC035308',
+      ...(project.salesPhone ? { telephone: project.salesPhone } : {}),
     },
     eligibleRegion: { '@type': 'Place', name: project.city },
     availability: 'https://schema.org/LimitedAvailability',
@@ -198,6 +204,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 <strong>{project.developer}</strong> in {project.microLocation}, {project.city}.
                 This project is eligible under the <strong>Godrej 1% Payment Plan</strong>.
                 RERA: <strong>{project.rera}</strong>.
+                {project.salesPhone && (
+                  <> The {project.name} sales office is reachable at <strong>{project.salesPhone}</strong>.</>
+                )}
               </p>
             </div>
 
@@ -215,6 +224,12 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 <h3>Developer</h3>
                 <p>{project.developer}</p>
               </div>
+              {project.salesPhone && (
+                <div className="card card-warm">
+                  <h3>Project Sales Office</h3>
+                  <p><a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>{project.salesPhone}</a></p>
+                </div>
+              )}
             </div>
           </article>
         </div>
