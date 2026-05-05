@@ -1007,7 +1007,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registered. RERA No: P02400009910; Project: Godrej Regal Pavilion, Survey No: 253/P, 254, 255, 256/P, 259/P, at Gagan Pahad, Rajendranagar, Ranga Reddy, 500052; Website: https://rera.telangana.gov.in/. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on the Telangana RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/hyderabad/godrej-regal-pavilion',
-    leadGen: { projectId: 'a1lId000000TOqGIAW', adCode: '106732' },
+    leadGen: { projectId: 'a1lId000000TOqGIAW', adCode: '137713' },
     salesPhone: '+91 9986791440',
   },
   {
@@ -1435,7 +1435,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registration: PRM/KA/RERA/1250/304/PR/090126/008393, available at website: http://rera.karnataka.gov.in. Site Address: Godrej Parkshire, SY NO 36/1, 36/2, 36/3, 36/4A1, 36/4A2, 36/4B1, 36/4B2, 36/5, 36/6, 36/7, 36/8, 36/9, 66/1, 66/2, 66/3, 67/1A1, 67/1A2, 67/1A3, 67/1B1, 67/1B2, 67/1B3, 67/2, 67/3, 67/4, 68/1, 68/2, 68/3, 68/4 AND 68/5, Sarkariguttahalli Village, Kasaba Hobli, Hosakote, Bengaluru Rural, Karnataka — 562114. The project is registered as Godrej Parkshire. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Do not rely on information provided on any other website. The sale is subject to the terms of the application form, allotment letter, and Agreement for Sale. The specifications and amenities mentioned in the Agreement for Sale and/or uploaded on the Karnataka RERA website are final and binding on the Developer and Purchaser. Recipients are advised to verify all relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Refer to payment terms as mentioned in the Agreement for Sale. The offer is at the sole discretion of the developer and is available for a limited time period. Date of publication: 14 April 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-parkshire',
-    leadGen: { projectId: 'a1le2000000AOHBAA4', adCode: '125474' },
+    leadGen: { projectId: 'a1le2000000AOHBAA4', adCode: '137716' },
     salesPhone: '+91 8095956081',
   },
   {
@@ -1733,7 +1733,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registered. RERA No. PRM/KA/RERA/1251/446/PR/300924/007105 Project is registered as Godrej Lakeside Orchard, available at website: http://rera.karnataka.gov.in. Site address: Godrej Lakeside Orchard, Survey Nos. 77, 174/1B, 175/P, 175/2A, 175/2B, 176/2A, 176/2B, 177, 73, 78/1A, 78/2A1(P), 78/2B, 78/3A, 78/4, 79/1C2, 178 of Kodathi Village Varthur Hobli, Bengaluru East, Bengaluru Urban, Karnataka \u2013 560035. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on Karnataka RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026. T&C Apply.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-lakeside-orchard',
-    leadGen: { projectId: 'a1lId000000TNV0IAO', adCode: '97478' },
+    leadGen: { projectId: 'a1lId000000TNV0IAO', adCode: '137717' },
     salesPhone: '+91 8530493095',
   },
   {
@@ -2023,7 +2023,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'The project is registered as "GODREJ WOODS" with Karnataka RERA bearing Registration No. PRM/KA/RERA/1251/472/PR/121125/008248 at https://rera.karnataka.gov.in/. The Developer of the project is Godrej Properties Limited. Site Address: GODREJ WOODS, KHATA NO. 323/106/9&10, E PID NO. 2254233335, SY NO 106/9 & 106/10 KOGILU VILLAGE, YELAHANKA HOBLI, YELAHANKA, BENGALURU URBAN, KARNATAKA – 560064. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on Karnataka RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/bengaluru/godrej-woods',
-    leadGen: { projectId: 'a1le200000004y5AAA', adCode: '115926' },
+    leadGen: { projectId: 'a1le200000004y5AAA', adCode: '137714' },
     salesPhone: '+91 8506047779',
   },
   {
@@ -2498,7 +2498,7 @@ export const projects: Project[] = [
     ],
     legalDisclaimers: 'RERA Registered. RERA No: TNRERA/35/BLG/0354/2025; Project: Godrej Azure, Survey Nos. 282, 283/1, 284/1, 284/2A, 281/1B1A, 281/1B2, 283/2 and 284/2B Padur Village, Tiruporur Taluk, Kancheepuram District and survey Nos. 222/2, 224/1, 224/2, 227/1A, 227/1B, 227/1C, 227/2A, 227/2B, 227/2C, 227/3, 225/1, 225/2, 226/1 and 226/2 Kazhipattur Village, Muttukadu Panchayat Union, Kancheepuram District. Website: https://rera.tn.gov.in. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. The sale will be subject to the terms of the application form, allotment letter and Agreement for Sale. The specifications/amenities mentioned in the Agreement for Sale and/or uploaded on Karnataka RERA website shall be final and binding on the Developer and Purchaser. Recipients are advised to apprise themselves of the necessary and relevant information of the Project prior to making any purchase decisions. *This refers to the payment plan offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Date of publication 14th April, 2026.',
     liveProjectUrl: 'https://www.godrejproperties.com/the-1-percent-plan/chennai/godrej-azure',
-    leadGen: { projectId: 'a1le20000000NflAAE', adCode: '124805' },
+    leadGen: { projectId: 'a1le20000000NflAAE', adCode: '137715' },
     salesPhone: '+91 9513237731',
   },
   {

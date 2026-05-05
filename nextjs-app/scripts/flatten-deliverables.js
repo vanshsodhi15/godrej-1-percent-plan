@@ -6,11 +6,11 @@ const deliverDir = path.join(__dirname, '../Deliverables_Flat');
 
 // Lead-gen credentials for the 5 active projects
 const LEAD_GEN = {
-  'godrej-woods':           { projectId: 'a1le200000004y5AAA', adCode: '115926', name: 'Godrej Woods' },
-  'godrej-regal-pavilion':  { projectId: 'a1lId000000TOqGIAW', adCode: '106732', name: 'Godrej Regal Pavilion' },
-  'godrej-parkshire':       { projectId: 'a1le2000000AOHBAA4', adCode: '125474', name: 'Godrej Parkshire' },
-  'godrej-lakeside-orchard':{ projectId: 'a1lId000000TNV0IAO', adCode: '97478',  name: 'Godrej Lakeside Orchard' },
-  'godrej-azure':           { projectId: 'a1le20000000NflAAE', adCode: '124805', name: 'Godrej Azure' },
+  'godrej-woods':           { projectId: 'a1le200000004y5AAA', adCode: '137714', name: 'Godrej Woods' },
+  'godrej-regal-pavilion':  { projectId: 'a1lId000000TOqGIAW', adCode: '137713', name: 'Godrej Regal Pavilion' },
+  'godrej-parkshire':       { projectId: 'a1le2000000AOHBAA4', adCode: '137716', name: 'Godrej Parkshire' },
+  'godrej-lakeside-orchard':{ projectId: 'a1lId000000TNV0IAO', adCode: '137717', name: 'Godrej Lakeside Orchard' },
+  'godrej-azure':           { projectId: 'a1le20000000NflAAE', adCode: '137715', name: 'Godrej Azure' },
 };
 
 // Self-contained vanilla JS lead-gen modal — no React/Next.js dependency
