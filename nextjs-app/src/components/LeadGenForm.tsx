@@ -7,6 +7,11 @@
  * • Rendered client-side only (dynamic import with ssr:false in [slug].tsx)
  *   → zero impact on static HTML / AI crawler visibility
  * • POSTs to https://www.godrejproperties.com/api/enquiry
+ *
+ * Validation rules:
+ *   Name  — letters + spaces only; accepts "Name", "Name Surname", "Name Middle Surname"
+ *   Phone — for +91: exactly 10 digits starting with 6, 7, 8, or 9
+ *   Email — must end in .com / .in / .net (e.g. xyz@abc.com, xyz@abc.co.in)
  */
 
 import { useState, useEffect, useRef } from 'react';
@@ -20,16 +25,52 @@ interface LeadGenFormProps {
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
+// Email: local@domain where TLD is .com, .in, or .net (covers .co.in, .co.uk-style as long as last segment matches)
+const EMAIL_REGEX = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.(com|net|in)$/i;
+// Name: letters, spaces, hyphens, apostrophes — at least two characters
+const NAME_REGEX = /^[a-zA-Z\u00C0-\u024F][a-zA-Z\u00C0-\u024F' -]*$/;
+
+function validateForm(form: { fullName: string; email: string; phone: string; countryCode: string }) {
+  const errors: Record<string, string> = {};
+
+  const name = form.fullName.trim();
+  if (!name) {
+    errors.fullName = 'Name is required';
+  } else if (!NAME_REGEX.test(name)) {
+    errors.fullName = 'Name should contain letters only (spaces allowed)';
+  }
+
+  const email = form.email.trim();
+  if (!email) {
+    errors.email = 'Email is required';
+  } else if (!EMAIL_REGEX.test(email)) {
+    errors.email = 'Invalid email — accepted formats: name@domain.com / .in / .net';
+  }
+
+  const phone = form.phone.trim();
+  if (!phone) {
+    errors.phone = 'Mobile number is required';
+  } else if (form.countryCode === '+91') {
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      errors.phone = 'Enter a valid 10-digit number starting with 6, 7, 8, or 9';
+    }
+  } else if (!/^\d{6,15}$/.test(phone)) {
+    errors.phone = 'Enter a valid mobile number';
+  }
+
+  return errors;
+}
+
 export default function LeadGenForm({ projectName, projectId, adCode, projectUrl }: LeadGenFormProps) {
-  const [visible, setVisible] = useState(false);      // modal open/closed
-  const [shown, setShown] = useState(false);           // has modal appeared at least once
+  const [visible, setVisible] = useState(false);
+  const [shown, setShown] = useState(false);
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
     phone: '',
     countryCode: '+91',
@@ -56,18 +97,42 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    // Phone: digits only, max 10 for +91
+    if (name === 'phone') {
+      const digits = value.replace(/\D/g, '');
+      const max = form.countryCode === '+91' ? 10 : 15;
+      setForm((prev) => ({ ...prev, phone: digits.slice(0, max) }));
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
+    // Clear field error on change
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => { const next = { ...prev }; delete next[name]; return next; });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('submitting');
     setErrorMsg('');
+
+    const errors = validateForm(form);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+    setFieldErrors({});
+    setStatus('submitting');
+
+    // Split full name into firstName / lastName for SFDC payload
+    const nameParts = form.fullName.trim().split(/\s+/);
+    const firstName = nameParts[0];
+    const lastName = nameParts.slice(1).join(' ');
 
     const payload = {
       formData: {
-        firstName: form.firstName.trim(),
-        lastName: form.lastName.trim(),
+        firstName,
+        lastName,
         email: form.email.trim(),
         propertyType: '',
         dateTime: new Date().toISOString(),
@@ -234,37 +299,22 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
           ) : (
             /* Form */
             <form onSubmit={handleSubmit} noValidate>
-              {/* Name row */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '0.75rem' }}>
-                <div>
-                  <label htmlFor="lgf-firstName" style={labelStyle}>First Name *</label>
-                  <input
-                    ref={firstInputRef}
-                    id="lgf-firstName"
-                    name="firstName"
-                    type="text"
-                    required
-                    autoComplete="given-name"
-                    value={form.firstName}
-                    onChange={handleChange}
-                    placeholder="John"
-                    style={inputStyle}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lgf-lastName" style={labelStyle}>Last Name *</label>
-                  <input
-                    id="lgf-lastName"
-                    name="lastName"
-                    type="text"
-                    required
-                    autoComplete="family-name"
-                    value={form.lastName}
-                    onChange={handleChange}
-                    placeholder="Doe"
-                    style={inputStyle}
-                  />
-                </div>
+              {/* Full Name */}
+              <div style={{ marginBottom: '0.75rem' }}>
+                <label htmlFor="lgf-fullName" style={labelStyle}>Full Name *</label>
+                <input
+                  ref={firstInputRef}
+                  id="lgf-fullName"
+                  name="fullName"
+                  type="text"
+                  required
+                  autoComplete="name"
+                  value={form.fullName}
+                  onChange={handleChange}
+                  placeholder="e.g. Rahul Sharma"
+                  style={{ ...inputStyle, borderColor: fieldErrors.fullName ? '#c0392b' : undefined }}
+                />
+                {fieldErrors.fullName && <p style={fieldErrorStyle}>{fieldErrors.fullName}</p>}
               </div>
 
               {/* Email */}
@@ -278,9 +328,10 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                   autoComplete="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
-                  style={inputStyle}
+                  placeholder="name@example.com"
+                  style={{ ...inputStyle, borderColor: fieldErrors.email ? '#c0392b' : undefined }}
                 />
+                {fieldErrors.email && <p style={fieldErrorStyle}>{fieldErrors.email}</p>}
               </div>
 
               {/* Phone with country code */}
@@ -306,12 +357,14 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                     type="tel"
                     required
                     autoComplete="tel-national"
+                    inputMode="numeric"
                     value={form.phone}
                     onChange={handleChange}
-                    placeholder="9876543210"
-                    style={{ ...inputStyle, flex: 1 }}
+                    placeholder={form.countryCode === '+91' ? '9876543210' : ''}
+                    style={{ ...inputStyle, flex: 1, borderColor: fieldErrors.phone ? '#c0392b' : undefined }}
                   />
                 </div>
+                {fieldErrors.phone && <p style={fieldErrorStyle}>{fieldErrors.phone}</p>}
               </div>
 
               {/* Error message */}
@@ -391,4 +444,11 @@ const inputStyle: React.CSSProperties = {
   background: 'var(--bg-white)',
   boxSizing: 'border-box',
   outline: 'none',
+};
+
+const fieldErrorStyle: React.CSSProperties = {
+  margin: '0.3rem 0 0',
+  fontSize: '0.75rem',
+  color: '#c0392b',
+  lineHeight: 1.4,
 };
