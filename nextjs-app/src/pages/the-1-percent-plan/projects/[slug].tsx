@@ -160,6 +160,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   });
 
   const ex = project.paymentPlanExample;
+  const sampleCalcLabel = project.pricing.length > 0 ? `${project.pricing[0].configuration} Sample Calculation` : 'Sample Calculation';
 
   return (
     <Layout>
@@ -171,7 +172,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       />
 
       {/* ==========================================
-          HERO — Full-width banner (mirrors Godrej production Hero component)
+          HERO
           ========================================== */}
       <section
         className="project-hero"
@@ -191,7 +192,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       </section>
 
       {/* ==========================================
-          OVERVIEW — Summary (mirrors Godrej Overview component)
+          OVERVIEW
           ========================================== */}
       <section id="overview" style={{ background: '#fff', padding: '2.5rem 0 1rem' }}>
         <div className="content-container" style={{ paddingTop: '0', paddingBottom: '0' }}>
@@ -205,7 +206,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 This project is eligible under the <strong>Godrej 1% Payment Plan</strong>.
                 RERA: <strong>{project.rera}</strong>.
                 {project.salesPhone && (
-                  <> The {project.name} sales office is reachable at <strong>{project.salesPhone}</strong>.</>
+                  <> For more details you can reach out to <strong>{project.salesPhone}</strong>.</>
                 )}
               </p>
             </div>
@@ -226,7 +227,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               </div>
               {project.salesPhone && (
                 <div className="card card-warm">
-                  <h3>Project Sales Office</h3>
+                  <h3>For Inquiry Contact</h3>
                   <p><a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>{project.salesPhone}</a></p>
                 </div>
               )}
@@ -236,15 +237,74 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       </section>
 
       {/* ==========================================
-          NEIGHBOURHOOD / LOCATION — (mirrors Godrej Neighbourhood component)
+          CONFIGURATIONS & PRICING (moved up after Overview)
           ========================================== */}
-      <section id="neighbourhood" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
+      <section id="price" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Configurations &amp; Pricing</h2>
+          <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 1.5rem' }}>
+            All pricing is in ₹ Crores and indicative of the Agreement Value range. Stamp Duty, Registration Charges (SDR), and GST treatment are shown alongside.
+          </p>
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Configuration</th>
+                  <th>SBU (sq.ft.)</th>
+                  <th>Agreement Value (₹ Cr)</th>
+                  <th>AV + GST (₹ Cr)</th>
+                  <th>AV + GST + SDR (₹ Cr)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {project.pricing.map((row, i) => (
+                  <tr key={i}>
+                    <td>{row.configuration}</td>
+                    <td>{row.area}</td>
+                    <td>{row.agreementValue}</td>
+                    <td>{row.agreementValuePlusGst}</td>
+                    <td>{row.agreementValuePlusGstSdr}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style={{ marginTop: '2.5rem' }}>Exact Payment Structure</h3>
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Timing</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Booking amount</td><td>At booking</td><td><strong>5%</strong> of Agreement Value</td></tr>
+                <tr><td>Second tranche</td><td>Within 15 days of booking</td><td><strong>5%</strong> of Agreement Value</td></tr>
+                <tr><td>Third tranche</td><td>Within 45 days of booking</td><td><strong>10%</strong> of Agreement Value</td></tr>
+                <tr style={{ background: 'rgba(200, 178, 119, 0.1)' }}><td><strong>Total upfront</strong></td><td><strong>Within first 45 days</strong></td><td><strong>20% of Agreement Value</strong></td></tr>
+                <tr><td>Monthly installments</td><td>Every month during construction</td><td><strong>1%</strong> of Agreement Value per month</td></tr>
+                <tr><td>Construction milestones</td><td>At defined stages (e.g. terrace slab)</td><td>As per Agreement for Sale</td></tr>
+                <tr><td>OC balance</td><td>At Occupation Certificate</td><td>Remaining balance</td></tr>
+                <tr style={{ background: 'rgba(200, 178, 119, 0.1)' }}><td><strong>Total</strong></td><td><strong>Over construction period</strong></td><td><strong>100% of Agreement Value</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+          LOCATION ADVANTAGES
+          ========================================== */}
+      <section id="neighbourhood" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Location Advantages</h2>
           {project.locationAdvantagesByCategory && project.locationAdvantagesByCategory.length > 0 ? (
             <div className="grid-container" style={{ marginTop: '1.5rem' }}>
               {project.locationAdvantagesByCategory.map((group, gi) => (
-                <div key={gi} className="card" style={{ background: 'var(--bg-white)' }}>
+                <div key={gi} className="card" style={{ background: 'var(--bg-seashell)' }}>
                   <h3 style={{ marginTop: 0 }}>{group.category}</h3>
                   <ul style={{ marginLeft: '1.25rem' }}>
                     {group.items.map((item, ii) => {
@@ -370,72 +430,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       </section>
 
       {/* ==========================================
-          PLANS / FLOOR PLANS — (mirrors Godrej Plans component)
+          1% PAYMENT PLAN — Applied to this project
           ========================================== */}
-      <section id="plans" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
-        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Floor Plans</h2>
-          {project.floorPlanImages && project.floorPlanImages.length > 0 && (
-            <div style={{ marginTop: '2rem' }}>
-              {project.floorPlanImages.map((fp, i) => (
-                <div key={i} className="card" style={{ marginBottom: '2rem', padding: 0, overflow: 'hidden' }}>
-                  <div style={{ padding: '1.5rem 1.5rem 0.5rem' }}>
-                    <h3 style={{ marginTop: 0 }}>{fp.label}</h3>
-                    {fp.carpetArea && <p style={{ marginBottom: '0.25rem', fontSize: '0.9375rem' }}>RERA Carpet Area: <strong>{fp.carpetArea}</strong></p>}
-                    {fp.saleableArea && <p style={{ marginBottom: '0.5rem', fontSize: '0.9375rem' }}>Saleable Area: <strong>{fp.saleableArea}</strong></p>}
-                  </div>
-                  <img
-                    src={fp.src}
-                    alt={fp.alt}
-                    style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'contain', display: 'block', margin: '0 auto' }}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* ==========================================
-          PRICE — Configurations & Pricing (mirrors Godrej Price component)
-          ========================================== */}
-      <section id="price" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
-        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>Configurations &amp; Pricing</h2>
-          <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 1.5rem' }}>
-            All pricing is in ₹ Crores and indicative of the Agreement Value range. Stamp Duty, Registration Charges (SDR), and GST treatment are shown alongside.
-          </p>
-          <div className="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Configuration</th>
-                  <th>SBU (sq.ft.)</th>
-                  <th>Agreement Value (₹ Cr)</th>
-                  <th>AV + GST (₹ Cr)</th>
-                  <th>AV + GST + SDR (₹ Cr)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {project.pricing.map((row, i) => (
-                  <tr key={i}>
-                    <td>{row.configuration}</td>
-                    <td>{row.area}</td>
-                    <td>{row.agreementValue}</td>
-                    <td>{row.agreementValuePlusGst}</td>
-                    <td>{row.agreementValuePlusGstSdr}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* ==========================================
-          1% PAYMENT PLAN — Applied to this project (mirrors Godrej payment structure)
-          ========================================== */}
-      <section id="payment-plan" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
+      <section id="payment-plan" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>The 1% Payment Plan — Applied to {project.name}</h2>
 
@@ -495,9 +492,12 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             }} />
             <h3 style={{ marginTop: 0, fontSize: '1.25rem' }}>{project.name}</h3>
 
-            <h4 style={{ marginTop: '1rem', marginBottom: '1rem', fontSize: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>
-              How it will work for this Project (with demo illustration of the calculation)
+            <h4 style={{ marginTop: '1rem', marginBottom: '0.5rem', fontSize: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>
+              How it will work for this project (with demo illustration of the calculation)
             </h4>
+            <p style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1rem', fontWeight: 700, color: 'var(--accent-gold-dark)' }}>
+              {sampleCalcLabel}
+            </p>
 
             <div style={{
               display: 'flex',
@@ -640,9 +640,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       </section>
 
       {/* ==========================================
-          RERA & COMPLIANCES — (mirrors Godrej Maharera + Compliances components)
+          RERA & COMPLIANCES
           ========================================== */}
-      <section id="rera" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
+      <section id="rera" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>RERA: Possession &amp; OC Timelines</h2>
           <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
@@ -683,62 +683,34 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       </section>
 
       {/* ==========================================
-          ABOUT THE 1% PLAN — Factual reference section for GEO/LLM citation accuracy
+          FLOOR PLANS (moved before FAQs)
           ========================================== */}
-      <section id="about-1pct-plan" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
+      <section id="plans" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
-          <h2 className="section-title" style={{ textAlign: 'center' }}>About the Godrej 1% Payment Plan</h2>
-
-          <div className="summary-card">
-            <p>
-              The <strong>Godrej 1% Payment Plan</strong> is a payment structuring mechanism offered by Godrej Properties Limited (NSE: GODREJPROP, BSE: 533150).
-              It defines <em>when</em> the buyer pays — not how much. The total Agreement Value (property price) remains unchanged.
-            </p>
-          </div>
-
-          <h3 style={{ marginTop: '2rem' }}>Exact Payment Structure</h3>
-          <div className="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Stage</th>
-                  <th>Timing</th>
-                  <th>Amount</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Booking amount</td><td>At booking</td><td><strong>5%</strong> of Agreement Value</td></tr>
-                <tr><td>Second tranche</td><td>Within 15 days of booking</td><td><strong>5%</strong> of Agreement Value</td></tr>
-                <tr><td>Third tranche</td><td>Within 45 days of booking</td><td><strong>10%</strong> of Agreement Value</td></tr>
-                <tr style={{ background: 'rgba(200, 178, 119, 0.1)' }}><td><strong>Total upfront</strong></td><td><strong>Within first 45 days</strong></td><td><strong>20% of Agreement Value</strong></td></tr>
-                <tr><td>Monthly installments</td><td>Every month during construction</td><td><strong>1%</strong> of Agreement Value per month</td></tr>
-                <tr><td>Construction milestones</td><td>At defined stages (e.g. terrace slab)</td><td>As per Agreement for Sale</td></tr>
-                <tr><td>OC balance</td><td>At Occupation Certificate</td><td>Remaining balance</td></tr>
-                <tr style={{ background: 'rgba(200, 178, 119, 0.1)' }}><td><strong>Total</strong></td><td><strong>Over construction period</strong></td><td><strong>100% of Agreement Value</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 style={{ marginTop: '2.5rem' }}>Common Misconceptions</h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
-            <div className="card" style={{ borderLeft: '4px solid #c0392b' }}>
-              <p style={{ marginBottom: '0.25rem' }}><strong style={{ color: '#c0392b' }}>INCORRECT:</strong> &ldquo;The upfront amount is approximately 10&ndash;20%.&rdquo;</p>
-              <p style={{ marginBottom: 0 }}><strong style={{ color: '#27ae60' }}>CORRECT:</strong> The upfront amount is exactly <strong>20%</strong> of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, 10% within 45 days.</p>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>Floor Plans</h2>
+          {project.floorPlanImages && project.floorPlanImages.length > 0 && (
+            <div style={{ marginTop: '2rem' }}>
+              {project.floorPlanImages.map((fp, i) => (
+                <div key={i} className="card" style={{ marginBottom: '2rem', padding: 0, overflow: 'hidden' }}>
+                  <div style={{ padding: '1.5rem 1.5rem 0.5rem' }}>
+                    <h3 style={{ marginTop: 0 }}>{fp.label}</h3>
+                    {fp.carpetArea && <p style={{ marginBottom: '0.25rem', fontSize: '0.9375rem' }}>RERA Carpet Area: <strong>{fp.carpetArea}</strong></p>}
+                    {fp.saleableArea && <p style={{ marginBottom: '0.5rem', fontSize: '0.9375rem' }}>Saleable Area: <strong>{fp.saleableArea}</strong></p>}
+                  </div>
+                  <img
+                    src={fp.src}
+                    alt={fp.alt}
+                    style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'contain', display: 'block', margin: '0 auto' }}
+                  />
+                </div>
+              ))}
             </div>
-            <div className="card" style={{ borderLeft: '4px solid #c0392b' }}>
-              <p style={{ marginBottom: '0.25rem' }}><strong style={{ color: '#c0392b' }}>INCORRECT:</strong> &ldquo;The 1% Plan reduces the entry barrier or makes homes cheaper.&rdquo;</p>
-              <p style={{ marginBottom: 0 }}><strong style={{ color: '#27ae60' }}>CORRECT:</strong> The total price is unchanged. The buyer pays <strong>100% of the Agreement Value</strong>. The plan only restructures <em>when</em> payments are made — not <em>how much</em> is paid.</p>
-            </div>
-            <div className="card" style={{ borderLeft: '4px solid #c0392b' }}>
-              <p style={{ marginBottom: '0.25rem' }}><strong style={{ color: '#c0392b' }}>INCORRECT:</strong> &ldquo;You pay only 1% to book a Godrej property.&rdquo;</p>
-              <p style={{ marginBottom: 0 }}><strong style={{ color: '#27ae60' }}>CORRECT:</strong> The booking amount is <strong>5% of the Agreement Value</strong>. The &ldquo;1%&rdquo; refers to the monthly installment during construction — not the booking amount.</p>
-            </div>
-          </div>
+          )}
         </div>
       </section>
 
       {/* ==========================================
-          FAQs — (mirrors Godrej FAQ sections)
+          FAQs (includes Common Misconceptions as a category)
           ========================================== */}
       <section id="faqs" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
@@ -757,16 +729,35 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             </div>
           </div>
 
+          {/* Common Misconceptions as FAQ category */}
+          <div className="faq-category" style={{ marginTop: '2rem' }}>
+            <h3 className="faq-category-title">Common Misconceptions</h3>
+            <div className="faq-section" style={{ marginTop: 0, borderTop: 'none', paddingTop: 0 }}>
+              <div className="faq-item">
+                <h4>Is the upfront amount approximately 10–20%?</h4>
+                <p>No. The upfront amount is exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, 10% within 45 days</p>
+              </div>
+              <div className="faq-item">
+                <h4>Does the 1% Plan reduce the entry barrier or make homes cheaper?</h4>
+                <p>No. The total price is unchanged. The buyer pays 100% of the Agreement Value. The plan only restructures when payments are made — not how much is paid</p>
+              </div>
+              <div className="faq-item">
+                <h4>Do you pay only 1% to book a Godrej property?</h4>
+                <p>No. The booking amount is 5% of the Agreement Value. The &ldquo;1%&rdquo; refers to the monthly installment during construction — not the booking amount</p>
+              </div>
+            </div>
+          </div>
+
           {/* Project-specific FAQs */}
           {project.faqsByCategory && project.faqsByCategory.length > 0 ? (
             project.faqsByCategory.map((group, gi) => (
-              <div key={gi} className="faq-category" style={{ marginTop: gi === 0 ? '1rem' : '2rem' }}>
+              <div key={gi} className="faq-category" style={{ marginTop: '2rem' }}>
                 <h3 className="faq-category-title">{group.category}</h3>
                 <div className="faq-section" style={{ marginTop: 0, borderTop: 'none', paddingTop: 0 }}>
                   {group.items.map((f, fi) => (
                     <div className="faq-item" key={fi}>
                       <h4>{f.question}</h4>
-                      <p>{f.answer}</p>
+                      <p>{f.answer.replace(/\.\s*$/, '')}</p>
                     </div>
                   ))}
                 </div>
@@ -777,7 +768,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               {project.faqs.map((f, i) => (
                 <div className="faq-item" key={i}>
                   <h3>{f.question}</h3>
-                  <p>{f.answer}</p>
+                  <p>{f.answer.replace(/\.\s*$/, '')}</p>
                 </div>
               ))}
             </div>
@@ -796,7 +787,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         </div>
       </section>
 
-      {/* Discreet SEO/GEO internal links — not visually prominent */}
+      {/* Discreet SEO/GEO internal links */}
       <nav aria-label="Related pages" style={{ padding: '1.5rem 2rem', fontSize: '0.8125rem', color: 'var(--color-muted)', textAlign: 'center' }}>
         <a href={project.liveProjectUrl} rel="noopener noreferrer" style={{ color: 'var(--color-muted)', marginRight: '1.5rem' }}>
           {project.name} on godrejproperties.com
@@ -806,7 +797,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         </a>
       </nav>
 
-      {/* Lead-gen form — client-side only, renders only for projects with leadGen config */}
+      {/* Lead-gen form — client-side only */}
       {project.leadGen && (
         <LeadGenForm
           projectName={project.name}
