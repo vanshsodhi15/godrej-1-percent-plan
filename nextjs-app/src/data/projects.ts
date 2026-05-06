@@ -633,42 +633,42 @@ export const projects: Project[] = [
     ],
     locationAdvantages: [
       'NH 44 \u2013 Site is on NH 44',
-      'Outer Ring Road (ORR) \u2013 12 mins (9 km)*',
-      'Budvel Railway Station \u2013 7 mins (3.8 km)*',
-      'Rajiv Gandhi International Airport \u2013 20 mins (15 km)*',
-      'IT Park \u2013 22 km (40 mins)*',
-      'PV Narasimha Rao Expressway \u2013 Nearby*',
-      'Gachibowli \u2013 Accessible via ORR*',
-      'HITEC City \u2013 Accessible via ORR*',
-      'Financial District \u2013 30\u201340 mins via PVNR Expressway and ORR*',
+      'Outer Ring Road (ORR) \u2013 12 mins* (9 km)',
+      'Budvel Railway Station \u2013 7 mins* (3.8 km)',
+      'Rajiv Gandhi International Airport \u2013 20 mins* (15 km)',
+      'IT Park \u2013 22 km (40 mins*)',
+      'PV Narasimha Rao Expressway \u2013 Nearby',
+      'Gachibowli \u2013 Accessible via ORR',
+      'HITEC City \u2013 Accessible via ORR',
+      'Financial District \u2013 30\u201340 mins* via PVNR Expressway and ORR',
     ],
     locationAdvantagesByCategory: [
       {
         category: 'Connectivity',
         items: [
           'NH 44 \u2013 Site is on NH 44',
-          'NH 65 \u2013 Nearby, improves access to various areas of Hyderabad*',
-          'Outer Ring Road (ORR) \u2013 12 mins (9 km)*',
-          'PV Narasimha Rao Expressway \u2013 Nearby*',
+          'NH 65 \u2013 Nearby, improves access to various areas of Hyderabad',
+          'Outer Ring Road (ORR) \u2013 12 mins* (9 km)',
+          'PV Narasimha Rao Expressway \u2013 Nearby',
         ],
       },
       {
         category: 'Commute and Transport',
         items: [
-          'Rajiv Gandhi International Airport \u2013 20 mins (15 km)*',
-          'Budvel Railway Station \u2013 7 mins (3.8 km)*',
-          'Hyderabad Airport Metro Express (Upcoming) \u2013 31 km line connecting Raidurg to RGIA via Rajendra Nagar*',
+          'Rajiv Gandhi International Airport \u2013 20 mins* (15 km)',
+          'Budvel Railway Station \u2013 7 mins* (3.8 km)',
+          'Hyderabad Airport Metro Express (Upcoming) \u2013 31 km line connecting Raidurg to RGIA via Rajendra Nagar',
         ],
       },
       {
         category: 'Employment and IT Hubs',
         items: [
-          'IT Park \u2013 22 km (40 mins)*',
-          'Gachibowli \u2013 Accessible via ORR*',
-          'HITEC City \u2013 Accessible via ORR*',
-          'Financial District \u2013 30\u201340 mins via PVNR Expressway and ORR*',
-          'GMR Aerocity \u2013 1,500-acre land parcel near the airport*',
-          'IT clusters (Budvel\u2013Kismatpur) \u2013 350 acres earmarked for 28 IT firms*',
+          'IT Park \u2013 22 km (40 mins*)',
+          'Gachibowli \u2013 Accessible via ORR',
+          'HITEC City \u2013 Accessible via ORR',
+          'Financial District \u2013 30\u201340 mins* via PVNR Expressway and ORR',
+          'GMR Aerocity \u2013 1,500-acre land parcel near the airport',
+          'IT clusters (Budvel\u2013Kismatpur) \u2013 350 acres earmarked for 28 IT firms',
         ],
       },
       {
@@ -682,8 +682,8 @@ export const projects: Project[] = [
       {
         category: 'Green Zones and Institutions',
         items: [
-          'Professor Jayashankar Telangana Agricultural University \u2013 Landmark*',
-          'Police Academy \u2013 Nearby*',
+          'Professor Jayashankar Telangana Agricultural University \u2013 Landmark',
+          'Police Academy \u2013 Nearby',
         ],
       },
     ],
@@ -848,9 +848,7 @@ export const projects: Project[] = [
       {
         category: 'Approvals and Legal Status',
         items: [
-          { question: 'What is the current status of approvals?', answer: 'Approvals in process.' },
           { question: 'What is the upcoming infrastructure?', answer: 'Rajendra Nagar in Hyderabad is set for considerable infrastructure improvements, boosting its appeal as a residential and business hub. Notable impending developments include: 1. Development of IT Parks \u2013 The Telangana government has set up roughly 350 acres between Budvel and Kismatpur for the development of IT clusters. This plan seeks to house 28 IT firms, creating job opportunities and stimulating economic growth in the region. Also, GMR Aerocity which is a 1,500-acre land parcel near the airport. 2. Hyderabad Airport Metro Express \u2013 The projected 31-kilometre Hyderabad Airport Metro Express will connect Raidurg to Rajiv Gandhi International Airport via Rajendra Nagar. This project is projected to drastically cut travel time to the airport while improving overall connectivity.' },
-          { question: 'What is the likely launch month?', answer: 'To be updated.' },
           { question: 'Is the title of the property clear?', answer: 'Yes.' },
           { question: 'What is the current status of the litigations?', answer: 'No litigations.' },
           { question: 'Is the property freehold (no encroachment)?', answer: 'Yes.' },
@@ -930,7 +928,6 @@ export const projects: Project[] = [
         category: 'Pricing and Payment',
         items: [
           { question: 'What is the payment schedule? Is it time bound?', answer: 'Construction Linked (bank tie-ups will be available).' },
-          { question: 'What is the booking amount?', answer: 'Refer to the training deck or contact the Site Head for booking-related queries.' },
           { question: 'What is the mode of payment?', answer: 'Swipe / Online transfer through NEFT, RTGS or IMPS or Cheque payment or barcode scanning.' },
           { question: 'Can I pay 100% down payment?', answer: 'Yes, post registration and avail the benefit of PACE.' },
           { question: 'What is my responsibility for disbursement of instalments through HFIs?', answer: 'Customer is entirely responsible.' },
@@ -960,11 +957,6 @@ export const projects: Project[] = [
         category: 'Parking',
         items: [
           { question: 'What is the parking system?', answer: 'Tandem Parking.' },
-          { question: 'What is the total number of parking?', answer: 'To be confirmed after approvals.' },
-          { question: 'Is there sufficient parking for visitors?', answer: 'To be confirmed after approvals.' },
-          { question: 'What is the number of visitor parking?', answer: 'To be confirmed after approvals.' },
-          { question: 'Will there be EV provision for owner parking?', answer: 'To be confirmed after approvals.' },
-          { question: 'Will there be EV provision in visitor parking?', answer: 'To be confirmed after approvals.' },
           { question: 'What is the width of the open and approach driveway?', answer: '11 m.' },
           { question: 'What is the internal driveway width in the podium?', answer: '11 m.' },
         ],
@@ -984,13 +976,10 @@ export const projects: Project[] = [
       {
         category: 'Launch FAQs',
         items: [
-          { question: 'When is the construction starting at site?', answer: 'As soon as all the approvals are in place.' },
           { question: 'What are the buildings that are being launched now?', answer: 'Total of 5 towers are being launched with an inventory of 1,083 units.' },
           { question: 'In case I wish to cancel the unit after the application amount is paid?', answer: '10% of monies is non-refundable.' },
           { question: 'What documents will I get after giving the cheque/RTGS/NEFT/SWIPE?', answer: 'Mail confirmation from sales person.' },
-          { question: 'What is the pricing?', answer: 'To be confirmed after approvals.' },
           { question: 'What is the applicability of the current pricing?', answer: 'They are subject to revision/withdrawal at any time without notice at the sole discretion of the Company.' },
-          { question: 'What is the final ticket size of apartments (including GST but exclusive of SDR)?', answer: 'Will be shared by the sales team.' },
         ],
       },
       {

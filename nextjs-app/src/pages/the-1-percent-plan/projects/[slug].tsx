@@ -453,13 +453,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               <strong>Q1 Top-up:</strong> The total payment is brought up to {ex.q1TotalPct} of the Agreement Value within the first quarter from booking.
             </li>
             <li>
-              <strong>Monthly 1%:</strong> From the month following Q1, {ex.monthlyDurationMonths.toLowerCase()}, one percent of the Agreement Value is paid each month.
-            </li>
-            <li>
               <strong>Construction-Linked Tranches:</strong> At each construction milestone, a defined tranche is invoiced as per the Agreement for Sale schedule.
-            </li>
-            <li>
-              <strong>OC Balance:</strong> {ex.ocBalancePct} of the total consideration is paid at the time of the Occupation Certificate, prior to handover.
             </li>
           </ol>
 
