@@ -337,13 +337,13 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
               {/* Phone with country code */}
               <div style={{ marginBottom: '1rem' }}>
                 <label htmlFor="lgf-phone" style={labelStyle}>Mobile *</label>
-                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'stretch' }}>
                   <select
                     name="countryCode"
                     value={form.countryCode}
                     onChange={handleChange}
                     aria-label="Country code"
-                    style={{ ...inputStyle, width: '80px', flex: 'none', paddingRight: '0.25rem' }}
+                    style={{ ...inputStyle, width: '90px', flex: 'none', paddingRight: '0.25rem' }}
                   >
                     <option value="+91">🇮🇳 +91</option>
                     <option value="+1">🇺🇸 +1</option>

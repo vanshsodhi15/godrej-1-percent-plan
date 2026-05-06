@@ -33,7 +33,7 @@ function buildLeadGenScript(lg, projectUrl) {
       '#lgf-modal label{display:block;font-size:.75rem;font-weight:600;color:#27262e;margin-bottom:.3rem;letter-spacing:.02em;}',
       '#lgf-modal input,#lgf-modal select{width:100%;border:1px solid #e7e7e7;border-radius:4px;padding:.5rem .75rem;font-size:.9375rem;font-family:inherit;color:#141414;background:#fff;box-sizing:border-box;margin-bottom:.75rem;}',
       '#lgf-modal input.err{border-color:#c0392b;margin-bottom:.2rem;}',
-      '#lgf-modal .phone-row{display:flex;gap:.5rem;}',
+      '#lgf-modal .phone-row{display:flex;gap:.5rem;align-items:stretch;}',
       '#lgf-modal .phone-row select{width:90px;flex:none;margin-bottom:0;}',
       '#lgf-modal .phone-row input{flex:1;margin-bottom:.75rem;}',
       '#lgf-ferr{color:#c0392b;font-size:.75rem;margin:.0rem 0 .6rem;display:none;}',
