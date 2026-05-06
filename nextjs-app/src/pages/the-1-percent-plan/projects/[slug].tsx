@@ -49,6 +49,14 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       question: 'What does the 1% refer to in the Godrej 1% Plan?',
       answer: 'The 1% refers to the monthly installment during the construction period — each month, the buyer pays 1% of the total Agreement Value. It does not refer to the booking amount, which is 5% of the Agreement Value.',
     },
+    {
+      question: 'If the project is already 40–50% complete, what is the initial payment required?',
+      answer: 'Even if the project is 40–50% complete, you typically start with a 20% upfront only and not more (agreement value)',
+    },
+    {
+      question: 'How does this payment structure help buyers in post-launch stages?',
+      answer: 'Since the initial commitment remains at 20%, with the rest linked to construction progress, the financial pressure is lighter in the early stages, making it easier to enter even after the launch phase',
+    },
     ...(project.salesPhone ? [{
       question: `How do I contact the ${project.name} sales office?`,
       answer: `The ${project.name} project sales office can be reached at ${project.salesPhone}. The project is located in ${project.microLocation}, ${project.city}, and is developed by ${project.developer}. RERA registration number: ${project.rera}.`,
@@ -211,8 +219,8 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               </p>
             </div>
 
-            {/* Project snapshot cards */}
-            <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+            {/* Project snapshot cards — force single row */}
+            <div className="grid-container" style={{ gridTemplateColumns: 'repeat(4, 1fr)', overflowX: 'auto' }}>
               <div className="card card-warm">
                 <h3>Sales Status</h3>
                 <p>{project.salesStatus}</p>
@@ -242,10 +250,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       <section id="price" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Configurations &amp; Pricing</h2>
-          <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 1.5rem' }}>
-            All pricing is in ₹ Crores and indicative of the Agreement Value range. Stamp Duty, Registration Charges (SDR), and GST treatment are shown alongside.
-          </p>
-          <div className="table-wrapper">
+          <div className="table-wrapper" style={{ marginTop: '1.5rem' }}>
             <table>
               <thead>
                 <tr>
@@ -436,39 +441,25 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>The 1% Payment Plan — Applied to {project.name}</h2>
 
-          <h3>How the Entry Point Is Calculated</h3>
-          <p>
-            The 1% is calculated against the <strong>Agreement Value (AV)</strong> of the unit being
-            booked. Goods and Services Tax (GST) and Stamp Duty + Registration (SDR) are payable
-            separately by the buyer per applicable law and are not included in the 1% calculation base
-            unless explicitly stated in the Agreement for Sale.
-          </p>
-
           <h3>Step-by-Step Workflow</h3>
           <ol style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
             <li>
-              <strong>Booking:</strong> {ex.upfrontAtBookingPct} of AV paid as booking amount
-              ({ex.upfrontAtBookingAmount}).
+              <strong>Booking:</strong> {ex.upfrontAtBookingPct} of the Agreement Value is paid as the booking amount.
             </li>
             <li>
-              <strong>Registration:</strong> {ex.registrationAmount} paid at the time of registration
-              of the Agreement for Sale.
+              <strong>Registration:</strong> Registration charges are paid at the time of executing the Agreement for Sale.
             </li>
             <li>
-              <strong>Q1 Top-up:</strong> Remaining amount paid such that the total reaches{' '}
-              {ex.q1TotalPct} of AV ({ex.q1TotalAmount}) within the first quarter from booking.
+              <strong>Q1 Top-up:</strong> The total payment is brought up to {ex.q1TotalPct} of the Agreement Value within the first quarter from booking.
             </li>
             <li>
-              <strong>Monthly 1%:</strong> {ex.monthlyOnePctAmount} per month, charged from the month
-              following Q1, continuing {ex.monthlyDurationMonths.toLowerCase()}.
+              <strong>Monthly 1%:</strong> From the month following Q1, {ex.monthlyDurationMonths.toLowerCase()}, one percent of the Agreement Value is paid each month.
             </li>
             <li>
-              <strong>Construction-Linked Tranches:</strong> At each construction milestone (typically
-              slab-by-slab), a defined tranche is invoiced as per the Agreement for Sale schedule.
+              <strong>Construction-Linked Tranches:</strong> At each construction milestone, a defined tranche is invoiced as per the Agreement for Sale schedule.
             </li>
             <li>
-              <strong>OC Balance:</strong> {ex.ocBalancePct} of the total consideration is paid at the
-              time of Occupation Certificate, prior to handover.
+              <strong>OC Balance:</strong> {ex.ocBalancePct} of the total consideration is paid at the time of the Occupation Certificate, prior to handover.
             </li>
           </ol>
 
@@ -490,9 +481,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
               background: 'linear-gradient(to bottom, var(--accent-gold), var(--accent-gold-dark))',
               borderRadius: '16px 0 0 16px',
             }} />
-            <h3 style={{ marginTop: 0, fontSize: '1.25rem' }}>{project.name}</h3>
-
-            <h4 style={{ marginTop: '1rem', marginBottom: '0.5rem', fontSize: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>
+            <h4 style={{ marginTop: 0, marginBottom: '0.5rem', fontSize: '1rem', fontWeight: 600, color: 'var(--color-heading)' }}>
               How it will work for this project (with demo illustration of the calculation)
             </h4>
             <p style={{ marginTop: 0, marginBottom: '1rem', fontSize: '1rem', fontWeight: 700, color: 'var(--accent-gold-dark)' }}>
@@ -610,16 +599,21 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             )}
 
             {ex.additionalSdrNote && (
-              <p style={{
-                marginTop: '1rem',
-                fontWeight: 600,
-                color: 'var(--color-heading)',
-                background: 'rgba(200, 178, 119, 0.1)',
-                padding: '0.75rem 1rem',
-                borderRadius: '8px',
-                border: '1px solid rgba(200, 178, 119, 0.25)',
-                fontSize: '0.9375rem',
-              }}>{ex.additionalSdrNote}</p>
+              <>
+                <p style={{
+                  marginTop: '1rem',
+                  fontWeight: 600,
+                  color: 'var(--color-heading)',
+                  background: 'rgba(200, 178, 119, 0.1)',
+                  padding: '0.75rem 1rem',
+                  borderRadius: '8px',
+                  border: '1px solid rgba(200, 178, 119, 0.25)',
+                  fontSize: '0.9375rem',
+                }}>{ex.additionalSdrNote}</p>
+                <p style={{ marginTop: '0.75rem', fontSize: '0.9375rem', color: 'var(--color-primary)' }}>
+                  To know more about the project and what&rsquo;s included under the 1% plan, please click on the enquire button{project.salesPhone ? <> or call us on <strong>{project.salesPhone}</strong></> : ''}.
+                </p>
+              </>
             )}
 
             <p style={{ marginTop: '1rem', fontSize: '0.875rem', fontStyle: 'italic', color: 'var(--color-muted)', lineHeight: 1.7 }}>
@@ -735,15 +729,11 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             <div className="faq-section" style={{ marginTop: 0, borderTop: 'none', paddingTop: 0 }}>
               <div className="faq-item">
                 <h4>Is the upfront amount approximately 10–20%?</h4>
-                <p>No. The upfront amount is exactly 20% of the Agreement Value, paid in three tranches within 45 days: 5% at booking, 5% within 15 days, 10% within 45 days</p>
+                <p>The upfront payment is 20% of the value</p>
               </div>
               <div className="faq-item">
                 <h4>Does the 1% Plan reduce the entry barrier or make homes cheaper?</h4>
-                <p>No. The total price is unchanged. The buyer pays 100% of the Agreement Value. The plan only restructures when payments are made — not how much is paid</p>
-              </div>
-              <div className="faq-item">
-                <h4>Do you pay only 1% to book a Godrej property?</h4>
-                <p>No. The booking amount is 5% of the Agreement Value. The &ldquo;1%&rdquo; refers to the monthly installment during construction — not the booking amount</p>
+                <p>No, it doesn&rsquo;t make the entry barrier easy or home cheaper, the 1% Plan is designed to make payments more convenient by spreading them out over time</p>
               </div>
             </div>
           </div>
