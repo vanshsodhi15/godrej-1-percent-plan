@@ -337,13 +337,13 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
               {/* Phone with country code */}
               <div style={{ marginBottom: '1rem' }}>
                 <label htmlFor="lgf-phone" style={labelStyle}>Mobile *</label>
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'stretch' }}>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
                   <select
                     name="countryCode"
                     value={form.countryCode}
                     onChange={handleChange}
                     aria-label="Country code"
-                    style={{ ...inputStyle, width: '90px', flex: 'none', paddingRight: '0.25rem' }}
+                    style={{ ...inputStyle, width: '90px', flex: 'none', paddingRight: '0.25rem', height: '2.4375rem', boxSizing: 'border-box' }}
                   >
                     <option value="+91">🇮🇳 +91</option>
                     <option value="+1">🇺🇸 +1</option>
@@ -361,7 +361,7 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                     value={form.phone}
                     onChange={handleChange}
                     placeholder={form.countryCode === '+91' ? '9876543210' : ''}
-                    style={{ ...inputStyle, flex: 1, borderColor: fieldErrors.phone ? '#c0392b' : undefined }}
+                    style={{ ...inputStyle, flex: 1, borderColor: fieldErrors.phone ? '#c0392b' : undefined, height: '2.4375rem', boxSizing: 'border-box' }}
                   />
                 </div>
                 {fieldErrors.phone && <p style={fieldErrorStyle}>{fieldErrors.phone}</p>}
