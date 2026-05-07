@@ -6,67 +6,21 @@
  * • User can close/collapse; a sticky "Enquire" pill lets them reopen
  * • Rendered client-side only (dynamic import with ssr:false in [slug].tsx)
  *   → zero impact on static HTML / AI crawler visibility
- * • POSTs to https://www.godrejproperties.com/api/enquiry
- *
- * Validation rules:
- *   Name  — letters + spaces only; accepts "Name", "Name Surname", "Name Middle Surname"
- *   Phone — for +91: exactly 10 digits starting with 6, 7, 8, or 9
- *   Email — must end in .com / .in / .net (e.g. xyz@abc.com, xyz@abc.co.in)
+ * • Submission logic / validation to be wired up by IT
  */
 
 import { useState, useEffect, useRef } from 'react';
 
 interface LeadGenFormProps {
   projectName: string;
-  projectId: string;   // Salesforce projCode
-  adCode: string;      // Campaign addCode
-  projectUrl: string;  // canonical URL of the project page
 }
 
-type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+type FormStatus = 'idle' | 'success';
 
-// Email: local@domain where TLD is .com, .in, or .net (covers .co.in, .co.uk-style as long as last segment matches)
-const EMAIL_REGEX = /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.(com|net|in)$/i;
-// Name: letters, spaces, hyphens, apostrophes — at least two characters
-const NAME_REGEX = /^[a-zA-Z\u00C0-\u024F][a-zA-Z\u00C0-\u024F' -]*$/;
-
-function validateForm(form: { fullName: string; email: string; phone: string; countryCode: string }) {
-  const errors: Record<string, string> = {};
-
-  const name = form.fullName.trim();
-  if (!name) {
-    errors.fullName = 'Name is required';
-  } else if (!NAME_REGEX.test(name)) {
-    errors.fullName = 'Name should contain letters only (spaces allowed)';
-  }
-
-  const email = form.email.trim();
-  if (!email) {
-    errors.email = 'Email is required';
-  } else if (!EMAIL_REGEX.test(email)) {
-    errors.email = 'Invalid email — accepted formats: name@domain.com / .in / .net';
-  }
-
-  const phone = form.phone.trim();
-  if (!phone) {
-    errors.phone = 'Mobile number is required';
-  } else if (form.countryCode === '+91') {
-    if (!/^[6-9]\d{9}$/.test(phone)) {
-      errors.phone = 'Enter a valid 10-digit number starting with 6, 7, 8, or 9';
-    }
-  } else if (!/^\d{6,15}$/.test(phone)) {
-    errors.phone = 'Enter a valid mobile number';
-  }
-
-  return errors;
-}
-
-export default function LeadGenForm({ projectName, projectId, adCode, projectUrl }: LeadGenFormProps) {
+export default function LeadGenForm({ projectName }: LeadGenFormProps) {
   const [visible, setVisible] = useState(false);
   const [shown, setShown] = useState(false);
   const [status, setStatus] = useState<FormStatus>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   const [form, setForm] = useState({
@@ -98,31 +52,12 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    // Phone: digits only, max 10 for +91
-    if (name === 'phone') {
-      const digits = value.replace(/\D/g, '');
-      const max = form.countryCode === '+91' ? 10 : 15;
-      setForm((prev) => ({ ...prev, phone: digits.slice(0, max) }));
-    } else {
-      setForm((prev) => ({ ...prev, [name]: value }));
-    }
-    // Clear field error on change
-    if (fieldErrors[name]) {
-      setFieldErrors((prev) => { const next = { ...prev }; delete next[name]; return next; });
-    }
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setErrorMsg('');
-
-    const errors = validateForm(form);
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors);
-      return;
-    }
-    setFieldErrors({});
-    // API integration handled by IT — just show success
+    // Submission / validation handled by IT
     setStatus('success');
   };
 
@@ -269,9 +204,8 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                   value={form.fullName}
                   onChange={handleChange}
                   placeholder="e.g. Rahul Sharma"
-                  style={{ ...inputStyle, borderColor: fieldErrors.fullName ? '#c0392b' : undefined }}
+                  style={inputStyle}
                 />
-                {fieldErrors.fullName && <p style={fieldErrorStyle}>{fieldErrors.fullName}</p>}
               </div>
 
               {/* Email */}
@@ -286,9 +220,8 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                   value={form.email}
                   onChange={handleChange}
                   placeholder="name@example.com"
-                  style={{ ...inputStyle, borderColor: fieldErrors.email ? '#c0392b' : undefined }}
+                  style={inputStyle}
                 />
-                {fieldErrors.email && <p style={fieldErrorStyle}>{fieldErrors.email}</p>}
               </div>
 
               {/* Phone with country code */}
@@ -318,34 +251,17 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                     value={form.phone}
                     onChange={handleChange}
                     placeholder={form.countryCode === '+91' ? '9876543210' : ''}
-                    style={{ ...inputStyle, flex: 1, borderColor: fieldErrors.phone ? '#c0392b' : undefined, height: '2.4375rem', boxSizing: 'border-box' }}
+                    style={{ ...inputStyle, flex: 1, height: '2.4375rem', boxSizing: 'border-box' }}
                   />
                 </div>
-                {fieldErrors.phone && <p style={fieldErrorStyle}>{fieldErrors.phone}</p>}
               </div>
-
-              {/* Error message */}
-              {status === 'error' && (
-                <p role="alert" style={{
-                  color: '#c0392b',
-                  fontSize: '0.8125rem',
-                  marginBottom: '0.75rem',
-                  background: '#fdf2f2',
-                  padding: '0.5rem 0.75rem',
-                  borderRadius: '4px',
-                  border: '1px solid #f5c6cb',
-                }}>
-                  {errorMsg}
-                </p>
-              )}
 
               {/* Submit */}
               <button
                 type="submit"
-                disabled={status === 'submitting'}
                 style={{
                   width: '100%',
-                  background: status === 'submitting' ? 'var(--color-muted)' : 'var(--bg-dark)',
+                  background: 'var(--bg-dark)',
                   color: 'var(--color-white)',
                   border: 'none',
                   borderRadius: '4px',
@@ -353,11 +269,11 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
                   fontSize: '0.9375rem',
                   fontWeight: 600,
                   fontFamily: 'inherit',
-                  cursor: status === 'submitting' ? 'not-allowed' : 'pointer',
+                  cursor: 'pointer',
                   letterSpacing: '0.03em',
                 }}
               >
-                {status === 'submitting' ? 'Sending…' : 'Get a Callback'}
+                Get a Callback
               </button>
 
               <p style={{ fontSize: '0.7rem', color: 'var(--color-muted)', marginTop: '0.6rem', marginBottom: 0, textAlign: 'center', lineHeight: 1.5 }}>
@@ -401,11 +317,4 @@ const inputStyle: React.CSSProperties = {
   background: 'var(--bg-white)',
   boxSizing: 'border-box',
   outline: 'none',
-};
-
-const fieldErrorStyle: React.CSSProperties = {
-  margin: '0.3rem 0 0',
-  fontSize: '0.75rem',
-  color: '#c0392b',
-  lineHeight: 1.4,
 };

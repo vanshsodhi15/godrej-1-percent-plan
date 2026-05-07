@@ -14,10 +14,7 @@ const LEAD_GEN = {
 };
 
 // Self-contained vanilla JS lead-gen modal — no React/Next.js dependency
-// Validation rules match LeadGenForm.tsx:
-//   Name  — letters + spaces only (single, double or triple name)
-//   Phone — +91: exactly 10 digits starting with 6/7/8/9
-//   Email — must end in .com / .in / .net (covers .co.in)
+// Submission / validation handled by IT
 function buildLeadGenScript(lg, projectUrl) {
   return `<script>
 (function(){
@@ -32,12 +29,12 @@ function buildLeadGenScript(lg, projectUrl) {
       '@media(max-width:480px){#lgf-modal{max-width:100%!important;}}',
       '#lgf-modal label{display:block;font-size:.75rem;font-weight:600;color:#27262e;margin-bottom:.3rem;letter-spacing:.02em;}',
       '#lgf-modal input,#lgf-modal select{width:100%;border:1px solid #e7e7e7;border-radius:4px;padding:.5rem .75rem;font-size:.9375rem;font-family:inherit;color:#141414;background:#fff;box-sizing:border-box;margin-bottom:.75rem;}',
-      '#lgf-modal input.err{border-color:#c0392b;margin-bottom:.2rem;}',
       '#lgf-modal .phone-row{display:flex;gap:.5rem;}',
       '#lgf-modal .phone-row select{width:90px;flex:none;margin-bottom:0;height:2.4375rem;box-sizing:border-box;}',
       '#lgf-modal .phone-row input{flex:1;margin-bottom:.75rem;height:2.4375rem;box-sizing:border-box;}',
       '#lgf-modal .phone-row input[type=tel]{margin-bottom:.75rem;}',
       '#lgf-ferr{color:#c0392b;font-size:.75rem;margin:.0rem 0 .6rem;display:none;}',
+      /* field error styles kept for IT to reuse if needed */
       '#lgf-submit{width:100%;background:#27262e;color:#fff;border:none;border-radius:4px;padding:.75rem;font-size:.9375rem;font-weight:600;font-family:inherit;cursor:pointer;letter-spacing:.03em;}',
       '#lgf-submit:disabled{background:#828282;cursor:not-allowed;}',
       '#lgf-success{text-align:center;padding:1.5rem 0;}',
@@ -68,11 +65,11 @@ function buildLeadGenScript(lg, projectUrl) {
       '</div>'+
       '<div id="lgf-body">'+
         '<label for="lgf-name">Full Name *</label>'+
-        '<input id="lgf-name" type="text" placeholder="e.g. Rahul Sharma" required autocomplete="name"/>'+
-        '<div id="lgf-name-err" class="lgf-fe"></div>'+
+        '<input id="lgf-name" type="text" placeholder="e.g. Rahul Sharma" autocomplete="name"/>'+
         '<label for="lgf-em">Email *</label>'+
-        '<input id="lgf-em" type="email" placeholder="name@example.com" required autocomplete="email"/>'+
+        '<input id="lgf-em" type="email" placeholder="name@example.com" autocomplete="email"/>'+
         '<div id="lgf-em-err" class="lgf-fe"></div>'+
+        /* field error divs kept for IT to wire up */
         '<label for="lgf-ph">Mobile *</label>'+
         '<div class="phone-row">'+
           '<select id="lgf-cc" aria-label="Country code">'+
@@ -82,10 +79,10 @@ function buildLeadGenScript(lg, projectUrl) {
             '<option value="+971">\ud83c\udde6\ud83c\uddea +971</option>'+
             '<option value="+65">\ud83c\uddf8\ud83c\uddec +65</option>'+
           '</select>'+
-          '<input id="lgf-ph" type="tel" inputmode="numeric" placeholder="9876543210" required autocomplete="tel-national"/>'+
+          '<input id="lgf-ph" type="tel" inputmode="numeric" placeholder="9876543210" autocomplete="tel-national"/>'+
         '</div>'+
         '<div id="lgf-ph-err" class="lgf-fe"></div>'+
-        '<div id="lgf-error" style="color:#c0392b;font-size:.8125rem;margin-bottom:.75rem;background:#fdf2f2;padding:.5rem .75rem;border-radius:4px;border:1px solid #f5c6cb;display:none;"></div>'+
+        /* error banner kept for IT */
         '<button id="lgf-submit" type="button">Get a Callback</button>'+
         '<p id="lgf-note">By submitting, you agree to be contacted by Godrej Properties. T&amp;C apply.</p>'+
       '</div>'+
@@ -96,18 +93,6 @@ function buildLeadGenScript(lg, projectUrl) {
         '<button onclick="closeModal()" style="margin-top:1.25rem;background:#27262e;color:#fff;border:none;border-radius:4px;padding:.6rem 1.5rem;cursor:pointer;font-family:inherit;font-weight:600;font-size:.875rem;">Close</button>'+
       '</div>';
     document.body.appendChild(el);
-
-    // Inline field-error styles
-    var fe=document.createElement('style');
-    fe.textContent='.lgf-fe{color:#c0392b;font-size:.75rem;margin:.0 0 .6rem;display:none;}';
-    document.head.appendChild(fe);
-
-    // Digits-only + max 10 on +91
-    document.getElementById('lgf-ph').addEventListener('input',function(){
-      this.value=this.value.replace(/\\D/g,'');
-      var cc=document.getElementById('lgf-cc').value;
-      if(cc==='+91' && this.value.length>10) this.value=this.value.slice(0,10);
-    });
 
     document.getElementById('lgf-close').addEventListener('click', closeModal);
     document.getElementById('lgf-submit').addEventListener('click', submitForm);
@@ -139,52 +124,8 @@ function buildLeadGenScript(lg, projectUrl) {
     open=false;
   }
 
-  function showFieldErr(id, msg){
-    var el=document.getElementById(id);
-    if(!el) return;
-    el.textContent=msg; el.style.display=msg?'block':'none';
-  }
-
   function submitForm(){
-    var nameVal=document.getElementById('lgf-name').value.trim();
-    var emVal=document.getElementById('lgf-em').value.trim();
-    var phVal=document.getElementById('lgf-ph').value.trim();
-    var cc=document.getElementById('lgf-cc').value;
-
-    // Reset errors
-    ['lgf-name-err','lgf-em-err','lgf-ph-err'].forEach(function(id){showFieldErr(id,'');});
-    document.getElementById('lgf-error').style.display='none';
-
-    var valid=true;
-
-    // Name validation — letters + spaces only
-    if(!nameVal){
-      showFieldErr('lgf-name-err','Name is required'); valid=false;
-    } else if(!/^[a-zA-Z\xC0-\u024F][a-zA-Z\xC0-\u024F' -]*$/.test(nameVal)){
-      showFieldErr('lgf-name-err','Name should contain letters only (spaces allowed)'); valid=false;
-    }
-
-    // Email — must end in .com / .in / .net
-    if(!emVal){
-      showFieldErr('lgf-em-err','Email is required'); valid=false;
-    } else if(!/^[^\\s@]+@[^\\s@.]+(?:\\.[^\\s@.]+)*\\.(com|net|in)$/i.test(emVal)){
-      showFieldErr('lgf-em-err','Invalid email \u2014 accepted formats: name@domain.com / .in / .net'); valid=false;
-    }
-
-    // Phone validation
-    if(!phVal){
-      showFieldErr('lgf-ph-err','Mobile number is required'); valid=false;
-    } else if(cc==='+91'){
-      if(!/^[6-9]\\d{9}$/.test(phVal)){
-        showFieldErr('lgf-ph-err','Enter a valid 10-digit number starting with 6, 7, 8, or 9'); valid=false;
-      }
-    } else if(!/^\\d{6,15}$/.test(phVal)){
-      showFieldErr('lgf-ph-err','Enter a valid mobile number'); valid=false;
-    }
-
-    if(!valid) return;
-
-    // API integration handled by IT — just show success
+    // Submission / validation handled by IT
     document.getElementById('lgf-body').style.display='none';
     document.getElementById('lgf-success').style.display='block';
   }

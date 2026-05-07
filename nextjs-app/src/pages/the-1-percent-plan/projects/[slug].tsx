@@ -783,9 +783,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
       {project.leadGen && (
         <LeadGenForm
           projectName={project.name}
-          projectId={project.leadGen.projectId}
-          adCode={project.leadGen.adCode}
-          projectUrl={canonical}
         />
       )}
     </Layout>
