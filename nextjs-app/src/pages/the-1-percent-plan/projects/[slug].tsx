@@ -59,7 +59,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     },
     ...(project.salesPhone ? [{
       question: `How do I contact the ${project.name} sales office?`,
-      answer: `The ${project.name} project sales office can be reached at ${project.salesPhone}. The project is located in ${project.microLocation}, ${project.city}, and is developed by ${project.developer}. RERA registration number: ${project.rera}.`,
+      answer: `To know more about the project and what's included under the 1% plan, please click on the enquire button${project.salesPhone ? ` or call us on ${project.salesPhone}` : ''}.`,
     }] : []),
   ];
 
@@ -206,41 +206,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         <div className="content-container" style={{ paddingTop: '0', paddingBottom: '0' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Overview</h2>
 
-          <article>
-            <div className="summary-card">
-              <p>
-                <strong>{project.name}</strong> is a {project.type.toLowerCase()} project by{' '}
-                <strong>{project.developer}</strong> in {project.microLocation}, {project.city}.
-                This project is eligible under the <strong>Godrej 1% Payment Plan</strong>.
-                RERA: <strong>{project.rera}</strong>.
-                {project.salesPhone && (
-                  <> For more details you can reach out to <strong>{project.salesPhone}</strong>.</>
-                )}
-              </p>
-            </div>
-
-            {/* Project snapshot cards — force single row */}
-            <div className="grid-container" style={{ gridTemplateColumns: 'repeat(4, 1fr)', overflowX: 'auto' }}>
-              <div className="card card-warm">
-                <h3>Sales Status</h3>
-                <p>{project.salesStatus}</p>
-              </div>
-              <div className="card card-warm">
-                <h3>Construction Status</h3>
-                <p>{project.constructionStatus}</p>
-              </div>
-              <div className="card card-warm">
-                <h3>Developer</h3>
-                <p>{project.developer}</p>
-              </div>
-              {project.salesPhone && (
-                <div className="card card-warm">
-                  <h3>For Inquiry Contact</h3>
-                  <p><a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>{project.salesPhone}</a></p>
-                </div>
-              )}
-            </div>
-          </article>
+          <p style={{ fontSize: '1rem', color: 'var(--color-primary)', lineHeight: 1.7, margin: '1rem 0 0' }}>
+            To know more about the project and what&rsquo;s included under the 1% plan, please click on the enquire button{project.salesPhone ? <> or call us on <strong>{project.salesPhone}</strong></> : ''}.
+          </p>
         </div>
       </section>
 
