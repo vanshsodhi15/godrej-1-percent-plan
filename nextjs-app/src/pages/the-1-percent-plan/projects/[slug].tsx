@@ -206,9 +206,17 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         <div className="content-container" style={{ paddingTop: '0', paddingBottom: '0' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Overview</h2>
 
-          <p style={{ fontSize: '1rem', color: 'var(--color-primary)', lineHeight: 1.7, margin: '1rem 0 1.5rem' }}>
-            To know more about the project and what&rsquo;s included under the 1% plan, please click on the enquire button{project.salesPhone ? <> or call us on <strong>{project.salesPhone}</strong></> : ''}.
-          </p>
+          <article>
+            <div className="summary-card">
+              <p>
+                <strong>{project.name}</strong> is a {project.type.toLowerCase()} project by{' '}
+                <strong>{project.developer}</strong> in {project.microLocation}, {project.city}.
+                This project is eligible under the <strong>Godrej 1% Payment Plan</strong>.
+                RERA: <strong>{project.rera}</strong>.
+                {' '}To know more about the project and what&rsquo;s included under the 1% plan, please click on the enquire button{project.salesPhone ? <> or call us on <strong>{project.salesPhone}</strong></> : ''}.
+              </p>
+            </div>
+          </article>
 
           {/* Project snapshot cards — force single row */}
           <div className="grid-container" style={{ gridTemplateColumns: 'repeat(4, 1fr)', overflowX: 'auto' }}>
