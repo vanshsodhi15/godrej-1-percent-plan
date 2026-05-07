@@ -122,51 +122,8 @@ export default function LeadGenForm({ projectName, projectId, adCode, projectUrl
       return;
     }
     setFieldErrors({});
-    setStatus('submitting');
-
-    // Split full name into firstName / lastName for SFDC payload
-    const nameParts = form.fullName.trim().split(/\s+/);
-    const firstName = nameParts[0];
-    const lastName = nameParts.slice(1).join(' ');
-
-    const payload = {
-      formData: {
-        firstName,
-        lastName,
-        email: form.email.trim(),
-        propertyType: '',
-        dateTime: new Date().toISOString(),
-        property: {
-          projCode: projectId,
-          addCode: adCode,
-          url: projectUrl,
-        },
-        phone: form.phone.trim(),
-        countryCode: form.countryCode,
-        country: 'India',
-        optIn: 'Yes',
-        OrganicCampagnID: '',
-        websiteName: projectUrl,
-      },
-    };
-
-    try {
-      const res = await fetch('https://www.godrejproperties.com/api/enquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-
-      if (res.ok) {
-        setStatus('success');
-      } else {
-        setStatus('error');
-        setErrorMsg(`Server responded with ${res.status}. Please try again.`);
-      }
-    } catch {
-      setStatus('error');
-      setErrorMsg('Network error — please check your connection and try again.');
-    }
+    // API integration handled by IT — just show success
+    setStatus('success');
   };
 
   return (

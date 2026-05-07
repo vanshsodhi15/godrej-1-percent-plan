@@ -184,35 +184,9 @@ function buildLeadGenScript(lg, projectUrl) {
 
     if(!valid) return;
 
-    // Split full name into first / last for SFDC
-    var parts=nameVal.split(/\\s+/);
-    var firstName=parts[0];
-    var lastName=parts.slice(1).join(' ');
-
-    var btn=document.getElementById('lgf-submit');
-    btn.disabled=true; btn.textContent='Sending\u2026';
-
-    var payload={formData:{firstName:firstName,lastName:lastName,email:emVal,propertyType:'',dateTime:new Date().toISOString(),property:{projCode:PROJ_ID,addCode:AD_CODE,url:PROJ_URL},phone:phVal,countryCode:cc,country:'India',optIn:'Yes',OrganicCampagnID:'',websiteName:PROJ_URL}};
-
-    fetch('https://www.godrejproperties.com/api/enquiry',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json, */*','Origin':'https://www.godrejproperties.com'},
-      body:JSON.stringify(payload)
-    }).then(function(r){
-      if(r.ok){
-        document.getElementById('lgf-body').style.display='none';
-        document.getElementById('lgf-success').style.display='block';
-      } else {
-        var err=document.getElementById('lgf-error');
-        err.textContent='Server error ('+r.status+'). Please try again.'; err.style.display='block';
-        btn.disabled=false; btn.textContent='Get a Callback';
-      }
-    }).catch(function(){
-      var err=document.getElementById('lgf-error');
-      err.textContent='Unable to submit. Please call or visit godrejproperties.com directly.';
-      err.style.display='block';
-      btn.disabled=false; btn.textContent='Get a Callback';
-    });
+    // API integration handled by IT — just show success
+    document.getElementById('lgf-body').style.display='none';
+    document.getElementById('lgf-success').style.display='block';
   }
 
   // Expose closeModal globally for the success button onclick
