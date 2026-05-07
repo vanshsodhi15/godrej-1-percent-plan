@@ -206,9 +206,31 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         <div className="content-container" style={{ paddingTop: '0', paddingBottom: '0' }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>Overview</h2>
 
-          <p style={{ fontSize: '1rem', color: 'var(--color-primary)', lineHeight: 1.7, margin: '1rem 0 0' }}>
+          <p style={{ fontSize: '1rem', color: 'var(--color-primary)', lineHeight: 1.7, margin: '1rem 0 1.5rem' }}>
             To know more about the project and what&rsquo;s included under the 1% plan, please click on the enquire button{project.salesPhone ? <> or call us on <strong>{project.salesPhone}</strong></> : ''}.
           </p>
+
+          {/* Project snapshot cards — force single row */}
+          <div className="grid-container" style={{ gridTemplateColumns: 'repeat(4, 1fr)', overflowX: 'auto' }}>
+            <div className="card card-warm">
+              <h3>Sales Status</h3>
+              <p>{project.salesStatus}</p>
+            </div>
+            <div className="card card-warm">
+              <h3>Construction Status</h3>
+              <p>{project.constructionStatus}</p>
+            </div>
+            <div className="card card-warm">
+              <h3>Developer</h3>
+              <p>{project.developer}</p>
+            </div>
+            {project.salesPhone && (
+              <div className="card card-warm">
+                <h3>For Inquiry Contact</h3>
+                <p><a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>{project.salesPhone}</a></p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
