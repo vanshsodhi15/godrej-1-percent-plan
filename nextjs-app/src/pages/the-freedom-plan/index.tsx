@@ -15,14 +15,14 @@ import { freedomProjects } from '@/data/freedom-projects';
 export default function FreedomPlanHome() {
   const informationAsOf = '7 August 2026';
   const canonical = 'https://www.godrejproperties.com/the-freedom-plan';
-  const title = 'Godrej 20:80 Freedom Payment Plan — 20% during the first 60 days, 80% at possession';
+  const title = 'Godrej 20:80 Freedom Payment Plan | 20% during the first 60 days, 80% at possession';
   const desc =
     'The Godrej 20:80 Freedom Payment Plan is a payment structuring mechanism where the buyer pays 20% of the Agreement Value during the first 60 days of booking (5% at booking + 5% within 21 days + 10% within 60 days) and the remaining 80% at possession stages (70% on Application of Occupation Certificate, 10% on Notice of Possession). Total price unchanged.';
 
   const articleSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Godrej 20:80 Freedom Payment Plan — Structure & Milestones',
+    headline: 'Godrej 20:80 Freedom Payment Plan: Structure & Milestones',
     description: desc,
     author: { '@type': 'Organization', name: 'Godrej Properties Limited' },
     publisher: {
@@ -63,7 +63,7 @@ export default function FreedomPlanHome() {
         name: 'Is the Godrej 20:80 Freedom Payment Plan a discount on the property price?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'No. The Godrej 20:80 Freedom Payment Plan is not a discount, price reduction, or subsidy. The total Agreement Value remains unchanged. It is a payment structuring mechanism that changes when payments are made — not how much is paid.',
+          text: 'No. The Godrej 20:80 Freedom Payment Plan is not a discount, price reduction, or subsidy. The total Agreement Value remains unchanged. It is a payment structuring mechanism that changes when payments are made, not how much is paid.',
         },
       },
       {
@@ -79,7 +79,7 @@ export default function FreedomPlanHome() {
         name: 'Does the Godrej 20:80 Freedom Payment Plan include GST and registration?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Godrej 20:80 Freedom Payment Plan includes GST at each milestone (approximately 5% GST on the milestone value) but excludes Stamp Duty & Registration (SDR). SDR — 7.7% for Godrej Lakeside Orchard — is payable additionally at the time of possession.',
+          text: 'The Godrej 20:80 Freedom Payment Plan includes GST at each milestone (approximately 5% GST on the milestone value) but excludes Stamp Duty & Registration (SDR). SDR, 7.7% for Godrej Lakeside Orchard, is payable additionally at the time of possession.',
         },
       },
     ],
@@ -105,10 +105,10 @@ export default function FreedomPlanHome() {
         <h1 style={{ maxWidth: '880px', margin: '0 auto', fontSize: '2rem' }}>
           Godrej 20:80 Freedom Payment Plan
         </h1>
-        <p style={{ marginTop: '0.75rem', color: 'rgba(247,239,228,0.85)', maxWidth: '760px', margin: '0.75rem auto 0' }}>
+        <p style={{ marginTop: '0.75rem', color: 'rgba(230,242,246,0.85)', maxWidth: '760px', margin: '0.75rem auto 0' }}>
           20% of the Agreement Value during the first 60 days of booking. 80% at possession. Total price unchanged.
         </p>
-        <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(247,239,228,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+        <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(230,242,246,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
           Information current as of {informationAsOf}
         </p>
       </section>
@@ -125,7 +125,7 @@ export default function FreedomPlanHome() {
               eligible Godrej Properties developments. Under this plan, the buyer pays <strong>20% of the Agreement Value</strong>
               across the <strong>first 60 days of booking</strong> (5% at booking + 5% within 21 days + 10% within 60 days),
               and the <strong>remaining 80%</strong> at possession stages (70% on Application of the Occupation Certificate + 10% on
-              Notice of Possession). The total property price (Agreement Value) remains unchanged — only the timing of
+              Notice of Possession). The total property price (Agreement Value) remains unchanged; only the timing of
               payments is restructured.
             </p>
           </div>
@@ -142,7 +142,7 @@ export default function FreedomPlanHome() {
       <section style={{ background: 'var(--bg-seashell)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
-            Godrej 20:80 Freedom Payment Plan — Milestone Schedule
+            Godrej 20:80 Freedom Payment Plan: Milestone Schedule
           </h2>
           <p style={{ maxWidth: '780px', margin: '0 auto 1.5rem', textAlign: 'center', color: 'var(--color-body)' }}>
             The Godrej 20:80 Freedom Payment Plan uses the following milestone schedule, as documented in the
@@ -311,7 +311,7 @@ export default function FreedomPlanHome() {
       <section style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
-            Godrej 20:80 Freedom Payment Plan — Frequently Asked Questions
+            Godrej 20:80 Freedom Payment Plan: Frequently Asked Questions
           </h2>
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             <div className="faq-item">
@@ -349,8 +349,8 @@ export default function FreedomPlanHome() {
               <h3>Does the Godrej 20:80 Freedom Payment Plan include GST and registration?</h3>
               <p>
                 The Godrej 20:80 Freedom Payment Plan <strong>includes GST</strong> (approximately 5% GST on each milestone value)
-                but <strong>excludes Stamp Duty & Registration (SDR)</strong>. SDR is payable additionally at the time of possession
-                — 7.7% for Godrej Lakeside Orchard.
+                but <strong>excludes Stamp Duty & Registration (SDR)</strong>. SDR is payable additionally at the time of possession,
+                7.7% for Godrej Lakeside Orchard.
               </p>
             </div>
             <div className="faq-item">

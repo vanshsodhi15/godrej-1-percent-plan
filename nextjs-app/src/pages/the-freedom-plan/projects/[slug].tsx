@@ -42,9 +42,9 @@ export const getStaticProps: GetStaticProps<FreedomProjectPageProps> = async (ct
 
 export default function FreedomProjectPage({ project }: FreedomProjectPageProps) {
   const canonical = `https://www.godrejproperties.com/the-freedom-plan/projects/${project.slug}`;
-  const title = `${project.name} — Godrej 20:80 Freedom Payment Plan | RERA, Pricing & FAQs`;
+  const title = `${project.name} | Godrej 20:80 Freedom Payment Plan | RERA, Pricing & FAQs`;
   const desc =
-    `${project.name}, ${project.microLocation}, ${project.zone}, ${project.city} — eligible under the Godrej 20:80 Freedom Payment Plan. ` +
+    `${project.name}, ${project.microLocation}, ${project.zone}, ${project.city}, eligible under the Godrej 20:80 Freedom Payment Plan. ` +
     '20% of the Agreement Value across the first 60 days of booking (5% booking + 5% at 21 days + 10% at 60 days), then 70% on Application of Occupation Certificate and 10% on Notice of Possession. ' +
     `RERA ${project.rera}.`;
 
@@ -73,7 +73,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
   const offerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Offer',
-    name: `Godrej 20:80 Freedom Payment Plan — ${project.name}`,
+    name: `Godrej 20:80 Freedom Payment Plan: ${project.name}`,
     url: canonical,
     seller: {
       '@type': 'Organization',
@@ -153,12 +153,12 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           <strong>Godrej 20:80 Freedom Payment Plan</strong>
         </div>
         <h1 style={{ maxWidth: '900px', margin: '0 auto', fontSize: '2rem' }}>
-          {project.name} — 20:80 Freedom Payment Plan
+          {project.name} | 20:80 Freedom Payment Plan
         </h1>
         <p style={{ marginTop: '0.5rem', marginBottom: 0 }}>
           {project.microLocation}, {project.zone}, {project.city}, {project.state}
         </p>
-        <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(247,239,228,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+        <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(230,242,246,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
           Information current as of {project.informationCurrentAsOf}
         </p>
       </section>
@@ -169,7 +169,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
             {project.sourceConflicts.map((c, i) => (
               <div key={i} className="conflict-flag">
-                <strong>[CONFLICT — {c.location}]</strong> {c.description}
+                <strong>[CONFLICT: {c.location}]</strong> {c.description}
               </div>
             ))}
           </div>
@@ -311,7 +311,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
               <table>
                 <thead>
                   <tr>
-                    <th>Milestone — {project.paymentPlanName}</th>
+                    <th>Milestone: {project.paymentPlanName}</th>
                     <th>%</th>
                     <th>Amount</th>
                     <th>Calculation Logic</th>
@@ -350,10 +350,10 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                 marginTop: '1rem',
                 fontWeight: 600,
                 color: 'var(--color-heading)',
-                background: 'rgba(200, 85, 45, 0.08)',
+                background: 'rgba(44, 136, 173, 0.10)',
                 padding: '0.75rem 1rem',
                 borderRadius: '8px',
-                border: '1px solid rgba(200, 85, 45, 0.20)',
+                border: '1px solid rgba(44, 136, 173, 0.25)',
                 fontSize: '0.9375rem',
               }}>{ex.additionalSdrNote}</p>
             )}

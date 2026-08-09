@@ -694,102 +694,118 @@ input:focus, select:focus {
   .breadcrumbs { gap: 0.25rem; line-height: 1.5; }
 }
 /* ============================================================
-   FREEDOM PLAN THEME — Terracotta / Warm Earth
+   FREEDOM PLAN THEME: Lakeside / Water
    Scoped to `.theme-freedom` so it only affects Freedom Plan
    pages. 1% Plan visuals remain unchanged.
+
+   Palette rationale (project name = Lakeside Orchard):
+     - Deep water (#0d3b57)   - dark navy-teal, the brand "dark"
+     - Mid water (#1e5c7f)    - calm lake blue
+     - Water surface (#2c88ad) - bright accent water
+     - Reflection (#5fb0d1)   - sunlight-on-water highlight
+     - Mist (#e6f2f6)         - very pale water (sand replacement)
+     - Sand shore (#f4ede0)   - warm neutral for card backgrounds
    ============================================================ */
 
 .theme-freedom {
-  /* Warm earthy accent palette */
-  --accent-gold: #c8552d;              /* terracotta */
-  --accent-gold-dark: #8f3a1c;         /* burnt sienna */
+  /* Lakeside accent palette (overrides gold vars used by shared components) */
+  --accent-gold: #2c88ad;              /* water surface blue */
+  --accent-gold-dark: #0d3b57;         /* deep water navy-teal */
 
-  /* Backgrounds */
-  --bg-seashell: #f7efe4;              /* warm sand */
-  --bg-warm: #fbf3e6;                  /* cream */
-  --bg-warm-light: #fdf7ec;
-  --bg-floral: #fef9f2;
-  --bg-dark: #3a2416;                  /* deep umber (was charcoal) */
+  /* Backgrounds - cool water + soft shore */
+  --bg-seashell: #e6f2f6;              /* pale water mist */
+  --bg-warm: #f4ede0;                  /* soft sand shore */
+  --bg-warm-light: #f0f7fa;            /* faintest water tint */
+  --bg-floral: #f7fbfc;                /* almost-white with cool cast */
+  --bg-dark: #0d3b57;                  /* deep lake water */
 
-  /* Headings */
-  --color-heading: #3a2416;
-  --color-primary: #241408;
+  /* Headings - deep water for legible dark text on light bg */
+  --color-heading: #0d3b57;
+  --color-primary: #0a2d43;
 }
 
-/* Hero — warm terracotta gradient instead of charcoal */
+/* Hero: deep-water gradient with sunlight ripple overlay */
 .theme-freedom .project-hero,
 .theme-freedom .hero-dark {
-  background: linear-gradient(135deg, #3a2416 0%, #5c3720 50%, #8f3a1c 100%);
+  background: linear-gradient(135deg, #0d3b57 0%, #1e5c7f 55%, #2c88ad 100%);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Sunlight glint on the water surface */
 .theme-freedom .project-hero::before {
-  background: radial-gradient(ellipse at 30% 0%, rgba(200, 85, 45, 0.25) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 20% -10%, rgba(159, 213, 233, 0.32) 0%, transparent 55%);
 }
 
-/* Section title underline — terracotta */
+/* Section title underline: bright water accent */
 .theme-freedom .section-title::after {
   background: var(--accent-gold);
 }
 
-/* Cards — warm tint */
+/* Cards: cool water tint */
 .theme-freedom .card-accent {
   border-left-color: var(--accent-gold);
-  background: linear-gradient(to right, rgba(200, 85, 45, 0.05), var(--bg-white));
+  background: linear-gradient(to right, rgba(44, 136, 173, 0.06), var(--bg-white));
 }
 
 .theme-freedom .summary-card {
-  background: linear-gradient(135deg, var(--bg-seashell) 0%, var(--bg-warm) 100%);
+  background: linear-gradient(135deg, var(--bg-seashell) 0%, var(--bg-warm-light) 100%);
   border-left-color: var(--accent-gold);
 }
 
-/* Table header — deep umber instead of charcoal */
+/* Table header: deep water */
 .theme-freedom th {
-  background: linear-gradient(135deg, #3a2416 0%, #5c3720 100%);
+  background: linear-gradient(135deg, #0d3b57 0%, #1e5c7f 100%);
 }
 
-/* Table alt row — warm tint */
+/* Table alt row: pale water */
 .theme-freedom tbody tr:nth-child(even) {
   background-color: var(--bg-seashell);
 }
 
 .theme-freedom tbody tr:hover {
-  background-color: rgba(200, 85, 45, 0.06);
+  background-color: rgba(44, 136, 173, 0.07);
 }
 
-/* Milestone highlights — terracotta tint */
+/* Milestone highlights: initial = calm water; construction = subtle reed-green */
 .theme-freedom .milestone-phase-initial td {
-  background: rgba(200, 85, 45, 0.08);
+  background: rgba(44, 136, 173, 0.09);
 }
 .theme-freedom .milestone-phase-construction td {
-  background: rgba(58, 36, 22, 0.05);
+  background: rgba(74, 122, 92, 0.07);
 }
 
-/* FAQ category — terracotta */
+/* FAQ category: deep water headline with water-tint bg */
 .theme-freedom .faq-category-title {
   color: var(--accent-gold-dark);
-  background: linear-gradient(to right, rgba(200, 85, 45, 0.10), transparent);
+  background: linear-gradient(to right, rgba(44, 136, 173, 0.12), transparent);
   border-left-color: var(--accent-gold);
 }
 
-/* Button — warm variant */
+/* Button: deep water base, brighter water on hover */
 .theme-freedom .btn {
-  background: #3a2416;
-  border-color: #3a2416;
+  background: #0d3b57;
+  border-color: #0d3b57;
 }
 .theme-freedom .btn:hover {
-  background: var(--accent-gold-dark);
-  border-color: var(--accent-gold-dark);
+  background: #1e5c7f;
+  border-color: #1e5c7f;
 }
 
-/* Results box — warm dark */
+/* Results box: deep water base */
 .theme-freedom .results-box {
-  background: #3a2416;
+  background: #0d3b57;
 }
 .theme-freedom .results-box h3 {
-  color: var(--accent-gold);
+  color: #5fb0d1;
 }
 
-/* Freedom Plan brand mark — text-only logo alternative */
+/* Card warm helper: cool it down to sand-shore neutral in lakeside scope */
+.theme-freedom .card-warm {
+  background: var(--bg-warm);
+}
+
+/* Freedom Plan brand mark: text-only logo pill, water tint */
 .freedom-brand-mark {
   display: inline-block;
   font-family: inherit;
@@ -797,16 +813,16 @@ input:focus, select:focus {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.6rem 1.25rem 0.55rem;
-  border: 1px solid rgba(200, 85, 45, 0.6);
+  border: 1px solid rgba(95, 176, 209, 0.6);
   border-radius: 999px;
-  background: rgba(200, 85, 45, 0.10);
-  color: #f7efe4;
+  background: rgba(44, 136, 173, 0.18);
+  color: #e6f2f6;
   font-size: 0.75rem;
   margin-bottom: 1.5rem;
 }
 
 .freedom-brand-mark strong {
-  color: #f7efe4;
+  color: #e6f2f6;
   font-weight: 500;
   letter-spacing: 0.15em;
 }
@@ -823,7 +839,7 @@ input:focus, select:focus {
 }
 
 .freedom-ratio .colon {
-  color: var(--accent-gold);
+  color: #5fb0d1;
   margin: 0 0.15em;
   font-weight: 300;
 }
@@ -832,7 +848,9 @@ input:focus, select:focus {
   .freedom-ratio { font-size: 2.25rem; }
 }
 
-/* Conflict flag banner — used inline in copy where source doc self-contradicts */
+/* Conflict flag banner: kept in the amber warning register on purpose.
+   Semantic meaning = "attention needed", so we do NOT recolor it to
+   match the theme. Amber signals unresolved data. */
 .conflict-flag {
   display: block;
   background: #fff4e6;

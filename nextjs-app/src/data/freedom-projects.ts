@@ -227,65 +227,65 @@ const godrejLakesideOrchard: FreedomProject = {
     {
       category: 'Connectivity',
       items: [
-        'Outer Ring Road — 15 min*',
-        'Marathahalli — 30–35 min*',
-        'Bellandur — 26 min*',
-        'Electronic City — 30–35 min*',
-        'S.H. 35 — 12 min*',
+        'Outer Ring Road: 15 min*',
+        'Marathahalli: 30–35 min*',
+        'Bellandur: 26 min*',
+        'Electronic City: 30–35 min*',
+        'S.H. 35: 12 min*',
       ],
     },
     {
       category: 'Commute & Transport',
       items: [
-        'Proposed Iblur Metro Station — 15 min*',
-        'Proposed Carmelaram Metro Station — 6 min*',
-        'Carmelaram Railway Station — 7 min*',
+        'Proposed Iblur Metro Station: 15 min*',
+        'Proposed Carmelaram Metro Station: 6 min*',
+        'Carmelaram Railway Station: 7 min*',
       ],
     },
     {
       category: 'Recreational & Lifestyle Hubs',
       items: [
-        'DoubleTree Suites by Hilton Hotel — 13 min*',
-        'Rural Blues — 8 min*',
-        'Fairfield by Marriott — 16 min*',
-        'Soul Space Spirit Centro Mall — 15 min*',
-        'Bier Library — 8 min*',
-        'Byg Brewski — 10 min*',
+        'DoubleTree Suites by Hilton Hotel: 13 min*',
+        'Rural Blues: 8 min*',
+        'Fairfield by Marriott: 16 min*',
+        'Soul Space Spirit Centro Mall: 15 min*',
+        'Bier Library: 8 min*',
+        'Byg Brewski: 10 min*',
       ],
     },
     {
       category: 'Tech Parks & Employment Hubs',
       items: [
-        'Global Technology Park — 16 min*',
-        'RGA Tech Park — 6 min*',
-        'Cessna Business Park — 20 min*',
-        'RMZ Ecospace — 15 min*',
-        'Embassy Tech Village — 20 min*',
-        'Wipro — 8 min*',
+        'Global Technology Park: 16 min*',
+        'RGA Tech Park: 6 min*',
+        'Cessna Business Park: 20 min*',
+        'RMZ Ecospace: 15 min*',
+        'Embassy Tech Village: 20 min*',
+        'Wipro: 8 min*',
       ],
     },
     {
       category: 'Schools & Colleges',
       items: [
-        'CMR Gandhi Public School — 4 min*',
-        'DPS EAST — 8 min*',
-        'Harvest International School — 15 min*',
-        'Primus Public School — 12 min*',
-        'Inventure Academy — 14 min*',
-        'Oakridge International School — 13 min*',
-        'GEAR Innovative International School — 14 min*',
-        'The International School — 14 min*',
+        'CMR Gandhi Public School: 4 min*',
+        'DPS EAST: 8 min*',
+        'Harvest International School: 15 min*',
+        'Primus Public School: 12 min*',
+        'Inventure Academy: 14 min*',
+        'Oakridge International School: 13 min*',
+        'GEAR Innovative International School: 14 min*',
+        'The International School: 14 min*',
       ],
     },
     {
       category: 'Healthcare Facilities',
       items: [
-        'Belenus Champion Hospital — 7 min*',
-        'Natus Women & Children Hospital — 7 min*',
-        'Motherhood Hospital — 11 min*',
-        'Cloudnine Hospital — 10 min*',
-        'Sakra World Hospital — 18 min*',
-        'Manipal Hospital — 15 min*',
+        'Belenus Champion Hospital: 7 min*',
+        'Natus Women & Children Hospital: 7 min*',
+        'Motherhood Hospital: 11 min*',
+        'Cloudnine Hospital: 10 min*',
+        'Sakra World Hospital: 18 min*',
+        'Manipal Hospital: 15 min*',
       ],
     },
   ],
@@ -296,7 +296,7 @@ const godrejLakesideOrchard: FreedomProject = {
       paragraphs: [
         'Sarjapur has emerged as one of Bengaluru’s fastest-growing residential and IT hubs, driven by its strategic connectivity to Whitefield, Electronic City, Outer Ring Road (ORR) and Bellandur.',
         'With the presence of leading IT parks, reputed international schools and social infrastructure, the location continues to attract both end-users and long-term investors.',
-        'Ongoing infrastructure developments — including the Peripheral Ring Road (PRR), Satellite Town Ring Road (STRR), and the proposed Metro connectivity — are expected to further enhance accessibility and support sustained property value appreciation.',
+        'Ongoing infrastructure developments, including the Peripheral Ring Road (PRR), Satellite Town Ring Road (STRR), and the proposed Metro connectivity, are expected to further enhance accessibility and support sustained property value appreciation.',
       ],
     },
     {
@@ -445,7 +445,7 @@ const godrejLakesideOrchard: FreedomProject = {
         {
           question: 'Does the 20:80 Freedom Payment Plan include GST and registration?',
           answer:
-            'The 20:80 Freedom Payment Plan at Godrej Lakeside Orchard includes GST but excludes registration. Stamp Duty and Registration (SDR) — 7.7% — are payable additionally at the time of possession.',
+            'The 20:80 Freedom Payment Plan at Godrej Lakeside Orchard includes GST but excludes registration. Stamp Duty and Registration (SDR), 7.7%, are payable additionally at the time of possession.',
         },
         {
           question: 'How much do I need to pay upfront under the 20:80 Freedom Payment Plan at Godrej Lakeside Orchard?',
@@ -503,7 +503,7 @@ const godrejLakesideOrchard: FreedomProject = {
       items: [
         {
           question: 'What is the current construction status of Godrej Lakeside Orchard?',
-          answer: 'Godrej Lakeside Orchard is currently Under Construction — 7th/12th floor.',
+          answer: 'Godrej Lakeside Orchard is currently Under Construction, 7th/12th floor.',
         },
       ],
     },
@@ -552,15 +552,16 @@ const godrejLakesideOrchard: FreedomProject = {
 
   floorPlans: [
     {
-      label: '3.5 BHK Luxe',
+      label: '3 BHK Luxe',
       src: '/assets/lake_side_orchard_3.5_luxe.jpg',
-      alt: 'Godrej Lakeside Orchard 3.5 BHK Luxe Floor Plan',
-      saleableArea: '2,214–2,257 sq. ft.',
+      alt: 'Godrej Lakeside Orchard 3 BHK Luxe Floor Plan (Tower G, floors 02-19, 21-25)',
+      saleableArea: '1,790–2,260 sq. ft.',
     },
     {
-      label: '3.5 BHK',
+      label: '3.5 BHK Luxe',
       src: '/assets/lake_side_orchard_3.5.jpg',
-      alt: 'Godrej Lakeside Orchard 3.5 BHK Floor Plan',
+      alt: 'Godrej Lakeside Orchard 3.5 BHK Luxe Floor Plan (Tower A, floors 02-25)',
+      saleableArea: '2,214–2,257 sq. ft.',
     },
   ],
 
