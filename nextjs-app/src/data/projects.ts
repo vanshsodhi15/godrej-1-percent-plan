@@ -612,22 +612,22 @@ export const projects: Project[] = [
     floorPlanImages: [
       {
         label: '2 BHK Luxe',
-        src: '/assets/godrej_regal_pavillion_2bhk_luxe.jpg',
+        src: '/assets_one_percent/godrej_regal_pavillion_2bhk_luxe.jpg',
         alt: 'Godrej Regal Pavilion 2 BHK Luxe floor plan',
       },
       {
         label: '3 BHK Premium',
-        src: '/assets/godrej_regal_pavillion_3bhk_premium.jpg',
+        src: '/assets_one_percent/godrej_regal_pavillion_3bhk_premium.jpg',
         alt: 'Godrej Regal Pavilion 3 BHK Premium floor plan',
       },
       {
         label: '3 BHK / 3.5 BHK Luxe',
-        src: '/assets/godrej_regal_pavillion_3bhk_3.5bhk_luxe.jpg',
+        src: '/assets_one_percent/godrej_regal_pavillion_3bhk_3.5bhk_luxe.jpg',
         alt: 'Godrej Regal Pavilion 3 BHK and 3.5 BHK Luxe floor plan',
       },
       {
         label: '4 BHK',
-        src: '/assets/godrej_regal_pavillion_4bhk.jpg',
+        src: '/assets_one_percent/godrej_regal_pavillion_4bhk.jpg',
         alt: 'Godrej Regal Pavilion 4 BHK floor plan',
       },
     ],
@@ -1119,21 +1119,21 @@ export const projects: Project[] = [
     floorPlanImages: [
       {
         label: '2 BHK Luxe',
-        src: '/assets/godrej_parkshire_2luxe_plan.jpg',
+        src: '/assets_one_percent/godrej_parkshire_2luxe_plan.jpg',
         alt: 'Godrej Parkshire 2 BHK Luxe floor plan – RERA Carpet Area 68.27 sq.mts. (734.86 sq.ft.), Saleable Area 113.75 sq.mts. (1,224.35 sq.ft.)',
         carpetArea: '68.27 sq.mts. (734.86 sq.ft.)',
         saleableArea: '113.75 sq.mts. (1,224.35 sq.ft.)',
       },
       {
         label: '3 BHK Premium',
-        src: '/assets/godrej_parkshire_3pre_plan.jpg',
+        src: '/assets_one_percent/godrej_parkshire_3pre_plan.jpg',
         alt: 'Godrej Parkshire 3 BHK Premium floor plan – RERA Carpet Area 88.88 sq.mts. (956.70 sq.ft.), Saleable Area 151.82 sq.mts. (1,634.14 sq.ft.)',
         carpetArea: '88.88 sq.mts. (956.70 sq.ft.)',
         saleableArea: '151.82 sq.mts. (1,634.14 sq.ft.)',
       },
       {
         label: '3 BHK Luxe',
-        src: '/assets/godrej_parkshire_3luxe_plan.jpg',
+        src: '/assets_one_percent/godrej_parkshire_3luxe_plan.jpg',
         alt: 'Godrej Parkshire 3 BHK Luxe floor plan – RERA Carpet Area 95.93 sq.mts. (1,032.59 sq.ft.), Saleable Area 162.59 sq.mts. (1,750.06 sq.ft.)',
         carpetArea: '95.93 sq.mts. (1,032.59 sq.ft.)',
         saleableArea: '162.59 sq.mts. (1,750.06 sq.ft.)',
@@ -1557,10 +1557,10 @@ export const projects: Project[] = [
     },
     floorPlans: '4 floor plans available — 3 BHK (Tower-C), 3 BHK Premium (Tower-H), 3 BHK Luxe (Tower-G), 3.5 BHK (Tower-B).',
     floorPlanImages: [
-      { label: '3 BHK', src: '/assets/godrej_lakeside_orchard_3bhk.jpg', alt: 'Godrej Lakeside Orchard 3 BHK Floor Plan', carpetArea: '89.62 sq.mts. (964.66 sq.ft.)', saleableArea: '146.78 sq.mts. (1,579.89 sq.ft.)' },
-      { label: '3 BHK Premium', src: '/assets/godrej_lakeside_orchard_3bhk_premium.jpg', alt: 'Godrej Lakeside Orchard 3 BHK Premium Floor Plan', carpetArea: '99.78 sq.mts. (1,074.03 sq.ft.)', saleableArea: '166.35 sq.mts. (1,790.01 sq.ft.)' },
-      { label: '3 BHK Luxe', src: '/assets/godrej_lakeside_orchard_3bhk_luxe.jpg', alt: 'Godrej Lakeside Orchard 3 BHK Luxe Floor Plan', carpetArea: '126.20 sq.mts. (1,293.83 sq.ft.)', saleableArea: '195.35 sq.mts. (2,102.74 sq.ft.)' },
-      { label: '3.5 BHK', src: '/assets/godrej_lakeside_orchard_3_5bhk.jpg', alt: 'Godrej Lakeside Orchard 3.5 BHK Floor Plan', carpetArea: '124.79 sq.mts. (1,343.23 sq.ft.)', saleableArea: '201.02 sq.mts. (2,163.73 sq.ft.)' },
+      { label: '3 BHK', src: '/assets_one_percent/godrej_lakeside_orchard_3bhk.jpg', alt: 'Godrej Lakeside Orchard 3 BHK Floor Plan', carpetArea: '89.62 sq.mts. (964.66 sq.ft.)', saleableArea: '146.78 sq.mts. (1,579.89 sq.ft.)' },
+      { label: '3 BHK Premium', src: '/assets_one_percent/godrej_lakeside_orchard_3bhk_premium.jpg', alt: 'Godrej Lakeside Orchard 3 BHK Premium Floor Plan', carpetArea: '99.78 sq.mts. (1,074.03 sq.ft.)', saleableArea: '166.35 sq.mts. (1,790.01 sq.ft.)' },
+      { label: '3 BHK Luxe', src: '/assets_one_percent/godrej_lakeside_orchard_3bhk_luxe.jpg', alt: 'Godrej Lakeside Orchard 3 BHK Luxe Floor Plan', carpetArea: '126.20 sq.mts. (1,293.83 sq.ft.)', saleableArea: '195.35 sq.mts. (2,102.74 sq.ft.)' },
+      { label: '3.5 BHK', src: '/assets_one_percent/godrej_lakeside_orchard_3_5bhk.jpg', alt: 'Godrej Lakeside Orchard 3.5 BHK Floor Plan', carpetArea: '124.79 sq.mts. (1,343.23 sq.ft.)', saleableArea: '201.02 sq.mts. (2,163.73 sq.ft.)' },
     ],
     locationAdvantages: [
       'Proposed Carmelaram Metro Station (6 min* drive)',
@@ -1808,21 +1808,21 @@ export const projects: Project[] = [
     floorPlanImages: [
       {
         label: '2 BHK',
-        src: '/assets/godrej_woods_2bhk_plan.jpg',
+        src: '/assets_one_percent/godrej_woods_2bhk_plan.jpg',
         alt: 'Godrej Woods 2 BHK floor plan – RERA Carpet Area 66.81 sq.mt. (719.17 sq.ft.), Saleable Area 110.87 sq.mt. (1,193.38 sq.ft.)',
         carpetArea: '66.81 sq.mt. (719.17 sq.ft.)',
         saleableArea: '110.87 sq.mt. (1,193.38 sq.ft.)',
       },
       {
         label: '3 BHK Premium',
-        src: '/assets/godrej_woods_3bhk_premium_plan.jpg',
+        src: '/assets_one_percent/godrej_woods_3bhk_premium_plan.jpg',
         alt: 'Godrej Woods 3 BHK Premium floor plan – RERA Carpet Area 95.34 sq.mt. (1,026.26 sq.ft.), Saleable Area 175.39 sq.mt. (1,887.88 sq.ft.)',
         carpetArea: '95.34 sq.mt. (1,026.26 sq.ft.)',
         saleableArea: '175.39 sq.mt. (1,887.88 sq.ft.)',
       },
       {
         label: '3 BHK Lux',
-        src: '/assets/godrej_woods_3bhk_lux_plan.jpg',
+        src: '/assets_one_percent/godrej_woods_3bhk_lux_plan.jpg',
         alt: 'Godrej Woods 3 BHK Lux floor plan – RERA Carpet Area 109.04 sq.mt. (1,173.66 sq.ft.), Saleable Area 203.58 sq.mt. (2,191.36 sq.ft.)',
         carpetArea: '109.04 sq.mt. (1,173.66 sq.ft.)',
         saleableArea: '203.58 sq.mt. (2,191.36 sq.ft.)',
@@ -2111,12 +2111,12 @@ export const projects: Project[] = [
     },
     floorPlans: '6 floor plans available — 2 BHK Royal, 3 BHK Elite, 3 BHK Royal, 3 BHK Grand, 4 BHK Grand Lower, 4 BHK Grand Upper.',
     floorPlanImages: [
-      { label: '2 BHK Royal', src: '/assets/godrej_azure_2bhk_royal.jpg', alt: 'Godrej Azure 2 BHK Royal Floor Plan' },
-      { label: '3 BHK Elite', src: '/assets/godrej_azure_3bhk_elite.jpg', alt: 'Godrej Azure 3 BHK Elite Floor Plan' },
-      { label: '3 BHK Royal', src: '/assets/godrej_azure_3bhk_royal.jpg', alt: 'Godrej Azure 3 BHK Royal Floor Plan' },
-      { label: '3 BHK Grand', src: '/assets/godrej_azure_3bhk_grand.jpg', alt: 'Godrej Azure 3 BHK Grand Floor Plan' },
-      { label: '4 BHK Grand – Lower', src: '/assets/godrej_azure_4bhk_grand_lower.jpg', alt: 'Godrej Azure 4 BHK Grand Lower Floor Plan' },
-      { label: '4 BHK Grand – Upper', src: '/assets/godrej_azure_4bhk_grand_upper.jpg', alt: 'Godrej Azure 4 BHK Grand Upper Floor Plan' },
+      { label: '2 BHK Royal', src: '/assets_one_percent/godrej_azure_2bhk_royal.jpg', alt: 'Godrej Azure 2 BHK Royal Floor Plan' },
+      { label: '3 BHK Elite', src: '/assets_one_percent/godrej_azure_3bhk_elite.jpg', alt: 'Godrej Azure 3 BHK Elite Floor Plan' },
+      { label: '3 BHK Royal', src: '/assets_one_percent/godrej_azure_3bhk_royal.jpg', alt: 'Godrej Azure 3 BHK Royal Floor Plan' },
+      { label: '3 BHK Grand', src: '/assets_one_percent/godrej_azure_3bhk_grand.jpg', alt: 'Godrej Azure 3 BHK Grand Floor Plan' },
+      { label: '4 BHK Grand – Lower', src: '/assets_one_percent/godrej_azure_4bhk_grand_lower.jpg', alt: 'Godrej Azure 4 BHK Grand Lower Floor Plan' },
+      { label: '4 BHK Grand – Upper', src: '/assets_one_percent/godrej_azure_4bhk_grand_upper.jpg', alt: 'Godrej Azure 4 BHK Grand Upper Floor Plan' },
     ],
     locationAdvantages: [
       'Hindustan University — 0.95 km (4 min* drive)',

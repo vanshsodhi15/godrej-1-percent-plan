@@ -6,20 +6,37 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Godrej 1% Plan — QA Hub</title>
-        <meta name="description" content="Internal testing hub for Godrej 1% plan GEO pages" />
+        <title>Godrej Properties — GEO Testing Hub</title>
+        <meta name="description" content="Internal testing hub for Godrej Properties GEO pages: 1% Plan and 20:80 Freedom Payment Plan" />
       </Head>
       
       <div className="hero">
-        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" />
-        <h1>Godrej 1% Plan — Testing Hub</h1>
+        <img src="/assets_one_percent/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" />
+        <h1>Godrej Properties — GEO Testing Hub</h1>
       </div>
 
       <main className="content-container" style={{ paddingTop: '2rem' }}>
         <p style={{ marginBottom: '2rem', color: 'var(--color-muted)' }}>
           Welcome to the internal staging hub. Click any of the links below to test the compiled Generative Engine Optimization (GEO) pages.
         </p>
-        
+
+        <h2 style={{ marginTop: 0, fontSize: '1.25rem' }}>20:80 Freedom Payment Plan</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
+          <Link href="/the-freedom-plan" className="card card-accent" style={{ textDecoration: 'none' }}>
+            <h3 style={{ marginTop: 0 }}>Main Hub — Godrej 20:80 Freedom Payment Plan</h3>
+            <p style={{ marginBottom: 0, color: 'var(--color-muted)', fontSize: '0.9375rem' }}>
+              Plan definition, milestone schedule, comparison to 1% Plan, eligible projects
+            </p>
+          </Link>
+          <Link href="/the-freedom-plan/projects/godrej-lakeside-orchard" className="card card-accent" style={{ textDecoration: 'none' }}>
+            <h3 style={{ marginTop: 0 }}>Project — Godrej Lakeside Orchard, Sarjapur, East Bangalore</h3>
+            <p style={{ marginBottom: 0, color: 'var(--color-muted)', fontSize: '0.9375rem' }}>
+              RERA PRM/KA/RERA/1251/446/PR/300924/007105 · 3 BHK Luxe & 3.5 BHK Luxe
+            </p>
+          </Link>
+        </div>
+
+        <h2 style={{ fontSize: '1.25rem' }}>1% Payment Plan</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <Link href="/the-1-percent-plan" className="card card-accent" style={{ textDecoration: 'none' }}>
             <h3 style={{ marginTop: 0 }}>Main Hub — What is the Godrej 1% Plan?</h3>

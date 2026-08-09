@@ -3,11 +3,15 @@ import Head from 'next/head';
 
 interface LayoutProps {
   children: React.ReactNode;
+  /** Optional theme scope. Currently supports "freedom" (20:80 Freedom Payment Plan
+   *  terracotta palette). Falls back to the default Godrej 1% Plan charcoal + gold. */
+  theme?: 'freedom';
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, theme }: LayoutProps) {
+  const themeClass = theme ? `theme-${theme}` : '';
   return (
-    <div className="page-wrapper">
+    <div className={`page-wrapper ${themeClass}`.trim()}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>

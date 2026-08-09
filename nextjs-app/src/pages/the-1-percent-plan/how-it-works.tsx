@@ -49,7 +49,7 @@ export default function HowItWorks() {
       <SEO title={title} description={desc} schema={[articleSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan/how-it-works" />
       
       <section className="project-hero">
-        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
+        <img src="/assets_one_percent/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
         <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>1% Plan: Payment Workflow & Structure</h1>
       </section>
 

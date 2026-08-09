@@ -145,7 +145,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     '@type': 'Article',
     headline: title,
     description: desc,
-    image: 'https://www.godrejproperties.com/assets/1_percent_og_image.jpg',
+    image: 'https://www.godrejproperties.com/assets_one_percent/1_percent_og_image.jpg',
     author: {
       '@type': 'Organization',
       name: 'Godrej Properties Limited',
@@ -186,7 +186,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
         className="project-hero"
       >
         <img
-          src="/assets/1_percent_logo.png"
+          src="/assets_one_percent/1_percent_logo.png"
           alt="The 1% Plan Logo"
           className="hero-logo"
           style={{ filter: 'brightness(0) invert(1)' }}

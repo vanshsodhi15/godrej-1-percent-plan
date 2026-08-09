@@ -179,10 +179,21 @@ const htmlFiles = getAllHtmlFiles(path.join(outDir, 'the-1-percent-plan'));
 const mainPagePath = path.join(outDir, 'the-1-percent-plan.html');
 if (fs.existsSync(mainPagePath)) htmlFiles.push(mainPagePath);
 
+// Also include Freedom Payment Plan (20:80) pages
+const freedomFiles = getAllHtmlFiles(path.join(outDir, 'the-freedom-plan'));
+freedomFiles.forEach((f) => htmlFiles.push(f));
+const freedomHubPath = path.join(outDir, 'the-freedom-plan.html');
+if (fs.existsSync(freedomHubPath)) htmlFiles.push(freedomHubPath);
+
 console.log(`Found ${htmlFiles.length} pages to flatten...`);
 
 htmlFiles.forEach(htmlPath => {
   let baseName = path.basename(htmlPath, '.html');
+  // Namespace freedom-plan pages so their slug (e.g. godrej-lakeside-orchard)
+  // does not collide with an identically-slugged 1% plan page.
+  if (htmlPath.includes(`${path.sep}the-freedom-plan${path.sep}`) || htmlPath.endsWith(`${path.sep}the-freedom-plan.html`)) {
+    baseName = `freedom-${baseName}`;
+  }
   const pageDir = path.join(deliverDir, baseName);
   fs.mkdirSync(pageDir, { recursive: true });
   
@@ -190,14 +201,14 @@ htmlFiles.forEach(htmlPath => {
   const jsDir = path.join(pageDir, 'js');
   const imgsDir = path.join(pageDir, 'imgs');
   
-  fs.mkdirSync(cssDir);
-  fs.mkdirSync(jsDir);
-  fs.mkdirSync(imgsDir);
+  fs.mkdirSync(cssDir, { recursive: true });
+  fs.mkdirSync(jsDir, { recursive: true });
+  fs.mkdirSync(imgsDir, { recursive: true });
   
   let htmlContent = fs.readFileSync(htmlPath, 'utf8');
 
   // Unified asset processing
-  const assetRegex = /(href|src|content)="(\/(_next\/static|assets)\/[^"]+)"/g;
+  const assetRegex = /(href|src|content)="(\/(_next\/static|assets|assets_one_percent)\/[^"]+)"/g;
   let match;
   const replacements = [];
 

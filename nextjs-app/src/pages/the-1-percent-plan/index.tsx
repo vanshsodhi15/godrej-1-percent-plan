@@ -66,7 +66,7 @@ export default function HomeRewrite() {
       <SEO title={title} description={desc} schema={[articleSchema, faqSchema]} canonical="https://www.godrejproperties.com/the-1-percent-plan" />
       
       <section className="project-hero">
-        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
+        <img src="/assets_one_percent/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" style={{ filter: 'brightness(0) invert(1)' }} />
         <h1 style={{ maxWidth: '800px', margin: '0 auto' }}>Godrej Properties 1% Plan: The Structural Window</h1>
         <p style={{ marginTop: '1rem', color: 'rgba(255,255,255,0.8)', fontSize: '1.125rem' }}>A conversion unlock mechanism designed to match modern financial behavior.</p>
       </section>

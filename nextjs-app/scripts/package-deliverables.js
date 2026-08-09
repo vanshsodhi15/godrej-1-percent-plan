@@ -63,6 +63,16 @@ if (fs.existsSync(mainPagePath)) {
   htmlFiles.push(mainPagePath);
 }
 
+// Get all pages inside the-freedom-plan (20:80 Freedom Payment Plan)
+const freedomFiles = getAllHtmlFiles(path.join(outDir, 'the-freedom-plan'));
+freedomFiles.forEach((f) => htmlFiles.push(f));
+
+// Also add the freedom-plan hub page (the-freedom-plan.html) if it exists
+const freedomHubPath = path.join(outDir, 'the-freedom-plan.html');
+if (fs.existsSync(freedomHubPath)) {
+  htmlFiles.push(freedomHubPath);
+}
+
 console.log(`Found ${htmlFiles.length} pages to package...`);
 
 // Build a lookup of all files in _next
@@ -77,7 +87,12 @@ allNextFiles.forEach((f) => {
 });
 
 htmlFiles.forEach((htmlPath) => {
-  const baseName = path.basename(htmlPath, '.html');
+  let baseName = path.basename(htmlPath, '.html');
+  // Namespace freedom-plan pages so slugs shared with 1% Plan (e.g.
+  // godrej-lakeside-orchard) do not collide in the output folder.
+  if (htmlPath.includes(`${path.sep}the-freedom-plan${path.sep}`) || htmlPath.endsWith(`${path.sep}the-freedom-plan.html`)) {
+    baseName = `freedom-${baseName}`;
+  }
   const pageDir = path.join(deliverDir, baseName);
 
   // Create clean folder structure
@@ -120,9 +135,9 @@ htmlFiles.forEach((htmlPath) => {
     }
   });
 
-  // --- 3. Copy images from /assets/ to imgs/, rewrite paths ---
+  // --- 3. Copy images from /assets/ AND /assets_one_percent/ to imgs/, rewrite paths ---
   const imgRefs = new Set();
-  html = html.replace(/(src|href)="(\/assets\/([^"]+))"/g, (match, attr, fullRef, fileName) => {
+  html = html.replace(/(src|href)="(\/(assets|assets_one_percent)\/([^"]+))"/g, (match, attr, fullRef, _dir, fileName) => {
     imgRefs.add({ fullRef, fileName });
     return `${attr}="imgs/${fileName}"`;
   });

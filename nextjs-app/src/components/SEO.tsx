@@ -9,7 +9,7 @@ interface SEOProps {
   ogImage?: string;
 }
 
-export default function SEO({ title, description, canonical, schema, ogImage = '/assets/1_percent_og_image.jpg' }: SEOProps) {
+export default function SEO({ title, description, canonical, schema, ogImage = '/assets_one_percent/1_percent_og_image.jpg' }: SEOProps) {
   return (
     <Head>
       <title>{title}</title>

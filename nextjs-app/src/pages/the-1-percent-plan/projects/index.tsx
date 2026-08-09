@@ -41,7 +41,7 @@ export default function ProjectsIndex() {
       />
 
       <div className="hero">
-        <img src="/assets/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" />
+        <img src="/assets_one_percent/1_percent_logo.png" alt="The 1% Plan Logo" className="hero-logo" />
         <h1 style={{ maxWidth: '900px', margin: '0 auto' }}>
           {total} Godrej Projects under the 1% Plan
         </h1>
