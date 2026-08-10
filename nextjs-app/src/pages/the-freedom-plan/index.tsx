@@ -424,10 +424,6 @@ export default function FreedomPlanHome() {
               </a>
             </div>
           </div>
-          <p className="freedom-contact-attribution">
-            Authorised channel-partner referral for Godrej Properties Limited. Please quote AD Code{' '}
-            <strong>{adCode}</strong> for 20:80 Freedom Payment Plan enquiries.
-          </p>
         </div>
       </section>
 

@@ -72,7 +72,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     ...(project.salesPhone
       ? [{
           question: `How do I contact Godrej Properties about ${project.name}?`,
-          answer: `To know more about ${project.name} and what is included under the Godrej 20:80 Freedom Payment Plan, call the Godrej Properties sales team on ${project.salesPhone}${project.leadGen?.adCode ? ` (quote AD Code ${project.leadGen.adCode})` : ''}, or use the enquire button on this page.`,
+          answer: `To know more about ${project.name} and what is included under the Godrej 20:80 Freedom Payment Plan, call the Godrej Properties sales team on ${project.salesPhone}, or use the enquire button on this page.`,
         }]
       : []),
   ];
@@ -271,8 +271,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         {project.salesPhone && (
           <p>
             For sales enquiries about {project.name} under the {project.paymentPlanName}, call the Godrej
-            Properties sales team on {project.salesPhone}
-            {project.leadGen?.adCode ? ` and quote AD Code ${project.leadGen.adCode}` : ''}.
+            Properties sales team on {project.salesPhone}.
           </p>
         )}
         {project.paymentPlanExample && (
@@ -303,7 +302,6 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           <dt>Possession (RERA)</dt><dd>{project.possessionRera}</dd>
           <dt>Possession (GPL target)</dt><dd>{project.possessionGpl}</dd>
           {project.salesPhone && (<><dt>Sales phone</dt><dd>{project.salesPhone}</dd></>)}
-          {project.leadGen?.adCode && (<><dt>AD Code</dt><dd>{project.leadGen.adCode}</dd></>)}
           {project.pricing.map((row, i) => (
             <Fragment key={i}>
               <dt>Configuration {i + 1}</dt>
@@ -745,12 +743,6 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                 </a>
               </div>
             </div>
-            {project.leadGen?.adCode && (
-              <p className="freedom-contact-attribution">
-                Authorised channel-partner referral for Godrej Properties Limited. Please quote AD Code{' '}
-                <strong>{project.leadGen.adCode}</strong> for {project.name} enquiries.
-              </p>
-            )}
           </div>
         </section>
       )}
