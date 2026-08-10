@@ -122,6 +122,12 @@ export interface FreedomProject {
   // Ancillary
   liveProjectUrl?: string;
   salesPhone?: string;
+  // Campaign lead-gen credentials. adCode is the GPL channel-partner
+  // attribution code that must accompany any enquiry captured on this page.
+  leadGen?: {
+    adCode: string;
+    projectId?: string;
+  };
 }
 
 // ────────────────────────────────────────────────────────────────
@@ -588,6 +594,10 @@ const godrejLakesideOrchard: FreedomProject = {
 
   liveProjectUrl:
     'https://www.godrejproperties.com/bengaluru/godrej-lakeside-orchard-sarjapur-bangalore',
+  salesPhone: '+91 85304 93095',
+  leadGen: {
+    adCode: '145371',
+  },
 };
 
 // ────────────────────────────────────────────────────────────────

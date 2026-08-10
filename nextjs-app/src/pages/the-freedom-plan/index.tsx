@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
+import FreedomNav from '@/components/FreedomNav';
 import { freedomProjects } from '@/data/freedom-projects';
 
 /**
@@ -18,6 +19,31 @@ export default function FreedomPlanHome() {
   const title = 'Godrej 20:80 Freedom Payment Plan | 20% during the first 60 days, 80% at possession';
   const desc =
     'The Godrej 20:80 Freedom Payment Plan is a payment structuring mechanism where the buyer pays 20% of the Agreement Value during the first 60 days of booking (5% at booking + 5% within 21 days + 10% within 60 days) and the remaining 80% at possession stages (70% on Application of Occupation Certificate, 10% on Notice of Possession). Total price unchanged.';
+
+  // Sales channel details. Sourced from the plan-level campaign brief.
+  // Silently propagated through JSON-LD, sticky nav, contact strip, and CTA
+  // query-strings so both LLM crawlers and human buyers can attribute an
+  // enquiry to the correct Godrej Properties sales channel.
+  const salesPhone = '+91 85304 93095';
+  const adCode = '145371';
+
+  const organizationSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Godrej Properties Limited',
+    url: 'https://www.godrejproperties.com',
+    identifier: 'L74120MH1985PLC035308',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: salesPhone,
+        contactType: 'sales',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi', 'Kannada'],
+        identifier: adCode,
+      },
+    ],
+  });
 
   const articleSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -91,8 +117,23 @@ export default function FreedomPlanHome() {
         title={title}
         description={desc}
         canonical={canonical}
-        schema={[articleSchema, faqSchema]}
+        schema={[articleSchema, faqSchema, organizationSchema]}
       />
+
+      <FreedomNav
+        links={[
+          { href: '#what', label: 'What' },
+          { href: '#milestones', label: 'Milestones' },
+          { href: '#compare', label: 'Compare' },
+          { href: '#projects', label: 'Projects' },
+          { href: '#faqs', label: 'FAQs' },
+          { href: '#contact', label: 'Contact' },
+        ]}
+        phone={salesPhone}
+        adCode={adCode}
+      />
+
+      <span id="top" />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="project-hero" style={{ paddingBottom: '4rem' }}>
@@ -114,7 +155,7 @@ export default function FreedomPlanHome() {
       </section>
 
       {/* ── PLAIN-ENGLISH DEFINITION ─────────────────────────── */}
-      <section style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
+      <section id="what" style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             What is the Godrej 20:80 Freedom Payment Plan?
@@ -139,7 +180,7 @@ export default function FreedomPlanHome() {
       </section>
 
       {/* ── MILESTONE TABLE ─────────────────────────────────── */}
-      <section style={{ background: 'var(--bg-seashell)', padding: '3.5rem 0' }}>
+      <section id="milestones" style={{ background: 'var(--bg-seashell)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Godrej 20:80 Freedom Payment Plan: Milestone Schedule
@@ -212,7 +253,7 @@ export default function FreedomPlanHome() {
       </section>
 
       {/* ── HOW IT DIFFERS FROM 1% PLAN ─────────────────────── */}
-      <section style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
+      <section id="compare" style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             How the Godrej 20:80 Freedom Payment Plan differs from the Godrej 1% Payment Plan
@@ -273,7 +314,7 @@ export default function FreedomPlanHome() {
       </section>
 
       {/* ── ELIGIBLE PROJECTS ─────────────────────────────────── */}
-      <section style={{ background: 'var(--bg-seashell)', padding: '3.5rem 0' }}>
+      <section id="projects" style={{ background: 'var(--bg-seashell)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Godrej Properties Projects Eligible under the 20:80 Freedom Payment Plan
@@ -308,7 +349,7 @@ export default function FreedomPlanHome() {
       </section>
 
       {/* ── FAQs ─────────────────────────────────────────────── */}
-      <section style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
+      <section id="faqs" style={{ background: 'var(--bg-white)', padding: '3.5rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
             Godrej 20:80 Freedom Payment Plan: Frequently Asked Questions
@@ -360,6 +401,39 @@ export default function FreedomPlanHome() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── CONTACT / ENQUIRIES STRIP ────────────────── */}
+      <section id="contact" className="freedom-contact-strip">
+        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+          <div className="freedom-contact-inner">
+            <div className="freedom-contact-copy">
+              <p className="freedom-contact-eyebrow">Talk to the sales team</p>
+              <h2 className="freedom-contact-heading">
+                Enquire about the Godrej 20:80 Freedom Payment Plan
+              </h2>
+              <p className="freedom-contact-sub">
+                Call the Godrej Properties sales office on{' '}
+                <a href={`tel:${salesPhone.replace(/\s/g, '')}`} className="freedom-contact-phone">
+                  {salesPhone}
+                </a>{' '}
+                to know more about the 20:80 Freedom Payment Plan across eligible Godrej Properties developments.
+              </p>
+            </div>
+            <div className="freedom-contact-actions">
+              <a href={`tel:${salesPhone.replace(/\s/g, '')}`} className="freedom-contact-call-cta">
+                Call {salesPhone}
+              </a>
+              <a href={`#enquire?adcode=${adCode}`} className="freedom-contact-enquire-cta">
+                Enquire online
+              </a>
+            </div>
+          </div>
+          <p className="freedom-contact-attribution">
+            Authorised channel-partner referral for Godrej Properties Limited. Please quote AD Code{' '}
+            <strong>{adCode}</strong> for 20:80 Freedom Payment Plan enquiries.
+          </p>
         </div>
       </section>
 

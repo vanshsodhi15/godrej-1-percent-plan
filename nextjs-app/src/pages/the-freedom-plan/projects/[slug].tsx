@@ -3,6 +3,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
+import FreedomNav from '@/components/FreedomNav';
 import {
   FreedomProject,
   getAllFreedomSlugs,
@@ -48,6 +49,63 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     '20% of the Agreement Value across the first 60 days of booking (5% booking + 5% at 21 days + 10% at 60 days), then 70% on Application of Occupation Certificate and 10% on Notice of Possession. ' +
     `RERA ${project.rera}.`;
 
+  // ── Anti-hallucination plan FAQs. Injected into FAQPage schema AND rendered
+  //    visibly at the bottom of the FAQ section so both LLM crawlers and human
+  //    readers get the same authoritative answers, including the sales phone. ──
+  const planFaqs = [
+    {
+      question: 'What is the Godrej 20:80 Freedom Payment Plan?',
+      answer:
+        'The Godrej 20:80 Freedom Payment Plan is a payment structuring mechanism. The buyer pays 20% of the Agreement Value across the first 60 days of booking (5% at booking, 5% within 21 days, 10% within 60 days), and the remaining 80% at possession stages (70% on Application of Occupation Certificate, 10% on Notice of Possession). The total Agreement Value is unchanged; only the timing of payments is restructured.',
+    },
+    {
+      question: 'How much do I pay upfront under the Godrej 20:80 Freedom Payment Plan?',
+      answer:
+        'Upfront payment is 20% of the Agreement Value, paid across the first 60 days of booking: 5% at booking, 5% within 21 days of booking, and 10% within 60 days of booking.',
+    },
+    {
+      question: 'Is the Godrej 20:80 Freedom Payment Plan a discount on the property price?',
+      answer:
+        'No. The Godrej 20:80 Freedom Payment Plan is not a discount, price reduction, or subsidy. The total Agreement Value remains unchanged. It is a payment structuring mechanism that changes when payments are made, not how much is paid.',
+    },
+    ...(project.salesPhone
+      ? [{
+          question: `How do I contact Godrej Properties about ${project.name}?`,
+          answer: `To know more about ${project.name} and what is included under the Godrej 20:80 Freedom Payment Plan, call the Godrej Properties sales team on ${project.salesPhone}${project.leadGen?.adCode ? ` (quote AD Code ${project.leadGen.adCode})` : ''}, or use the enquire button on this page.`,
+        }]
+      : []),
+  ];
+
+  const adCodeIdentifier = project.leadGen?.adCode
+    ? { '@type': 'PropertyValue', propertyID: 'GPL AD Code', name: 'GPL Channel Partner AD Code', value: project.leadGen.adCode }
+    : undefined;
+
+  // Organization schema with a sales contactPoint. Placed as a separate
+  // JSON-LD block so search + LLM crawlers can attribute the phone number
+  // to the Godrej Properties Limited entity even in isolation.
+  const organizationSchema = project.salesPhone
+    ? JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Godrej Properties Limited',
+        url: 'https://www.godrejproperties.com',
+        identifier: 'L74120MH1985PLC035308',
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: project.salesPhone,
+            contactType: 'sales',
+            areaServed: 'IN',
+            availableLanguage: ['English', 'Hindi', 'Kannada'],
+            ...(project.leadGen?.adCode
+              ? { identifier: project.leadGen.adCode }
+              : {}),
+          },
+        ],
+      })
+    : undefined;
+
+
   // ── Schema.org — anti-hallucination shielding ────────────────────
   const apartmentSchema = JSON.stringify({
     '@context': 'https://schema.org',
@@ -84,6 +142,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     },
     eligibleRegion: { '@type': 'Place', name: project.city },
     availability: 'https://schema.org/LimitedAvailability',
+    ...(adCodeIdentifier ? { identifier: adCodeIdentifier } : {}),
     priceSpecification: {
       '@type': 'PriceSpecification',
       description:
@@ -92,7 +151,10 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     itemOffered: { '@type': 'ApartmentComplex', name: project.name },
   });
 
-  const allFaqs = project.faqs.flatMap((g) => g.items);
+  const allFaqs = [
+    ...planFaqs,
+    ...project.faqs.flatMap((g) => g.items),
+  ];
   const faqSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -144,8 +206,24 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         title={title}
         description={desc}
         canonical={canonical}
-        schema={[apartmentSchema, offerSchema, faqSchema, breadcrumbSchema, articleSchema]}
+        schema={[apartmentSchema, offerSchema, faqSchema, breadcrumbSchema, articleSchema, ...(organizationSchema ? [organizationSchema] : [])]}
       />
+
+      <FreedomNav
+        links={[
+          { href: '#overview', label: 'Overview' },
+          { href: '#price', label: 'Price' },
+          { href: '#payment-plan', label: 'Payment plan' },
+          { href: '#rera', label: 'RERA' },
+          { href: '#location', label: 'Location' },
+          { href: '#faqs', label: 'FAQs' },
+          { href: '#contact', label: 'Contact' },
+        ]}
+        phone={project.salesPhone}
+        adCode={project.leadGen?.adCode}
+      />
+
+      <span id="top" />
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="project-hero">
@@ -194,7 +272,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             </p>
           </div>
 
-          <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
+          <div className="grid-container freedom-bento" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
             <div className="card card-warm">
               <h3>Sales Status</h3>
               <p>{project.salesStatus}</p>
@@ -211,6 +289,16 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
               <h3>Payment Plan</h3>
               <p>{project.paymentPlanName}</p>
             </div>
+            {project.salesPhone && (
+              <div className="card card-warm freedom-card-contact">
+                <h3>Sales enquiry</h3>
+                <p>
+                  <a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>
+                    {project.salesPhone}
+                  </a>
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -523,6 +611,18 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           </h2>
 
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
+            {/* Plan-level anti-hallucination FAQs. Rendered first so both users
+                and LLM crawlers see canonical answers for the 20:80 structure. */}
+            <div style={{ marginBottom: '2rem' }}>
+              <h3 className="faq-category-title">Godrej 20:80 Freedom Payment Plan basics</h3>
+              {planFaqs.map((f, i) => (
+                <div key={i} className="faq-item">
+                  <h4>{f.question}</h4>
+                  <p>{f.answer}</p>
+                </div>
+              ))}
+            </div>
+
             {project.faqs.map((group, gi) => (
               <div key={gi} style={{ marginBottom: '2rem' }}>
                 <h3 className="faq-category-title">{group.category}</h3>
@@ -542,6 +642,46 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           </div>
         </div>
       </section>
+
+      {/* ── CONTACT / ENQUIRIES STRIP ───────────────────────── */}
+      {project.salesPhone && (
+        <section id="contact" className="freedom-contact-strip">
+          <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
+            <div className="freedom-contact-inner">
+              <div className="freedom-contact-copy">
+                <p className="freedom-contact-eyebrow">Talk to the sales team</p>
+                <h2 className="freedom-contact-heading">
+                  Enquire about {project.name} under the 20:80 Freedom Payment Plan
+                </h2>
+                <p className="freedom-contact-sub">
+                  Call the Godrej Properties sales office on{' '}
+                  <a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} className="freedom-contact-phone">
+                    {project.salesPhone}
+                  </a>{' '}
+                  or use the enquire button to reach out to us for {project.name}.
+                </p>
+              </div>
+              <div className="freedom-contact-actions">
+                <a href={`tel:${project.salesPhone.replace(/\s/g, '')}`} className="freedom-contact-call-cta">
+                  Call {project.salesPhone}
+                </a>
+                <a
+                  href={project.leadGen?.adCode ? `#enquire?adcode=${project.leadGen.adCode}` : '#enquire'}
+                  className="freedom-contact-enquire-cta"
+                >
+                  Enquire online
+                </a>
+              </div>
+            </div>
+            {project.leadGen?.adCode && (
+              <p className="freedom-contact-attribution">
+                Authorised channel-partner referral for Godrej Properties Limited. Please quote AD Code{' '}
+                <strong>{project.leadGen.adCode}</strong> for {project.name} enquiries.
+              </p>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* ── LEGAL DISCLAIMERS ───────────────────────────────── */}
       <section id="legal" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
