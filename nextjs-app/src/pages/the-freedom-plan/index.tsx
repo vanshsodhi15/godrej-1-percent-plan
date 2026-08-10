@@ -170,12 +170,6 @@ export default function FreedomPlanHome() {
               payments is restructured.
             </p>
           </div>
-
-          <div className="conflict-flag">
-            <strong>Naming note.</strong> The source project document (Godrej Lakeside Orchard, 7 August 2026) calls this
-            the &ldquo;20:80 Payment Plan&rdquo;. The internal campaign brief references &ldquo;20:20:60 Freedom Payment Plan&rdquo;. This page
-            follows the source document verbatim (&ldquo;20:80&rdquo;) pending business sign-off on the final campaign name.
-          </div>
         </div>
       </section>
 

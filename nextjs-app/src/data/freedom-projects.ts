@@ -573,13 +573,7 @@ const godrejLakesideOrchard: FreedomProject = {
   legalDisclaimers:
     'RERA Registered. RERA No. PRM/KA/RERA/1251/446/PR/300924/007105. Project is registered as Godrej Lakeside Orchard, available at website http://rera.karnataka.gov.in. Site address: Godrej Lakeside Orchard, Survey Nos. 77, 174/1B, 175/P, 175/2A, 175/2B, 176/2A, 176/2B, 177, 73, 78/1A, 78/2A1(P), 78/2B, 78/3A, 78/4, 79/1C2, 178 of Kodathi Village, Varthur Hobli, Bengaluru East, Bengaluru Urban, Karnataka – 560035. Stock images are for representation purposes only and contain artist’s impressions. The information is presented as general information and no warranty is expressly or impliedly given that the completed development will comply in any degree with such artist’s impression or anticipated appearance. The sale is subject to the terms of the Application Form and the Agreement for Sale. The prices mentioned are an indicative Agreement Value; Stamp Duty & Registration, GST and other charges are over and above the Agreement Value. All specifications of the unit shall be as per the final agreement between the parties. Customers are advised to apprise themselves of the necessary and relevant information of the project(s)/offer(s) prior to making any purchase decision. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. *T&C apply.',
 
-  sourceConflicts: [
-    {
-      location: 'Payment plan name',
-      description:
-        'The source document header calls this the "20:80 Payment Plan"; the campaign brief calls it the "20:20:60 Freedom Payment Plan". This page uses "20:80 Freedom Payment Plan" per the source document. Business to confirm.',
-    },
-  ],
+  sourceConflicts: [],
 
   liveProjectUrl:
     'https://www.godrejproperties.com/bengaluru/godrej-lakeside-orchard-sarjapur-bangalore',
