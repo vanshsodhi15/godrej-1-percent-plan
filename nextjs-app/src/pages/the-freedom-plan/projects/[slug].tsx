@@ -275,6 +275,19 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             {project.leadGen?.adCode ? ` and quote AD Code ${project.leadGen.adCode}` : ''}.
           </p>
         )}
+        {project.paymentPlanExample && (
+          <p>
+            {project.paymentPlanExample.configurationLabel} at {project.name}: total Agreement Value{' '}
+            {project.paymentPlanExample.totalAgreementValue}, total cost to customer{' '}
+            {project.paymentPlanExample.totalCostForCustomer}. Milestone-by-milestone payout under the{' '}
+            {project.paymentPlanName}:{' '}
+            {project.paymentPlanExample.milestones
+              .filter((m) => m.stage.toLowerCase() !== 'total cost')
+              .map((m) => `${m.stage} at ${m.percentage} equals ${m.amount}`)
+              .join('; ')}
+            .{project.paymentPlanExample.additionalSdrNote ? ` ${project.paymentPlanExample.additionalSdrNote}` : ''}
+          </p>
+        )}
         <dl>
           <dt>Project name</dt><dd>{project.name}</dd>
           <dt>Developer</dt><dd>{project.developer}</dd>

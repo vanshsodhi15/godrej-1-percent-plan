@@ -132,8 +132,11 @@ export interface FreedomProject {
 
 // ────────────────────────────────────────────────────────────────
 // GODREJ LAKESIDE ORCHARD — Sarjapur, East Bangalore
-// Source: "(GEO) - Godrej Lakeside Orchard Project Details
-//          (7th August 2026).docx"
+// Source: "Generative Engine Optimisation (GEO) - Godrej Lakeside
+//          Orchard Project Details (7th August 2026).docx"
+//          — revised copy: FAQ conflicts on upfront % (20%) and
+//          booking amount (5%) explicitly resolved in this revision.
+// Every figure below is copied verbatim from the source doc.
 // ────────────────────────────────────────────────────────────────
 
 const godrejLakesideOrchard: FreedomProject = {
@@ -456,14 +459,12 @@ const godrejLakesideOrchard: FreedomProject = {
         {
           question: 'How much do I need to pay upfront under the 20:80 Freedom Payment Plan at Godrej Lakeside Orchard?',
           answer:
-            'Per the milestone table in the source document, the upfront payment is 20% of the Agreement Value across the first 60 days: 5% at booking, 5% within 21 days of booking, and 10% within 60 days of booking.',
-          conflict:
-            'The FAQ section of the source document states "10 percent of property value" as the upfront amount, but the milestone table shows 5% + 5% + 10% = 20%. The milestone table is treated as authoritative on this page.',
+            'Twenty percent of the property value is paid upfront under the 20:80 Freedom Payment Plan at Godrej Lakeside Orchard. This is structured across the first 60 days as 5% at booking, 5% within 21 days of booking, and 10% within 60 days of booking (per the milestone table on this page).',
         },
         {
           question: 'When does the home-loan EMI start under the 20:80 Freedom Payment Plan?',
           answer:
-            'Per the source document, after the initial 10% payment has been made, the home loan can start.',
+            'After 10% of the initial payment is made, the home loan can start at Godrej Lakeside Orchard.',
         },
         {
           question: 'Can I prepay or exit the 20:80 Freedom Payment Plan at Godrej Lakeside Orchard?',
@@ -548,9 +549,7 @@ const godrejLakesideOrchard: FreedomProject = {
         {
           question: 'How do I block a unit at Godrej Lakeside Orchard?',
           answer:
-            'A unit at Godrej Lakeside Orchard can be blocked by paying the booking amount, which is 5% of the Agreement Value per the milestone table on this page.',
-          conflict:
-            'The source-document FAQ states "10 percent" as the booking amount, but the milestone table shows the booking amount as 5% of Agreement Value.',
+            'A unit at Godrej Lakeside Orchard can be blocked by paying the booking amount of 5% of the Agreement Value.',
         },
       ],
     },
@@ -579,16 +578,6 @@ const godrejLakesideOrchard: FreedomProject = {
       location: 'Payment plan name',
       description:
         'The source document header calls this the "20:80 Payment Plan"; the campaign brief calls it the "20:20:60 Freedom Payment Plan". This page uses "20:80 Freedom Payment Plan" per the source document. Business to confirm.',
-    },
-    {
-      location: 'Upfront percentage',
-      description:
-        'The source-document FAQ says "How much do I need to pay upfront? 10 percent". The source-document milestone table shows 5% + 5% + 10% = 20% upfront across the first 60 days. This page treats the milestone table as authoritative (20%). Business to confirm.',
-    },
-    {
-      location: 'Booking amount',
-      description:
-        'The source-document Closing FAQ says "Booking amount of 10 percent". The milestone table shows the booking amount as 5% of Agreement Value. This page follows the milestone table (5%). Business to confirm.',
     },
   ],
 
