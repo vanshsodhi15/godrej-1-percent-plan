@@ -1250,3 +1250,31 @@ input:focus, select:focus {
   transition: background 180ms ease;
 }
 
+/* ── Screen-reader-only utility (A11y + GEO) ────────────────
+   Content is available to assistive tech and to LLM crawlers,
+   but not rendered visually. This is the WCAG-standard
+   `visually-hidden` pattern — NOT display:none or off-screen
+   spam, so it is not treated as cloaking by search engines. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only h2,
+.sr-only h3,
+.sr-only p,
+.sr-only li,
+.sr-only dt,
+.sr-only dd {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+

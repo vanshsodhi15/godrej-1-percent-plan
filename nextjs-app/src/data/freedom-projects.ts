@@ -601,10 +601,432 @@ const godrejLakesideOrchard: FreedomProject = {
 };
 
 // ────────────────────────────────────────────────────────────────
+// GODREJ WOODS — Kogilu Village, Yelahanka, North Bengaluru
+// Source: "Generative Engine Optimisation (GEO) - Godrej Woods
+//          Project Details (7th August 2026).docx"
+// Every figure below is copied verbatim from the source doc.
+// Where the source doc contradicts itself (e.g. "Within 15 days"
+// vs "Within 30 days" for the same milestone; "10% upfront" in
+// closing FAQ vs "20% upfront" via 5+5+10 in the milestone table)
+// the milestone table is treated as authoritative and the
+// contradiction is retained as an inline `sourceConflicts` entry.
+// ────────────────────────────────────────────────────────────────
+
+const godrejWoods: FreedomProject = {
+  id: 'GP-BLR-WDS',
+  slug: 'godrej-woods',
+  name: 'Godrej Woods',
+  city: 'Bengaluru',
+  state: 'Karnataka',
+  microLocation: 'Thanisandra',
+  zone: 'North Bengaluru',
+  developer: 'Godrej Properties',
+  type: 'Group housing',
+  informationCurrentAsOf: '7 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus:
+    'Excavation is currently in progress for Towers A, B, and C D. For Tower A, B, C & D excavation has been completed and foundation work has commenced. For rest of the towers commencement of upper basement.',
+
+  pricing: [
+    {
+      configuration: '2 BHK',
+      area: '1193 - 1242 sq. ft.',
+      agreementValue: '1.70 Cr.',
+      agreementValuePlusGst: '1.70 Cr. + 5%',
+      agreementValuePlusGstSdr: '1.70 Cr. + 5% + 7.6%',
+    },
+    {
+      configuration: '3 BHK Premium',
+      area: '1888 sq. ft.',
+      agreementValue: '2.50 Cr.',
+      agreementValuePlusGst: '2.50 Cr. + 5%',
+      agreementValuePlusGstSdr: '2.50 Cr. + 5% + 7.6%',
+    },
+    {
+      configuration: '3 BHK Lux',
+      area: '2143 - 2305 sq. ft.',
+      agreementValue: '2.80 Cr.',
+      agreementValuePlusGst: '2.80 Cr. + 5%',
+      agreementValuePlusGstSdr: '2.80 Cr. + 5% + 7.6%',
+    },
+  ],
+
+  rera: 'PRM/KA/RERA/1251/472/PR/121125/008248',
+  reraCertificateLink: 'PRM/KA/RERA/1251/472/PR/121125/008248',
+  reraPortal: 'https://rera.karnataka.gov.in/',
+  possessionRera: 'Nov 2030',
+  possessionGpl: 'Dec 2029',
+
+  paymentPlanName: '20:80 Freedom Payment Plan',
+
+  paymentPlanExample: {
+    configurationLabel: '2 BHK Cost Sheet: Sample Calculation',
+    totalAgreementValue: '₹1,70,77,227',
+    totalCostForCustomer: '₹1,81,39,173',
+    milestones: [
+      {
+        stage: 'On Booking',
+        percentage: '5%',
+        amount: '₹8,96,554',
+        logic: '5% of Agreement Value + additional 5% GST of that value',
+      },
+      {
+        stage: 'Within 15 Days from the Date of Booking',
+        percentage: '5%',
+        amount: '₹8,96,554',
+        logic: '5% of Agreement Value + additional 5% GST of that value',
+      },
+      {
+        stage: 'Within 60 Days from the Date of Booking',
+        percentage: '10%',
+        amount: '₹17,93,109',
+        logic: '10% of Agreement Value + additional 5% GST of that value',
+      },
+      {
+        stage: 'On Application of Occupancy Certificate',
+        percentage: '70%',
+        amount: '₹1,25,51,762',
+        logic: '70% of Agreement Value + additional 5% GST of that value',
+      },
+      {
+        stage: 'On Notice of Possession',
+        percentage: '10%',
+        amount: '₹17,93,109',
+        logic: '10% of Agreement Value + additional 5% GST of that value',
+      },
+      {
+        stage: 'On Notice of Possession: Advance Maintenance & Sinking Fund Charges',
+        percentage: '0%',
+        amount: '₹2,08,085',
+        logic: 'Advanced Maintenance & Sinking Fund Charges + 18% GST of Advanced Maintenance Value',
+      },
+      {
+        stage: 'Total Cost',
+        percentage: '100%',
+        amount: '₹1,81,39,173',
+        logic: '',
+      },
+    ],
+    additionalSdrNote:
+      'Additional SDR Charges (changes during handover from year to year; starting from 7%) at the time of possession.',
+    notes:
+      'This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on (i) the unit selected, (ii) associated charges for that unit, and (iii) the offers available at the project marketing office.',
+  },
+
+  locationAdvantages: [
+    {
+      category: 'Educational Institutes',
+      items: [
+        'REVA University: 2 min*',
+        'EuroSchool North Campus: 6 min*',
+        'Delhi Public School: 7 minutes*',
+        'Canadian International School: 10 min*',
+        'Mallya Aditi: 12 min*',
+        'CMR University: 12 min*',
+        'Stonehill International School: 18 min*',
+        'Vidyashilp University: 22 min*',
+      ],
+    },
+    {
+      category: 'Hospitals',
+      items: [
+        'Cytecare Hospital: 7 min*',
+        'Sparsh Hospital Yelahanka: 9 min*',
+        'Cratis Hospital: 16 min*',
+        'Aster CMI Hospital: 16 min*',
+        'Manipal Hospital, Hebbal: 30 min*',
+      ],
+    },
+    {
+      category: 'IT & Tech Parks',
+      items: [
+        'Bhartiya Centre of Information Technology: 7 min*',
+        'Manyata Tech Park: 12 min*',
+        'L&T Tech Park: 12 min*',
+        'KIADB Aerospace Park: 15 min*',
+        'Kirloskar Business Park: 18 min*',
+      ],
+    },
+    {
+      category: 'Entertainment & Leisure',
+      items: [
+        'Bhartiya Mall Of Bengaluru: 8 min*',
+        'Oia: 10 min*',
+        'Byg Brewski: 12 min*',
+        'Elements Mall: 12 min*',
+        'Decathlon: 12 min*',
+        'The Galleria Mall: 14 min*',
+        'Phoenix Mall Of Asia: 15 min*',
+        'Padukone-Dravid Centre For Sports Excellence: 18 min*',
+      ],
+    },
+  ],
+
+  microMarketSections: [
+    {
+      heading: 'Location Overview',
+      paragraphs: [
+        'Thanisandra is one of North Bengaluru’s fastest-growing residential corridors.',
+      ],
+      bullets: [
+        'Proximity to Manyata Tech Park',
+        'Connectivity to Hebbal, Airport Road & Outer Ring Road',
+        'Rapid infrastructure growth',
+        'Demand from IT professionals and investors',
+        'Emergence of premium residential developments',
+      ],
+      takeaway: 'It has evolved from a peripheral location into a mid-to-premium housing market.',
+    },
+    {
+      heading: 'Employment Catchment',
+      paragraphs: ['Major demand comes from employees working in:'],
+      bullets: [
+        'Manyata Tech Park',
+        'Kirloskar Tech Park',
+        'Hebbal business district',
+        'Airport corridor offices',
+        'Upcoming tech and commercial hubs in North Bengaluru',
+      ],
+    },
+    {
+      heading: 'Infrastructure Growth',
+      bullets: [
+        'Wider roads and flyover developments',
+        'Retail growth (malls, supermarkets, entertainment)',
+        'International schools and hospitals nearby',
+        'Strong social infrastructure supporting family buyers',
+      ],
+    },
+    {
+      heading: 'Project Land & Design Facts',
+      bullets: [
+        'Total land area except the buffer zone: 6 acres & 37 Gunthas',
+        'Open space ratio: 76%',
+        'Construction area: 6,099 sq. m.',
+        'UDS of the project: approximately 26%',
+        'Civic amenities area: 5% of plot area',
+        'Theme: Forest Theme',
+        'Amenities: Clubhouse, Swimming pool, Kids play area',
+        'Clubhouse area: 20,000 sq. ft.',
+        'Fully grown trees on site: approximately 350',
+        'Entry / exit: Single entry/exit portal',
+        'Main road width: 24 m (proposed to be widened to 30 m)',
+        'Khata: A khata',
+        'Land zoning: Residential',
+        'Tower Height: 41.45 / 44.4 metres; FSI: 2.98',
+        'Gap between units: Differs as per tower layout',
+        'Gap between towers: Differs as per tower layout',
+        'Construction type: RCC Frame structure',
+        'Water source: Borewell, BWSSB',
+      ],
+    },
+    {
+      heading: 'Project Specifications & Distinctions',
+      bullets: [
+        'What makes Godrej Woods unique: Limited apartments, lavish balconies, forest-themed development.',
+        'Smart home features (video door phone, home automation): No',
+        'Additional parking or storage space available for purchase: No',
+        'Visitor parking: 60',
+        'Sewage Treatment Plant (STP) type: SBR',
+        'Electric backup: 2 BHK is 0.8 kW, 3 BHK is 1 kW',
+        'Concrete grade: Foundation M35, Column M45',
+        'Steel grade for reinforcement: Fe 550',
+        'Solar panels, rainwater harvesting and waste-management systems included: Yes',
+      ],
+    },
+  ],
+
+  faqs: [
+    {
+      category: 'General Project FAQs',
+      items: [
+        {
+          question: 'Where exactly is Godrej Woods located?',
+          answer:
+            'Godrej Woods is at Khatha No. 323/106/9&10, E PID No. 2254233335, Sy No 106/9 & 106/10, Kogilu Village, Yelahanka Hobli, Yelahanka, Bengaluru Urban, Karnataka, 560064. The project sits in the Thanisandra corridor of North Bengaluru.',
+        },
+        {
+          question: 'Who is the developer of Godrej Woods?',
+          answer: 'Godrej Woods is developed by Godrej Properties Limited.',
+        },
+        {
+          question: 'Is Godrej Woods RERA approved?',
+          answer:
+            'Yes. Godrej Woods is RERA-registered under RERA No. PRM/KA/RERA/1251/472/PR/121125/008248 on the Karnataka RERA portal (https://rera.karnataka.gov.in/).',
+        },
+        {
+          question: 'What is the possession timeline for Godrej Woods?',
+          answer:
+            'The RERA possession timeline for Godrej Woods is November 2030. Godrej Properties’ internal (GPL) target possession is December 2029. The OC timeline is not specified in the source document.',
+        },
+        {
+          question: 'What configurations are available at Godrej Woods?',
+          answer:
+            'Godrej Woods offers 2 BHK (1,193–1,242 sq. ft.), 3 BHK Premium (1,888 sq. ft.), and 3 BHK Lux (2,143–2,305 sq. ft.).',
+        },
+      ],
+    },
+    {
+      category: 'Pricing & Costing FAQs',
+      items: [
+        {
+          question: 'What is the starting price at Godrej Woods?',
+          answer:
+            'The Agreement Value at Godrej Woods starts at ₹1.70 Cr. for 2 BHK, ₹2.50 Cr. for 3 BHK Premium, and ₹2.80 Cr. for 3 BHK Lux.',
+        },
+        {
+          question: 'What are the additional charges over and above the Agreement Value at Godrej Woods?',
+          answer:
+            'Additional charges over the Agreement Value at Godrej Woods include 5% GST and Stamp Duty & Registration (SDR) starting from approximately 7.6% at the time of possession.',
+        },
+      ],
+    },
+    {
+      category: '20:80 Freedom Payment Plan FAQs',
+      items: [
+        {
+          question: 'What is the 20:80 Freedom Payment Plan at Godrej Woods?',
+          answer:
+            'The 20:80 Freedom Payment Plan at Godrej Woods is a payment structure where the buyer pays 20% of the Agreement Value across the initial booking window and the remaining 80% at possession stages (70% on Application of the Occupancy Certificate + 10% on Notice of Possession). See the milestone table on this page for the exact schedule.',
+        },
+        {
+          question: 'How much do I pay upfront under the 20:80 Freedom Payment Plan at Godrej Woods?',
+          answer:
+            'Per the milestone table in the source document (2 BHK Cost Sheet), the upfront payment is 20% of the Agreement Value: 5% on booking, 5% within 15 days of booking, and 10% within 60 days of booking.',
+          conflict:
+            'The source-document "20-80 Freedom Offer FAQ" states "pay 10% initially and the remaining closer to possession", and the "20-80 Freedom Offer Payment Milestones" FAQ states the third tranche is due "Within 30 days from date of booking". The milestone table shows 5% + 5% + 10% = 20% upfront (Booking + 15 days + 60 days). The milestone table is treated as authoritative on this page.',
+        },
+        {
+          question: 'When does the home-loan EMI start under the 20:80 Freedom Payment Plan at Godrej Woods?',
+          answer:
+            'Per the source-document FAQ, the home loan can start after the initial 10% payment has been made.',
+        },
+        {
+          question: 'Does the 20:80 Freedom Payment Plan at Godrej Woods include GST and registration?',
+          answer:
+            'The 20:80 Freedom Payment Plan at Godrej Woods includes GST (5% on each milestone value) but excludes Stamp Duty & Registration (SDR). SDR of approximately 7.6% is payable additionally at the time of possession.',
+        },
+      ],
+    },
+    {
+      category: 'Location & Connectivity FAQs',
+      items: [
+        {
+          question: 'How close is Manyata Tech Park to Godrej Woods?',
+          answer: 'Manyata Tech Park is approximately 12 minutes* from Godrej Woods.',
+        },
+        {
+          question: 'How close is the airport corridor to Godrej Woods?',
+          answer:
+            'Godrej Woods sits in the Thanisandra corridor with direct connectivity to Hebbal, Airport Road and Outer Ring Road. Refer to the Location Advantages section of this page for exact drive-time distances.',
+        },
+        {
+          question: 'Which schools are near Godrej Woods?',
+          answer:
+            'Educational institutes near Godrej Woods include REVA University (2 min*), EuroSchool North Campus (6 min*), Delhi Public School (7 min*), Canadian International School (10 min*), Mallya Aditi (12 min*), CMR University (12 min*), Stonehill International School (18 min*) and Vidyashilp University (22 min*).',
+        },
+      ],
+    },
+    {
+      category: 'Design, Amenities & Specifications FAQs',
+      items: [
+        {
+          question: 'What is the theme of Godrej Woods?',
+          answer:
+            'Godrej Woods is a Forest-Themed development with approximately 350 fully grown trees on site, a 76% open space ratio, and a 20,000 sq. ft. clubhouse.',
+        },
+        {
+          question: 'What amenities are available at Godrej Woods?',
+          answer:
+            'Amenities at Godrej Woods include a Clubhouse, Swimming pool and Kids play area. Solar panels, rainwater harvesting and waste-management systems are also included.',
+        },
+        {
+          question: 'Does Godrej Woods have smart home features?',
+          answer: 'No, Godrej Woods does not include smart home features per the source document.',
+        },
+        {
+          question: 'What is the electric backup at Godrej Woods?',
+          answer: 'Electric backup at Godrej Woods is 0.8 kW for 2 BHK and 1 kW for 3 BHK.',
+        },
+        {
+          question: 'What is the construction type at Godrej Woods?',
+          answer:
+            'Godrej Woods uses an RCC frame structure with foundation concrete grade M35, column concrete grade M45, and Fe 550 steel for reinforcement.',
+        },
+        {
+          question: 'What is the water source at Godrej Woods?',
+          answer: 'The water source at Godrej Woods is Borewell and BWSSB.',
+        },
+      ],
+    },
+  ],
+
+  floorPlans: [
+    {
+      label: '2 BHK',
+      src: '/assets/godrej_woods_2_bhk.jpg',
+      alt: 'Godrej Woods 2 BHK Floor Plan (Saleable Area 1,193–1,242 sq. ft.)',
+      saleableArea: '1,193–1,242 sq. ft.',
+    },
+    {
+      label: '3 BHK Premium',
+      src: '/assets/godrej_woods_3_bhk_premium.jpg',
+      alt: 'Godrej Woods 3 BHK Premium Floor Plan (Saleable Area 1,888 sq. ft.)',
+      saleableArea: '1,888 sq. ft.',
+    },
+    {
+      label: '3 BHK Lux',
+      src: '/assets/godrej_woods_3_bhk_lux.jpg',
+      alt: 'Godrej Woods 3 BHK Lux Floor Plan (Saleable Area 2,143–2,305 sq. ft.)',
+      saleableArea: '2,143–2,305 sq. ft.',
+    },
+  ],
+
+  legalDisclaimers:
+    'The Project is registered as " GODREJ WOODS " with Karnataka RERA bearing Registration No. PRM/KA/RERA/1251/472/PR/121125/008248 at https://rera.karnataka.gov.in/. This Project is being developed by Godrej Properties Limited. Site Address: GODREJ WOODS, KHATHA NO. 323/106/9&10, E PID NO. 2254233335, SY NO 106/9 & 106/10 KOGILU VILLAGE, YELAHANKA HOBLI, YELAHANKA, BENGALURU URBAN, KARNATAKA – 560064. The images contain artist’s impressions. No warranty is expressly or impliedly given that the completed development will comply in any degree with such artist’s impression as depicted. The sale is subject to terms of application form & agreement for sale. All specifications of the unit shall be as per the sale agreement between the parties. *The prices mentioned are an indicative agreement value. Stamp duty registration, GST & other charges over and above the agreement value. Customers are advised to apprise themselves of the necessary and relevant information of the project(s)/offer(s) prior to making any purchase decision. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. *T&C Apply.',
+
+  sourceConflicts: [
+    {
+      location: 'Construction status',
+      description:
+        'The source document states, in the same sentence, both "Excavation is currently in progress for Towers A, B, and C D" and "For Tower A, B, C & D excavation has been completed and foundation work has commenced." These two claims contradict each other for the same set of towers. This page renders the sentence verbatim from the source. Business to confirm which is current.',
+    },
+    {
+      location: 'Second-tranche timing',
+      description:
+        'The source-document milestone table shows the second tranche due "Within 15 Days from the Date of Booking". The "20-80 Freedom Offer Payment Milestones" FAQ elsewhere in the source document says "Within 15th days from date of booking" for the same tranche. Both timings are 15 days, so the milestone table is authoritative on this page.',
+    },
+    {
+      location: 'Third-tranche timing',
+      description:
+        'The source-document milestone table shows the third tranche due "Within 60 Days from the Date of Booking" (10%). The "20-80 Freedom Offer Payment Milestones" FAQ elsewhere in the source document says "Within 30 days from date of booking" for the same tranche. This page uses the milestone table (Within 60 days). Business to confirm.',
+    },
+    {
+      location: 'Upfront percentage: FAQ vs milestone table',
+      description:
+        'The source-document "20-80 Freedom Offer FAQ" says "pay 10% initially and the remaining closer to possession". The milestone table shows 5% + 5% + 10% = 20% upfront across the first 60 days. This page treats the milestone table as authoritative (20%). Business to confirm.',
+    },
+    {
+      location: 'OC timeline',
+      description:
+        'The source document leaves both the RERA OC timeline and the GPL OC timeline blank. This page reflects the blank source values. Business to confirm.',
+    },
+  ],
+
+  liveProjectUrl:
+    'https://www.godrejproperties.com/bengaluru/godrej-woods-yelahanka-bangalore',
+  salesPhone: '+91 85060 54547',
+  leadGen: {
+    adCode: '145366',
+  },
+};
+
+// ────────────────────────────────────────────────────────────────
 // EXPORTS
 // ────────────────────────────────────────────────────────────────
 
-export const freedomProjects: FreedomProject[] = [godrejLakesideOrchard];
+export const freedomProjects: FreedomProject[] = [godrejLakesideOrchard, godrejWoods];
 
 export const getAllFreedomSlugs = () => freedomProjects.map((p) => p.slug);
 
