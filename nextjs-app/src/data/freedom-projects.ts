@@ -227,7 +227,7 @@ const godrejLakesideOrchard: FreedomProject = {
         logic: '',
       },
     ],
-    additionalSdrNote: 'Additional SDR charges of 7.7% at the time of possession.',
+    additionalSdrNote: 'Additional SDR charges of 7.7%* at the time of possession.',
     notes:
       'This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on (i) the unit selected, (ii) associated charges for that unit, and (iii) the offers available at the project marketing office.',
   },
@@ -468,7 +468,7 @@ const godrejLakesideOrchard: FreedomProject = {
         },
         {
           question: 'Can I prepay or exit the 20:80 Freedom Payment Plan at Godrej Lakeside Orchard?',
-          answer: 'No. Per the source document, the 20:80 Freedom Payment Plan does not permit prepayment or exit.',
+          answer: 'No. The 20:80 Freedom Payment Plan does not permit prepayment or exit.',
         },
       ],
     },
@@ -496,7 +496,7 @@ const godrejLakesideOrchard: FreedomProject = {
         {
           question: 'Is Godrej Lakeside Orchard a good investment?',
           answer:
-            'Per the source document, Godrej Lakeside Orchard is positioned as a strong investment due to its proximity to IT hubs (ORR, Sarjapur Road, Electronic City, Whitefield) and upcoming Metro expansion in Sarjapur.',
+            'Godrej Lakeside Orchard is positioned as a strong investment due to its proximity to IT hubs (ORR, Sarjapur Road, Electronic City, Whitefield) and upcoming Metro expansion in Sarjapur.',
         },
         {
           question: 'Who is Godrej Lakeside Orchard ideal for?',
@@ -520,7 +520,7 @@ const godrejLakesideOrchard: FreedomProject = {
         {
           question: 'Why should I buy at Godrej Lakeside Orchard in Sarjapur instead of Whitefield?',
           answer:
-            'Per the source document, Sarjapur offers stronger long-term appreciation potential than Whitefield, excellent connectivity to major IT hubs, and a well-developed social infrastructure with relatively lower traffic congestion.',
+            'Sarjapur offers stronger long-term appreciation potential than Whitefield, excellent connectivity to major IT hubs, and a well-developed social infrastructure with relatively lower traffic congestion.',
         },
         {
           question: 'What if Godrej Lakeside Orchard gets delayed?',
@@ -530,7 +530,7 @@ const godrejLakesideOrchard: FreedomProject = {
         {
           question: 'Is the 20:80 Freedom Payment Plan at Godrej Lakeside Orchard really beneficial?',
           answer:
-            'Per the source document, the 20:80 Freedom Payment Plan reduces the financial burden during the construction period and improves cash-flow flexibility, as the majority of payment (80%) is deferred to possession stages.',
+            'The 20:80 Freedom Payment Plan reduces the financial burden during the construction period and improves cash-flow flexibility, as the majority of payment (80%) is deferred to possession stages.',
         },
       ],
     },
@@ -586,13 +586,11 @@ const godrejLakesideOrchard: FreedomProject = {
 // ────────────────────────────────────────────────────────────────
 // GODREJ WOODS — Kogilu Village, Yelahanka, North Bengaluru
 // Source: "Generative Engine Optimisation (GEO) - Godrej Woods
-//          Project Details (7th August 2026).docx"
-// Every figure below is copied verbatim from the source doc.
-// Where the source doc contradicts itself (e.g. "Within 15 days"
-// vs "Within 30 days" for the same milestone; "10% upfront" in
-// closing FAQ vs "20% upfront" via 5+5+10 in the milestone table)
-// the milestone table is treated as authoritative and the
-// contradiction is retained as an inline `sourceConflicts` entry.
+//          Project Details (7th August 2026).docx" (revised copy)
+//          — the revised copy resolves all five prior source-doc
+//          contradictions (construction status wording, tranche
+//          timings, upfront percentage, OC timelines).
+// Every figure below is copied verbatim from the revised doc.
 // ────────────────────────────────────────────────────────────────
 
 const godrejWoods: FreedomProject = {
@@ -609,7 +607,7 @@ const godrejWoods: FreedomProject = {
 
   salesStatus: 'Sustenance',
   constructionStatus:
-    'Excavation is currently in progress for Towers A, B, and C D. For Tower A, B, C & D excavation has been completed and foundation work has commenced. For rest of the towers commencement of upper basement.',
+    'For Tower A, B, C & D excavation has been completed and foundation work has commenced. For rest of the towers commencement of upper basement.',
 
   pricing: [
     {
@@ -692,7 +690,7 @@ const godrejWoods: FreedomProject = {
       },
     ],
     additionalSdrNote:
-      'Additional SDR Charges (changes during handover from year to year; starting from 7%) at the time of possession.',
+      'Additional SDR Charges* (changes during handover from year to year; starting from 7%) at the time of possession.',
     notes:
       'This illustration is for representation purposes only. The actual calculation and monthly payout may vary depending on (i) the unit selected, (ii) associated charges for that unit, and (iii) the offers available at the project marketing office.',
   },
@@ -926,7 +924,7 @@ const godrejWoods: FreedomProject = {
         },
         {
           question: 'Does Godrej Woods have smart home features?',
-          answer: 'No, Godrej Woods does not include smart home features per the source document.',
+          answer: 'No, Godrej Woods does not include smart home features.',
         },
         {
           question: 'What is the electric backup at Godrej Woods?',
@@ -969,33 +967,7 @@ const godrejWoods: FreedomProject = {
   legalDisclaimers:
     'The Project is registered as " GODREJ WOODS " with Karnataka RERA bearing Registration No. PRM/KA/RERA/1251/472/PR/121125/008248 at https://rera.karnataka.gov.in/. This Project is being developed by Godrej Properties Limited. Site Address: GODREJ WOODS, KHATHA NO. 323/106/9&10, E PID NO. 2254233335, SY NO 106/9 & 106/10 KOGILU VILLAGE, YELAHANKA HOBLI, YELAHANKA, BENGALURU URBAN, KARNATAKA – 560064. The images contain artist’s impressions. No warranty is expressly or impliedly given that the completed development will comply in any degree with such artist’s impression as depicted. The sale is subject to terms of application form & agreement for sale. All specifications of the unit shall be as per the sale agreement between the parties. *The prices mentioned are an indicative agreement value. Stamp duty registration, GST & other charges over and above the agreement value. Customers are advised to apprise themselves of the necessary and relevant information of the project(s)/offer(s) prior to making any purchase decision. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. *T&C Apply.',
 
-  sourceConflicts: [
-    {
-      location: 'Construction status',
-      description:
-        'The source document states, in the same sentence, both "Excavation is currently in progress for Towers A, B, and C D" and "For Tower A, B, C & D excavation has been completed and foundation work has commenced." These two claims contradict each other for the same set of towers. This page renders the sentence verbatim from the source. Business to confirm which is current.',
-    },
-    {
-      location: 'Second-tranche timing',
-      description:
-        'The source-document milestone table shows the second tranche due "Within 15 Days from the Date of Booking". The "20-80 Freedom Offer Payment Milestones" FAQ elsewhere in the source document says "Within 15th days from date of booking" for the same tranche. Both timings are 15 days, so the milestone table is authoritative on this page.',
-    },
-    {
-      location: 'Third-tranche timing',
-      description:
-        'The source-document milestone table shows the third tranche due "Within 60 Days from the Date of Booking" (10%). The "20-80 Freedom Offer Payment Milestones" FAQ elsewhere in the source document says "Within 30 days from date of booking" for the same tranche. This page uses the milestone table (Within 60 days). Business to confirm.',
-    },
-    {
-      location: 'Upfront percentage: FAQ vs milestone table',
-      description:
-        'The source-document "20-80 Freedom Offer FAQ" says "pay 10% initially and the remaining closer to possession". The milestone table shows 5% + 5% + 10% = 20% upfront across the first 60 days. This page treats the milestone table as authoritative (20%). Business to confirm.',
-    },
-    {
-      location: 'OC timeline',
-      description:
-        'The source document leaves both the RERA OC timeline and the GPL OC timeline blank. This page reflects the blank source values. Business to confirm.',
-    },
-  ],
+  sourceConflicts: [],
 
   liveProjectUrl:
     'https://www.godrejproperties.com/bengaluru/godrej-woods-yelahanka-bangalore',

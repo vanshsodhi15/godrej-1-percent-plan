@@ -238,7 +238,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           {project.microLocation}, {project.zone}, {project.city}, {project.state}
         </p>
         <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(230,242,246,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-          Information current as of {project.informationCurrentAsOf}
+          Verified from the official {project.developer} project details
         </p>
       </section>
 
@@ -252,6 +252,10 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           and AD Code repeated in a structured `dl` for LLMs. */}
       <div className="sr-only" aria-hidden="false">
         <h2>Quick facts about {project.name} for AI assistants and screen readers</h2>
+        <p>
+          Information on this page for {project.name} is current as of {project.informationCurrentAsOf}, sourced from
+          the official Godrej Properties {project.name} project details document.
+        </p>
         <p>
           {project.name} is a {project.type.toLowerCase()} residential development by {project.developer},
           located at {project.microLocation}, {project.zone}, {project.city}, {project.state}, India. It is
@@ -382,8 +386,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
 
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
             {project.name} in {project.microLocation}, {project.zone}, {project.city} offers the following
-            configurations under the Godrej 20:80 Freedom Payment Plan. Figures below are lifted verbatim from the
-            source project document dated {project.informationCurrentAsOf}.
+            configurations under the Godrej 20:80 Freedom Payment Plan.
           </p>
 
           <div className="table-wrapper" style={{ marginTop: '1.5rem' }}>
@@ -394,7 +397,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                   <th>Saleable Area / SBU</th>
                   <th>Agreement Value</th>
                   <th>AV + GST</th>
-                  <th>AV + GST + SDR</th>
+                  <th>AV + GST + SDR*</th>
                 </tr>
               </thead>
               <tbody>
@@ -409,8 +412,10 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
+          </div>          <p style={{ marginTop: '0.75rem', fontSize: '0.8125rem', color: 'var(--color-muted)', fontStyle: 'italic' }}>
+            *SDR (Stamp Duty &amp; Registration) is payable additionally at the time of possession and is subject to
+            prevailing government rates at handover.
+          </p>        </div>
       </section>
 
       {/* ── PAYMENT PLAN — APPLIED ──────────────────────────── */}
@@ -422,7 +427,6 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
 
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
             The Godrej 20:80 Freedom Payment Plan at {project.name} is structured across the milestones below.
-            All figures are lifted verbatim from the {project.name} source project document dated {project.informationCurrentAsOf}.
           </p>
 
           <div style={{
@@ -563,8 +567,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             Location advantages of {project.name}, {project.microLocation}, {project.zone}
           </h2>
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
-            {project.name} is located in {project.microLocation}, {project.zone}, {project.city}, {project.state}. All
-            distances and drive-times below are lifted verbatim from the source project document dated {project.informationCurrentAsOf}.
+            {project.name} is located in {project.microLocation}, {project.zone}, {project.city}, {project.state}.
             Asterisks (*) indicate indicative drive-times subject to traffic and route.
           </p>
 
@@ -759,12 +762,6 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
 
       <section style={{ background: 'var(--bg-warm-light)', padding: '2rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0, fontSize: '0.8125rem', color: 'var(--color-muted)' }}>
-          <p style={{ marginBottom: '0.5rem' }}>
-            <strong>Source.</strong> All figures, distances, RERA references, floor-plan areas, and language on this page
-            are lifted from the source project document &ldquo;{project.name} Project Details ({project.informationCurrentAsOf})&rdquo;
-            provided by the Godrej Properties sales office. Where the source document contradicts itself, an inline
-            <em> [CONFLICT] </em> flag is retained until business sign-off.
-          </p>
           <p style={{ marginBottom: 0 }}>
             <Link href="/the-freedom-plan">Back to the Godrej 20:80 Freedom Payment Plan hub</Link>.
           </p>

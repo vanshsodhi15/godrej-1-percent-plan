@@ -14,7 +14,6 @@ import { freedomProjects } from '@/data/freedom-projects';
  */
 
 export default function FreedomPlanHome() {
-  const informationAsOf = '7 August 2026';
   const canonical = 'https://www.godrejproperties.com/the-freedom-plan';
   const title = 'Godrej 20:80 Freedom Payment Plan | 20% during the first 60 days, 80% at possession';
   const desc =
@@ -150,7 +149,7 @@ export default function FreedomPlanHome() {
           20% of the Agreement Value during the first 60 days of booking. 80% at possession. Total price unchanged.
         </p>
         <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(230,242,246,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-          Information current as of {informationAsOf}
+          A Godrej Properties initiative for eligible group housing projects
         </p>
       </section>
 
@@ -180,8 +179,7 @@ export default function FreedomPlanHome() {
             Godrej 20:80 Freedom Payment Plan: Milestone Schedule
           </h2>
           <p style={{ maxWidth: '780px', margin: '0 auto 1.5rem', textAlign: 'center', color: 'var(--color-body)' }}>
-            The Godrej 20:80 Freedom Payment Plan uses the following milestone schedule, as documented in the
-            Godrej Lakeside Orchard project details dated {informationAsOf}.
+            The Godrej 20:80 Freedom Payment Plan uses the milestone schedule shown below across eligible Godrej Properties developments.
           </p>
 
           <div className="table-wrapper">
@@ -391,7 +389,7 @@ export default function FreedomPlanHome() {
             <div className="faq-item">
               <h3>Can I prepay or exit the Godrej 20:80 Freedom Payment Plan?</h3>
               <p>
-                No. Per the source document for Godrej Lakeside Orchard, the 20:80 Freedom Payment Plan does not permit prepayment or exit.
+                No. The 20:80 Freedom Payment Plan does not permit prepayment or exit.
               </p>
             </div>
           </div>
