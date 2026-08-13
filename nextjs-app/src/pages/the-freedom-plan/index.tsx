@@ -424,17 +424,6 @@ export default function FreedomPlanHome() {
           </div>
         </div>
       </section>
-
-      <section style={{ background: 'var(--bg-warm-light)', padding: '2rem 0' }}>
-        <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0, fontSize: '0.8125rem', color: 'var(--color-muted)' }}>
-          <p style={{ marginBottom: 0 }}>
-            <strong>Sources.</strong> Payment milestone percentages, timing, and language on this page are lifted from
-            the &ldquo;Godrej Lakeside Orchard Project Details&rdquo; source document dated 7 August 2026, provided by the
-            Godrej Properties sales office. RERA registration references the Karnataka RERA portal at{' '}
-            <a href="http://rera.karnataka.gov.in" target="_blank" rel="noopener noreferrer">rera.karnataka.gov.in</a>.
-          </p>
-        </div>
-      </section>
     </Layout>
   );
 }

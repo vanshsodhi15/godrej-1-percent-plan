@@ -839,7 +839,7 @@ const godrejWoods: FreedomProject = {
         {
           question: 'What is the possession timeline for Godrej Woods?',
           answer:
-            'The RERA possession timeline for Godrej Woods is November 2030. Godrej Properties’ internal (GPL) target possession is December 2029. The OC timeline is not specified in the source document.',
+            'The RERA possession timeline for Godrej Woods is November 2030. Godrej Properties’ internal (GPL) target possession is December 2029.',
         },
         {
           question: 'What configurations are available at Godrej Woods?',
@@ -874,14 +874,12 @@ const godrejWoods: FreedomProject = {
         {
           question: 'How much do I pay upfront under the 20:80 Freedom Payment Plan at Godrej Woods?',
           answer:
-            'Per the milestone table in the source document (2 BHK Cost Sheet), the upfront payment is 20% of the Agreement Value: 5% on booking, 5% within 15 days of booking, and 10% within 60 days of booking.',
-          conflict:
-            'The source-document "20-80 Freedom Offer FAQ" states "pay 10% initially and the remaining closer to possession", and the "20-80 Freedom Offer Payment Milestones" FAQ states the third tranche is due "Within 30 days from date of booking". The milestone table shows 5% + 5% + 10% = 20% upfront (Booking + 15 days + 60 days). The milestone table is treated as authoritative on this page.',
+            'The upfront payment is 20% of the Agreement Value, structured as 5% on booking, 5% within 15 days of booking, and 10% within 60 days of booking (as per the 2 BHK Cost Sheet milestone table).',
         },
         {
           question: 'When does the home-loan EMI start under the 20:80 Freedom Payment Plan at Godrej Woods?',
           answer:
-            'Per the source-document FAQ, the home loan can start after the initial 10% payment has been made.',
+            'The home loan can start after the initial 10% payment has been made.',
         },
         {
           question: 'Does the 20:80 Freedom Payment Plan at Godrej Woods include GST and registration?',

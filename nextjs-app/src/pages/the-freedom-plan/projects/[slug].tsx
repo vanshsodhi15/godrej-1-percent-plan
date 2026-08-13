@@ -237,9 +237,6 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         <p style={{ marginTop: '0.5rem', marginBottom: 0 }}>
           {project.microLocation}, {project.zone}, {project.city}, {project.state}
         </p>
-        <p style={{ marginTop: '1.25rem', fontSize: '0.8125rem', color: 'rgba(230,242,246,0.65)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-          Verified from the official {project.developer} project details
-        </p>
       </section>
 
       {/* ── SR-ONLY GEO CONTEXT ──────────────────────────────
