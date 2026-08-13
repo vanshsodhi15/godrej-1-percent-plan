@@ -681,17 +681,11 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           </h2>
 
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
-            {/* Plan-level anti-hallucination FAQs. Rendered first so both users
-                and LLM crawlers see canonical answers for the 20:80 structure. */}
-            <div style={{ marginBottom: '2rem' }}>
-              <h3 className="faq-category-title">Godrej 20:80 Freedom Payment Plan basics</h3>
-              {planFaqs.map((f, i) => (
-                <div key={i} className="faq-item">
-                  <h4>{f.question}</h4>
-                  <p>{f.answer}</p>
-                </div>
-              ))}
-            </div>
+            {/* Plan-level canonical Q&A is embedded invisibly in the FAQPage
+                JSON-LD (see planFaqs spread above). It is intentionally NOT
+                rendered visibly here to avoid duplicating the project-specific
+                "20:80 Freedom Payment Plan FAQs" category below, which covers
+                the same questions with project-specific figures. */}
 
             {project.faqs.map((group, gi) => (
               <div key={gi} style={{ marginBottom: '2rem' }}>
