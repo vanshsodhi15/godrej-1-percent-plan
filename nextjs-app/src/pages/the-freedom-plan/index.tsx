@@ -317,7 +317,9 @@ export default function FreedomPlanHome() {
           </p>
 
           <div className="grid-container" style={{ marginTop: '1rem' }}>
-            {freedomProjects.map((p) => (
+            {freedomProjects
+              .filter((p) => /freedom/i.test(p.paymentPlanName))
+              .map((p) => (
               <Link
                 key={p.slug}
                 href={`/the-freedom-plan/projects/${p.slug}`}
@@ -329,7 +331,7 @@ export default function FreedomPlanHome() {
                   {p.microLocation}, {p.zone}, {p.city}, {p.state}
                 </p>
                 <p style={{ marginBottom: '0.35rem', fontSize: '0.875rem', color: 'var(--color-muted)' }}>
-                  RERA {p.rera}
+                  {p.paymentPlanName} · RERA {p.rera}
                 </p>
                 <p style={{ marginBottom: 0, fontSize: '0.875rem', color: 'var(--color-muted)' }}>
                   Configurations: {p.pricing.map((r) => r.configuration).join(' · ')}

@@ -26,9 +26,14 @@ interface FreedomNavProps {
   adCode?: string;
   /** Small label shown before the phone number (e.g. "Sales enquiry"). */
   callLabel?: string;
+  /** Text shown next to the GPL brand mark in the nav. Defaults to the
+   *  20:80 Freedom Payment Plan label used by the hub. Project pages pass
+   *  their own payment plan name so non-Freedom projects (Aveline, Azure,
+   *  Regal Pavilion) do not surface the "Freedom" word here. */
+  brandSubLabel?: string;
 }
 
-export default function FreedomNav({ links, phone, adCode, callLabel = 'Sales enquiry' }: FreedomNavProps) {
+export default function FreedomNav({ links, phone, adCode, callLabel = 'Sales enquiry', brandSubLabel = '20:80 Freedom Payment Plan' }: FreedomNavProps) {
   const telHref = phone ? `tel:${phone.replace(/\s/g, '')}` : undefined;
   const enquireHref = adCode ? `#enquire?adcode=${adCode}` : '#enquire';
 
@@ -37,7 +42,7 @@ export default function FreedomNav({ links, phone, adCode, callLabel = 'Sales en
       <div className="freedom-nav-inner">
         <a href="#top" className="freedom-nav-brand">
           <span className="freedom-nav-brand-mark">GPL</span>
-          <span className="freedom-nav-brand-sub">20:80 Freedom Payment Plan</span>
+          <span className="freedom-nav-brand-sub">{brandSubLabel}</span>
         </a>
 
         <ul className="freedom-nav-links" role="list">

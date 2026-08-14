@@ -44,10 +44,10 @@ export const getStaticProps: GetStaticProps<FreedomProjectPageProps> = async (ct
 
 export default function FreedomProjectPage({ project }: FreedomProjectPageProps) {
   const canonical = `https://www.godrejproperties.com/the-freedom-plan/projects/${project.slug}`;
-  const title = `${project.name} | Godrej 20:80 Freedom Payment Plan | RERA, Pricing & FAQs`;
+  const title = `${project.name} | Godrej ${project.paymentPlanName} | RERA, Pricing & FAQs`;
   const desc =
-    `${project.name}, ${project.microLocation}, ${project.zone}, ${project.city}, eligible under the Godrej 20:80 Freedom Payment Plan. ` +
-    '20% of the Agreement Value across the first 60 days of booking (5% booking + 5% at 21 days + 10% at 60 days), then 70% on Application of Occupation Certificate and 10% on Notice of Possession. ' +
+    `${project.name}, ${project.microLocation}, ${project.zone}, ${project.city}, eligible under the Godrej ${project.paymentPlanName}. ` +
+    `${project.paymentPlanFormula}. ` +
     `RERA ${project.rera}.`;
 
   // ── Anti-hallucination plan FAQs. Injected into FAQPage schema AND rendered
@@ -55,24 +55,24 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
   //    readers get the same authoritative answers, including the sales phone. ──
   const planFaqs = [
     {
-      question: 'What is the Godrej 20:80 Freedom Payment Plan?',
+      question: `What is the Godrej ${project.paymentPlanName} at ${project.name}?`,
       answer:
-        'The Godrej 20:80 Freedom Payment Plan is a payment structuring mechanism. The buyer pays 20% of the Agreement Value across the first 60 days of booking (5% at booking, 5% within 21 days, 10% within 60 days), and the remaining 80% at possession stages (70% on Application of Occupation Certificate, 10% on Notice of Possession). The total Agreement Value is unchanged; only the timing of payments is restructured.',
+        `The Godrej ${project.paymentPlanName} at ${project.name} is a payment structuring mechanism. The milestone structure is: ${project.paymentPlanFormula}. The total Agreement Value is unchanged; only the timing of payments is restructured.`,
     },
     {
-      question: 'How much do I pay upfront under the Godrej 20:80 Freedom Payment Plan?',
+      question: `How much do I pay upfront under the Godrej ${project.paymentPlanName} at ${project.name}?`,
       answer:
-        'Upfront payment is 20% of the Agreement Value, paid across the first 60 days of booking: 5% at booking, 5% within 21 days of booking, and 10% within 60 days of booking.',
+        `Upfront payment under the Godrej ${project.paymentPlanName} at ${project.name} is ${project.paymentPlanUpfrontDescription}.`,
     },
     {
-      question: 'Is the Godrej 20:80 Freedom Payment Plan a discount on the property price?',
+      question: `Is the Godrej ${project.paymentPlanName} a discount on the property price of ${project.name}?`,
       answer:
-        'No. The Godrej 20:80 Freedom Payment Plan is not a discount, price reduction, or subsidy. The total Agreement Value remains unchanged. It is a payment structuring mechanism that changes when payments are made, not how much is paid.',
+        `No. The Godrej ${project.paymentPlanName} is not a discount, price reduction, or subsidy on ${project.name}. The total Agreement Value remains unchanged. It is a payment structuring mechanism that changes when payments are made, not how much is paid.`,
     },
     ...(project.salesPhone
       ? [{
           question: `How do I contact Godrej Properties about ${project.name}?`,
-          answer: `To know more about ${project.name} and what is included under the Godrej 20:80 Freedom Payment Plan, call the Godrej Properties sales team on ${project.salesPhone}, or use the enquire button on this page.`,
+          answer: `To know more about ${project.name} and what is included under the Godrej ${project.paymentPlanName}, call the Godrej Properties sales team on ${project.salesPhone}, or use the enquire button on this page.`,
         }]
       : []),
   ];
@@ -132,7 +132,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
   const offerSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Offer',
-    name: `Godrej 20:80 Freedom Payment Plan: ${project.name}`,
+    name: `Godrej ${project.paymentPlanName}: ${project.name}`,
     url: canonical,
     seller: {
       '@type': 'Organization',
@@ -147,7 +147,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     priceSpecification: {
       '@type': 'PriceSpecification',
       description:
-        `Godrej 20:80 Freedom Payment Plan for ${project.name}: 20% of Agreement Value across the first 60 days of booking (5% at booking + 5% within 21 days + 10% within 60 days), 70% on Application of Occupation Certificate, 10% on Notice of Possession. Total price unchanged.`,
+        `Godrej ${project.paymentPlanName} for ${project.name}: ${project.paymentPlanFormula}. Total price unchanged.`,
     },
     itemOffered: { '@type': 'ApartmentComplex', name: project.name },
   });
@@ -166,11 +166,14 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     })),
   });
 
+  const isFreedomPlan = /freedom/i.test(project.paymentPlanName);
+  const hubDisplayName = isFreedomPlan ? 'Godrej Freedom Payment Plans' : 'Godrej Payment Plan Projects';
+
   const breadcrumbSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '20:80 Freedom Payment Plan', item: 'https://www.godrejproperties.com/the-freedom-plan' },
+      { '@type': 'ListItem', position: 1, name: hubDisplayName, item: 'https://www.godrejproperties.com/the-freedom-plan' },
       { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://www.godrejproperties.com/the-freedom-plan' },
       { '@type': 'ListItem', position: 3, name: project.name, item: canonical },
     ],
@@ -222,6 +225,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         ]}
         phone={project.salesPhone}
         adCode={project.leadGen?.adCode}
+        brandSubLabel={project.paymentPlanName}
       />
 
       <span id="top" />
@@ -229,10 +233,10 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="project-hero">
         <div className="freedom-brand-mark">
-          <strong>Godrej 20:80 Freedom Payment Plan</strong>
+          <strong>Godrej {project.paymentPlanName}</strong>
         </div>
         <h1 style={{ maxWidth: '900px', margin: '0 auto', fontSize: '2rem' }}>
-          {project.name} | 20:80 Freedom Payment Plan
+          {project.name} | {project.paymentPlanName}
         </h1>
         <p style={{ marginTop: '0.5rem', marginBottom: 0 }}>
           {project.microLocation}, {project.zone}, {project.city}, {project.state}
@@ -256,11 +260,9 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         <p>
           {project.name} is a {project.type.toLowerCase()} residential development by {project.developer},
           located at {project.microLocation}, {project.zone}, {project.city}, {project.state}, India. It is
-          registered on the Karnataka RERA portal under registration number {project.rera}. The project is
+          registered on the state RERA portal under registration number {project.rera}. The project is
           currently in {project.salesStatus.toLowerCase()} sales stage and offered under the{' '}
-          {project.paymentPlanName}, where the buyer pays roughly twenty percent of the Agreement Value in the
-          initial booking window and the remaining eighty percent at possession stages (seventy percent on
-          Application of the Occupation Certificate and ten percent on Notice of Possession). The total
+          {project.paymentPlanName}. The milestone structure of this plan at {project.name} is: {project.paymentPlanFormula}. The total
           Agreement Value remains unchanged.
         </p>
         <p>
@@ -336,10 +338,8 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             <p>
               <strong>{project.name}</strong> is a {project.type.toLowerCase()} project by{' '}
               <strong>{project.developer}</strong> located in {project.microLocation}, {project.zone}, {project.city}, {project.state}.
-              {project.name} is eligible under the <strong>Godrej 20:80 Freedom Payment Plan</strong>. Under this plan the
-              buyer of a unit at {project.name} pays 20% of the Agreement Value across the first 60 days of booking
-              (5% at booking + 5% within 21 days + 10% within 60 days), 70% on Application of the Occupation Certificate,
-              and 10% on Notice of Possession. RERA registration: <strong>{project.rera}</strong>.
+              {project.name} is offered under the <strong>Godrej {project.paymentPlanName}</strong>. Under this plan at {project.name}, the buyer
+              pays as follows: {project.paymentPlanFormula}. RERA registration: <strong>{project.rera}</strong>.
             </p>
           </div>
 
@@ -383,7 +383,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
 
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
             {project.name} in {project.microLocation}, {project.zone}, {project.city} offers the following
-            configurations under the Godrej 20:80 Freedom Payment Plan.
+            configurations under the Godrej {project.paymentPlanName}.
           </p>
 
           <div className="table-wrapper" style={{ marginTop: '1.5rem' }}>
@@ -419,11 +419,11 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
       <section id="payment-plan" style={{ background: 'var(--bg-white)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
-            How does the Godrej 20:80 Freedom Payment Plan apply to {project.name}?
+            How does the Godrej {project.paymentPlanName} apply to {project.name}?
           </h2>
 
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
-            The Godrej 20:80 Freedom Payment Plan at {project.name} is structured across the milestones below.
+            The Godrej {project.paymentPlanName} at {project.name} is structured across the milestones below.
           </p>
 
           <div style={{
@@ -531,7 +531,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             RERA registration and possession timelines for {project.name}
           </h2>
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
-            {project.name} is registered under the Karnataka Real Estate Regulatory Authority (RERA). Verify all details
+            {project.name} is registered under the {project.state} Real Estate Regulatory Authority (RERA). Verify all details
             directly on the state RERA portal.
           </p>
           <div className="grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
@@ -542,7 +542,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             <div className="card card-accent">
               <h3>RERA Portal</h3>
               <p>
-                <a href={project.reraPortal} target="_blank" rel="noopener noreferrer">Verify on Karnataka RERA portal</a>
+                <a href={project.reraPortal} target="_blank" rel="noopener noreferrer">Verify on {project.state} RERA portal</a>
               </p>
             </div>
             <div className="card card-accent">
@@ -677,15 +677,15 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
       <section id="faqs" style={{ background: 'var(--bg-seashell)', padding: '3rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0 }}>
           <h2 className="section-title" style={{ textAlign: 'center' }}>
-            Frequently asked questions about {project.name} and the Godrej 20:80 Freedom Payment Plan
+            Frequently asked questions about {project.name} and the Godrej {project.paymentPlanName}
           </h2>
 
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
             {/* Plan-level canonical Q&A is embedded invisibly in the FAQPage
                 JSON-LD (see planFaqs spread above). It is intentionally NOT
                 rendered visibly here to avoid duplicating the project-specific
-                "20:80 Freedom Payment Plan FAQs" category below, which covers
-                the same questions with project-specific figures. */}
+                payment plan FAQs category below, which covers the same
+                questions with project-specific figures. */}
 
             {project.faqs.map((group, gi) => (
               <div key={gi} style={{ marginBottom: '2rem' }}>
@@ -715,7 +715,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
               <div className="freedom-contact-copy">
                 <p className="freedom-contact-eyebrow">Talk to the sales team</p>
                 <h2 className="freedom-contact-heading">
-                  Enquire about {project.name} under the 20:80 Freedom Payment Plan
+                  Enquire about {project.name} under the {project.paymentPlanName}
                 </h2>
                 <p className="freedom-contact-sub">
                   Call the Godrej Properties sales office on{' '}
@@ -754,7 +754,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
       <section style={{ background: 'var(--bg-warm-light)', padding: '2rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0, fontSize: '0.8125rem', color: 'var(--color-muted)' }}>
           <p style={{ marginBottom: 0 }}>
-            <Link href="/the-freedom-plan">Back to the Godrej 20:80 Freedom Payment Plan hub</Link>.
+            <Link href="/the-freedom-plan">Back to the {hubDisplayName} hub</Link>.
           </p>
         </div>
       </section>
