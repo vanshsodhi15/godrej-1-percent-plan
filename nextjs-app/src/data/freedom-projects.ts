@@ -1438,7 +1438,7 @@ const godrejParkshire: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 85060 54547',
+  salesPhone: '+91 85304 92711',
   leadGen: {
     adCode: '145366',
   },
@@ -1746,7 +1746,7 @@ const godrejAveline: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 85060 54547',
+  salesPhone: '+91 85060 51399',
   leadGen: {
     adCode: '145366',
   },
@@ -2072,7 +2072,7 @@ const godrejRegalPavilion: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 85060 54547',
+  salesPhone: '+91 99867 91629',
   leadGen: {
     adCode: '145366',
   },
@@ -2393,12 +2393,12 @@ const godrejAzure: FreedomProject = {
   ],
 
   floorPlans: [
-    { label: '2 BHK Royale', src: '/assets_one_percent/godrej_azure_2bhk_royal.jpg', alt: 'Godrej Azure 2 BHK Royale Floor Plan (Saleable Area 1,020–1,050 sq. ft.)', saleableArea: '1,020–1,050 sq. ft.' },
-    { label: '3 BHK Elite', src: '/assets_one_percent/godrej_azure_3bhk_elite.jpg', alt: 'Godrej Azure 3 BHK Elite Floor Plan (Saleable Area 1,250 sq. ft.)', saleableArea: '1,250 sq. ft.' },
-    { label: '3 BHK Royale', src: '/assets_one_percent/godrej_azure_3bhk_royal.jpg', alt: 'Godrej Azure 3 BHK Royale Floor Plan (Saleable Area 1,470 sq. ft.)', saleableArea: '1,470 sq. ft.' },
-    { label: '3 BHK Grandeur', src: '/assets_one_percent/godrej_azure_3bhk_grand.jpg', alt: 'Godrej Azure 3 BHK Grandeur Floor Plan (Saleable Area 1,950 sq. ft.)', saleableArea: '1,950 sq. ft.' },
-    { label: '4 BHK Duplex (Lower)', src: '/assets_one_percent/godrej_azure_4bhk_grand_lower.jpg', alt: 'Godrej Azure 4 BHK Duplex Lower Floor Plan (Saleable Area 2,722 sq. ft.)', saleableArea: '2,722 sq. ft.' },
-    { label: '4 BHK Duplex (Upper)', src: '/assets_one_percent/godrej_azure_4bhk_grand_upper.jpg', alt: 'Godrej Azure 4 BHK Duplex Upper Floor Plan (Saleable Area 2,722 sq. ft.)', saleableArea: '2,722 sq. ft.' },
+    { label: '2 BHK Royale', src: '/assets_freedom/godrej_azure_2bhk_royal.png', alt: 'Godrej Azure 2 BHK Royale Floor Plan (Saleable Area 1,020–1,050 sq. ft.)', saleableArea: '1,020–1,050 sq. ft.' },
+    { label: '3 BHK Elite', src: '/assets_freedom/godrej_azure_3bhk_elite.png', alt: 'Godrej Azure 3 BHK Elite Floor Plan (Saleable Area 1,250 sq. ft.)', saleableArea: '1,250 sq. ft.' },
+    { label: '3 BHK Royale', src: '/assets_freedom/godrej_azure_3bhk_royal.png', alt: 'Godrej Azure 3 BHK Royale Floor Plan (Saleable Area 1,470 sq. ft.)', saleableArea: '1,470 sq. ft.' },
+    { label: '3 BHK Grandeur', src: '/assets_freedom/godrej_azure_3bhk_grand.png', alt: 'Godrej Azure 3 BHK Grandeur Floor Plan (Saleable Area 1,950 sq. ft.)', saleableArea: '1,950 sq. ft.' },
+    { label: '4 BHK Duplex (Lower)', src: '/assets_freedom/godrej_azure_4bhk_grand_lower.png', alt: 'Godrej Azure 4 BHK Duplex Lower Floor Plan (Saleable Area 2,722 sq. ft.)', saleableArea: '2,722 sq. ft.' },
+    { label: '4 BHK Duplex (Upper)', src: '/assets_freedom/godrej_azure_4bhk_grand_upper.png', alt: 'Godrej Azure 4 BHK Duplex Upper Floor Plan (Saleable Area 2,722 sq. ft.)', saleableArea: '2,722 sq. ft.' },
   ],
 
   legalDisclaimers:
@@ -2406,7 +2406,7 @@ const godrejAzure: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 85060 54547',
+  salesPhone: '+91 95132 37734',
   leadGen: {
     adCode: '145366',
   },
