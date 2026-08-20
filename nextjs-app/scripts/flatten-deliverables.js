@@ -208,7 +208,7 @@ htmlFiles.forEach(htmlPath => {
   let htmlContent = fs.readFileSync(htmlPath, 'utf8');
 
   // Unified asset processing
-  const assetRegex = /(href|src|content)="(\/(_next\/static|assets|assets_one_percent)\/[^"]+)"/g;
+  const assetRegex = /(href|src|content)="(\/(_next\/static|assets|assets_one_percent|assets_freedom)\/[^"]+)"/g;
   let match;
   const replacements = [];
 

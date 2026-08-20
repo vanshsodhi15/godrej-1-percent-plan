@@ -135,9 +135,9 @@ htmlFiles.forEach((htmlPath) => {
     }
   });
 
-  // --- 3. Copy images from /assets/ AND /assets_one_percent/ to imgs/, rewrite paths ---
+  // --- 3. Copy images from /assets/, /assets_one_percent/ AND /assets_freedom/ to imgs/, rewrite paths ---
   const imgRefs = new Set();
-  html = html.replace(/(src|href)="(\/(assets|assets_one_percent)\/([^"]+))"/g, (match, attr, fullRef, _dir, fileName) => {
+  html = html.replace(/(src|href)="(\/(assets|assets_one_percent|assets_freedom)\/([^"]+))"/g, (match, attr, fullRef, _dir, fileName) => {
     imgRefs.add({ fullRef, fileName });
     return `${attr}="imgs/${fileName}"`;
   });
