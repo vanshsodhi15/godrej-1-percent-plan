@@ -653,8 +653,8 @@ const godrejWoods: FreedomProject = {
 
   paymentPlanName: '20:80 Freedom Payment Plan',
   paymentPlanShort: '20:80',
-  paymentPlanFormula: '20% in the first 60 days of booking (5% at booking + 5% within 21 days + 10% within 60 days), 70% on Application of the Occupation Certificate, 10% on Notice of Possession',
-  paymentPlanUpfrontDescription: '20% of the Agreement Value in the first 60 days of booking (5% at booking + 5% within 21 days + 10% within 60 days)',
+  paymentPlanFormula: '20% in the first 60 days of booking (5% at booking + 5% within 15 days + 10% within 60 days), 70% on Application of the Occupation Certificate, 10% on Notice of Possession',
+  paymentPlanUpfrontDescription: '20% of the Agreement Value in the first 60 days of booking (5% at booking + 5% within 15 days + 10% within 60 days)',
 
   paymentPlanExample: {
     configurationLabel: '2 BHK Cost Sheet: Sample Calculation',
