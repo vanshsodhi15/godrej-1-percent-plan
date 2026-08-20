@@ -1475,7 +1475,7 @@ const godrejAveline: FreedomProject = {
     { configuration: '3 BHK Premium', area: '1593.87 sq. ft.', agreementValue: '2.89 Cr.', agreementValuePlusGst: '2.89 Cr. + 5%', agreementValuePlusGstSdr: '2.89 Cr. + 5% + 7%' },
     { configuration: '3 BHK Lux', area: '1908.05 sq. ft.', agreementValue: '3.30 Cr.', agreementValuePlusGst: '3.30 Cr. + 5%', agreementValuePlusGstSdr: '3.30 Cr. + 5% + 7%' },
     { configuration: '3.5 BHK Lux', area: '2195.39 sq. ft.', agreementValue: '3.80 Cr.', agreementValuePlusGst: '3.80 Cr. + 5%', agreementValuePlusGstSdr: '3.80 Cr. + 5% + 7%' },
-    { configuration: '4.5 BHK Lux', area: '2491.16 sq. ft.', agreementValue: '4.60 Cr.', agreementValuePlusGst: '4.60 Cr. + 5%', agreementValuePlusGstSdr: '4.60 Cr. + 5% + 7%' },
+    { configuration: '4.5 BHK Lux', area: '2491.16 sq. ft.', agreementValue: '4.20 Cr.', agreementValuePlusGst: '4.20 Cr. + 5%', agreementValuePlusGstSdr: '4.20 Cr. + 5% + 7%' },
   ],
 
   rera: 'PRM/KA/RERA/1251/309/PR/020326/008501',
@@ -1640,7 +1640,7 @@ const godrejAveline: FreedomProject = {
         {
           question: 'What is the starting price at Godrej Aveline?',
           answer:
-            'The Agreement Value at Godrej Aveline starts at ₹2.20 Cr. for 2 BHK Premium and goes up to ₹4.60 Cr. for 4.5 BHK Lux.',
+            'The Agreement Value at Godrej Aveline starts at ₹2.20 Cr. for 2 BHK Premium and goes up to ₹4.20 Cr. for 4.5 BHK Lux.',
         },
         {
           question: 'What are the additional charges at Godrej Aveline?',
@@ -1718,7 +1718,7 @@ const godrejAveline: FreedomProject = {
         {
           question: 'What is the clubhouse size at Godrej Aveline?',
           answer:
-            'The clubhouse at Godrej Aveline is 99 ft × 94 ft, is G+3 storeys tall, and includes a 125–150 guest capacity banquet hall.',
+            'The clubhouse at Godrej Aveline is approximately 30,000 sq. ft. and is G+3 storeys tall.',
         },
         {
           question: 'Does Godrej Aveline have swimming pools?',
