@@ -2098,7 +2098,7 @@ const godrejAzure: FreedomProject = {
   type: 'Group housing',
   informationCurrentAsOf: '7 August 2026',
 
-  salesStatus: 'Sustenance',
+  salesStatus: 'Ongoing',
   constructionStatus: 'Under Construction, Basement Stage',
 
   pricing: [
