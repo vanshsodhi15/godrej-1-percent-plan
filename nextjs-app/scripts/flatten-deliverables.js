@@ -4,13 +4,19 @@ const path = require('path');
 const outDir = path.join(__dirname, '../out');
 const deliverDir = path.join(__dirname, '../Deliverables_Flat');
 
-// Lead-gen credentials for the 5 active projects
+// Lead-gen credentials for active projects
 const LEAD_GEN = {
   'godrej-woods':           { projectId: 'a1le200000004y5AAA', adCode: '137714', name: 'Godrej Woods' },
   'godrej-regal-pavilion':  { projectId: 'a1lId000000TOqGIAW', adCode: '137713', name: 'Godrej Regal Pavilion' },
   'godrej-parkshire':       { projectId: 'a1le2000000AOHBAA4', adCode: '137716', name: 'Godrej Parkshire' },
   'godrej-lakeside-orchard':{ projectId: 'a1lId000000TNV0IAO', adCode: '137717', name: 'Godrej Lakeside Orchard' },
   'godrej-azure':           { projectId: 'a1le20000000NflAAE', adCode: '137715', name: 'Godrej Azure' },
+  'godrej-bayview':         { projectId: 'a1lDUMMY000000001', adCode: '000000', name: 'Godrej Bayview' },
+  'godrej-bliss':           { projectId: 'a1lDUMMY000000002', adCode: '000000', name: 'Godrej Bliss' },
+  'godrej-exquisite':       { projectId: 'a1lDUMMY000000003', adCode: '000000', name: 'Godrej Exquisite' },
+  'godrej-horizon':         { projectId: 'a1lDUMMY000000004', adCode: '000000', name: 'Godrej Horizon' },
+  'godrej-skyshore':        { projectId: 'a1lDUMMY000000005', adCode: '000000', name: 'Godrej Skyshore' },
+  'godrej-vistas':          { projectId: 'a1lDUMMY000000006', adCode: '000000', name: 'Godrej Vistas' },
 };
 
 // Self-contained vanilla JS lead-gen modal — no React/Next.js dependency

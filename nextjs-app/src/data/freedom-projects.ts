@@ -2413,6 +2413,649 @@ const godrejAzure: FreedomProject = {
 };
 
 // ────────────────────────────────────────────────────────────────
+// GODREJ BAYVIEW — Sector 9, Vashi, Navi Mumbai
+// Source: "Generative Engine Optimisation (GEO) - Godrej Bayview
+//          Project Details (21st August 2026).docx"
+// NOTE: Uses 25:25:50 Payment Plan. Per business direction, keep the
+// payment-plan branding as supplied in the MMR source document.
+// ────────────────────────────────────────────────────────────────
+
+const godrejBayview: FreedomProject = {
+  id: 'GP-MMR-BYV',
+  slug: 'godrej-bayview',
+  name: 'Godrej Bayview',
+  city: 'Navi Mumbai',
+  state: 'Maharashtra',
+  microLocation: 'Sector 9, Vashi',
+  zone: 'Navi Mumbai',
+  developer: 'Suncity Infrastructures (Mumbai) LLP, an affiliate of Godrej Properties Ltd.',
+  type: 'Group housing',
+  informationCurrentAsOf: '21 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus: 'Under Construction',
+
+  pricing: [
+    { configuration: '2 BHK Premium', area: '756 sqft.', agreementValue: '2.54 Cr. TO 3.15 Cr.', agreementValuePlusGst: '2.54 Cr. + GST 5%', agreementValuePlusGstSdr: '2.54 Cr. + GST 5% + 6%' },
+    { configuration: '2 BHK Regal', area: '892 sqft.', agreementValue: '3.19 Cr. To 3.65 Cr.', agreementValuePlusGst: '3.19 Cr. + GST 5%', agreementValuePlusGstSdr: '3.19 Cr. + GST 5% + 6%' },
+    { configuration: '3 BHK Lux', area: '987 sqft.', agreementValue: '3.63 Cr. TO 3.90 Cr.', agreementValuePlusGst: '3.63 Cr. + GST 5%', agreementValuePlusGstSdr: '3.63 Cr. + GST 5% + 6%' },
+    { configuration: '3 BHK Royal', area: '1268 sqft.', agreementValue: '4.81 Cr. TO 5.46 Cr.', agreementValuePlusGst: '4.81 Cr. + GST 5%', agreementValuePlusGstSdr: '4.81 Cr. + GST 5% + 6%' },
+  ],
+
+  rera: 'P51700031726',
+  reraCertificateLink: 'https://maharera.maharashtra.gov.in',
+  reraPortal: 'https://maharera.maharashtra.gov.in',
+  possessionRera: 'Dec 2028',
+  possessionGpl: 'Dec 2027',
+
+  paymentPlanName: '25:25:50 Payment Plan',
+  paymentPlanShort: '25:25:50',
+  paymentPlanFormula:
+    '25% upfront through Application Money, Stamp Duty & Registration, and within 90 days from booking; 25% on completion of RCC Terrace; 50% closer to completion through Occupancy Certificate and Possession milestones',
+  paymentPlanUpfrontDescription:
+    '25% collected upfront: 5% Application Money, 5% Stamp Duty & Registration, and 15% within 90 days from booking',
+
+  paymentPlanExample: {
+    configurationLabel: '2 BHK Premium - 756 sq.ft. Sample Calculation',
+    totalAgreementValue: '₹2,54,00,000',
+    totalCostForCustomer: '₹2,76,86,000',
+    milestones: [
+      { stage: 'Application Money', percentage: '5%', amount: '₹12,70,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'Stamp Duty & Registration', percentage: '5%', amount: '₹12,70,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'Within 90 days from Booking', percentage: '15%', amount: '₹38,10,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'On Completion of RCC Terrace', percentage: '25%', amount: '₹63,50,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'On Application of Occupancy Certificate', percentage: '45%', amount: '₹1,14,30,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'On Intimation of Possession', percentage: '5%', amount: '₹12,70,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'SDR+Other Charges', percentage: '0%', amount: '₹22,86,000', logic: 'SDR+GST 5%' },
+      { stage: 'Total', percentage: '100%', amount: '₹2,76,86,000', logic: '' },
+    ],
+    additionalSdrNote:
+      'The source document also carries a distinct SDR+Other Charges line outside the 100% Agreement Value schedule.',
+    notes:
+      'This illustration is for representation purposes only. The actual calculation and payout may vary depending on the unit selected, charges applicable to that unit, and the offers available at the project marketing office.',
+  },
+
+  locationAdvantages: [
+    { category: 'Connectivity', items: ['Sion Panvel Highway (Vashi Bridge) - 4 mins*', 'Vashi Railway Station - 5 mins*', 'Palm Beach Road - 6 mins*', 'Ghatkopar Mankhurd Link Road - 12 mins*', 'Eastern Freeway - 19 mins*', 'Atal Setu (MTHL) - 38 mins*', 'Upcoming Navi Mumbai International Airport - 35 mins*'] },
+    { category: 'Schools & Colleges', items: ['St. Mary’s School - 1 min*', 'Father Agnel Multipurpose School & Jr College - 2 mins*', 'Father Conceicao Rodrigues Institute of Management Studies and Engineering - 2 mins*', 'Sacred Heart School - 3 mins*', 'St Lawrence High School - 4 mins*', 'Goldcrest High School - 7 mins*', 'Avalon Heights International School - 7 mins*', 'Reliance Foundation School - 8 mins*', 'Orchids The International School - 8 mins*'] },
+    { category: 'Hospitals', items: ['Fortis Hiranandani Hospital - 3 mins*', 'MGM New Bombay Hospital - 3 mins*', 'Cloudnine Hospital - 7 mins*', 'Kokilaben Dhirubhai Hospital - 10 mins*'] },
+    { category: 'Shopping & Convenience', items: ['Inorbit Mall - 5 mins*', 'Reliance Smart Bazaar - 5 mins*', 'Satra Plaza - 6 mins*', 'D Mart - 7 mins*', 'Palm Beach Galleria Mall - 7 mins*', 'Reliance Fresh - 8 mins*', 'IKEA Furniture Mall - 10 mins*'] },
+    { category: 'Business Hubs', items: ['Dhirubhai Ambani Knowledge City - 10 mins*', 'Reliance Corporate Park - 12 mins*', 'Mindspace Business Park, Airoli - 20 mins*', 'BKC - 35 mins'] },
+    { category: 'Lifestyle, Recreation & Sports', items: ['Mini Seashore - 2 mins*', 'Father Agnel Sports Center - 2 mins*', 'Navi Mumbai Sports Association - 3 mins*', 'Sagar Vihar - 3 mins*', 'Sunset Flamingo Point - 4 mins*', 'NMMC Sports Complex - 5 mins*', 'D.Y. Patil Stadium - 14 mins*', "Asia's Largest Central Park - 26 mins", 'Kharghar Golf Course - 26 mins'] },
+  ],
+
+  microMarketSections: [
+    { heading: 'Market Positioning', paragraphs: ['Godrej Bayview is strategically positioned in Sector 9, Vashi, offering a well-connected waterfront-oriented lifestyle with established social infrastructure, business hubs, retail destinations and key transport links within easy reach.'] },
+    { heading: 'Commercial Proximity', paragraphs: ['The location offers convenient access to major employment and business destinations, including Dhirubhai Ambani Knowledge City at 10 minutes, Reliance Corporate Park at 12 minutes and Mindspace Business Park, Airoli at 20 minutes. BKC is indicated at approximately 35 minutes, positioning Godrej Bayview as an option for professionals working across Navi Mumbai and key Mumbai business districts.'] },
+    { heading: 'Transit Infrastructure', paragraphs: ['The project benefits from strong regional connectivity, with Sion Panvel Highway (Vashi Bridge) at 4 minutes, Vashi Railway Station at 5 minutes, Palm Beach Road at 6 minutes and Ghatkopar Mankhurd Link Road at 12 minutes. The brochure also highlights Atal Setu (MTHL) at 38 minutes and the upcoming Navi Mumbai International Airport at 35 minutes.'] },
+    { heading: 'Social Fabric', paragraphs: ['Godrej Bayview is surrounded by an established social ecosystem, with schools, healthcare, retail, lifestyle access, sports infrastructure and open-space destinations such as Mini Seashore, Sagar Vihar and Father Agnel Sports Center.'] },
+  ],
+
+  faqs: [
+    { category: '25:25:50 Payment Plan FAQs', items: [
+      { question: 'What does the 25:25:50 structure mean in this plan?', answer: 'It breaks the payment into three broad stages. The first 25% is collected upfront, the next 25% is linked to completion of the RCC terrace, and the final 50% is collected closer to completion through Occupancy Certificate and possession milestones.' },
+      { question: 'When is Stamp Duty & Registration collected in this plan?', answer: 'The source schedule includes a 5% Stamp Duty & Registration milestone early in the payment schedule and also lists a separate SDR+Other Charges line outside the 100% Agreement Value schedule. This should be clarified with the sales team for the specific unit selected.' },
+      { question: 'What is the largest single payment milestone?', answer: 'The largest milestone is 45%, due on application of the Occupancy Certificate.' },
+    ] },
+    { category: 'Project FAQs', items: [
+      { question: 'What configurations are available at Godrej Bayview?', answer: 'Godrej Bayview offers 2 BHK Premium, 2 BHK Regal, 3 BHK Lux and 3 BHK Royal configurations as per the source pricing grid.' },
+      { question: 'Where is Godrej Bayview located?', answer: 'Godrej Bayview is positioned in Sector 9, Vashi, Navi Mumbai, with access to Vashi Railway Station, Palm Beach Road, Sion Panvel Highway and key Navi Mumbai business hubs.' },
+      { question: 'What is the RERA possession timeline?', answer: 'The source project summary lists the RERA possession timeline as Dec 2028 and the GPL target possession as Dec 2027.' },
+    ] },
+    { category: 'Location FAQs', items: [
+      { question: 'How close is Godrej Bayview to transport links?', answer: 'The source document lists Sion Panvel Highway at 4 minutes, Vashi Railway Station at 5 minutes, Palm Beach Road at 6 minutes and Ghatkopar Mankhurd Link Road at 12 minutes.' },
+      { question: 'Which business hubs are nearby?', answer: 'Nearby business destinations include Dhirubhai Ambani Knowledge City, Reliance Corporate Park, Mindspace Business Park Airoli and BKC.' },
+    ] },
+    { category: 'About Godrej’s Freedom Plan Concept', items: [
+      { question: 'Does Godrej Bayview use the Godrej Freedom Plan?', answer: 'Godrej Bayview is documented under the 25:25:50 Payment Plan, not a Freedom-branded plan. Freedom-branded Godrej project pages on this hub include projects such as Godrej Woods, Godrej Lakeside Orchard, Godrej Parkshire, Godrej Horizon and Godrej Skyshore.' },
+    ] },
+  ],
+
+  floorPlans: [
+    { label: '2 BHK Floor Plan', src: '/assets_freedom/godrej_bayview_2bhk.png', alt: 'Godrej Bayview 2 BHK Floor Plan' },
+    { label: '3 BHK Floor Plan', src: '/assets_freedom/godrej_bayview_3bhk.png', alt: 'Godrej Bayview 3 BHK Floor Plan' },
+  ],
+
+  legalDisclaimers:
+    'The Project is being developed by Suncity Infrastructures (Mumbai) LLP, which is an affiliate of Godrej Properties Ltd. The sale is subject to terms of the Application Form and Agreement for Sale. All specifications of the unit shall be as per the Agreement for Sale. Customers are advised to apprise themselves of the necessary and relevant information about the Project prior to making any purchase decisions. The official website of Godrej Properties Limited is www.godrejproperties.com. Please do not rely on the information provided on any other website. Indicative Agreement value is exclusive of stamp duty, registration, GST and other applicable charges. 25:25:50 refers to the payment plan as described in the source document. T&C apply.',
+
+  sourceConflicts: [
+    { location: 'RERA fields', description: 'Section 3 lists RERA Number P51700031726, while the FAQ/legal text refers to Seabreeze at Godrej Bayview under MahaRERA No. P51700079255.' },
+    { location: 'Payment plan table', description: 'The 25:25:50 table labels the project row as Q2 Fy27 Exquisite even though the document is for Godrej Bayview.' },
+  ],
+
+  salesPhone: '+91 00000 00000',
+  leadGen: { adCode: '000000' },
+};
+
+// ────────────────────────────────────────────────────────────────
+// GODREJ BLISS — Kandivali, Mumbai
+// Source: "Generative Engine Optimisation (GEO) - Godrej Bliss
+//          Project Details (21st August 2026).docx"
+// ────────────────────────────────────────────────────────────────
+
+const godrejBliss: FreedomProject = {
+  id: 'GP-MMR-BLS',
+  slug: 'godrej-bliss',
+  name: 'Godrej Bliss',
+  city: 'Mumbai',
+  state: 'Maharashtra',
+  microLocation: 'Kandivali',
+  zone: 'Western Suburbs, Mumbai',
+  developer: 'Shivam Developers, with Godrej Projects Development Limited as Development Manager',
+  type: 'Group housing',
+  informationCurrentAsOf: '21 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus: 'Under Construction',
+
+  pricing: [
+    { configuration: '2 BHK w/o Deck', area: '653 sqft.', agreementValue: '1.77 Cr.', agreementValuePlusGst: '1.77 Cr. + 14%', agreementValuePlusGstSdr: '1.77 Cr. + 14% + 0%' },
+    { configuration: '2 BHK with Deck', area: '695 sqft.', agreementValue: '1.88 Cr.', agreementValuePlusGst: '1.88 Cr. + 14%', agreementValuePlusGstSdr: '1.88 Cr. + 14% + 0%' },
+    { configuration: '2 BHK with Deck', area: '739 sqft.', agreementValue: '2.10 Cr.', agreementValuePlusGst: '2.10 Cr. + 14%', agreementValuePlusGstSdr: '2.10 Cr. + 14% + 0%' },
+    { configuration: '3 BHK with Deck', area: '944 sqft.', agreementValue: '2.75 Cr.', agreementValuePlusGst: '2.75 Cr. + 14%', agreementValuePlusGstSdr: '2.75 Cr. + 14% + 0%' },
+  ],
+
+  rera: 'P51800051172',
+  reraCertificateLink: 'https://maharera.maharashtra.gov.in',
+  reraPortal: 'https://maharera.maharashtra.gov.in',
+  possessionRera: 'November 2029',
+  possessionGpl: 'November 2029',
+
+  paymentPlanName: '30:40:30 Payment Plan',
+  paymentPlanShort: '30:40:30',
+  paymentPlanFormula:
+    'Approximately 30% upfront, 40% linked to construction progress, and the final 30% closer to completion through terrace, Occupancy Certificate and possession milestones',
+  paymentPlanUpfrontDescription:
+    'Approximately 30% upfront: 5% Application Money, 4.95% within 21 days, and 20% within 60 days from booking',
+
+  paymentPlanExample: {
+    configurationLabel: '2 BHK w/o Deck - 653 sq.ft. Sample Calculation',
+    totalAgreementValue: '₹1,77,00,000',
+    totalCostForCustomer: '₹2,02,00,000',
+    milestones: [
+      { stage: 'Application Money', percentage: '5%', amount: '₹8,93,850', logic: '5% of AV' },
+      { stage: 'Within 21 days', percentage: '4.95%', amount: '₹8,76,150', logic: '4.95% of AV' },
+      { stage: 'Within 60 days from Booking', percentage: '20%', amount: '₹35,40,000', logic: '20% of AV' },
+      { stage: 'Within 270 days', percentage: '30%', amount: '₹53,10,000', logic: '30% of AV' },
+      { stage: 'On Commencement of RCC Terrace', percentage: '10%', amount: '₹17,70,000', logic: '10% of AV' },
+      { stage: '180 days from commencement of terrace slab', percentage: '15%', amount: '₹26,55,000', logic: '15% of AV' },
+      { stage: 'On application of OC', percentage: '10%', amount: '₹17,70,000', logic: '10% of AV' },
+      { stage: 'On intimation of possession', percentage: '5%', amount: '₹8,85,000', logic: '5% of AV' },
+      { stage: 'Additional Other Charges + GST + SDR', percentage: '0%', amount: '₹25,00,000', logic: '5% Other Charges + 14% GST + 0% SDR' },
+      { stage: 'Total Cost to Customer', percentage: '100%', amount: '₹2,02,00,000', logic: '2.02 Cr.' },
+    ],
+    notes:
+      'This illustration is for representation purposes only. The actual calculation and payout may vary depending on the unit selected, charges applicable to that unit, and the offers available at the project marketing office.',
+  },
+
+  locationAdvantages: [
+    { category: 'Connectivity', items: ['Western Express Highway - 6 mins*', 'Akurli Metro Station - 7 mins*', 'Kandivali Railway Station - 13 mins*'] },
+    { category: 'Schools & Colleges', items: ['Lokhandwala Foundation School - 3 mins*', 'Thakur Public School - 8 mins*', 'Cambridge School - 9 mins*', 'Oxford International School - 9 mins*', 'Oberoi International School - 11 mins*'] },
+    { category: 'Malls & Theatres', items: ['Centrium Mall - 3 mins*', 'Lokhandwala Shopping Centre - 5 mins*', "Growel's 101 - 7 mins*", 'Oberoi Mall - 12 mins*'] },
+    { category: 'Hospitals', items: ['Apex Hospital - 4 mins*', 'ALAP Hospital - 7 mins*', 'Shree Sai Hospital - 8 mins*', 'DNA Multispeciality Hospital - 9 mins*', 'Sanjeevani Hospital - 12 mins*'] },
+    { category: 'Banks', items: ['HDFC Bank - 2 mins*', 'ICICI Bank - 3 mins*', 'State Bank of India - 4 mins*'] },
+    { category: 'Upcoming Infrastructure', items: ['South Mumbai-Kandivali Coastal Road', 'Proposed Thane-Borivali Twin Tunnel Project', 'Proposed road connecting Kandivali to GMLR'] },
+  ],
+
+  microMarketSections: [
+    { heading: 'Market Positioning', paragraphs: ['Godrej Bliss is positioned in Kandivali as a well-connected residential address, supported by established social infrastructure and multiple existing and upcoming connectivity options.'] },
+    { heading: 'Strong Connectivity', paragraphs: ['The project is well connected to key city routes, with the Western Express Highway at 6 minutes, Akurli Metro Station at 7 minutes and Kandivali Railway Station at 13 minutes.'] },
+    { heading: 'Upcoming Infrastructure', paragraphs: ['The proposed South Mumbai-Kandivali Coastal Road, Thane-Borivali Twin Tunnel Project and road connecting Kandivali to GMLR are positioned as future infrastructure upgrades that can further improve travel times.'] },
+    { heading: 'Lifestyle Proposition', paragraphs: ['Beyond location, Godrej Bliss complements its connectivity with 3 levels of lifestyle amenities, approximately 1.5 acres of open spaces and well-planned homes with decks, creating a proposition centred around convenience and family-oriented living.'] },
+  ],
+
+  faqs: [
+    { category: 'General Project FAQs', items: [
+      { question: 'What configurations are available, and what is the starting price?', answer: 'Godrej Bliss offers 2 BHK without Deck, 2 BHK with Deck in 695 sq.ft. and 739 sq.ft. variants, and 3 BHK with Deck. Agreement Value pricing starts at 1.77 Cr. for 2 BHK w/o Deck and goes up to 2.75 Cr. for 3 BHK with Deck.' },
+      { question: 'What is the RERA-approved possession date?', answer: 'The RERA-registered possession timeline is November 2029, and Godrej Properties internal target also aligns to November 2029.' },
+      { question: 'Who is developing Godrej Bliss?', answer: 'The project is being developed by Shivam Developers, with Godrej Projects Development Limited acting as the Development Manager.' },
+    ] },
+    { category: '30:40:30 Payment Plan FAQs', items: [
+      { question: 'How does the 30:40:30 Payment Plan work?', answer: 'It splits payment into three broad stages: roughly 30% upfront, 40% linked to construction progress, and the final 30% closer to completion.' },
+      { question: 'Does the quoted price include GST and SDR?', answer: 'No. The quoted figures are Agreement Value only. GST is charged additionally at 14%, while SDR is listed at 0% in the source pricing table.' },
+      { question: 'For a 2 BHK priced at 1.77 Cr., what is the actual total cost?', answer: 'The source illustration shows a total cost of approximately 2.02 Cr. after adding other charges, GST and SDR as stated in the table.' },
+    ] },
+    { category: 'Location & Lifestyle FAQs', items: [
+      { question: 'How well-connected is Godrej Bliss?', answer: 'The project is positioned near Western Express Highway, Akurli Metro Station and Kandivali Railway Station, with schools, malls, hospitals and banks located nearby.' },
+      { question: 'What amenities are available at Godrej Bliss?', answer: 'The source document describes lifestyle amenities spread across three levels: Active Podium, Rooftop Rejuvenation and Promenade Greens.' },
+      { question: 'Are the open spaces exclusive to Godrej Bliss?', answer: 'No. The source document states that the open spaces are part of a larger combined layout shared between Godrej Bliss and Godrej Nest.' },
+    ] },
+    { category: 'About Godrej’s Freedom Plan Concept', items: [
+      { question: 'Does Godrej Bliss use the Godrej Freedom Plan?', answer: 'Godrej Bliss is documented under the 30:40:30 Payment Plan, not a Freedom-branded plan. Freedom-branded Godrej project pages on this hub include projects such as Godrej Woods, Godrej Lakeside Orchard, Godrej Parkshire, Godrej Horizon and Godrej Skyshore.' },
+    ] },
+  ],
+
+  floorPlans: [
+    { label: 'Floor Plan Layout - Sheet 1', src: '/assets_freedom/godrej_bliss_1bhk_grand.png', alt: 'Godrej Bliss Floor Plan Layout - Sheet 1' },
+    { label: 'Floor Plan Layout - Sheet 2', src: '/assets_freedom/godrej_bliss_2bhk_regal.png', alt: 'Godrej Bliss Floor Plan Layout - Sheet 2' },
+    { label: 'Floor Plan Layout - Sheet 3', src: '/assets_freedom/godrej_bliss_3bhk_luxe.png', alt: 'Godrej Bliss Floor Plan Layout - Sheet 3' },
+  ],
+
+  legalDisclaimers:
+    'The project is registered as Godrej Bliss under MahaRERA bearing registration No. P51800051172 available at https://maharera.maharashtra.gov.in. The project is being developed by Shivam Developers and Godrej Projects Development Limited is the Development Manager. The developer has obtained project finance from Tata Capital Housing Finance Ltd. The Sale is subject to terms of Application Form and Agreement for Sale. All specifications of the unit shall be as per the final agreement between the Parties. Recipients are advised to apprise themselves of the necessary and relevant information of the project prior to making any purchase decisions. The official website of Godrej Properties Ltd. is www.godrejproperties.com. Please do not rely on the information provided on any other website. Date of Publication 29th October 2025. T&C Apply.',
+
+  sourceConflicts: [],
+
+  salesPhone: '+91 00000 00000',
+  leadGen: { adCode: '000000' },
+};
+
+// ────────────────────────────────────────────────────────────────
+// GODREJ EXQUISITE — Ghodbunder Road, Thane
+// Source: "Generative Engine Optimisation (GEO) - Godrej Exquisite
+//          Project Details (21st August 2026).docx"
+// ────────────────────────────────────────────────────────────────
+
+const godrejExquisite: FreedomProject = {
+  id: 'GP-MMR-EXQ',
+  slug: 'godrej-exquisite',
+  name: 'Godrej Exquisite',
+  city: 'Thane',
+  state: 'Maharashtra',
+  microLocation: 'Ghodbunder Road',
+  zone: 'Thane, MMR',
+  developer: 'Godrej Macbricks Private Limited, part of the Godrej Properties Group',
+  type: 'Group housing',
+  informationCurrentAsOf: '21 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus: 'Under Construction',
+
+  pricing: [
+    { configuration: '2Bed Premium', area: '655 sqft.', agreementValue: '1.36 Cr. to 1.43 Cr.', agreementValuePlusGst: '1.36 Cr. + GST 5%', agreementValuePlusGstSdr: '1.36 Cr. + GST 5% + 6%' },
+    { configuration: '3Bed Luxe', area: '922 sqft.', agreementValue: '1.89 Cr. to 2.01 Cr.', agreementValuePlusGst: '1.89 Cr. + GST 5%', agreementValuePlusGstSdr: '1.89 Cr. + GST 5% + 6%' },
+  ],
+
+  rera: 'P51700024496',
+  reraCertificateLink: 'https://maharera.maharashtra.gov.in',
+  reraPortal: 'https://maharera.maharashtra.gov.in',
+  possessionRera: 'September 2026',
+  possessionGpl: 'September 2026',
+
+  paymentPlanName: '25:75 Payment Plan',
+  paymentPlanShort: '25:75',
+  paymentPlanFormula:
+    '25% before construction milestones through 10% Application Money and 15% within 60 days of booking, followed by 70% on receipt of Occupancy Certificate and 5% on Intimation of Possession',
+  paymentPlanUpfrontDescription:
+    '25% before construction milestones: 10% Application Money and 15% within 60 days of booking',
+
+  paymentPlanExample: {
+    configurationLabel: '2 BHK Premium - 655 sq.ft. Sample Calculation',
+    totalAgreementValue: '₹1,36,00,000',
+    totalCostForCustomer: '₹1,48,24,000',
+    milestones: [
+      { stage: 'Application Money (forms a part of Booking Amount)', percentage: '10%', amount: '₹13,60,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'Within 60 days of booking', percentage: '15%', amount: '₹20,40,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'On Receipt of Occupancy Certificate', percentage: '70%', amount: '₹95,20,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'On Intimation of Possession', percentage: '5%', amount: '₹6,80,000', logic: '5% of AV + App 5% GST' },
+      { stage: 'SDR+Other Charges', percentage: '0%', amount: '₹12,24,000', logic: 'SDR+GST 5%' },
+      { stage: 'Total', percentage: '100%', amount: '₹1,48,24,000', logic: '' },
+    ],
+    additionalSdrNote: 'SDR+Other Charges are shown separately in the source payment-plan table.',
+    notes:
+      'This illustration is for representation purposes only. The actual calculation and payout may vary depending on the unit selected, charges applicable to that unit, and the offers available at the project marketing office.',
+  },
+
+  locationAdvantages: [
+    { category: 'Connectivity', items: ['Ghodbunder Road', 'JVLR', 'SCLR', 'Eastern Freeway', 'NH 8', 'Mumbai-Nashik Highway', 'Navi Mumbai Road (Thane-Navi Mumbai)'] },
+    { category: 'Rail Connectivity', items: ['Central Harbour Line', 'Central Railway', 'Western Railway Line'] },
+    { category: 'Upcoming Infrastructure', items: ['Thane-Kalyan Metro Line 5', 'Proposed tunnel connecting Borivali and Thane', 'Metro Line 10 - Mira Road-Gaimukh Junction', 'Metro Line 4A - Gaimukh Junction-Kasarvadavali', 'Metro Line 4 - Kasarvadavali-Wadala'] },
+    { category: 'Key Location Advantage', items: ['Thane is positioned as a well-connected residential destination with access to Mumbai, Navi Mumbai and the wider MMR.', "The brochure highlights Thane as being ranked among the world's top 20 real estate investment destinations."] },
+  ],
+
+  microMarketSections: [
+    { heading: 'Market Positioning', paragraphs: ['Godrej Exquisite is positioned as a premium residential address in Thane, built around connectivity, exclusivity and a luxury-led lifestyle.'] },
+    { heading: 'Well-Connected Thane Address', paragraphs: ['The project benefits from access to Ghodbunder Road, JVLR, SCLR, Eastern Freeway, NH 8 and the Mumbai-Nashik Highway, creating connectivity across key parts of the MMR.'] },
+    { heading: 'Future Infrastructure Advantage', paragraphs: ['Proposed infrastructure such as the Borivali-Thane tunnel and Metro Lines 4, 4A and 5 is expected to further improve regional connectivity.'] },
+    { heading: 'Premium Lifestyle Positioning', paragraphs: ['Godrej Exquisite is positioned as an exclusive development comprising three magnificent towers, with each tower envisioned around its own world of luxury and supported by a grand clubhouse and world-class amenities.'] },
+  ],
+
+  faqs: [
+    { category: '25:75 Payment Plan FAQs', items: [
+      { question: 'What does the 25:75 payment plan mean?', answer: 'It refers to the split between upfront and possession-linked payments: the first 25% is collected before construction milestones, and the remaining 75% is collected closer to completion.' },
+      { question: 'How much do I pay at the time of booking?', answer: 'At booking, the source schedule lists Application Money at 10% of the Agreement Value, forming part of the overall Booking Amount.' },
+      { question: 'What does the total payable include besides the unit cost?', answer: 'The total payable includes the Agreement Value paid across the milestones plus SDR and Other Charges shown in the source table.' },
+    ] },
+    { category: 'Project & Location FAQs', items: [
+      { question: 'What is the MahaRERA registration number for Godrej Exquisite?', answer: 'Godrej Exquisite is registered under MahaRERA No. P51700024496.' },
+      { question: 'Where is Godrej Exquisite located?', answer: 'Godrej Exquisite is located on Ghodbunder Road in Thane, with road connectivity through Ghodbunder Road, JVLR, SCLR, Eastern Freeway, NH 8 and the Mumbai-Nashik Highway.' },
+      { question: 'What configurations are available?', answer: 'The source pricing grid lists 2Bed Premium and 3Bed Luxe configurations.' },
+      { question: 'What upcoming infrastructure is highlighted?', answer: 'The source document references Metro Line 5, the proposed Borivali-Thane tunnel, Metro Line 10, Metro Line 4A and Metro Line 4.' },
+    ] },
+    { category: 'About Godrej’s Freedom Plan Concept', items: [
+      { question: 'Does Godrej Exquisite use the Godrej Freedom Plan?', answer: 'Godrej Exquisite is documented under the 25:75 Payment Plan, not a Freedom-branded plan. Freedom-branded Godrej project pages on this hub include projects such as Godrej Woods, Godrej Lakeside Orchard, Godrej Parkshire, Godrej Horizon and Godrej Skyshore.' },
+    ] },
+  ],
+
+  floorPlans: [
+    { label: 'Floor Plan Layout - Sheet 1', src: '/assets_freedom/godrej_exquisite_2bhk_luxe.png', alt: 'Godrej Exquisite Floor Plan Layout - Sheet 1' },
+    { label: 'Floor Plan Layout - Sheet 2', src: '/assets_freedom/godrej_exquisite_2bhk_premium.png', alt: 'Godrej Exquisite Floor Plan Layout - Sheet 2' },
+  ],
+
+  legalDisclaimers:
+    'The project is registered as Godrej Exquisite under MahaRERA No.: P51700024496, available on https://maharera.maharashtra.gov.in. This project is being developed by Godrej Macbricks Private Limited, earlier known as Ashank Macbricks Private Limited, a part of Godrej Properties Group. The sales office is at Godrej Exquisite, Ghodbunder road, Vijay Nagari, Thane West, Thane, Maharashtra-400607. The sale is subject to the terms of Application Form and Agreement For Sale. Customers are advised to apprise themselves with all relevant information before making any purchase decision. The official website of Godrej Properties Limited is www.godrejproperties.com. Indicative Agreement Value excludes Stamp Duty & Registration, GST and other applicable charges. T&C apply.',
+
+  sourceConflicts: [
+    { location: 'Payment plan timing', description: 'The payment table says 15% within 60 days of booking, while legal disclaimer text says the next 15% shall be paid within 45 days from booking.' },
+  ],
+
+  salesPhone: '+91 00000 00000',
+  leadGen: { adCode: '000000' },
+};
+
+// ────────────────────────────────────────────────────────────────
+// GODREJ HORIZON — Dadar-Wadala, Mumbai
+// Source: "Generative Engine Optimisation (GEO) - Godrej Horizon
+//          Project Details (21st August 2026).docx"
+// ────────────────────────────────────────────────────────────────
+
+const godrejHorizon: FreedomProject = {
+  id: 'GP-MMR-HRZ',
+  slug: 'godrej-horizon',
+  name: 'Godrej Horizon',
+  city: 'Mumbai',
+  state: 'Maharashtra',
+  microLocation: 'R.A. Kidwai Road, Azad Nagar, Wadala West',
+  zone: 'Central Mumbai',
+  developer: 'Godrej Projects Development Limited',
+  type: 'Group housing',
+  informationCurrentAsOf: '21 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus: 'Under Construction',
+
+  pricing: [
+    { configuration: '2 Bed Elegante', area: '777/779 sq.ft.', agreementValue: '4.32 Cr.', agreementValuePlusGst: '4.32 Cr. + 5%', agreementValuePlusGstSdr: '4.32 Cr. + 5% + 6%' },
+    { configuration: '2 Bed Supreme', area: '836 sq.ft.', agreementValue: '-', agreementValuePlusGst: '-', agreementValuePlusGstSdr: '-' },
+    { configuration: '3 Bed Elegante', area: '1001 sq.ft.', agreementValue: '4.58 Cr. to 5.67 Cr.', agreementValuePlusGst: '4.58 Cr. + 5% to 5.67 Cr. + 5%', agreementValuePlusGstSdr: '4.58 Cr. + 5% + 6% to 5.67 Cr. + 5% + 6%' },
+    { configuration: '3 Bed Opulent', area: '1385 sq.ft.', agreementValue: '7.68 Cr.', agreementValuePlusGst: '7.68 Cr. + 5%', agreementValuePlusGstSdr: '7.68 Cr. + 5% + 6%' },
+    { configuration: '3 Bed Palatial', area: '1477/1480 sq.ft.', agreementValue: '6.88 Cr. to 8.21 Cr.', agreementValuePlusGst: '6.88 Cr. + 5% to 8.21 Cr. + 5%', agreementValuePlusGstSdr: '6.88 Cr. + 5% + 6% to 8.21 Cr. + 5% + 6%' },
+  ],
+
+  rera: 'Phase I - P51900034851, Phase II - P51900049757, Phase III - P51900078358',
+  reraCertificateLink: 'https://maharera.maharashtra.gov.in',
+  reraPortal: 'https://maharera.maharashtra.gov.in',
+  possessionRera: 'Phase I - May 2022, Phase II - May 2028, Phase III - June 2031',
+  possessionGpl: 'June 2027',
+
+  paymentPlanName: '20:80 Freedom Payment Plan',
+  paymentPlanShort: '20:80',
+  paymentPlanFormula:
+    '20% upfront through 10% Booking Amount and 10% within 45 days of booking, with 70% on Application of Occupancy Certificate and 10% on Intimation of Possession; Stamp Duty & Registration is payable within 30 days from booking',
+  paymentPlanUpfrontDescription:
+    '20% of the Agreement Value upfront: 10% as Booking Amount and 10% within 45 days of booking, with Stamp Duty & Registration separately within 30 days',
+
+  paymentPlanExample: {
+    configurationLabel: '3 Bed Elegante Sample Calculation',
+    totalAgreementValue: '₹5,66,99,997.20',
+    totalCostForCustomer: '₹6,38,76,297.29',
+    milestones: [
+      { stage: 'Booking Amount', percentage: '10%', amount: '₹59,53,499.71', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Stamp Duty and Registration within 30 days from Booking Date', percentage: '0%', amount: '₹34,31,999.83', logic: 'Same flat Stamp Duty & Registration total as the CLP plan' },
+      { stage: 'Within 45 days of Booking', percentage: '10%', amount: '₹59,53,499.71', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Application of Occupancy Certificate', percentage: '70%', amount: '₹4,16,74,497.94', logic: '70% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Intimation of Possession', percentage: '10%', amount: '₹59,53,499.71', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Maintenance and Corpus fund', percentage: '0%', amount: '₹3,38,027.90', logic: 'Same Maintenance & Corpus fund as the CLP plan' },
+      { stage: 'Other Charges', percentage: '0%', amount: '₹5,71,272.50', logic: 'Same Other Charges as the CLP plan' },
+      { stage: 'Total', percentage: '100%', amount: '₹6,38,76,297.29', logic: 'Sum of all rows above' },
+    ],
+    notes:
+      'This illustration is for representation purposes only. No price loading is applied in the source 20:80 Freedom Payment Plan; the Agreement Value is split 20:80 as-is.',
+  },
+
+  locationAdvantages: [
+    { category: 'Connectivity', items: ['Chhatrapati Shivaji Maharaj International Airport (CSMIA) - 14 km', 'Eastern Express Highway - 1.5 km', 'Atal Setu - 3.1 km', 'Eastern Freeway - 3 km', 'Wadala Railway Station - 0.3 km', 'Monorail Station, Wadala Bridge - 0.7 km', 'Upcoming Metro Station - 2.7 km', 'Upcoming Sewri-Worli Elevated Corridor - 1.4 km', 'Dadar Railway Station - 1.9 km', 'BKC - 11 km', 'Lower Parel - 5 km'] },
+    { category: 'Schools & Colleges', items: ['Auxilium Convent High School - 0.75 km', 'JB Vachha High School - 1.1 km', 'St. Joseph High School - 1.1 km', 'VJTI (Veermata Jijabai Technological Institute) - 1.4 km', 'Institute of Chemical Technology - 1.8 km', 'Ramnarain Ruia College - 1.8 km', 'Poddar College - 2.1 km', 'Don Bosco High School - 2.5 km', 'Welingkar Institute of Management & Research - 2.7 km', 'JBCN International School - 2.9 km', 'Bombay Scottish School - 3.6 km'] },
+    { category: 'Hospitals', items: ['KEM Hospital - 2.4 km', 'Tata Memorial Hospital - 2.6 km', 'Global Hospital - 2.7 km'] },
+    { category: 'Lifestyle & Recreation', items: ['Five Gardens - 1.2 km', 'Dadar Parsi Gymkhana - 1.7 km', 'Matunga Gymkhana - 2.1 km', 'Maheshwari Udyan - 2 km', 'The Indian Gymkhana, Matunga - 2.6 km'] },
+    { category: 'Key Commercial & Business Hubs', items: ['Lower Parel - 5 km', 'BKC - 11 km'] },
+  ],
+
+  microMarketSections: [
+    { heading: 'Market Positioning', paragraphs: ['Godrej Horizon is strategically positioned in Dadar-Wadala, offering seamless connectivity to South and Central Mumbai while placing residents close to established business districts, transport infrastructure, and premium social amenities.'] },
+    { heading: 'Commercial Proximity', paragraphs: ['The location provides convenient access to Lower Parel at 5 km and BKC at 11 km, positioning Godrej Horizon as a residential option for professionals working across Mumbai’s established business districts.'] },
+    { heading: 'Transit Infrastructure', paragraphs: ['Wadala Railway Station is just 0.3 km away and the Monorail Station at Wadala Bridge is 0.7 km away. Eastern Express Highway, Eastern Freeway, Atal Setu and the upcoming Sewri-Worli Elevated Corridor are also highlighted in the source document.'] },
+    { heading: 'Social Fabric', paragraphs: ['Godrej Horizon is surrounded by an established social ecosystem comprising reputed educational institutions, healthcare facilities and recreational destinations.'] },
+  ],
+
+  faqs: [
+    { category: '20:80 Freedom Payment Plan FAQs', items: [
+      { question: 'What is the overall payment structure for the Horizon 20:80 Freedom Payment Plan?', answer: '20% of the Agreement Value is paid upfront: 10% as Booking Amount and another 10% within 45 days of booking. Stamp Duty & Registration is payable within 30 days. The remaining 80% is paid as 70% on Application of Occupancy Certificate and 10% on Intimation of Possession.' },
+      { question: 'Is any price loading applied to this plan?', answer: 'No. The source document states that no price loading is applied; the Agreement Value is split 20:80 as-is, with 5% GST added on each Agreement Value-based milestone.' },
+      { question: 'Are Stamp Duty, Maintenance and Other Charges different under this plan?', answer: 'No. The source document states that Stamp Duty, Maintenance/Corpus fund and Other Charges are the same regardless of the payment plan selected.' },
+    ] },
+    { category: 'Project FAQs', items: [
+      { question: 'Where is Godrej Horizon located?', answer: 'Godrej Horizon is located on R.A. Kidwai Road, Azad Nagar, Wadala West, Mumbai.' },
+      { question: 'What configurations and sizes are available?', answer: 'The source pricing grid lists 2 Bed and 3 Bed configurations, including Elegante, Supreme, Opulent and Palatial variants across different floor bands.' },
+      { question: 'What is the GPL target possession?', answer: 'The source document lists the GPL target possession as June 2027.' },
+    ] },
+  ],
+
+  floorPlans: [
+    { label: 'Typical Floor Plan', src: '/assets_freedom/godrej_horizon_typical.png', alt: 'Godrej Horizon Typical Floor Plan' },
+  ],
+
+  legalDisclaimers:
+    'The Project is being developed by Godrej Projects Development Limited. Site Address: Godrej Horizon Phase II, R.A.Kidwai Road, Azad Nagar, Wadala (West), Mumbai - 400 031. The sale is subject to the terms of Application Form and Agreement for Sale. All specifications of the unit shall be as per the final agreement between the Developer and the customer. Recipients are advised to apprise themselves of the necessary and relevant information of the project/offer prior to making any purchase decisions. The official website of Godrej Properties Limited is www.godrejproperties.com. Please do not rely on the information provided on any other website. Exclusive 20:80 payment plan is valid for all units of Godrej Horizon Phase II except Series 03, 04 and 05 from 37th floor to 44th floor. T&C apply.',
+
+  sourceConflicts: [
+    { location: 'Legal disclaimer payment split', description: 'The payment table states 70% on application of OC and 10% on possession, while the legal disclaimer text states 75% on application of occupancy certificate and 5% on possession.' },
+  ],
+
+  salesPhone: '+91 00000 00000',
+  leadGen: { adCode: '000000' },
+};
+
+// ────────────────────────────────────────────────────────────────
+// GODREJ SKYSHORE — Versova, Andheri West, Mumbai
+// Source: "Generative Engine Optimisation (GEO) - Godrej Skyshore
+//          Project Details (21st August 2026).docx"
+// ────────────────────────────────────────────────────────────────
+
+const godrejSkyshore: FreedomProject = {
+  id: 'GP-MMR-SKY',
+  slug: 'godrej-skyshore',
+  name: 'Godrej Skyshore',
+  city: 'Mumbai',
+  state: 'Maharashtra',
+  microLocation: 'Popco Colony Road, Versova, Andheri West',
+  zone: 'Western Suburbs, Mumbai',
+  developer: 'One Stop Business Services LLP and Godrej Properties Limited',
+  type: 'Group housing',
+  informationCurrentAsOf: '21 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus: 'Under Construction',
+
+  pricing: [
+    { configuration: 'Tower A - 4 BHK', area: '2646 sq.ft.', agreementValue: 'Rate grid from Rs. 60,000 per sq.ft.', agreementValuePlusGst: 'Agreement Value + GST 5%', agreementValuePlusGstSdr: 'Agreement Value + GST 5% + SDR 6%' },
+    { configuration: 'Tower A Regal - 4 BHK', area: '2154 sq.ft.', agreementValue: 'Rate grid from Rs. 57,000 per sq.ft.', agreementValuePlusGst: 'Agreement Value + GST 5%', agreementValuePlusGstSdr: 'Agreement Value + GST 5% + SDR 6%' },
+    { configuration: 'Tower A Regal - 3 BHK', area: '1577 sq.ft.', agreementValue: 'Rate grid from Rs. 57,000 per sq.ft.', agreementValuePlusGst: 'Agreement Value + GST 5%', agreementValuePlusGstSdr: 'Agreement Value + GST 5% + SDR 6%' },
+    { configuration: 'Tower B - 4 BHK (2646)', area: '2646 sq.ft.', agreementValue: 'Rate grid from Rs. 55,250 per sq.ft.', agreementValuePlusGst: 'Agreement Value + GST 5%', agreementValuePlusGstSdr: 'Agreement Value + GST 5% + SDR 6%' },
+    { configuration: 'Tower B - 4 BHK (2154)', area: '2154 sq.ft.', agreementValue: 'Rate grid from Rs. 55,250 per sq.ft.', agreementValuePlusGst: 'Agreement Value + GST 5%', agreementValuePlusGstSdr: 'Agreement Value + GST 5% + SDR 6%' },
+    { configuration: 'Tower B - 3 BHK Regal', area: '1577 sq.ft.', agreementValue: 'Rate grid from Rs. 55,250 per sq.ft.', agreementValuePlusGst: 'Agreement Value + GST 5%', agreementValuePlusGstSdr: 'Agreement Value + GST 5% + SDR 6%' },
+  ],
+
+  rera: 'PM1180002500076',
+  reraCertificateLink: 'https://maharera.maharashtra.gov.in',
+  reraPortal: 'https://maharera.maharashtra.gov.in',
+  possessionRera: 'December 2031',
+  possessionGpl: 'February 2030',
+
+  paymentPlanName: '20:80 Freedom Plan',
+  paymentPlanShort: '20:80',
+  paymentPlanFormula:
+    '20% upfront through 10% Booking Amount and 10% within 45 days of booking, with 70% on Application of Occupancy Certificate and 10% on Intimation of Possession; Stamp Duty & Registration is payable separately within 30 days',
+  paymentPlanUpfrontDescription:
+    '20% of the Agreement Value upfront: 10% Booking Amount and 10% within 45 days of booking, with Stamp Duty & Registration separately within 30 days',
+
+  paymentPlanExample: {
+    configurationLabel: 'Skyshore 20:80 Freedom Plan Sample Calculation',
+    totalAgreementValue: '₹9.33 Cr.',
+    totalCostForCustomer: '₹10.61 Cr.',
+    milestones: [
+      { stage: 'Booking Amount', percentage: '10%', amount: '₹0.98 Cr.', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Stamp Duty and Registration within 30 days from Booking Date', percentage: '0%', amount: '₹0.56 Cr.', logic: '6% of Agreement Value, no GST' },
+      { stage: 'Within 45 days of Booking', percentage: '10%', amount: '₹0.98 Cr.', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Application of Occupancy Certificate', percentage: '70%', amount: '₹6.87 Cr.', logic: '70% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Intimation of Possession', percentage: '10%', amount: '₹0.98 Cr.', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Other Charges', percentage: '2.5%', amount: '₹0.23 Cr.', logic: '2.5% of Agreement Value, added on top of Total AV, no GST' },
+      { stage: 'Total Cost Of Ownership', percentage: '100%', amount: '₹10.61 Cr.', logic: '' },
+    ],
+    notes:
+      'This illustration is for representation purposes only. The source document states that this 20:80 plan uses the same Agreement Value, GST, SDR and Other Charges as the Construction Linked Plan and only the milestone percentage split differs.',
+  },
+
+  locationAdvantages: [
+    { category: 'Recreation', items: ['Infiniti Mall - 7 mins*, 3.1 km', 'Fun Republic Mall - 7 mins*, 2.9 km', 'Lokhandwala Market - 7 mins*, 3.2 km', 'Citi Mall - 7 mins*, 2.9 km', 'The Club Mumbai - 7 mins*, 2.7 km', 'PVR Juhu - 8 mins*, 3.1 km', 'Prithvi Theatre & Cafe - 12 mins*, 4.6 km'] },
+    { category: 'Education', items: ['Ecole Mondiale World School - 8 mins*, 2.5 km', 'Utpal Shanghvi Global School - 9 mins*, 3.8 km', 'S. P. Jain Institute of Management & Research - 9 mins*, 3.9 km', 'RIMS International School - 10 mins*, 4.6 km', 'Jamnabai Narsee International School - 10 mins*, 4.6 km', 'NMIMS - 12 mins*, 5.3 km', "SVKM's Mithibai College - 14 mins*, 5.2 km", 'Maneckji Cooper Education Trust School - 14 mins*, 6.8 km'] },
+    { category: 'Hospitals', items: ['Kokilaben Hospital - 5 mins*, 2.1 km', 'Holy Spirit Hospital - 16 mins*, 7.2 km', 'Paramount General Hospital & ICCU - 20 mins*, 9.6 km', 'Seven Hills Hospital, Marol Maroshi - 22 mins*, 9.4 km'] },
+    { category: 'Beach', items: ['Versova Beach - 4 mins*, 1.6 km', 'Silver Beach - 12 mins*, 3.9 km', 'Juhu Beach - 12 mins*, 6.3 km'] },
+    { category: 'Cafes', items: ['The Tanjore Tiffin Room - 3 mins*, 850 m', 'WTF! Versova - 3 mins*, 850 m', 'Versova Social - 4 mins*, 1.2 km', 'Leaping Windows - 4 mins*, 1.1 km', 'Urban Tadka - 4 mins*, 1.2 km', 'Jamjar Diner Restaurant - 4 mins*, 1.2 km'] },
+    { category: 'Connectivity', items: ['Upcoming Lokhandwala Connector - 2 mins*, 400 m', 'Upcoming Coastal Road - 4 mins*, 850 m', 'Versova Metro Station - 4 mins*, 1.4 km', 'Juhu-Versova Link Road - 5 mins*, 1.7 km', 'Juhu Circle - 9 mins*, 2.7 km', 'Chhatrapati Shivaji Maharaj International Airport - 16 mins*, 9.9 km', 'Western Express Highway - 18 mins*, 10.9 km', 'BKC - 26 mins*, 14.8 km'] },
+  ],
+
+  microMarketSections: [
+    { heading: 'Market Positioning', paragraphs: ['Versova, the coastline of culture and calm - Godrej Skyshore is positioned as a premium residential address that combines the calm of a coastal neighbourhood with the pulse of Mumbai.'] },
+    { heading: 'Coastal Advantage', paragraphs: ['Located close to Versova Beach, Silver Beach and Juhu Beach, the project offers a lifestyle centred around the coastline while remaining connected to the city. Versova Beach is just 1.6 km away.'] },
+    { heading: 'Strong Connectivity', paragraphs: ['The upcoming Lokhandwala Connector is 400 m away, while the upcoming Coastal Road is 850 m away. Versova Metro Station is 1.4 km away, providing multiple existing and upcoming connectivity options.'] },
+    { heading: 'Premium Residential Context', paragraphs: ['The combination of coastal living, established social infrastructure and access to major city corridors positions Skyshore as a premium address for those seeking a quieter residential setting without moving away from Mumbai key destinations.'] },
+  ],
+
+  faqs: [
+    { category: '20:80 Freedom Plan FAQs', items: [
+      { question: 'What is the structure of the 20:80 Freedom Payment Plan?', answer: 'Under this plan, 20% of the Agreement Value is paid upfront through 10% Booking Amount and 10% within 45 days of booking, while the remaining 80% is deferred as 70% on Application of Occupancy Certificate and 10% on Intimation of Possession. Stamp Duty and Registration is payable separately within 30 days of booking.' },
+      { question: 'Is this payment plan available for all units?', answer: 'No. As per the brochure, the 20:80 Freedom Payment Plan is valid for all units except Series 03, 04 and 05 from the 37th to 44th floor.' },
+      { question: 'Are GST, Stamp Duty and Other Charges included?', answer: 'GST at 5% is added on each Agreement Value milestone. Stamp Duty & Registration at 6% and Other Charges at 2.5% are charged separately as per the source table.' },
+    ] },
+    { category: 'Project FAQs', items: [
+      { question: 'Where is Godrej Skyshore located?', answer: 'Godrej Skyshore is located on Popco Colony Road, Versova, Andheri West, Mumbai.' },
+      { question: 'What configurations does the project offer?', answer: 'The source document lists premium 3 BHK Regal and 4 BHK apartments across Tower A and Tower B, with carpet areas including 1577 sq.ft., 2154 sq.ft. and 2646 sq.ft.' },
+      { question: 'Does Godrej Skyshore have sea views?', answer: 'The source FAQ states that Godrej Skyshore offers premium 3 BHK and 4 BHK apartments with sea views from the 7th floor onwards, subject to the actual unit selected.' },
+    ] },
+  ],
+
+  floorPlans: [
+    { label: 'Tower A Floor Plan', src: '/assets_freedom/godrej_skyshore_tower_a.png', alt: 'Godrej Skyshore Tower A Floor Plan' },
+    { label: 'Tower B Floor Plan', src: '/assets_freedom/godrej_skyshore_tower_b.png', alt: 'Godrej Skyshore Tower B Floor Plan' },
+  ],
+
+  legalDisclaimers:
+    'One Stop Business Services LLP is the owner of the land on which Project is being developed by Godrej Properties Limited. Both One Stop Business Services LLP and Godrej Properties Limited have been registered as Promoters under RERA. Site address of the project is Sales Lounge, Godrej Skyshore, Plot number CTS No. 1165, 1166, 1166/1 to 7, 1167, 1168, 1168/1 to11, 1169,1169/1 to 5, 1170, 1170/1 to 11, 1171, 1172, 1172/1 to 4 at Versova, Andheri, Mumbai Suburban, 400061. The Sale is subject to the terms of the Application Form and Agreement for Sale. Indicative agreement value excludes Stamp Duty and Registration charges, GST and other charges. The views may vary basis the actual unit selected. T&C apply.',
+
+  sourceConflicts: [],
+
+  salesPhone: '+91 00000 00000',
+  leadGen: { adCode: '000000' },
+};
+
+// ────────────────────────────────────────────────────────────────
+// GODREJ VISTAS — Vikhroli, Mumbai
+// Source: "Generative Engine Optimisation (GEO) - Godrej Vistas
+//          Project Details (21st August 2026).docx"
+// ────────────────────────────────────────────────────────────────
+
+const godrejVistas: FreedomProject = {
+  id: 'GP-MMR-VST',
+  slug: 'godrej-vistas',
+  name: 'Godrej Vistas',
+  city: 'Mumbai',
+  state: 'Maharashtra',
+  microLocation: 'Vikhroli',
+  zone: 'Central Mumbai',
+  developer: 'Godrej & Boyce Manufacturing Company Limited, with Godrej Properties Limited as Development Manager',
+  type: 'Group housing',
+  informationCurrentAsOf: '21 August 2026',
+
+  salesStatus: 'Sustenance',
+  constructionStatus: 'Under Construction',
+
+  pricing: [
+    { configuration: '2 BHK Supreme', area: '844-856 sq. ft.', agreementValue: '3.13 Cr. to 3.79 Cr.', agreementValuePlusGst: '3.29 Cr. to 3.98 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
+    { configuration: '3 BHK Smart', area: '985 sq. ft.', agreementValue: '4.11 Cr. to 4.83 Cr.', agreementValuePlusGst: '4.32 Cr. to 5.07 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
+    { configuration: '3 BHK Supreme', area: '1196 sq. ft.', agreementValue: '5.30 Cr. to 6.17 Cr.', agreementValuePlusGst: '5.56 Cr. to 6.48 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
+    { configuration: '3 BHK Palatial with Home Office', area: '1410 sq. ft.', agreementValue: '6.23 Cr.', agreementValuePlusGst: '6.54 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
+    { configuration: '2 BHK + 2 BHK', area: '(853+851) / (853+856) / (851+844) sq. ft.', agreementValue: '8.46 Cr. to 8.66 Cr.', agreementValuePlusGst: '8.88 Cr. to 9.09 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
+  ],
+
+  rera: 'P51800055142',
+  reraCertificateLink: 'https://maharera.maharashtra.gov.in',
+  reraPortal: 'https://maharera.maharashtra.gov.in',
+  possessionRera: 'December 2029',
+  possessionGpl: 'December 2029',
+
+  paymentPlanName: '20:80 Payment Plan',
+  paymentPlanShort: '20:80',
+  paymentPlanFormula:
+    '20% upfront through 5% Booking Amount, 5% Balance Application Money, Agreement Registration and 10% within 50 days of booking upon execution of Agreement, followed by 75% on Application of Occupancy Certificate and 5% on Intimation of Possession; a 4.5% price loading is applied',
+  paymentPlanUpfrontDescription:
+    '20% upfront through booking, balance application money, registration and agreement-execution milestones, with 4.5% price loading applied to the CLP total',
+
+  paymentPlanExample: {
+    configurationLabel: '2 BHK Supreme Sample Calculation',
+    totalAgreementValue: '₹3,51,80,885',
+    totalCostForCustomer: '₹3,67,95,374.72',
+    milestones: [
+      { stage: 'Booking Amount', percentage: '5%', amount: '₹18,38,201.24', logic: '5% Of Loaded Value' },
+      { stage: 'Balance Application Money within 30 days from Booking Date', percentage: '5%', amount: '₹18,38,201.24', logic: '5% Of Loaded Value' },
+      { stage: 'Agreement Registration', percentage: '0%', amount: '₹31,350.00', logic: 'Registration charge plus 4.5% Price Loading applied to it' },
+      { stage: 'Within 50 days of booking upon execution of Agreement', percentage: '10%', amount: '₹36,76,402.47', logic: '10% Of Loaded Value' },
+      { stage: 'On Application of Occupancy Certificate', percentage: '75%', amount: '₹2,75,73,018.54', logic: '75% Of Loaded Value' },
+      { stage: 'On Intimation of Possession and total estimated and tentative other charges', percentage: '5%', amount: '₹18,38,201.24', logic: '5% Of Loaded Value' },
+      { stage: 'Total Cost', percentage: '100%', amount: '₹3,67,95,374.72', logic: '' },
+    ],
+    notes:
+      'This illustration is for representation purposes only. The source document states that the 20:80 Plan carries a 4.5% price loading on the CLP Total, inclusive of GST, registration and other charges.',
+  },
+
+  locationAdvantages: [
+    { category: 'Connectivity', items: ['Eastern Express Highway', 'Western Express Highway', 'Metro Line 1', 'Metro Line 4*', 'Metro Line 6^', 'Ghatkopar-Mankhurd Link Road', 'Vashi Bridge', 'Mumbai International Airport', 'BKC', 'SCLR'] },
+    { category: 'Education', items: ['Hiranandani Foundation School', 'Orchid International School, Vikhroli East', 'Udayachal High School'] },
+    { category: 'Healthcare', items: ['Godrej Memorial Hospital', 'Dr. L H Hiranandani Hospital', 'Fortis Hospital'] },
+    { category: 'Retail & Lifestyle', items: ['R City Mall', 'D-Mart', 'Phoenix Marketcity', 'Vikhroli Social & Starbucks'] },
+    { category: 'Business Hubs', items: ['Godrej IT Park', 'BKC', 'Powai', 'Andheri East'] },
+    { category: 'Natural Surroundings', items: ['Vikhroli Mangroves', 'Vihar Lake', 'Sanjay Gandhi National Park'] },
+  ],
+
+  microMarketSections: [
+    { heading: 'Market Positioning', paragraphs: ['Godrej Vistas is positioned around the combination of a central Mumbai location, premium living and proximity to extensive green surroundings.'] },
+    { heading: 'Central Mumbai Location', paragraphs: ['Vikhroli is positioned as the new centre of Mumbai, with connectivity towards key locations including BKC, Andheri East, Powai, Thane and Lower Parel.'] },
+    { heading: 'Nature-Led Advantage', paragraphs: ['The project is surrounded by significant green and natural landmarks, including Vikhroli Mangroves and Vihar Lake, reinforcing its positioning as a premium address close to Mumbai natural landscape.'] },
+    { heading: 'Amenity-Led Differentiation', paragraphs: ['Godrej Vistas offers a mix of sports, wellness, leisure and community spaces, including a squash court, badminton court, cricket net, jogging track, organic farming garden, star-gazing deck, swimming pool and mini theatre.'] },
+  ],
+
+  faqs: [
+    { category: '20:80 Payment Plan FAQs', items: [
+      { question: 'What is the 20:80 Payment Plan?', answer: 'It is a construction-linked payment structure where 20% of the total cost is paid upfront and the remaining 80% is paid through 75% on application of the Occupancy Certificate and 5% on intimation of possession.' },
+      { question: 'Why is there a 4.5% price loading?', answer: 'The source document states that the 20:80 plan carries a 4.5% loading on the CLP Total because a larger share of payment is deferred to later construction stages.' },
+      { question: 'What are the key milestones?', answer: 'The source illustration lists 5% Booking Amount, 5% Balance Application Money, Agreement Registration, 10% within 50 days of booking upon execution of Agreement, 75% on OC application and 5% on Intimation of Possession.' },
+    ] },
+    { category: 'Project FAQs', items: [
+      { question: 'Where is Godrej Vistas located?', answer: 'Godrej Vistas is located in Vikhroli, Mumbai, positioned as a well-connected micro-market with proximity to Vashi Bridge and upcoming Metro Lines 4 and 6.' },
+      { question: 'What amenities does Godrej Vistas offer?', answer: 'The source document describes sports, wellness and community amenities including squash court, badminton court, cricket net, jogging track, organic farming garden, star-gazing deck, yoga lawn, gymnasium, swimming pool, outdoor cafe, mini theatre and kids play area.' },
+      { question: 'Is the project RERA registered?', answer: 'Yes. Godrej Vistas is registered with MahaRERA under registration number P51800055142.' },
+    ] },
+    { category: 'About Godrej’s Freedom Plan Concept', items: [
+      { question: 'Does Godrej Vistas use the Godrej Freedom Plan?', answer: 'Godrej Vistas is documented under a 20:80 Payment Plan with 4.5% loading, but the source document does not brand it as the Freedom Plan. Freedom-branded Godrej project pages on this hub include projects such as Godrej Woods, Godrej Lakeside Orchard, Godrej Parkshire, Godrej Horizon and Godrej Skyshore.' },
+    ] },
+  ],
+
+  floorPlans: [
+    { label: '2 BHK Supreme Floor Plan', src: '/assets_freedom/godrej_vistas_2bhk_supreme.png', alt: 'Godrej Vistas 2 BHK Supreme Floor Plan' },
+    { label: '3 BHK Supreme Floor Plan', src: '/assets_freedom/godrej_vistas_3bhk_supreme.png', alt: 'Godrej Vistas 3 BHK Supreme Floor Plan' },
+  ],
+
+  legalDisclaimers:
+    'The Project is registered as Godrej Vistas with MahaRERA Registration No. P51800055142 available on MahaRERA website, https://maharera.maharashtra.gov.in. This project is being developed by Godrej & Boyce Mfg. Co. Ltd. and Godrej Properties Ltd. is the Development Manager. The sales office is at Godrej Construction, Godrej & Boyce Mfg. Co. Ltd. Plant 13, Pirojshanagar, Vikhroli East, Mumbai - 400079. This is the name of the campaign and refers to a payment offer. Please refer to payment terms as mentioned in the AFS. 20:80 Payment Plan shall mean construction linked payment plan as described in the source document. Offer valid till 31st Sept 2026. T&C Apply.',
+
+  sourceConflicts: [],
+
+  salesPhone: '+91 00000 00000',
+  leadGen: { adCode: '000000' },
+};
+
+// ────────────────────────────────────────────────────────────────
 // EXPORTS
 // ────────────────────────────────────────────────────────────────
 
@@ -2423,6 +3066,12 @@ export const freedomProjects: FreedomProject[] = [
   godrejAveline,
   godrejRegalPavilion,
   godrejAzure,
+  godrejBayview,
+  godrejBliss,
+  godrejExquisite,
+  godrejHorizon,
+  godrejSkyshore,
+  godrejVistas,
 ];
 
 export const getAllFreedomSlugs = () => freedomProjects.map((p) => p.slug);
