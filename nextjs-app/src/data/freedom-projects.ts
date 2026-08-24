@@ -2442,7 +2442,7 @@ const godrejBayview: FreedomProject = {
     { configuration: '3 BHK Royal', area: '1268 sqft.', agreementValue: '4.81 Cr. TO 5.46 Cr.', agreementValuePlusGst: '4.81 Cr. + GST 5%', agreementValuePlusGstSdr: '4.81 Cr. + GST 5% + 6%' },
   ],
 
-  rera: 'P51700031726',
+  rera: 'P51700031726, P51700079255',
   reraCertificateLink: 'https://maharera.maharashtra.gov.in',
   reraPortal: 'https://maharera.maharashtra.gov.in',
   possessionRera: 'Dec 2028',
@@ -2519,10 +2519,7 @@ const godrejBayview: FreedomProject = {
   legalDisclaimers:
     'The Project is being developed by Suncity Infrastructures (Mumbai) LLP, which is an affiliate of Godrej Properties Ltd. The sale is subject to terms of the Application Form and Agreement for Sale. All specifications of the unit shall be as per the Agreement for Sale. Customers are advised to apprise themselves of the necessary and relevant information about the Project prior to making any purchase decisions. The official website of Godrej Properties Limited is www.godrejproperties.com. Please do not rely on the information provided on any other website. Indicative Agreement value is exclusive of stamp duty, registration, GST and other applicable charges. 25:25:50 refers to the payment plan as described in the source document. T&C apply.',
 
-  sourceConflicts: [
-    { location: 'RERA fields', description: 'Section 3 lists RERA Number P51700031726, while the FAQ/legal text refers to Seabreeze at Godrej Bayview under MahaRERA No. P51700079255.' },
-    { location: 'Payment plan table', description: 'The 25:25:50 table labels the project row as Q2 Fy27 Exquisite even though the document is for Godrej Bayview.' },
-  ],
+  sourceConflicts: [],
 
   salesPhone: '+91 00000 00000',
   leadGen: { adCode: '000000' },
@@ -2734,11 +2731,9 @@ const godrejExquisite: FreedomProject = {
   ],
 
   legalDisclaimers:
-    'The project is registered as Godrej Exquisite under MahaRERA No.: P51700024496, available on https://maharera.maharashtra.gov.in. This project is being developed by Godrej Macbricks Private Limited, earlier known as Ashank Macbricks Private Limited, a part of Godrej Properties Group. The sales office is at Godrej Exquisite, Ghodbunder road, Vijay Nagari, Thane West, Thane, Maharashtra-400607. The sale is subject to the terms of Application Form and Agreement For Sale. Customers are advised to apprise themselves with all relevant information before making any purchase decision. The official website of Godrej Properties Limited is www.godrejproperties.com. Indicative Agreement Value excludes Stamp Duty & Registration, GST and other applicable charges. T&C apply.',
+    'This project is being developed by Godrej Macbricks Private Limited (earlier known as Ashank Macbricks Private Limited), a subsidiary of of Godrej Properties Limited. The sales office is at Godrej Exquisite, Ghodbunder Road, Vijay Nagari, Thane West, Thane, Maharashtra-400607 and registered office of the Developer is 5th Floor, Godrej ONE, Pirojshanagar, Vikhroli, Mumbai 400079. The sale is subject to the terms of Application Form and Agreement For Sale (AFS). All specification of the unit shall be as per the final agreement between the parties. Customers are advised to apprise themselves with all relevant information before making any purchase decision. The official website of Godrej Properties Limited is www.godrejproperties.com. Please do not rely on the information provided on any other website. This contains AI generated image for representation purpose only. No warranty is expressly or impliedly given that the completed development will comply in any degree with such media as depicted. The furniture, accessories, paintings, plantations, landscaping, items, electronic goods, additional fittings/fixtures, decorative items, false ceiling including finishing materials, specifications, shades, sizes and colour of the tiles, etc. shown in the image are only indicative in nature and are only for the purpose of illustrating/indicating a conceived layout and do not form part of the standard specifications/amenities/services to be provided in the unit and/or the Project. *The views may vary basis the actual unit selected. ^Indicative Agreement Value excludes Stamp Duty Registration charges, GST and other applicable charges. #This is the name of the campaign and refers to a construction linked payment plan whereby the customer has to pay 10% of agreement value at the time of booking. The customer shall execute and register the Agreement for Sale (AFS) within 30 days from the date of booking by paying the applicable Stamp Duty and Registration Charges. A further 15% of the Agreement Value shall be payable within 60 days from the day of booking post AFS registration. Thereafter, the customer shall pay 70% on receipt of OC and the remaining 5% on the intimation of possession, as per the agreement of sale. Offers maybe withdrawn anytime, basis sole discretion of the developer. Date of Publication 18th August, 2026. T&C Apply.',
 
-  sourceConflicts: [
-    { location: 'Payment plan timing', description: 'The payment table says 15% within 60 days of booking, while legal disclaimer text says the next 15% shall be paid within 45 days from booking.' },
-  ],
+  sourceConflicts: [],
 
   salesPhone: '+91 00000 00000',
   leadGen: { adCode: '000000' },
@@ -2782,7 +2777,7 @@ const godrejHorizon: FreedomProject = {
   paymentPlanName: '20:80 Freedom Payment Plan',
   paymentPlanShort: '20:80',
   paymentPlanFormula:
-    '20% upfront through 10% Booking Amount and 10% within 45 days of booking, with 70% on Application of Occupancy Certificate and 10% on Intimation of Possession; Stamp Duty & Registration is payable within 30 days from booking',
+    '20% upfront through 10% Booking Amount and 10% within 45 days of booking, with 75% on Application of Occupancy Certificate and 5% on Intimation of Possession; Stamp Duty & Registration is payable within 30 days from booking',
   paymentPlanUpfrontDescription:
     '20% of the Agreement Value upfront: 10% as Booking Amount and 10% within 45 days of booking, with Stamp Duty & Registration separately within 30 days',
 
@@ -2794,8 +2789,8 @@ const godrejHorizon: FreedomProject = {
       { stage: 'Booking Amount', percentage: '10%', amount: '₹59,53,499.71', logic: '10% Of Agreement Value + additional 5% GST of that value' },
       { stage: 'Stamp Duty and Registration within 30 days from Booking Date', percentage: '0%', amount: '₹34,31,999.83', logic: 'Same flat Stamp Duty & Registration total as the CLP plan' },
       { stage: 'Within 45 days of Booking', percentage: '10%', amount: '₹59,53,499.71', logic: '10% Of Agreement Value + additional 5% GST of that value' },
-      { stage: 'On Application of Occupancy Certificate', percentage: '70%', amount: '₹4,16,74,497.94', logic: '70% Of Agreement Value + additional 5% GST of that value' },
-      { stage: 'On Intimation of Possession', percentage: '10%', amount: '₹59,53,499.71', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Application of Occupancy Certificate', percentage: '75%', amount: '₹4,46,51,247.80', logic: '75% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Intimation of Possession', percentage: '5%', amount: '₹29,76,749.85', logic: '5% Of Agreement Value + additional 5% GST of that value' },
       { stage: 'Maintenance and Corpus fund', percentage: '0%', amount: '₹3,38,027.90', logic: 'Same Maintenance & Corpus fund as the CLP plan' },
       { stage: 'Other Charges', percentage: '0%', amount: '₹5,71,272.50', logic: 'Same Other Charges as the CLP plan' },
       { stage: 'Total', percentage: '100%', amount: '₹6,38,76,297.29', logic: 'Sum of all rows above' },
@@ -2821,7 +2816,7 @@ const godrejHorizon: FreedomProject = {
 
   faqs: [
     { category: '20:80 Freedom Payment Plan FAQs', items: [
-      { question: 'What is the overall payment structure for the Horizon 20:80 Freedom Payment Plan?', answer: '20% of the Agreement Value is paid upfront: 10% as Booking Amount and another 10% within 45 days of booking. Stamp Duty & Registration is payable within 30 days. The remaining 80% is paid as 70% on Application of Occupancy Certificate and 10% on Intimation of Possession.' },
+      { question: 'What is the overall payment structure for the Horizon 20:80 Freedom Payment Plan?', answer: '20% of the Agreement Value is paid upfront: 10% as Booking Amount and another 10% within 45 days of booking. Stamp Duty & Registration is payable within 30 days. The remaining 80% is paid as 75% on Application of Occupancy Certificate and 5% on Intimation of Possession.' },
       { question: 'Is any price loading applied to this plan?', answer: 'No. The source document states that no price loading is applied; the Agreement Value is split 20:80 as-is, with 5% GST added on each Agreement Value-based milestone.' },
       { question: 'Are Stamp Duty, Maintenance and Other Charges different under this plan?', answer: 'No. The source document states that Stamp Duty, Maintenance/Corpus fund and Other Charges are the same regardless of the payment plan selected.' },
     ] },
@@ -2837,11 +2832,9 @@ const godrejHorizon: FreedomProject = {
   ],
 
   legalDisclaimers:
-    'The Project is being developed by Godrej Projects Development Limited. Site Address: Godrej Horizon Phase II, R.A.Kidwai Road, Azad Nagar, Wadala (West), Mumbai - 400 031. The sale is subject to the terms of Application Form and Agreement for Sale. All specifications of the unit shall be as per the final agreement between the Developer and the customer. Recipients are advised to apprise themselves of the necessary and relevant information of the project/offer prior to making any purchase decisions. The official website of Godrej Properties Limited is www.godrejproperties.com. Please do not rely on the information provided on any other website. Exclusive 20:80 payment plan is valid for all units of Godrej Horizon Phase II except Series 03, 04 and 05 from 37th floor to 44th floor. T&C apply.',
+    'The Project is being developed by Godrej Projects Development Limited (“Developer”). Site Address: Godrej Horizon Phase II, R.A.Kidwai Road, Azad Nagar, Wadala (West), Mumbai – 400 031 and registered office of the Developer is Godrej One, 5th floor, Pirojshanagar, Eastern Express Highway, Vikhroli (East), Mumbai 400079. The sale is subject to the terms of Application Form and Agreement for Sale. All specifications of the unit shall be as per the final agreement between the Developer and the customer. Recipients are advised to apprise themselves of the necessary and relevant information of the project/offer prior to making any purchase decisions. The official website of Godrej Properties Limited is www.godrejproperties.com. Please do not rely on the information provided on any other website. This contains stock image for representation purpose only. No warranty is expressly or impliedly given that the completed development will comply in any degree with such stock image as depicted. *Indicative Agreement Value which excludes Stamp Duty & Registration charges, GST and Other applicable charges. #This is the name of the campaign and refers to a payment offer. Please refer to payment terms as mentioned in the AFS. Basis sole discretion of the developer. Limited time period offer. Exclusive 20:80 payment plan is valid for all units of Godrej Horizon Phase II except Series 03, 04 and 05 from 37th floor to 44th floor. 20:80 payment plan shall mean construction link payment plan whereby the customer has to pay 10% on booking. Thereafter, the customer shall execute AFS by paying the stamp duty and registration charges within 30 days of booking Subsequently, the customer shall pay balance 10% of Agreement Value within 45 days of booking post AFS registration. The next 75% shall be due and payable on the application of occupancy certificate and the balance 5% on the intimation on possession. Please refer to payment terms as mentioned in the Agreement for Sale. Offer maybe withdrawn anytime basis sole discretion of the Developer. The views may vary basis the actual unit selected. We do not represent or warrant the continuance of any views for any period of time after the date of publication of this document, or on any new development, redevelopment, or infrastructure in the vicinity resulting into any kind of impact on the views. The furniture, accessories, paintings, plantations, landscaping, items, electronic goods, additional fittings/fixtures, decorative items, false ceiling including finishing materials, specifications, shades, sizes and colour of the tiles, etc. shown in the image are only indicative in nature and are only for the purpose of illustrating/indicating a conceived layout and do not form part of the standard specifications/amenities/services to be provided in the unit and/or the Project. The specifications/amenities mentioned in the Agreement for sale and/or uploaded on RERA website shall be final and binding on the Developer and Purchaser. !This refers to the name of the campaign and not the RERA registered name. Date of publication: 21st Aug 2026. T&C Apply.',
 
-  sourceConflicts: [
-    { location: 'Legal disclaimer payment split', description: 'The payment table states 70% on application of OC and 10% on possession, while the legal disclaimer text states 75% on application of occupancy certificate and 5% on possession.' },
-  ],
+  sourceConflicts: [],
 
   salesPhone: '+91 00000 00000',
   leadGen: { adCode: '000000' },
