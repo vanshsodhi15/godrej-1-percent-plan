@@ -2521,7 +2521,7 @@ const godrejBayview: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 00000 00000',
+  salesPhone: '+91 95131 73012',
   leadGen: { adCode: '000000' },
 };
 
@@ -2634,7 +2634,7 @@ const godrejBliss: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 00000 00000',
+  salesPhone: '+91 95131 72756',
   leadGen: { adCode: '000000' },
 };
 
@@ -2735,7 +2735,7 @@ const godrejExquisite: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 00000 00000',
+  salesPhone: '+91 95131 72980',
   leadGen: { adCode: '000000' },
 };
 
@@ -2836,7 +2836,7 @@ const godrejHorizon: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 00000 00000',
+  salesPhone: '+91 95131 73050',
   leadGen: { adCode: '000000' },
 };
 
@@ -2939,7 +2939,7 @@ const godrejSkyshore: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 00000 00000',
+  salesPhone: '+91 95131 73264',
   leadGen: { adCode: '000000' },
 };
 
@@ -3044,7 +3044,7 @@ const godrejVistas: FreedomProject = {
 
   sourceConflicts: [],
 
-  salesPhone: '+91 00000 00000',
+  salesPhone: '+91 95131 73256',
   leadGen: { adCode: '000000' },
 };
 
