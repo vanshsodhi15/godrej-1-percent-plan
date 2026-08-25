@@ -26,6 +26,7 @@ export interface FreedomMilestone {
   stage: string;                        // "Booking Amount", "Within 21 days of Booking"
   percentage: string;                   // "5%"
   amount: string;                       // "12,44,412.59"
+  tentativeDate?: string;               // optional date from source sheets, e.g. "Oct 2028 (tentative)"
   logic: string;                        // "5% of Agreement Value + additional 5% GST of that value"
 }
 
@@ -2876,28 +2877,35 @@ const godrejSkyshore: FreedomProject = {
   possessionRera: 'December 2031',
   possessionGpl: 'February 2030',
 
-  paymentPlanName: '20:80 Freedom Plan',
-  paymentPlanShort: '20:80',
+  paymentPlanName: 'Construction Linked Payment Plan',
+  paymentPlanShort: 'Construction Linked',
   paymentPlanFormula:
-    '20% upfront through 10% Booking Amount and 10% within 45 days of booking, with 70% on Application of Occupancy Certificate and 10% on Intimation of Possession; Stamp Duty & Registration is payable separately within 30 days',
+    '10% Application Money, Stamp Duty & Registration within 30 days of booking, 20% within 60 days from booking, 30% on 15 July 2027 or initiation of 2nd slab whichever is later, 10% on completion of RCC terrace, and the remaining 30% in 5% instalments linked to staircases/lift wells, walls/internal plaster/flooring, elevation/external plumbing, water pumps/electrical fittings, Occupancy Certificate application and Intimation of Possession',
   paymentPlanUpfrontDescription:
-    '20% of the Agreement Value upfront: 10% Booking Amount and 10% within 45 days of booking, with Stamp Duty & Registration separately within 30 days',
+    '30% of the Agreement Value in the first 60 days of booking: 10% Application Money and 20% within 60 days from booking, with Stamp Duty & Registration payable separately within 30 days',
 
   paymentPlanExample: {
-    configurationLabel: 'Skyshore 20:80 Freedom Plan Sample Calculation',
-    totalAgreementValue: '₹9.33 Cr.',
+    configurationLabel: 'Skyshore - Payment Plan Calculation - GSKYTB1701 (Sample Unit, 1578 sq.ft., Unsold)',
+    totalAgreementValue: '₹9.35 Cr.',
     totalCostForCustomer: '₹10.61 Cr.',
     milestones: [
-      { stage: 'Booking Amount', percentage: '10%', amount: '₹0.98 Cr.', logic: '10% Of Agreement Value + additional 5% GST of that value' },
-      { stage: 'Stamp Duty and Registration within 30 days from Booking Date', percentage: '0%', amount: '₹0.56 Cr.', logic: '6% of Agreement Value, no GST' },
-      { stage: 'Within 45 days of Booking', percentage: '10%', amount: '₹0.98 Cr.', logic: '10% Of Agreement Value + additional 5% GST of that value' },
-      { stage: 'On Application of Occupancy Certificate', percentage: '70%', amount: '₹6.87 Cr.', logic: '70% Of Agreement Value + additional 5% GST of that value' },
-      { stage: 'On Intimation of Possession', percentage: '10%', amount: '₹0.98 Cr.', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Application Money', percentage: '10%', amount: '₹0.98 Cr.', tentativeDate: '-', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Stamp Duty & Registration', percentage: '-', amount: '₹0.56 Cr.', tentativeDate: 'Within 30 days of Booking', logic: '6% of Agreement Value (Stamp Duty & Registration, no GST)' },
+      { stage: 'Within 60 Days from Booking', percentage: '20%', amount: '₹1.96 Cr.', tentativeDate: '-', logic: '20% Of Agreement Value + additional 5% GST of that value' },
+      { stage: '15th July 2027 or initiation of 2nd slab, whichever is later', percentage: '30%', amount: '₹2.95 Cr.', tentativeDate: '15 Jul 2027 (tentative)', logic: '30% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Completion of RCC terrace', percentage: '10%', amount: '₹0.98 Cr.', tentativeDate: 'Oct 2028 (tentative)', logic: '10% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On completion of the staircases and lift wells', percentage: '5%', amount: '₹0.49 Cr.', tentativeDate: 'Dec 2028 (tentative)', logic: '5% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On completion of the walls, internal plaster, floorings of the said Apartment', percentage: '5%', amount: '₹0.49 Cr.', tentativeDate: 'Jan 2029 (tentative)', logic: '5% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On completion of Elevation and external plumbing of said apartment', percentage: '5%', amount: '₹0.49 Cr.', tentativeDate: 'Jan 2029 (tentative)', logic: '5% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On completion of Water Pumps of the building and Electrical Fittings of said apartment', percentage: '5%', amount: '₹0.49 Cr.', tentativeDate: 'Jan 2029 (tentative)', logic: '5% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Application of Occupancy Certificate', percentage: '5%', amount: '₹0.49 Cr.', tentativeDate: 'Mar 2029 (tentative)', logic: '5% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'On Intimation of Possession', percentage: '5%', amount: '₹0.49 Cr.', tentativeDate: 'Dec 2029 (tentative)', logic: '5% Of Agreement Value + additional 5% GST of that value' },
+      { stage: 'Total AV', percentage: '100%', amount: '₹10.38 Cr.', tentativeDate: '', logic: '' },
       { stage: 'Other Charges', percentage: '2.5%', amount: '₹0.23 Cr.', logic: '2.5% of Agreement Value, added on top of Total AV, no GST' },
       { stage: 'Total Cost Of Ownership', percentage: '100%', amount: '₹10.61 Cr.', logic: '' },
     ],
     notes:
-      'This illustration is for representation purposes only. The source document states that this 20:80 plan uses the same Agreement Value, GST, SDR and Other Charges as the Construction Linked Plan and only the milestone percentage split differs.',
+      'This illustration is for representation purposes only. The sample unit calculation uses Agreement Value 9.35 Cr., GST rate 5%, SDR rate 6%, and the milestone table Other Charges row of 2.5% / 0.23 Cr. to arrive at Total Cost of Ownership 10.61 Cr.',
   },
 
   locationAdvantages: [
@@ -2917,10 +2925,10 @@ const godrejSkyshore: FreedomProject = {
   ],
 
   faqs: [
-    { category: '20:80 Freedom Plan FAQs', items: [
-      { question: 'What is the structure of the 20:80 Freedom Payment Plan?', answer: 'Under this plan, 20% of the Agreement Value is paid upfront through 10% Booking Amount and 10% within 45 days of booking, while the remaining 80% is deferred as 70% on Application of Occupancy Certificate and 10% on Intimation of Possession. Stamp Duty and Registration is payable separately within 30 days of booking.' },
-      { question: 'Is this payment plan available for all units?', answer: 'No. As per the brochure, the 20:80 Freedom Payment Plan is valid for all units except Series 03, 04 and 05 from the 37th to 44th floor.' },
-      { question: 'Are GST, Stamp Duty and Other Charges included?', answer: 'GST at 5% is added on each Agreement Value milestone. Stamp Duty & Registration at 6% and Other Charges at 2.5% are charged separately as per the source table.' },
+    { category: 'Construction Linked Payment Plan FAQs', items: [
+      { question: 'What is the structure of the Godrej Skyshore Construction Linked Payment Plan?', answer: 'The sample unit schedule starts with 10% Application Money, Stamp Duty & Registration within 30 days of booking, 20% within 60 days from booking, 30% on 15 July 2027 or initiation of 2nd slab whichever is later, 10% on completion of RCC terrace, and then 5% instalments at the listed completion, OC and possession milestones.' },
+      { question: 'What sample unit is used for the Skyshore payment calculation?', answer: 'The attached calculation is for GSKYTB1701, a sample unsold unit of 1578 sq.ft., with Agreement Value of 9.35 Cr. and Total Cost of Ownership of 10.61 Cr.' },
+      { question: 'Are GST, Stamp Duty and Other Charges included?', answer: 'GST at 5% is added on each Agreement Value milestone. Stamp Duty & Registration is shown at 6% of Agreement Value and payable within 30 days of booking. Other Charges are shown in the milestone table as 2.5% of Agreement Value, added on top of Total AV, with no GST.' },
     ] },
     { category: 'Project FAQs', items: [
       { question: 'Where is Godrej Skyshore located?', answer: 'Godrej Skyshore is located on Popco Colony Road, Versova, Andheri West, Mumbai.' },

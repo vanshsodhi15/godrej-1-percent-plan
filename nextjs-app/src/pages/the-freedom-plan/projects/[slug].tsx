@@ -203,6 +203,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
   });
 
   const ex = project.paymentPlanExample;
+  const hasTentativeDates = ex.milestones.some((m) => m.tentativeDate !== undefined);
 
   return (
     <Layout theme="freedom">
@@ -284,7 +285,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
             {project.paymentPlanExample.totalCostForCustomer}. Milestone-by-milestone payout under the{' '}
             {project.paymentPlanName}:{' '}
             {project.paymentPlanExample.milestones
-              .filter((m) => m.stage.toLowerCase() !== 'total cost')
+              .filter((m) => !m.stage.toLowerCase().startsWith('total'))
               .map((m) => `${m.stage} at ${m.percentage} equals ${m.amount}`)
               .join('; ')}
             .{project.paymentPlanExample.additionalSdrNote ? ` ${project.paymentPlanExample.additionalSdrNote}` : ''}
@@ -473,6 +474,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                     <th>Milestone: {project.paymentPlanName}</th>
                     <th>%</th>
                     <th>Amount</th>
+                    {hasTentativeDates && <th>Tentative Date</th>}
                     <th>Calculation Logic</th>
                   </tr>
                 </thead>
@@ -490,12 +492,13 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                     } else if (m.stage.includes('Maintenance') || m.stage.includes('Fund')) {
                       rowClass = 'milestone-phase-other';
                     }
-                    const isTotal = m.stage === 'Total Cost';
+                    const isTotal = m.stage.toLowerCase().startsWith('total');
                     return (
                       <tr key={i} className={rowClass}>
                         <td>{isTotal ? <strong>{m.stage}</strong> : m.stage}</td>
                         <td><strong>{m.percentage}</strong></td>
                         <td><strong>{m.amount}</strong></td>
+                        {hasTentativeDates && <td>{m.tentativeDate ?? '-'}</td>}
                         <td style={{ fontSize: '0.8125rem', color: 'var(--color-muted)' }}>{m.logic}</td>
                       </tr>
                     );
