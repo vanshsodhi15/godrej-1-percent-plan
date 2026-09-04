@@ -89,6 +89,7 @@ export interface FreedomProject {
 
   // Section 2 — Configurations & Pricing
   pricing: FreedomPricingRow[];
+  hidePricingSdrNote?: boolean;
 
   // Section 3 — RERA
   rera: string;
@@ -2671,7 +2672,7 @@ const godrejExquisite: FreedomProject = {
   possessionRera: 'September 2026',
   possessionGpl: 'September 2026',
 
-  paymentPlanName: '25:75 Payment Plan',
+  paymentPlanName: 'Freedom from Payments: Pay 25% now and nothing till OC*',
   paymentPlanShort: '25:75',
   paymentPlanFormula:
     '25% before construction milestones through 10% Application Money and 15% within 60 days of booking, followed by 70% on receipt of Occupancy Certificate and 5% on Intimation of Possession',
@@ -2703,15 +2704,15 @@ const godrejExquisite: FreedomProject = {
   ],
 
   microMarketSections: [
-    { heading: 'Market Positioning', paragraphs: ['Godrej Exquisite is positioned as a premium residential address in Thane, built around connectivity, exclusivity and a luxury-led lifestyle.'] },
+    { heading: 'Market Positioning', paragraphs: ['Godrej Exquisite is a premium residential address in Thane, built around exclusivity, superior connectivity and a luxury-led lifestyle.'] },
     { heading: 'Well-Connected Thane Address', paragraphs: ['The project benefits from access to Ghodbunder Road, JVLR, SCLR, Eastern Freeway, NH 8 and the Mumbai-Nashik Highway, creating connectivity across key parts of the MMR.'] },
     { heading: 'Future Infrastructure Advantage', paragraphs: ['Proposed infrastructure such as the Borivali-Thane tunnel and Metro Lines 4, 4A and 5 is expected to further improve regional connectivity.'] },
     { heading: 'Premium Lifestyle Positioning', paragraphs: ['Godrej Exquisite is positioned as an exclusive development comprising three magnificent towers, with each tower envisioned around its own world of luxury and supported by a grand clubhouse and world-class amenities.'] },
   ],
 
   faqs: [
-    { category: '25:75 Payment Plan FAQs', items: [
-      { question: 'What does the 25:75 payment plan mean?', answer: 'It refers to the split between upfront and possession-linked payments: the first 25% is collected before construction milestones, and the remaining 75% is collected closer to completion.' },
+    { category: 'Freedom from Payments FAQs', items: [
+      { question: 'What does Freedom from Payments: Pay 25% now and nothing till OC* mean?', answer: 'It refers to the split between upfront and possession-linked payments: the first 25% is collected before construction milestones, and the remaining 75% is collected closer to completion.' },
       { question: 'How much do I pay at the time of booking?', answer: 'At booking, the source schedule lists Application Money at 10% of the Agreement Value, forming part of the overall Booking Amount.' },
       { question: 'What does the total payable include besides the unit cost?', answer: 'The total payable includes the Agreement Value paid across the milestones plus SDR and Other Charges shown in the source table.' },
     ] },
@@ -2722,7 +2723,7 @@ const godrejExquisite: FreedomProject = {
       { question: 'What upcoming infrastructure is highlighted?', answer: 'The source document references Metro Line 5, the proposed Borivali-Thane tunnel, Metro Line 10, Metro Line 4A and Metro Line 4.' },
     ] },
     { category: 'About Godrej’s Freedom Plan Concept', items: [
-      { question: 'Does Godrej Exquisite use the Godrej Freedom Plan?', answer: 'Godrej Exquisite is documented under the 25:75 Payment Plan, not a Freedom-branded plan. Freedom-branded Godrej project pages on this hub include projects such as Godrej Woods, Godrej Lakeside Orchard, Godrej Parkshire, Godrej Horizon and Godrej Skyshore.' },
+      { question: 'Does Godrej Exquisite use the Godrej Freedom from Payments plan?', answer: 'Yes. Godrej Exquisite is documented under Freedom from Payments: Pay 25% now and nothing till OC*, with 25% collected before construction milestones and the balance linked closer to Occupancy Certificate and possession milestones.' },
     ] },
   ],
 
@@ -2976,9 +2977,9 @@ const godrejVistas: FreedomProject = {
     { configuration: '2 BHK Supreme', area: '844-856 sq. ft.', agreementValue: '3.13 Cr. to 3.79 Cr.', agreementValuePlusGst: '3.29 Cr. to 3.98 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
     { configuration: '3 BHK Smart', area: '985 sq. ft.', agreementValue: '4.11 Cr. to 4.83 Cr.', agreementValuePlusGst: '4.32 Cr. to 5.07 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
     { configuration: '3 BHK Supreme', area: '1196 sq. ft.', agreementValue: '5.30 Cr. to 6.17 Cr.', agreementValuePlusGst: '5.56 Cr. to 6.48 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
-    { configuration: '3 BHK Palatial with Home Office', area: '1410 sq. ft.', agreementValue: '6.23 Cr.', agreementValuePlusGst: '6.54 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
     { configuration: '2 BHK + 2 BHK', area: '(853+851) / (853+856) / (851+844) sq. ft.', agreementValue: '8.46 Cr. to 8.66 Cr.', agreementValuePlusGst: '8.88 Cr. to 9.09 Cr.', agreementValuePlusGstSdr: 'Agreement Value + GST 5%' },
   ],
+  hidePricingSdrNote: true,
 
   rera: 'P51800055142',
   reraCertificateLink: 'https://maharera.maharashtra.gov.in',

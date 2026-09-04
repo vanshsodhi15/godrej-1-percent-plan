@@ -410,10 +410,12 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
                 ))}
               </tbody>
             </table>
-          </div>          <p style={{ marginTop: '0.75rem', fontSize: '0.8125rem', color: 'var(--color-muted)', fontStyle: 'italic' }}>
-            *SDR (Stamp Duty &amp; Registration) is payable additionally at the time of possession and is subject to
-            prevailing government rates at handover.
-          </p>        </div>
+          </div>          {!project.hidePricingSdrNote && (
+            <p style={{ marginTop: '0.75rem', fontSize: '0.8125rem', color: 'var(--color-muted)', fontStyle: 'italic' }}>
+              *SDR (Stamp Duty &amp; Registration) is payable additionally at the time of possession and is subject to
+              prevailing government rates at handover.
+            </p>
+          )}        </div>
       </section>
 
       {/* ── PAYMENT PLAN — APPLIED ──────────────────────────── */}
