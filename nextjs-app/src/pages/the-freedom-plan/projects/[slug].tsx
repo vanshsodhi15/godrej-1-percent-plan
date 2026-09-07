@@ -62,7 +62,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     {
       question: `How much do I pay upfront under the Godrej ${project.paymentPlanName} at ${project.name}?`,
       answer:
-        `Upfront payment under the Godrej ${project.paymentPlanName} at ${project.name} is ${project.paymentPlanUpfrontDescription}.`,
+        `Upfront payment under the Godrej ${project.paymentPlanName} at ${project.name} is ${project.paymentPlanUpfrontDescription}.${project.paymentPlanEligibilityNote ? ` ${project.paymentPlanEligibilityNote}` : ''}`,
     },
     {
       question: `Is the Godrej ${project.paymentPlanName} a discount on the property price of ${project.name}?`,
@@ -269,8 +269,11 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         <p>
           Buyer configurations at {project.name} include{' '}
           {project.pricing.map((p) => `${p.configuration} (${p.area}, Agreement Value ${p.agreementValue})`).join('; ')}.
-          Possession is targeted for {project.possessionGpl} per Godrej Properties’ internal plan and{' '}
-          {project.possessionRera} per RERA.
+          {project.hidePossessionGpl ? (
+            <> Possession timelines per RERA are {project.possessionRera}.</>
+          ) : (
+            <>Possession is targeted for {project.possessionGpl} per Godrej Properties’ internal plan and {project.possessionRera} per RERA.</>
+          )}
         </p>
         {project.salesPhone && (
           <p>
@@ -304,7 +307,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           <dt>Construction status</dt><dd>{project.constructionStatus}</dd>
           <dt>Payment plan</dt><dd>{project.paymentPlanName}</dd>
           <dt>Possession (RERA)</dt><dd>{project.possessionRera}</dd>
-          <dt>Possession (GPL target)</dt><dd>{project.possessionGpl}</dd>
+          {!project.hidePossessionGpl && (<><dt>Possession (GPL target)</dt><dd>{project.possessionGpl}</dd></>)}
           {project.salesPhone && (<><dt>Sales phone</dt><dd>{project.salesPhone}</dd></>)}
           {project.pricing.map((row, i) => (
             <Fragment key={i}>
@@ -427,6 +430,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
 
           <p style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 1.5rem', color: 'var(--color-body)' }}>
             The Godrej {project.paymentPlanName} at {project.name} is structured across the milestones below.
+            {project.paymentPlanEligibilityNote && <> {project.paymentPlanEligibilityNote}</>}
           </p>
 
           <div style={{
@@ -554,10 +558,12 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
               <h3>Possession (RERA)</h3>
               <p>{project.possessionRera}</p>
             </div>
-            <div className="card card-accent">
-              <h3>Possession (GPL Target)</h3>
-              <p>{project.possessionGpl}</p>
-            </div>
+            {!project.hidePossessionGpl && (
+              <div className="card card-accent">
+                <h3>Possession (GPL Target)</h3>
+                <p>{project.possessionGpl}</p>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -686,6 +692,11 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
           </h2>
 
           <div className="faq-section" style={{ marginTop: '1rem', borderTop: 'none', paddingTop: 0 }}>
+            {project.paymentPlanEligibilityNote && (
+              <p style={{ marginBottom: '1rem', color: 'var(--color-body)', fontWeight: 600 }}>
+                {project.paymentPlanEligibilityNote}
+              </p>
+            )}
             {/* Plan-level canonical Q&A is embedded invisibly in the FAQPage
                 JSON-LD (see planFaqs spread above). It is intentionally NOT
                 rendered visibly here to avoid duplicating the project-specific
