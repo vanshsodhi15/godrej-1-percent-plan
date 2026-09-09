@@ -18,6 +18,51 @@ interface FreedomProjectPageProps {
   project: FreedomProject;
 }
 
+const SITE_ORIGIN = 'https://www.godrejproperties.com';
+
+const publishedProjectMetadataBySlug: Record<string, { path: string; ogImage?: string }> = {
+  'godrej-exquisite': {
+    path: '/freedom-campaign/projects/godrej-exquisite/',
+  },
+  'godrej-vistas': {
+    path: '/freedom-campaign/projects/godrej-vistas/',
+  },
+  'godrej-skyshore': {
+    path: '/freedom-campaign/projects/godrej-skyshore/',
+  },
+  'godrej-bayview': {
+    path: '/freedom-campaign/projects/godrej-bayview/',
+  },
+  'godrej-horizon': {
+    path: '/freedom-campaign/projects/godrej-horizon/',
+  },
+  'godrej-parkshire': {
+    path: '/freedom-campaign/projects/godrej-parkshire/',
+  },
+  'godrej-lakeside-orchard': {
+    path: '/freedom-campaign/projects/godrej-lakeside-orchard/',
+  },
+  'godrej-woods': {
+    path: '/freedom-campaign/projects/godrej-woods/',
+  },
+  'godrej-regal-pavilion': {
+    path: '/construction-linked-plan/projects/godrej-regal-pavilion/',
+  },
+  'godrej-aveline': {
+    path: '/construction-linked-plan/projects/godrej-aveline/',
+  },
+  'godrej-azure': {
+    path: '/one-percent-payment-plan/projects/godrej-azure/',
+    ogImage: 'https://www.godrejproperties.com/one-percent-payment-plan/imgs/1_percent_og_image.jpg',
+  },
+};
+
+function getPublishedProjectMetadata(slug: string) {
+  return publishedProjectMetadataBySlug[slug] ?? {
+    path: `/the-freedom-plan/projects/${slug}/`,
+  };
+}
+
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: getAllFreedomSlugs().map((slug) => ({ params: { slug } })),
   fallback: false,
@@ -43,7 +88,8 @@ export const getStaticProps: GetStaticProps<FreedomProjectPageProps> = async (ct
  */
 
 export default function FreedomProjectPage({ project }: FreedomProjectPageProps) {
-  const canonical = `https://www.godrejproperties.com/the-freedom-plan/projects/${project.slug}`;
+  const publishedMetadata = getPublishedProjectMetadata(project.slug);
+  const canonical = `${SITE_ORIGIN}${publishedMetadata.path}`;
   const title = `${project.name} | Godrej ${project.paymentPlanName} | RERA, Pricing & FAQs`;
   const desc =
     `${project.name}, ${project.microLocation}, ${project.zone}, ${project.city}, eligible under the Godrej ${project.paymentPlanName}. ` +
@@ -211,6 +257,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
         title={title}
         description={desc}
         canonical={canonical}
+        ogImage={publishedMetadata.ogImage}
         schema={[apartmentSchema, offerSchema, faqSchema, breadcrumbSchema, articleSchema, ...(organizationSchema ? [organizationSchema] : [])]}
       />
 
