@@ -19,41 +19,54 @@ interface FreedomProjectPageProps {
 }
 
 const SITE_ORIGIN = 'https://www.godrejproperties.com';
+const FREEDOM_OG_IMAGE = `${SITE_ORIGIN}/freedom-campaign/imgs/freedom_og_image.jpg`;
+const CLP_OG_IMAGE = `${SITE_ORIGIN}/construction-linked-plan/imgs/clp_og_image.jpg`;
+const ONE_PERCENT_OG_IMAGE = `${SITE_ORIGIN}/one-percent-payment-plan/imgs/1_percent_og_image.jpg`;
 
 const publishedProjectMetadataBySlug: Record<string, { path: string; ogImage?: string }> = {
   'godrej-exquisite': {
     path: '/freedom-campaign/projects/godrej-exquisite/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-vistas': {
     path: '/freedom-campaign/projects/godrej-vistas/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-skyshore': {
     path: '/freedom-campaign/projects/godrej-skyshore/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-bayview': {
     path: '/freedom-campaign/projects/godrej-bayview/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-horizon': {
     path: '/freedom-campaign/projects/godrej-horizon/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-parkshire': {
     path: '/freedom-campaign/projects/godrej-parkshire/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-lakeside-orchard': {
     path: '/freedom-campaign/projects/godrej-lakeside-orchard/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-woods': {
     path: '/freedom-campaign/projects/godrej-woods/',
+    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-regal-pavilion': {
     path: '/construction-linked-plan/projects/godrej-regal-pavilion/',
+    ogImage: CLP_OG_IMAGE,
   },
   'godrej-aveline': {
     path: '/construction-linked-plan/projects/godrej-aveline/',
+    ogImage: CLP_OG_IMAGE,
   },
   'godrej-azure': {
     path: '/one-percent-payment-plan/projects/godrej-azure/',
-    ogImage: 'https://www.godrejproperties.com/one-percent-payment-plan/imgs/1_percent_og_image.jpg',
+    ogImage: ONE_PERCENT_OG_IMAGE,
   },
 };
 
