@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Fragment } from 'react';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import SEO from '@/components/SEO';
 import Layout from '@/components/Layout';
@@ -23,56 +22,102 @@ const FREEDOM_OG_IMAGE = `${SITE_ORIGIN}/freedom-campaign/imgs/freedom_og_image.
 const CLP_OG_IMAGE = `${SITE_ORIGIN}/construction-linked-plan/imgs/clp_og_image.jpg`;
 const ONE_PERCENT_OG_IMAGE = `${SITE_ORIGIN}/one-percent-payment-plan/imgs/1_percent_og_image.jpg`;
 
-const publishedProjectMetadataBySlug: Record<string, { path: string; ogImage?: string }> = {
+type PublishedProjectMetadata = {
+  path: string;
+  hubPath: string;
+  projectsPath: string;
+  hubDisplayName: string;
+  ogImage?: string;
+};
+
+const freedomCampaignMetadata = {
+  hubPath: '/freedom-campaign/',
+  projectsPath: '/freedom-campaign/projects/',
+  hubDisplayName: 'Godrej Freedom Payment Plans',
+  ogImage: FREEDOM_OG_IMAGE,
+};
+
+const clpCampaignMetadata = {
+  hubPath: '/construction-linked-plan/',
+  projectsPath: '/construction-linked-plan/projects/',
+  hubDisplayName: 'Godrej Construction Linked Payment Plans',
+  ogImage: CLP_OG_IMAGE,
+};
+
+const onePercentCampaignMetadata = {
+  hubPath: '/one-percent-payment-plan/',
+  projectsPath: '/one-percent-payment-plan/projects/',
+  hubDisplayName: 'Godrej 1% Payment Plan Projects',
+  ogImage: ONE_PERCENT_OG_IMAGE,
+};
+
+const publishedProjectMetadataBySlug: Record<string, PublishedProjectMetadata> = {
   'godrej-exquisite': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-exquisite/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-vistas': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-vistas/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-skyshore': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-skyshore/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-bayview': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-bayview/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-horizon': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-horizon/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-parkshire': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-parkshire/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-lakeside-orchard': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-lakeside-orchard/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-woods': {
+    ...freedomCampaignMetadata,
     path: '/freedom-campaign/projects/godrej-woods/',
-    ogImage: FREEDOM_OG_IMAGE,
   },
   'godrej-regal-pavilion': {
+    ...clpCampaignMetadata,
     path: '/construction-linked-plan/projects/godrej-regal-pavilion/',
-    ogImage: CLP_OG_IMAGE,
   },
   'godrej-aveline': {
+    ...clpCampaignMetadata,
     path: '/construction-linked-plan/projects/godrej-aveline/',
-    ogImage: CLP_OG_IMAGE,
   },
   'godrej-azure': {
+    ...onePercentCampaignMetadata,
     path: '/one-percent-payment-plan/projects/godrej-azure/',
-    ogImage: ONE_PERCENT_OG_IMAGE,
   },
 };
 
-function getPublishedProjectMetadata(slug: string) {
+export const freedomCampaignProjectSlugs = [
+  'godrej-exquisite',
+  'godrej-vistas',
+  'godrej-skyshore',
+  'godrej-bayview',
+  'godrej-horizon',
+  'godrej-parkshire',
+  'godrej-lakeside-orchard',
+  'godrej-woods',
+];
+
+export const clpCampaignProjectSlugs = ['godrej-regal-pavilion', 'godrej-aveline'];
+export const onePercentCampaignProjectSlugs = ['godrej-azure'];
+
+function getPublishedProjectMetadata(slug: string): PublishedProjectMetadata {
   return publishedProjectMetadataBySlug[slug] ?? {
     path: `/the-freedom-plan/projects/${slug}/`,
+    hubPath: '/the-freedom-plan/',
+    projectsPath: '/the-freedom-plan/projects/',
+    hubDisplayName: 'Godrej Payment Plan Projects',
   };
 }
 
@@ -103,6 +148,9 @@ export const getStaticProps: GetStaticProps<FreedomProjectPageProps> = async (ct
 export default function FreedomProjectPage({ project }: FreedomProjectPageProps) {
   const publishedMetadata = getPublishedProjectMetadata(project.slug);
   const canonical = `${SITE_ORIGIN}${publishedMetadata.path}`;
+  const hubUrl = `${SITE_ORIGIN}${publishedMetadata.hubPath}`;
+  const projectsUrl = `${SITE_ORIGIN}${publishedMetadata.projectsPath}`;
+  const hubDisplayName = publishedMetadata.hubDisplayName;
   const title = `${project.name} | Godrej ${project.paymentPlanName} | RERA, Pricing & FAQs`;
   const desc =
     `${project.name}, ${project.microLocation}, ${project.zone}, ${project.city}, eligible under the Godrej ${project.paymentPlanName}. ` +
@@ -225,15 +273,12 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
     })),
   });
 
-  const isFreedomPlan = /freedom/i.test(project.paymentPlanName);
-  const hubDisplayName = isFreedomPlan ? 'Godrej Freedom Payment Plans' : 'Godrej Payment Plan Projects';
-
   const breadcrumbSchema = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: hubDisplayName, item: 'https://www.godrejproperties.com/the-freedom-plan' },
-      { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://www.godrejproperties.com/the-freedom-plan' },
+      { '@type': 'ListItem', position: 1, name: hubDisplayName, item: hubUrl },
+      { '@type': 'ListItem', position: 2, name: 'Projects', item: projectsUrl },
       { '@type': 'ListItem', position: 3, name: project.name, item: canonical },
     ],
   });
@@ -830,7 +875,7 @@ export default function FreedomProjectPage({ project }: FreedomProjectPageProps)
       <section style={{ background: 'var(--bg-warm-light)', padding: '2rem 0' }}>
         <div className="content-container" style={{ paddingTop: 0, paddingBottom: 0, fontSize: '0.8125rem', color: 'var(--color-muted)' }}>
           <p style={{ marginBottom: 0 }}>
-            <Link href="/the-freedom-plan">Back to the {hubDisplayName} hub</Link>.
+            <a href={hubUrl}>Back to the {hubDisplayName} hub</a>.
           </p>
         </div>
       </section>
