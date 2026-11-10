@@ -40,3 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 deliverables/
+/Deliverables_Diwali/
+/gpl-diwali-*-review.zip

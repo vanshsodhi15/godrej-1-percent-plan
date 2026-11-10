@@ -1,0 +1,80 @@
+@font-face { font-family: 'GodrejDiwali'; src: url('/assets_diwali/inter-var-latin.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+.page { background: #fff; color: #333; letter-spacing: 0; font-family: 'GodrejDiwali', sans-serif; }
+.page a:focus-visible, .page button:focus-visible, .page summary:focus-visible { outline: 3px solid #087c78; outline-offset: 5px; }
+.header { min-height: 100px; padding: 18px max(24px, calc((100% - 1200px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid #e6e6e6; }
+.header img { display: block; width: 154px; height: 58px; object-fit: contain; }
+.header > a:last-child { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.review { text-align: center; padding: 8px 20px; font-size: 12px; color: #505050; background: #f1f5f4; }
+.main { max-width: 1020px; margin: auto; padding: 38px 28px 72px; }
+.back { display: inline-flex; gap: 10px; align-items: center; font-size: 14px; margin-bottom: 32px; }
+.hero { width: 100%; margin-bottom: 32px; }
+.hero img { display: block; width: 100%; height: auto; }
+.masthead { padding-bottom: 22px; border-bottom: 1px solid #dedede; }
+.campaign { font-size: 14px; color: #087c78; font-weight: 600; margin-bottom: 16px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: #666; font-size: 13px; margin: 14px 0; }
+.meta > span:first-child { color: #087c78; }
+.page h1 { font-family: Georgia, 'Times New Roman', serif; color: #252525; font-size: 44px; line-height: 1.18; font-weight: 400; margin: 20px 0 24px; max-width: 890px; }
+.byline { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 14px; }
+.byline > p a { text-decoration: underline; text-underline-offset: 3px; }
+.share { display: flex; align-items: center; gap: 12px; }
+.share button, .share a { width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #353535; border: 1px solid #d5d5d5; border-radius: 50%; cursor: pointer; }
+.share button:hover, .share a:hover { background: #eef6f4; border-color: #087c78; }
+.shareStatus { display: block; min-height: 24px; font-size: 12px; text-align: right; color: #087c78; }
+.contents { padding: 32px 0; border-bottom: 1px solid #dedede; }
+.contents h3 { font-size: 21px; font-weight: 600; margin-bottom: 18px; }
+.contents > p { line-height: 1.85; margin-bottom: 24px; }
+.contents ol { padding-left: 24px; }
+.contents li { padding: 5px 0 5px 5px; }
+.contents ul { padding-left: 22px; margin-top: 8px; }
+.contents ul li { font-size: 14px; padding-block: 4px; }
+.contents a:hover { color: #087c78; text-decoration: underline; }
+.body { padding-top: 36px; }
+.body section, .faqs, .faqs details { scroll-margin-top: 28px; }
+.page h2 { font-size: 25px; line-height: 1.4; font-weight: 600; color: #272727; margin: 32px 0 20px; }
+.body .repeatTitle { font-size: 28px; margin-top: 0; }
+.body p { margin: 0 0 20px; line-height: 1.9; }
+.body strong { font-weight: 600; color: #292929; }
+.body a { color: #087c78; text-decoration: underline; text-underline-offset: 3px; }
+.body ul { margin: 0 0 24px; padding-left: 24px; }
+.body li { padding-left: 4px; margin-bottom: 10px; line-height: 1.85; }
+.body table { width: 100%; border-collapse: collapse; margin: 24px 0; table-layout: fixed; font-size: 14px; }
+.body th, .body td { text-align: left; vertical-align: top; border: 1px solid #d9e3df; padding: 15px; overflow-wrap: anywhere; white-space: normal; }
+.body th { background: #edf4f1; font-weight: 600; color: #222; }
+.body tr:nth-child(even) td { background: #fafcfa; }
+.film { width: 100%; aspect-ratio: 16 / 9; border: 0; margin: 20px 0; }
+.faqs { margin: 40px 0; }
+.faqs details { border-bottom: 1px solid #ddd; }
+.faqs summary { list-style: none; display: flex; gap: 20px; justify-content: space-between; align-items: center; padding: 21px 0; color: #222; font-weight: 500; cursor: pointer; }
+.faqs summary::-webkit-details-marker { display: none; }
+.faqs summary svg { flex: 0 0 20px; }
+.faqs details[open] summary svg { transform: rotate(180deg); }
+.faqs details p { padding: 0 28px 24px 0; line-height: 1.85; }
+.contact { border-top: 3px solid #087c78; border-bottom: 1px solid #ddd; padding: 30px 0; margin: 48px 0; }
+.contact h2 { margin: 0 0 12px; }
+.contact .campaign { margin-bottom: 12px; }
+.contactActions { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 22px; }
+.contactActions a { display: inline-flex; align-items: center; gap: 10px; color: #087c78; font-weight: 600; }
+.tags h2 { font-size: 20px; }
+.tags > div { display: flex; flex-wrap: wrap; gap: 10px 24px; color: #087c78; font-size: 14px; }
+.tags a { text-decoration: underline; text-underline-offset: 4px; }
+.related > section { margin: 24px 0; border-top: 1px solid #dedede; padding-top: 20px; }
+.related img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.related h3 { font-size: 18px; margin-bottom: 12px; }
+.related ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px 24px; }
+.related a { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #087c78; padding: 10px 0; }
+.related a:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.related svg { flex: 0 0 16px; }
+.footer { background: #1c1c1c; color: #fff; padding: 36px max(24px, calc((100% - 964px) / 2)); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.footer nav { display: flex; flex-wrap: wrap; gap: 24px; font-size: 13px; }
+@media (max-width: 640px) {
+  .header { min-height: 84px; padding: 14px 20px; }
+  .header img { width: 130px; height: 49px; }
+  .header > a:last-child { font-size: 12px; }
+  .main { padding: 28px 22px 48px; }
+  .page h1 { font-size: 34px; line-height: 1.2; }
+  .page h2, .body .repeatTitle { font-size: 23px; }
+  .body p, .body li { line-height: 1.8; }
+  .body th, .body td { padding: 10px 8px; font-size: 12px; }
+  .shareStatus { text-align: left; }
+  .footer { padding: 28px 22px; }
+}
