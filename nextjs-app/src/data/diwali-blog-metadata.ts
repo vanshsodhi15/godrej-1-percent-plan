@@ -1,4 +1,4 @@
-export const blogSlug = 'griha-pravesh-during-diwali-auspicious-days-muhurat-rituals';
+export const blogSlug = 'khushiyon-ki-chaabi-mera-godrej-ghar';
 export const blogUrl = `https://www.godrejproperties.com/blog/${blogSlug}`;
 export const blogTitle = 'Khushiyon Ki Chaabi, Mera Godrej Ghar';
 export const metaTitle = 'Khushiyon Ki Chaabi, Mera Godrej Ghar | Godrej Properties';

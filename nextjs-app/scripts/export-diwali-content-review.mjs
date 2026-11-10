@@ -7,7 +7,7 @@ import TurndownService from 'turndown';
 import { gfm } from 'turndown-plugin-gfm';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const slug = 'griha-pravesh-during-diwali-auspicious-days-muhurat-rituals';
+const slug = 'khushiyon-ki-chaabi-mera-godrej-ghar';
 const html = await fs.readFile(path.join(root, 'out/blog', `${slug}.html`), 'utf8');
 const document = domino.createDocument(html);
 const article = document.querySelector('article');
