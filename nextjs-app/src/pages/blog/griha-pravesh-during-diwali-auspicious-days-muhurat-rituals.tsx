@@ -96,7 +96,7 @@ export default function DiwaliBlogPage({ blog }: Readonly<{ blog: DiwaliBlog }>)
             <div><p className={styles.campaign}>{blog.campaignName}</p><h2>A home for your next chapter</h2><p>{blog.contactAnswer}</p></div>
             <div className={styles.contactActions}>{blog.salesPhone && <a href={`tel:${blog.salesPhone}`}><Phone size={18} aria-hidden="true" />{blog.salesPhoneDisplay}</a>}<a href={blog.contactUrl}>Enquire with Godrej Properties <ArrowUpRight size={18} aria-hidden="true" /></a></div>
           </section>
-          <section className={styles.tags} aria-label="Article tags"><h2>Tags</h2><div>{blog.tags.length ? blog.tags.map(tag => <a key={tag.url} href={tag.url}>{tag.name}</a>) : ['griha pravesh puja', 'griha pravesh muhurat', 'diwali', 'vastu', 'home buying guide', 'new home'].map(tag => <span key={tag}>{tag}</span>)}</div></section>
+          <section className={styles.tags} aria-label="Article tags"><h2>Tags</h2><div>{blog.tags.length ? blog.tags.map(tag => <a key={tag.url} href={tag.url}>{tag.name}</a>) : ['Godrej Properties', 'Diwali', 'new beginnings', 'first Diwali', 'home buying guide', 'new home'].map(tag => <span key={tag}>{tag}</span>)}</div></section>
           {blog.projects.length > 0 && <section id="related-projects" className={styles.related}><h2>Related Projects</h2>
             {projectRegions.map(region => <section key={region} aria-label={`${region} projects`}>
               <h3>{region}</h3>
