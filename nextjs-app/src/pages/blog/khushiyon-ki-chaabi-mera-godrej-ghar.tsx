@@ -30,7 +30,7 @@ export default function DiwaliBlogPage({ blog }: Readonly<{ blog: DiwaliBlog }>)
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="robots" content={blog.ready ? 'index, follow' : 'noindex, nofollow'} />
+        <meta name="robots" content={blog.indexable ? 'index, follow' : 'noindex, nofollow'} />
         <link rel="canonical" href={blogUrl} />
         <link rel="icon" href="/assets_diwali/favicon.ico" />
         <meta property="og:type" content="article" />
@@ -49,7 +49,7 @@ export default function DiwaliBlogPage({ blog }: Readonly<{ blog: DiwaliBlog }>)
         <a href="https://www.godrejproperties.com/" aria-label="Godrej Properties home"><img src="/assets_diwali/godrej_properties_logo.svg" alt="Godrej Properties" width="154" height="58" /></a>
         <a href="https://www.godrejproperties.com/blog">The Godrej Blog <ArrowUpRight size={16} aria-hidden="true" /></a>
       </header>
-      {!blog.ready && <aside className={styles.review}>Editorial review | Not published</aside>}
+      {!blog.indexable && <aside className={styles.review}>Editorial review | Not published</aside>}
       <main className={styles.main}>
         <a href="https://www.godrejproperties.com/blog" className={styles.back}><ArrowLeft size={17} aria-hidden="true" /> Back to Blog</a>
         {blog.hero && <figure className={styles.hero}><img src={blog.hero.url} alt={blog.hero.alt} width={blog.hero.width} height={blog.hero.height} fetchPriority="high" /></figure>}

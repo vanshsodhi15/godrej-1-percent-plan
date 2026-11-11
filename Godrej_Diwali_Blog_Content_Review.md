@@ -1,6 +1,6 @@
 Khushiyon Ki Chaabi, Mera Godrej Ghar
 
-Home Buying Guide
+Home Buying GuideUpdated 11 November 2026
 
 # Khushiyon Ki Chaabi, Mera Godrej Ghar
 
@@ -13,8 +13,8 @@ Khushiyon Ki Chaabi, Mera Godrej Ghar celebrates the joy of a place to call your
 1.  [A new beginning, at a time that feels right](#section-1)
 2.  [Planning your homecoming around family traditions](#section-2)
 3.  [The joy of receiving your keys](#section-3)
-4.  [Welcoming light and blessings into your home](#section-4)
-5.  [Choosing a date for your family's homecoming](#section-5)
+4.  [Lakshmi puja before or after griha pravesh](#section-4)
+5.  [Griha pravesh muhurat dates: November 2026 to March 2027](#section-5)
 6.  [Your first Diwali in your Godrej home](#section-6)
 7.  [Frequently Asked Questions](#faqs)
     -   [Is it good to do griha pravesh during Diwali?](#faq-1)
@@ -49,7 +49,9 @@ Here is a guide to making those first celebrations thoughtful and personal, from
 
 ## 1\. A new beginning, at a time that feels right
 
-**Short answer: usually not, and the reason is Chaturmas rather than Diwali itself.**
+**Is it good to do griha pravesh during Diwali?**
+
+Families observing Chaturmas commonly defer formal griha pravesh until a suitable muhurat afterwards; confirm your family's practice with your priest.
 
 Diwali almost always falls within Chaturmas, the four-month period beginning at Devshayani Ekadashi and ending at Dev Uthani Ekadashi, during which Lord Vishnu is believed to rest. Many families avoid housewarming ceremonies, weddings and other major auspicious beginnings during this window.
 
@@ -64,6 +66,10 @@ Practice varies by region and by family. Some communities observe Chaturmas stri
 
 
 ## 2\. Planning your homecoming around family traditions
+
+**Which months should we avoid for griha pravesh?**
+
+Many families avoid Chaturmas and Kharmas or Dhanurmasam for griha pravesh, but the applicable periods depend on regional and family traditions.
 
 Chaturmas runs for roughly four lunar months through the monsoon. The practical tradition behind it is straightforward: travel, construction and large gatherings were historically difficult during the rains, so major ceremonies were deferred.
 
@@ -85,7 +91,9 @@ Read more about [auspicious dates for property registration](https://www.godrejp
 
 ## 3\. The joy of receiving your keys
 
-**Short answer: yes, Dhanteras is considered an auspicious day to receive your keys, and this is distinct from griha pravesh.**
+**Is Dhanteras a good day to get the keys?**
+
+Dhanteras is traditionally considered auspicious for receiving a home's keys, but key handover is separate from moving in or performing griha pravesh.
 
 Dhanteras marks the worship of Dhanvantari and, by extension, the acquisition of things of lasting value. This is why families traditionally buy gold, silver and utensils on this day. Taking possession of a home, receiving the keys, and completing registration formalities all sit comfortably within that tradition.
 
@@ -105,9 +113,11 @@ Read more about [griha pravesh muhurat dates](https://www.godrejproperties.com/b
 
 
 
-## 4\. Welcoming light and blessings into your home
+## 4\. Lakshmi puja before or after griha pravesh
 
-**Short answer: Diwali Lakshmi puja can be performed in a home before griha pravesh. The Lakshmi puja that forms part of the griha pravesh ritual is a separate, later observance.**
+**Lakshmi puja before or after griha pravesh?**
+
+Diwali Lakshmi puja can precede griha pravesh, while the Lakshmi invocation within the housewarming ceremony takes place on its chosen muhurat, subject to family tradition.
 
 These are two different pujas that share a name, which is the source of most of the confusion.
 
@@ -123,7 +133,11 @@ Read more about [decorating your new home for the ceremony](https://www.godrejpr
 
 
 
-## 5\. Choosing a date for your family's homecoming
+## 5\. Griha pravesh muhurat dates: November 2026 to March 2027
+
+**How should we choose a griha pravesh muhurat between November 2026 and March 2027?**
+
+Confirm any proposed griha pravesh date and time against a location-specific panchang and your family's traditions before booking the ceremony.
 
 These dates are drawn from standard panchang calculations for New Delhi and Hyderabad. Time windows vary by city, so confirm the exact muhurat with a priest or a panchang set to your location.
 
@@ -148,6 +162,10 @@ Points worth noting:
 
 
 ## 6\. Your first Diwali in your Godrej home
+
+**Can we celebrate our first Diwali before griha pravesh?**
+
+Many families celebrate Diwali in their new home before formal griha pravesh, while observing their family's customs and the building's fire-safety rules.
 
 A home does not need to be formally consecrated to be celebrated in.
 

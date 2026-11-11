@@ -106,7 +106,9 @@ function createSections(publication: Publication) {
     'section-6': [{ slug: 'significance-of-main-door-direction-in-vastu-shastra', anchor: 'main door direction' }],
   };
   const sections = segments.map(segment => {
-    let html = marked.parse(segment.markdown, { async: false }) as string;
+    const body = segment.question ? segment.markdown.replace(/^\s*\*\*Short answer:[\s\S]*?\*\*\s*/, '') : segment.markdown;
+    const markdown = segment.question ? `**${segment.question}**\n\n${segment.answer}\n\n${body}` : body;
+    let html = marked.parse(markdown, { async: false }) as string;
     for (const link of contextualLinks[segment.id] || []) html += `<p>Read more about <a href="https://www.godrejproperties.com/blog/${link.slug}">${link.anchor}</a>.</p>`;
     if (publication.campaignHubUrl && ['introduction', 'section-6'].includes(segment.id)) html += `<p><a href="${escapeHtml(publication.campaignHubUrl)}">${escapeHtml(segment.id === 'introduction' ? publication.campaignName : 'first Diwali in a new home')}</a></p>`;
     if (segment.id === 'section-6' && publication.projects.length) {
@@ -125,6 +127,9 @@ function createSections(publication: Publication) {
 export function loadDiwaliBlog() {
   const publication: Publication = publicationSettings;
   const ready = validatePublication(publication);
+  const productionRequested = process.env.DIWALI_PUBLISH_TARGET === 'production';
+  if (productionRequested && !ready) throw new Error('Diwali production export requires completed publication approvals');
+  const indexable = ready && productionRequested && process.env.VERCEL !== '1';
   const { faqs, contactAnswer } = createFaqs(publication);
   const { summary, sections } = createSections(publication);
   const organization = {
@@ -145,7 +150,7 @@ export function loadDiwaliBlog() {
     { '@type': 'ListItem', position: 1, name: 'Blog', item: 'https://www.godrejproperties.com/blog' },
     { '@type': 'ListItem', position: 2, name: blogTitle, item: blogUrl },
   ] };
-  return { ready, campaignName: publication.campaignName, summary, sections, faqs, contactAnswer, contactUrl: publication.contactUrl,
+  return { ready, indexable, campaignName: publication.campaignName, summary, sections, faqs, contactAnswer, contactUrl: publication.contactUrl,
     salesPhone: publication.contactApproved ? publication.salesPhone : null, salesPhoneDisplay: publication.contactApproved ? publication.salesPhoneDisplay : null,
     author: publication.author, datePublished: publication.datePublished, dateModified: publication.dateModified, hero: publication.hero,
     filmEmbedUrl: publication.filmEmbedUrl, projects: publication.projects, tags: publication.approvedTags,
