@@ -1,6 +1,6 @@
 Khushiyon Ki Chaabi, Mera Godrej Ghar
 
-Home Buying GuideUpdated 11 November 2026
+Home Buying GuidePublished 4 November 2026Updated 11 November 2026
 
 # Khushiyon Ki Chaabi, Mera Godrej Ghar
 
