@@ -100,7 +100,7 @@ Included: HTML, CSS, local fonts, GPL logo, favicon, FAQ/share JavaScript, Artic
 
 ## Approval before public launch
 
-The current source requires approved copy and location-specific calendar/ritual review, campaign hero/film, author and real publication/update dates, campaign hub, tag destinations, sales contact and asset/contact sign-offs. Resolve these in the publication settings and regenerate the package before indexed release. The supplied copy also describes 20 November 2026 as past and contains calendar-window conflicts; these need editorial resolution. Do not remove noindex or the review banner as a substitute for approval.
+The current source requires approved copy and location-specific calendar/ritual review, campaign hero/film, author and real publication/update dates, campaign hub, tag destinations, sales contact and asset/contact sign-offs. Resolve these in the publication settings and regenerate the package before indexed release. Business comments have been incorporated without restoring an unsupported housewarming date list; the remaining calendar interpretations and ritual advice still require qualified review. Do not remove noindex or the review banner as a substitute for approval.
 
 After all approvals, set status to approved and run DIWALI_PUBLISH_TARGET=production npm run build outside Vercel. The normal build is a noindex preview; Vercel is always noindex. An unapproved production build fails. For CMS deployment, apply the equivalent approval and robots settings in the production template.
 
