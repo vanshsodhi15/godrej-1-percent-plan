@@ -14,7 +14,7 @@ Khushiyon Ki Chaabi, Mera Godrej Ghar celebrates the joy of a place to call your
 2.  [Planning your homecoming around family traditions](#section-2)
 3.  [The joy of receiving your keys](#section-3)
 4.  [Lakshmi puja before or after griha pravesh](#section-4)
-5.  [Griha pravesh muhurat dates: November 2026 to March 2027](#section-5)
+5.  [How to choose a griha pravesh muhurat](#section-5)
 6.  [Your first Diwali in your Godrej home](#section-6)
 7.  [Frequently Asked Questions](#faqs)
     -   [Is it good to do griha pravesh during Diwali?](#faq-1)
@@ -69,19 +69,19 @@ Practice varies by region and by family. Some communities observe Chaturmas stri
 
 **Which months should we avoid for griha pravesh?**
 
-Many families avoid Chaturmas and Kharmas or Dhanurmasam for griha pravesh, but the applicable periods depend on regional and family traditions.
+Ask your priest which exclusions your family observes during Chaturmas, Kharmas or Dhanurmasam, and Adhik Maas. Calendar dates alone do not establish whether a housewarming is suitable for your family.
 
-Chaturmas runs for roughly four lunar months through the monsoon. The practical tradition behind it is straightforward: travel, construction and large gatherings were historically difficult during the rains, so major ceremonies were deferred.
+Use the calendar references below to discuss your plans with your priest or a qualified panchang practitioner. They are not a universal list of dates on which housewarming is prohibited.
 
-Two further periods are commonly avoided for griha pravesh:
-
-| Period | Dates | What families usually do |
+| Period to discuss | Calendar reference for New Delhi | What to confirm with your practitioner |
 | --- | --- | --- |
-| Chaturmas | Ends at Dev Uthani Ekadashi, 20 November 2026 | Formal griha pravesh is deferred until after it ends |
-| Kharmas / Dhanurmasam | 16 December 2026 to 14 January 2027 | Many Telugu, Tamil and North Indian families keep this month for dawn worship rather than housewarmings |
-| Adhik Maas and Ashada | Varies by year | Several regional traditions avoid housewarming entirely |
+| Chaturmas observance | Drik Panchang lists Dev Uthani Ekadashi on **20 November 2026**, with Gauna and Vaishnava observances on **21 November**. [Dev Uthani Ekadashi calendar](https://www.drikpanchang.com/ekadashis/prabodhini/prabodhini-ekadashi-date-time.html?year=2026) | If your family defers ceremonies during Chaturmas, confirm its observance end and a suitable housewarming muhurat. |
+| December-January Kharmas / Dhanurmasam observance | Dhanu Sankranti occurs on **16 December 2026 at 10:29 a.m.**; the Makara transition occurs on **14 January 2027 at 9:14 p.m.**, with Makara Sankranti observed on **15 January**. [2026 Sankranti calendar](https://www.drikpanchang.com/sankranti/sankranti.html?year=2026); [Makara Sankranti 2027](https://www.drikpanchang.com/sankranti/makar-sankranti-date-time.html?year=2027) | Confirm how your tradition uses these solar boundaries; the transit time and festival observance date are not interchangeable. |
+| Adhik Maas | Dates depend on the year and calendar convention. Drik Panchang's [griha pravesh calculation notes](https://www.drikpanchang.com/shubh-dates/griha-pravesh-dates-with-muhurat.html?year=2026) explicitly exclude the intercalary lunar month. | Check the relevant calendar edition and how its exclusions apply to your ceremony. |
 
-Note that panchang listings will still show technically valid muhurats inside these windows, because the calculation method and family custom are two different things. A date can be astrologically clear and still be one your family would not use.
+**Source: Drik Panchang**, using its New Delhi listings, checked on 12 November 2026. Times above are local to New Delhi (IST). The linked pages support the calendar entries and the stated Adhik Maas calculation rule, not a blanket prohibition for every community.
+
+For Ashada or any other period your family observes, ask your practitioner to confirm the applicable dates and customs. Do not assume one regional practice applies to every homecoming.
 
 Read more about [auspicious dates for property registration](https://www.godrejproperties.com/blog/explore-property-purchase-muhurat-for-your-new-home).
 
@@ -133,25 +133,15 @@ Read more about [decorating your new home for the ceremony](https://www.godrejpr
 
 
 
-## 5\. Griha pravesh muhurat dates: November 2026 to March 2027
+## 5\. How to choose a griha pravesh muhurat
 
-**How should we choose a griha pravesh muhurat between November 2026 and March 2027?**
+**How should we choose a griha pravesh muhurat?**
 
-Confirm any proposed griha pravesh date and time against a location-specific panchang and your family's traditions before booking the ceremony.
+Ask your priest or a qualified panchang practitioner to recommend a date and time based on your location, family traditions and any Vastu considerations you follow.
 
-For a homecoming between November 2026 and March 2027, confirm the date and time for your city before arranging the ceremony. This guide does not provide a verified list of auspicious housewarming dates for that period.
+Share your home's location and preferred moving period, and discuss any family observances or Vastu-related preferences with your practitioner. Ask them to consult a panchang for your location and confirm the ceremony's local start and end times before you book.
 
-The India Meteorological Department's Positional Astronomy Centre publishes the **Rashtriya Panchang**, a government reference for calendric data. IMD describes its contents as including tithis, nakshatras, sunrise and sunset timings, and principal festivals.
-
-**Calendar-data reference:** [India Meteorological Department: Rashtriya Panchang](https://mausam.imd.gov.in/imd_latest/contents/rashtriy_panchang.php). This reference explains the publication's scope; it does not verify a November 2026 to March 2027 griha pravesh schedule or endorse the ritual advice elsewhere in this article.
-
-Ask your family priest or a qualified panchang practitioner to confirm the following before you book:
-
--   The relevant year's calendar edition and the city used for the calculation.
--   The proposed ceremony date and its local start and end times.
--   Any observances or exclusions followed by your family.
-
-Keep key handover, legal possession and moving arrangements separate from the ceremony date, and confirm practical readiness with the project team.
+Separately, confirm possession, home readiness and any building permissions with the project team so your ceremony and moving arrangements can be planned together.
 
 <a id="section-6"></a>
 

@@ -72,13 +72,25 @@ assert.equal(original.querySelectorAll('#section-6 a[href*="/residential/"]').le
 const markdown = read('../Godrej_Diwali_Blog_Content_Review.md');
 assert.equal(read('Deliverables_Diwali/article.md'), markdown);
 const calendarSection = original.getElementById('section-5');
-const calendarReference = 'https://mausam.imd.gov.in/imd_latest/contents/rashtriy_panchang.php';
 assert.equal(calendarSection.querySelectorAll('table').length, 0);
-assert.equal(calendarSection.querySelectorAll(`a[href="${calendarReference}"]`).length, 1);
-assert.ok(calendarSection.textContent.includes('does not verify a November 2026 to March 2027 griha pravesh schedule'));
+assert.equal(calendarSection.querySelectorAll('a[href^="http"]').length, 0);
+assert.ok(calendarSection.textContent.includes('Ask your priest or a qualified panchang practitioner'));
+assert.ok(calendarSection.textContent.includes('based on your location, family traditions and any Vastu considerations you follow'));
 assert.ok(!calendarSection.textContent.includes('standard panchang calculations for New Delhi'));
-assert.ok(markdown.includes(calendarReference));
+assert.ok(!original.querySelector('article').textContent.includes('Rashtriya Panchang'));
+assert.ok(!markdown.includes('mausam.imd.gov.in'));
 assert.ok(!markdown.includes('| November 2026 | 11, 14, 20, 21, 25, 26 |'));
+const avoidanceSection = original.getElementById('section-2');
+assert.equal(avoidanceSection.querySelectorAll('tbody tr').length, 3);
+const avoidanceSources = Array.from(avoidanceSection.querySelectorAll('a[href^="https://www.drikpanchang.com/"]'));
+assert.equal(avoidanceSources.length, 4);
+for (const source of avoidanceSources) {
+  assert.ok(new URL(source.href).searchParams.has('year'));
+  assert.ok(markdown.includes(source.href));
+}
+assert.ok(avoidanceSection.textContent.includes('14 January 2027 at 9:14 p.m.'));
+assert.ok(avoidanceSection.textContent.includes('observed on 15 January'));
+assert.ok(!avoidanceSection.textContent.includes('Many Telugu, Tamil and North Indian families'));
 for (const section of content.sections.filter(section => section.title)) {
   const element = original.getElementById(section.id);
   assert.equal(element.querySelector('h2').textContent, section.title);
