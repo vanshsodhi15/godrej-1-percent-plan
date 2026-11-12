@@ -10,7 +10,7 @@ Redirect the previous `/blog/griha-pravesh-during-diwali-auspicious-days-muhurat
 
 ## Content and Implementation
 
-The single blog route follows the supplied brief: summary under Contents, numbered navigation and sections, repeated body title, expandable server-rendered FAQs, tags, share controls, and conditional hero/film/related-project modules. Article, FAQPage and BreadcrumbList JSON-LD are emitted in the head. All ten supplied FAQs remain unchanged; one separately added FAQ addresses home enquiries without presenting the sales team as a religious authority.
+The single blog route follows the supplied brief: summary under Contents, numbered navigation and sections, repeated body title, expandable server-rendered FAQs, tags, share controls, and conditional hero/film/related-project modules. Article, FAQPage and BreadcrumbList JSON-LD are emitted in the head. Nine supplied FAQs remain unchanged; FAQ 7 was updated on 12 November at the user's request to remove unsupported date exclusions and recommend location-specific practitioner guidance. One separately added FAQ addresses home enquiries without presenting the sales team as a religious authority.
 
 The loader uses `nextjs-app/src/data/diwali-blog-content.json`, containing only the public-facing article, summary and FAQs. It was generated from the original brief using `node scripts/import-diwali-brief.mjs`; that importer validates the source FAQ text against its schema and rejects private review-note leakage. The private root-level brief is not required in GitHub or Vercel, and must not be uploaded as an asset. Re-import only after approved copy changes; the public content JSON is versioned with the page.
 
@@ -29,7 +29,7 @@ No enquiry form was added or overwritten. The draft links to the official GPL ho
 - The updated screenshot supersedes the earlier list: 12 projects, comprising 3 MMR, 2 NCR, 4 South Zone, 1 Ahmedabad and 2 Pune. Existing supplied destinations are retained. Altus uses its verified official Ahmedabad landing page; Elaris and Ivara use their verified official Pune project pages. Both section 6 and Related Projects use this list. No prices or eligibility claims were added.
 - Confirm the brand/campaign sales telephone number, display format and enquiry destination. The source brief contains no phone number. Confirm existing tag archive URLs before enabling tag links.
 - Have a named qualified reviewer verify all calendar dates, ritual claims and regional caveats against location-specific authoritative panchang sources. Record source URLs, location and review dates.
-- Approve the additional contact FAQ and contextual read-more sentences. The campaign headline, summary, introduction, section headings and tags were updated at the user's request; the ten supplied FAQ questions and answers remain unchanged.
+- Approve the additional contact FAQ and contextual read-more sentences. The campaign headline, summary, introduction, section headings, tags and FAQ 7 answer were updated at the user's request; all ten supplied FAQ questions and the other nine supplied answers remain unchanged.
 
 ## Editorial Conflicts to Resolve
 
@@ -42,10 +42,10 @@ Section 2 now cites one publisher, Drik Panchang, using four claim-specific page
 - Makara solar transition: https://www.drikpanchang.com/sankranti/makar-sankranti-date-time.html?year=2027 distinguishes 14 January at 9:14 p.m. IST from the festival observation on 15 January.
 - Adhik Maas calculation rule: https://www.drikpanchang.com/shubh-dates/griha-pravesh-dates-with-muhurat.html?year=2026 explicitly excludes the intercalary lunar month and requires location-based calculation and practitioner consultation. It does not support a blanket Ashada ban or all regional claims in the previous table.
 
-The unsupported historical explanation, dawn-worship generalisation and blanket Ashada rule were removed from section 2. Source verification is not a named religious review or copy approval. The existing FAQs remain unchanged and require reconciliation before indexed publication.
+The unsupported historical explanation, dawn-worship generalisation and blanket Ashada rule were removed from section 2. Source verification is not a named religious review or copy approval. FAQ 7 now follows the practitioner-led guidance and no longer repeats fixed avoidance dates or the January-February exclusion. The other existing FAQs remain unchanged and require review before indexed publication.
 
 1. As of 11 November 2026, the supplied copy says Chaturmas "ended" on 20 November 2026. Either approve a future-tense correction throughout the article/FAQs or choose a genuinely later publication date; do not backdate the page.
-2. The section 5 table has been removed and section 2 now has scoped calendar references. Section 1 and FAQs 1/7 still need reconciliation with the sourced distinctions and qualified review, including the unsourced January-February exclusion in FAQ 7.
+2. The section 5 table has been removed, section 2 now has scoped calendar references, and FAQ 7 no longer states unsupported avoidance dates. Section 1 and FAQ 1 still need reconciliation with the sourced distinctions and qualified review.
 3. The remaining ritual sequence and regional advice require review. Do not present one tradition as universal.
 4. The campaign-led introduction does not answer six questions within the first 150 words. Do not assert that this original brief requirement is met.
 5. The concluding reference to the campaign film cannot be verified without the approved film. Retain only after campaign review.

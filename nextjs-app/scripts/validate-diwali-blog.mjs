@@ -91,6 +91,10 @@ for (const source of avoidanceSources) {
 assert.ok(avoidanceSection.textContent.includes('14 January 2027 at 9:14 p.m.'));
 assert.ok(avoidanceSection.textContent.includes('observed on 15 January'));
 assert.ok(!avoidanceSection.textContent.includes('Many Telugu, Tamil and North Indian families'));
+const avoidanceFaq = content.faqs.find(faq => faq.id === 'faq-7');
+assert.ok(avoidanceFaq.answer.includes('for your location and the relevant year'));
+assert.ok(!/2026|2027|8 January|6 February/.test(avoidanceFaq.answer));
+assert.ok(markdown.includes(avoidanceFaq.answer));
 for (const section of content.sections.filter(section => section.title)) {
   const element = original.getElementById(section.id);
   assert.equal(element.querySelector('h2').textContent, section.title);

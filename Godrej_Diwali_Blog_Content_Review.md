@@ -232,7 +232,7 @@ The common sequence is: collect keys on Dhanteras, celebrate Diwali in the home 
 
 ### Which months should we avoid for griha pravesh?
 
-Chaturmas, which ended on 20 November 2026, and Kharmas or Dhanurmasam, 16 December 2026 to 14 January 2027, are the two main periods. The lunar month from 8 January to 6 February 2027 is also considered unfavourable. Several regional traditions additionally avoid Adhik Maas and Ashada.
+Ask your priest or a qualified panchang practitioner which periods your family observes, including Chaturmas, Kharmas or Dhanurmasam, and Adhik Maas. Confirm any Ashada or other regional restrictions against a panchang for your location and the relevant year before choosing a ceremony date.
 
 <a id="faq-8"></a>
 
