@@ -71,6 +71,14 @@ assert.equal(original.querySelectorAll('#related-projects a').length, 12);
 assert.equal(original.querySelectorAll('#section-6 a[href*="/residential/"]').length, 12);
 const markdown = read('../Godrej_Diwali_Blog_Content_Review.md');
 assert.equal(read('Deliverables_Diwali/article.md'), markdown);
+const calendarSection = original.getElementById('section-5');
+const calendarReference = 'https://mausam.imd.gov.in/imd_latest/contents/rashtriy_panchang.php';
+assert.equal(calendarSection.querySelectorAll('table').length, 0);
+assert.equal(calendarSection.querySelectorAll(`a[href="${calendarReference}"]`).length, 1);
+assert.ok(calendarSection.textContent.includes('does not verify a November 2026 to March 2027 griha pravesh schedule'));
+assert.ok(!calendarSection.textContent.includes('standard panchang calculations for New Delhi'));
+assert.ok(markdown.includes(calendarReference));
+assert.ok(!markdown.includes('| November 2026 | 11, 14, 20, 21, 25, 26 |'));
 for (const section of content.sections.filter(section => section.title)) {
   const element = original.getElementById(section.id);
   assert.equal(element.querySelector('h2').textContent, section.title);

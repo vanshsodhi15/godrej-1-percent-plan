@@ -1,6 +1,6 @@
 Khushiyon Ki Chaabi, Mera Godrej Ghar
 
-Home Buying GuidePublished 4 November 2026Updated 11 November 2026
+Home Buying GuidePublished 4 November 2026Updated 12 November 2026
 
 # Khushiyon Ki Chaabi, Mera Godrej Ghar
 
@@ -139,23 +139,19 @@ Read more about [decorating your new home for the ceremony](https://www.godrejpr
 
 Confirm any proposed griha pravesh date and time against a location-specific panchang and your family's traditions before booking the ceremony.
 
-These dates are drawn from standard panchang calculations for New Delhi and Hyderabad. Time windows vary by city, so confirm the exact muhurat with a priest or a panchang set to your location.
+For a homecoming between November 2026 and March 2027, confirm the date and time for your city before arranging the ceremony. This guide does not provide a verified list of auspicious housewarming dates for that period.
 
-| Month | Auspicious dates |
-| --- | --- |
-| November 2026 | 11, 14, 20, 21, 25, 26 |
-| December 2026 | 2, 3, 4, 11, 12, 18, 19, 30 |
-| January 2027 | 1 |
-| February 2027 | 10, 11, 15, 22, 24, 25, 27 |
-| March 2027 | 3, 4, 10, 11, 15, 22, 24, 26, 27, 31 |
+The India Meteorological Department's Positional Astronomy Centre publishes the **Rashtriya Panchang**, a government reference for calendric data. IMD describes its contents as including tithis, nakshatras, sunrise and sunset timings, and principal festivals.
 
-Points worth noting:
+**Calendar-data reference:** [India Meteorological Department: Rashtriya Panchang](https://mausam.imd.gov.in/imd_latest/contents/rashtriy_panchang.php). This reference explains the publication's scope; it does not verify a November 2026 to March 2027 griha pravesh schedule or endorse the ritual advice elsewhere in this article.
 
--   **The gap from 2 January to 9 February 2027** is not an oversight. Those days are ruled out on nakshatra, weekday or tithi, and the lunar month from 8 January to 6 February is itself considered unfavourable for entering a new home.
--   **The 18, 19 and 30 December dates and 1 January** fall inside Kharmas. They are astrologically valid but many families avoid them.
--   **Uttarayana**, roughly January to June, is traditionally regarded as the stronger half of the year for housewarming.
--   **Pushya, Rohini, Shravana and Anuradha** nakshatras are considered the most favourable. Tuesdays and Saturdays, and the tithis of Ekadashi, Purnima and Amavasya, are generally avoided.
--   If no suitable muhurat is available, **Abhijit muhurat**, the short window around solar noon, is the traditional fallback.
+Ask your family priest or a qualified panchang practitioner to confirm the following before you book:
+
+-   The relevant year's calendar edition and the city used for the calculation.
+-   The proposed ceremony date and its local start and end times.
+-   Any observances or exclusions followed by your family.
+
+Keep key handover, legal possession and moving arrangements separate from the ceremony date, and confirm practical readiness with the project team.
 
 <a id="section-6"></a>
 

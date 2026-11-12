@@ -1,6 +1,6 @@
 # Diwali Blog: Editorial Review and Ethinos Handoff
 
-Status: draft, not approved for publication. Updated 11 November 2026.
+Status: draft, not approved for publication. Updated 12 November 2026.
 
 Campaign: **Khushiyon Ki Chaabi, Mera Godrej Ghar**.
 
@@ -33,9 +33,11 @@ No enquiry form was added or overwritten. The draft links to the official GPL ho
 
 ## Editorial Conflicts to Resolve
 
+On 12 November, the unverified section 5 date table and its associated blackout, nakshatra and fallback claims were removed. The section now cites one government calendar reference: https://mausam.imd.gov.in/imd_latest/contents/rashtriy_panchang.php (checked 12 November 2026). This IMD page describes the Rashtriya Panchang's calendric contents; it does not substantiate the removed 2026-27 housewarming schedule or the article's other ritual/calendar claims. Do not mark calendar review complete or use this link as evidence that the earlier dates were verified. The content revision date is now 2026-11-12; the user-confirmed first-publication date remains 2026-11-04.
+
 1. As of 11 November 2026, the supplied copy says Chaturmas "ended" on 20 November 2026. Either approve a future-tense correction throughout the article/FAQs or choose a genuinely later publication date; do not backdate the page.
-2. The November table lists 11 and 14 November before the stated end of Chaturmas. The December/January rows also include dates within the stated avoidance window. The draft preserves the supplied caveats, but the calendar reviewer must distinguish calculation criteria from applicable family practice explicitly.
-3. The general avoidance of Tuesdays/Saturdays and certain tithis, the suggested universal Abhijit fallback, the January-February blackout, and the ritual sequence require review. Do not present one tradition as universal or label the entire table auspicious for every city/family.
+2. The section 5 table has been removed. Calendar dates still present in sections 1/2 and FAQs 1/7 require independently verified, location-appropriate evidence before publication.
+3. The remaining ritual sequence and regional advice require review. Do not present one tradition as universal or treat the government calendar reference as endorsement of a ritual interpretation.
 4. The campaign-led introduction does not answer six questions within the first 150 words. Do not assert that this original brief requirement is met.
 5. The concluding reference to the campaign film cannot be verified without the approved film. Retain only after campaign review.
 6. Generalize safety-sensitive advice only with editorial approval: any flame, milk-boiling or balcony ritual must comply with building fire rules. Possession/registration timing remains subject to legal readiness and practical availability, not festival auspiciousness.
