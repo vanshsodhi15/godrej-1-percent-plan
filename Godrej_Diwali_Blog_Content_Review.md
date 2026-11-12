@@ -8,19 +8,19 @@ Godrej Properties
 
 ### Contents
 
-Khushiyon Ki Chaabi, Mera Godrej Ghar celebrates the joy of a place to call your own. From receiving the keys to lighting the first diya, discover ways to welcome your family, honour your traditions and make your first Diwali in a Godrej home a beginning to remember.
+Khushiyon Ki Chaabi, Mera Godrej Ghar celebrates the joy of a place to call your own. From receiving the keys to celebrating your first Diwali, it brings together the traditions, milestones and meaningful moments that mark the beginning of life in a new home. Discover ways to welcome your family, honour your rituals and make every first in your Godrej home a memory to cherish.
 
 1.  [A new beginning, at a time that feels right](#section-1)
 2.  [Planning your homecoming around family traditions](#section-2)
 3.  [The joy of receiving your keys](#section-3)
-4.  [Lakshmi puja before or after griha pravesh](#section-4)
+4.  [Lakshmi Puja before or after griha pravesh](#section-4)
 5.  [How to choose a griha pravesh muhurat](#section-5)
 6.  [Your first Diwali in your Godrej home](#section-6)
 7.  [Frequently Asked Questions](#faqs)
     -   [Is it good to do griha pravesh during Diwali?](#faq-1)
     -   [Is Dhanteras a good day to get the keys?](#faq-2)
     -   [Can we celebrate our first Diwali before griha pravesh?](#faq-3)
-    -   [Lakshmi puja before or after griha pravesh?](#faq-4)
+    -   [Lakshmi Puja before or after griha pravesh?](#faq-4)
     -   [Is it auspicious to move in during Diwali week?](#faq-5)
     -   [What is the right way to do griha pravesh around Diwali?](#faq-6)
     -   [Which months should we avoid for griha pravesh?](#faq-7)
@@ -39,9 +39,9 @@ A key opens a door. The moments that follow make it home: the first family visit
 
 **Khushiyon Ki Chaabi, Mera Godrej Ghar** brings that feeling to the heart of the festive season. It is about the happiness of belonging, the people you share a home with, and the everyday memories waiting to be made.
 
-Every family's homecoming has its own rhythm. Receiving the keys, celebrating Diwali and holding a formal housewarming need not happen on the same day. You can plan these milestones around your family's traditions, the readiness of your home and advice from your priest.
+Every family's homecoming has its own rhythm. Receiving the keys, celebrating Diwali and holding a formal housewarming need not happen on the same day. You can plan these milestones around your family's traditions, the readiness of your home and the guidance of your priest.
 
-Here is a guide to making those first celebrations thoughtful and personal, from the joy of key handover to welcoming light, loved ones and new beginnings into your Godrej home.
+Whether you're preparing for your griha pravesh, planning your first Diwali, or simply counting down to the day you receive your keys, here is a guide to making those first milestones thoughtful, meaningful and truly your own.
 
 <a id="section-1"></a>
 
@@ -51,15 +51,15 @@ Here is a guide to making those first celebrations thoughtful and personal, from
 
 **Is it good to do griha pravesh during Diwali?**
 
-Families observing Chaturmas commonly defer formal griha pravesh until a suitable muhurat afterwards; confirm your family's practice with your priest.
+Many families choose to receive their keys and celebrate Diwali in their new home, while scheduling the formal griha pravesh ceremony for a later date.
 
-Diwali almost always falls within Chaturmas, the four-month period beginning at Devshayani Ekadashi and ending at Dev Uthani Ekadashi, during which Lord Vishnu is believed to rest. Many families avoid housewarming ceremonies, weddings and other major auspicious beginnings during this window.
+This is because Diwali often falls during Chaturmas, the four-month period between Devshayani Ekadashi and Dev Uthani Ekadashi, when many families traditionally avoid conducting major ceremonies such as weddings and griha pravesh.
 
-In 2026, Diwali fell on 8 November and Chaturmas ended at Dev Uthani Ekadashi on 20 November. A family taking possession during Diwali week was therefore inside Chaturmas, which is why a priest would commonly have advised holding the formal ceremony until after the 20th.
+For 2026, the [calendar references in section 2](#section-2) distinguish Dev Uthani Ekadashi observances on 20 and 21 November. Families taking possession during the Diwali period can confirm their observance with their priest and choose a suitable griha pravesh muhurat afterwards.
 
-This does not mean the Diwali period is inauspicious. It means griha pravesh, as a formal Vedic ceremony, is traditionally kept for a muhurat outside Chaturmas. Moving in, cleaning, lighting diyas and celebrating are a separate matter, covered in section 6.
+That does not make Diwali any less auspicious. Many families still clean and decorate their home, light diyas, perform Lakshmi Puja and celebrate the festival together, reserving the formal housewarming ceremony for a later date.
 
-Practice varies by region and by family. Some communities observe Chaturmas strictly, others only partially. Your family priest is the authority on which applies to you.
+As traditions vary across regions and communities, it is always best to consult your family priest for guidance specific to your customs.
 
 <a id="section-2"></a>
 
@@ -69,7 +69,11 @@ Practice varies by region and by family. Some communities observe Chaturmas stri
 
 **Which months should we avoid for griha pravesh?**
 
-Ask your priest which exclusions your family observes during Chaturmas, Kharmas or Dhanurmasam, and Adhik Maas. Calendar dates alone do not establish whether a housewarming is suitable for your family.
+Many families avoid conducting a griha pravesh during Chaturmas and, in some regions, Kharmas (Dhanurmasam). The periods considered unsuitable, however, can vary based on regional customs and family traditions.
+
+Chaturmas, observed between Devshayani Ekadashi and Dev Uthani Ekadashi, is traditionally a time when many families defer major ceremonies and auspicious beginnings. Similarly, some communities avoid Kharmas, a period in the Hindu calendar associated with spiritual observances rather than new beginnings.
+
+These traditions are not followed uniformly across India. Customs may differ by region, community and family practice. For this reason, the most reliable way to identify suitable dates for your griha pravesh is to consult your family priest or astrologer.
 
 Use the calendar references below to discuss your plans with your priest or a qualified panchang practitioner. They are not a universal list of dates on which housewarming is prohibited.
 
@@ -93,17 +97,17 @@ Read more about [auspicious dates for property registration](https://www.godrejp
 
 **Is Dhanteras a good day to get the keys?**
 
-Dhanteras is traditionally considered auspicious for receiving a home's keys, but key handover is separate from moving in or performing griha pravesh.
+Dhanteras is traditionally considered an auspicious day to receive the keys to a new home. However, key handover is separate from moving in or performing a griha pravesh.
 
-Dhanteras marks the worship of Dhanvantari and, by extension, the acquisition of things of lasting value. This is why families traditionally buy gold, silver and utensils on this day. Taking possession of a home, receiving the keys, and completing registration formalities all sit comfortably within that tradition.
+Dhanteras marks the worship of Dhanvantari and, by extension, the acquisition of things of lasting value. This is why families traditionally buy gold, silver and utensils on this day. Taking possession of a home, receiving the keys and completing registration formalities fit naturally within that tradition.
 
-What Dhanteras does not require is that you move in or perform the ceremony that day.
+What Dhanteras does not require is that you move in or perform the griha pravesh on the same day. Families often choose to receive the keys during Diwali and schedule the formal ceremony later, on a suitable muhurat.
 
-A common and entirely traditional sequence looks like this:
+Every homecoming has its own rhythm, but for many families, the journey from receiving the keys to settling into the home follows a familiar and cherished sequence:
 
--   **Dhanteras:** collect the keys, complete handover formalities, carry in a small symbolic item such as a silver coin, a vessel or a lamp
--   **Diwali:** clean the home, light diyas at the threshold, perform Lakshmi puja
--   **After Dev Uthani Ekadashi:** perform the formal griha pravesh on a chosen muhurat, then begin living in the home
+-   **Dhanteras:** Collect the keys, complete handover formalities, and carry in a small symbolic item such as a silver coin, a vessel or a lamp.
+-   **Diwali:** Clean the home, light diyas at the threshold, and perform Lakshmi Puja.
+-   **After Dev Uthani Ekadashi:** Perform the formal griha pravesh on a chosen muhurat, then begin living in the home.
 
 This sequence lets a family mark Diwali in the new home without compromising the ceremony.
 
@@ -113,19 +117,19 @@ Read more about [griha pravesh muhurat dates](https://www.godrejproperties.com/b
 
 
 
-## 4\. Lakshmi puja before or after griha pravesh
+## 4\. Lakshmi Puja before or after griha pravesh
 
-**Lakshmi puja before or after griha pravesh?**
+**Lakshmi Puja before or after griha pravesh?**
 
-Diwali Lakshmi puja can precede griha pravesh, while the Lakshmi invocation within the housewarming ceremony takes place on its chosen muhurat, subject to family tradition.
+Diwali Lakshmi Puja can be performed before griha pravesh, while the Lakshmi invocation that forms part of the housewarming ceremony takes place on its chosen muhurat, subject to family tradition.
 
-These are two different pujas that share a name, which is the source of most of the confusion.
+These are two different pujas that share a name, which is often the source of confusion.
 
-**Diwali Lakshmi puja** is an annual festival observance tied to the calendar. It is performed wherever the family is on Diwali night. If you have possession of a new home and wish to light it that evening, you may perform Diwali Lakshmi puja there.
+**Diwali Lakshmi Puja** is an annual festival observance tied to the calendar. It is performed wherever the family is on Diwali night. If you have taken possession of a new home and wish to light it on that evening, you may perform Diwali Lakshmi Puja there.
 
-**Griha pravesh Lakshmi puja** is part of the housewarming ritual sequence, performed on the chosen muhurat, usually alongside Ganesh puja, Vastu Shanti and the boiling over of milk. It marks the formal consecration of the home.
+**Griha Pravesh Lakshmi Puja** forms part of the housewarming ritual and is performed on the chosen muhurat, usually alongside Ganesh Puja, Vastu Shanti and the milk-boiling ceremony. It marks the formal consecration of the home.
 
-The conventional order is Ganesh puja first, then Vastu Shanti, then Lakshmi invocation, then the milk ceremony, then the first meal cooked in the home. Regional practice varies, and your priest will set the order appropriate to your tradition.
+The conventional sequence is Ganesh Puja, followed by Vastu Shanti, Lakshmi invocation, the milk-boiling ceremony and the first meal cooked in the home. Regional customs may vary, and your priest can advise on the sequence appropriate to your family's traditions.
 
 Read more about [decorating your new home for the ceremony](https://www.godrejproperties.com/blog/griha-pravesh-decoration-ideas).
 
@@ -151,22 +155,22 @@ Separately, confirm possession, home readiness and any building permissions with
 
 **Can we celebrate our first Diwali before griha pravesh?**
 
-Many families celebrate Diwali in their new home before formal griha pravesh, while observing their family's customs and the building's fire-safety rules.
+Many families celebrate Diwali in their new home before the formal griha pravesh, while observing their family's customs and the building's fire-safety guidelines.
 
 A home does not need to be formally consecrated to be celebrated in.
 
-If you have your keys but your griha pravesh muhurat falls later, there is a long tradition of marking the home gently in the interim:
+If you have received your keys but your griha pravesh muhurat falls later, there is a long tradition of marking the home gently in the interim:
 
 -   Light diyas at the threshold and on the balcony
 -   Draw a rangoli at the entrance
 -   Hang a toran at the main door
--   Perform Diwali Lakshmi puja
+-   Perform Diwali Lakshmi Puja
 -   Share a meal, even a simple one, with family in the space
--   Bring in a symbolic first item: a lamp, a vessel, a plant, a photograph
+-   Bring in a symbolic first item, such as a lamp, vessel, plant or photograph
 
-What is usually deferred until after griha pravesh is permanent residence, moving the household in fully, and the formal consecration rituals.
+What is usually deferred until after griha pravesh is taking up permanent residence, moving the household in fully, and performing the formal consecration rituals.
 
-For most families the first Diwali in a new home is remembered less for the ceremony than for the evening itself. The campaign film closes on exactly this moment, a couple celebrating their first Diwali in a home that is finally theirs.
+For most families, the first Diwali in a new home is remembered less for the ceremony and more for the moment itself. The campaign film closes on exactly this feeling: a couple celebrating their first Diwali in a home that is finally theirs.
 
 Read more about [main door direction](https://www.godrejproperties.com/blog/significance-of-main-door-direction-in-vastu-shastra).
 
@@ -184,7 +188,7 @@ Explore [Golf Crest at Godrej City, Panvel](https://www.godrejproperties.com/lan
 
 ### Is it good to do griha pravesh during Diwali?
 
-Usually not, though the reason is Chaturmas rather than Diwali itself. Diwali typically falls within Chaturmas, the four-month period when major auspicious ceremonies are traditionally deferred. In 2026 Chaturmas ended on 20 November, twelve days after Diwali. Receiving keys and celebrating in the home during Diwali is customary; the formal ceremony is generally kept for a muhurat afterwards.
+Many families choose to receive their keys and celebrate Diwali in their new home, while scheduling the formal griha pravesh ceremony for a later date. Families observing Chaturmas can confirm their observance with their priest and choose a suitable muhurat afterwards. Traditions vary across regions and communities, so consult your family priest for guidance specific to your customs.
 
 <a id="faq-2"></a>
 
@@ -206,9 +210,9 @@ Yes. Lighting diyas, drawing a rangoli, hanging a toran, performing Diwali Laksh
 
 
 
-### Lakshmi puja before or after griha pravesh?
+### Lakshmi Puja before or after griha pravesh?
 
-Both, because they are two different pujas. Diwali Lakshmi puja is an annual festival observance and can be performed in the home before griha pravesh. The Lakshmi invocation within the griha pravesh sequence is separate and happens on the chosen muhurat.
+Both, because they are two different pujas. Diwali Lakshmi Puja is an annual festival observance and can be performed in the home before griha pravesh. The Lakshmi invocation within the griha pravesh sequence is separate and happens on the chosen muhurat.
 
 <a id="faq-5"></a>
 

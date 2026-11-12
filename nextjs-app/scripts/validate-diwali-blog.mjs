@@ -95,6 +95,13 @@ const avoidanceFaq = content.faqs.find(faq => faq.id === 'faq-7');
 assert.ok(avoidanceFaq.answer.includes('for your location and the relevant year'));
 assert.ok(!/2026|2027|8 January|6 February/.test(avoidanceFaq.answer));
 assert.ok(markdown.includes(avoidanceFaq.answer));
+assert.ok(markdown.includes(content.summary));
+assert.ok(markdown.includes("Whether you're preparing for your griha pravesh, planning your first Diwali"));
+assert.ok(!original.querySelector('article').textContent.includes('Chaturmas ended'));
+assert.ok(!original.querySelector('article').textContent.includes('upcoming griha pravesh muhurat dates'));
+for (const keyword of ['griha pravesh', 'Dhanteras', 'Lakshmi Puja', 'Vastu Shanti', 'Chaturmas']) {
+  assert.ok(markdown.includes(keyword));
+}
 for (const section of content.sections.filter(section => section.title)) {
   const element = original.getElementById(section.id);
   assert.equal(element.querySelector('h2').textContent, section.title);
