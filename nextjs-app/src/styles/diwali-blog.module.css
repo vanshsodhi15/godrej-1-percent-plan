@@ -35,7 +35,7 @@
 .body p { margin: 0 0 20px; line-height: 1.9; }
 .body strong { font-weight: 600; color: #292929; }
 .body a { color: #087c78; text-decoration: underline; text-underline-offset: 3px; }
-.body ul { margin: 0 0 24px; padding-left: 24px; }
+.body ul { list-style: disc outside; margin: 0 0 24px; padding-left: 24px; }
 .body li { padding-left: 4px; margin-bottom: 10px; line-height: 1.85; }
 .body table { width: 100%; border-collapse: collapse; margin: 24px 0; table-layout: fixed; font-size: 14px; }
 .body th, .body td { text-align: left; vertical-align: top; border: 1px solid #d9e3df; padding: 15px; overflow-wrap: anywhere; white-space: normal; }

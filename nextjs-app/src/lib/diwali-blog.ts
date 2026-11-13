@@ -90,8 +90,8 @@ function createFaqs(publication: Publication) {
   const faqs = content.faqs.map(faq => ({ ...faq }));
   if (faqs.length !== 10) throw new Error('Expected ten source FAQs');
   const contactAnswer = publication.contactApproved && publication.salesPhone
-    ? `For home enquiries and current availability, contact Godrej Properties on ${publication.salesPhoneDisplay}. The sales team can help with home enquiries; consult your family priest for advice on rituals and muhurat.`
-    : 'Use the enquiry option on the official Godrej Properties website for project information and current availability. The sales team can help with home enquiries; consult your family priest for advice on rituals and muhurat.';
+    ? `The Godrej Properties sales team can help with project information and current availability. Call ${publication.salesPhoneDisplay} to enquire about a home.`
+    : 'The Godrej Properties sales team can help with project information and current availability. Explore our homes and enquire on the official Godrej Properties website.';
   faqs.push({ id: 'faq-contact', question: 'How can I contact Godrej Properties about a home?', answer: contactAnswer });
   return { faqs, contactAnswer };
 }

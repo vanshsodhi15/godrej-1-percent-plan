@@ -1,6 +1,6 @@
 Khushiyon Ki Chaabi, Mera Godrej Ghar
 
-Home Buying GuidePublished 4 November 2026Updated 12 November 2026
+Home Buying GuidePublished 4 November 2026Updated 13 November 2026
 
 # Khushiyon Ki Chaabi, Mera Godrej Ghar
 
@@ -8,7 +8,7 @@ Godrej Properties
 
 ### Contents
 
-Khushiyon Ki Chaabi, Mera Godrej Ghar celebrates the joy of a place to call your own. From receiving the keys to celebrating your first Diwali, it brings together the traditions, milestones and meaningful moments that mark the beginning of life in a new home. Discover ways to welcome your family, honour your rituals and make every first in your Godrej home a memory to cherish.
+Khushiyon Ki Chaabi, Mera Godrej Ghar celebrates the happiness of owning a Godrej home and all the little joys that make it yours. From receiving the keys to celebrating your first Diwali, it brings together the traditions, milestones and meaningful moments that mark the beginning of life in a new home. Discover ways to welcome your family, honour your rituals and make every first in your Godrej home a memory to cherish.
 
 1.  [A new beginning, at a time that feels right](#section-1)
 2.  [Planning your homecoming around family traditions](#section-2)
@@ -268,7 +268,7 @@ Yes. The full ritual sequence adapts to apartments without difficulty. The milk 
 
 ### How can I contact Godrej Properties about a home?
 
-Use the enquiry option on the official Godrej Properties website for project information and current availability. The sales team can help with home enquiries; consult your family priest for advice on rituals and muhurat.
+The Godrej Properties sales team can help with project information and current availability. Explore our homes and enquire on the official Godrej Properties website.
 
 <a id="contact"></a>
 
@@ -278,7 +278,7 @@ Khushiyon Ki Chaabi, Mera Godrej Ghar
 
 ## A home for your next chapter
 
-Use the enquiry option on the official Godrej Properties website for project information and current availability. The sales team can help with home enquiries; consult your family priest for advice on rituals and muhurat.
+The Godrej Properties sales team can help with project information and current availability. Explore our homes and enquire on the official Godrej Properties website.
 
 [Enquire with Godrej Properties](https://www.godrejproperties.com/)
 
